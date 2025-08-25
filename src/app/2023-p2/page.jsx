@@ -26,9 +26,14 @@ function renderWithLatex(str = "") {
   });
 }
 
-function MainComponent({ onReturnToDashboard }) {
+function MainComponent() {
   const router = useRouter();
   const { currentUser } = useAuth();
+  
+  // Add this function for navigation
+  const handleReturnToDashboard = () => {
+    router.push('/');
+  };
   const [currentView, setCurrentView] = React.useState("welcome"); // 'welcome', 'instructions', 'exam', 'review'
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const [selectedAnswers, setSelectedAnswers] = React.useState({});
@@ -1330,4 +1335,7 @@ $\\quad$ 3 $\\quad$ $I_{p,q} > 0$ only if $p < 0$`,
   );
 }
 
-export default MainComponent;
+// Wrap MainComponent in Page export
+export default function Page() {
+  return <MainComponent />;
+}
