@@ -26,7 +26,7 @@ function renderWithLatex(str = "") {
   });
 }
 
-function MainComponent({ onReturnToDashboard }) {
+function MainComponent() {
   const router = useRouter();
   const { currentUser } = useAuth();
   const [currentView, setCurrentView] = React.useState("welcome"); // 'welcome', 'instructions', 'exam', 'review'
@@ -1260,4 +1260,6 @@ intersect at three distinct points, of which exactly two have positive $x$-coord
   );
 }
 
-export default MainComponent;
+export default function Page() {
+  return <MainComponent />;
+}

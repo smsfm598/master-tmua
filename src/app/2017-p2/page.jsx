@@ -26,9 +26,14 @@ function renderWithLatex(str = "") {
   });
 }
 
-function MainComponent({ onReturnToDashboard }) {
+function MainComponent() {
   const router = useRouter();
   const { currentUser } = useAuth();
+  
+  // Handle return to dashboard navigation
+  const handleReturnToDashboard = () => {
+    router.push('/');
+  };
   const [currentView, setCurrentView] = React.useState("welcome"); // 'welcome', 'instructions', 'exam', 'review'
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const [selectedAnswers, setSelectedAnswers] = React.useState({});
@@ -1282,4 +1287,6 @@ Using the best strategy, how many further attempts must I make in order to guara
   );
 }
 
-export default MainComponent;
+export default function Page() {
+  return <MainComponent />;
+}

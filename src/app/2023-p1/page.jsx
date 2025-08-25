@@ -26,7 +26,7 @@ function renderWithLatex(str = "") {
   });
 }
 
-function MainComponent({ onReturnToDashboard }) {
+function MainComponent() {
   const router = useRouter();
   const { currentUser } = useAuth();
   const [currentView, setCurrentView] = React.useState("welcome"); // 'welcome', 'instructions', 'exam', 'review'
@@ -1275,4 +1275,11 @@ Find the difference between the maximum and minimum values of $(f(x))^2 - f(x)$`
   );
 }
 
-export default MainComponent;
+// Replace onReturnToDashboard prop usage with router navigation
+const handleReturnToDashboard = () => {
+  router.push('/');
+};
+
+export default function Page() {
+  return <MainComponent />;
+}

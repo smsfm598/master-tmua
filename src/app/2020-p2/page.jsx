@@ -26,7 +26,7 @@ function renderWithLatex(str = "") {
   });
 }
 
-function MainComponent({ onReturnToDashboard }) {
+function MainComponent() {
   const router = useRouter();
   const { currentUser } = useAuth();
   const [currentView, setCurrentView] = React.useState("welcome"); // 'welcome', 'instructions', 'exam', 'review'
@@ -1311,4 +1311,6 @@ F. $f(x) ≥ 0$ if and only if $x < 0$`,
   );
 }
 
-export default MainComponent;
+export default function Page() {
+  return <MainComponent />;
+}

@@ -26,7 +26,7 @@ function renderWithLatex(str = "") {
   });
 }
 
-function MainComponent({ onReturnToDashboard }) {
+function MainComponent() {
   const router = useRouter();
   const { currentUser } = useAuth();
   const [currentView, setCurrentView] = React.useState("welcome"); // 'welcome', 'instructions', 'exam', 'review'
@@ -1268,4 +1268,6 @@ $$2 \\log_{10}(x - y) = \\log_{10}(2 - 2x) + \\log_{10}(y + 5)$$`,
   );
 }
 
-export default MainComponent;
+export default function Page() {
+  return <MainComponent />;
+}

@@ -26,7 +26,7 @@ function renderWithLatex(str = "") {
   });
 }
 
-function MainComponent({ onReturnToDashboard }) {
+function MainComponent() {
   const router = useRouter();
   const { currentUser } = useAuth();
   const [currentView, setCurrentView] = React.useState("welcome"); // 'welcome', 'instructions', 'exam', 'review'
@@ -1273,4 +1273,6 @@ Which one of the following conditions on $y = f(x)$ is necessary and sufficient 
   );
 }
 
-export default MainComponent;
+export default function Page() {
+  return <MainComponent />;
+}

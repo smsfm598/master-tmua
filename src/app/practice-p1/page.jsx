@@ -26,7 +26,7 @@ function renderWithLatex(str = "") {
   });
 }
 
-function MainComponent({ onReturnToDashboard }) {
+function MainComponent() {
   const router = useRouter();
   const { currentUser } = useAuth();
   const [currentView, setCurrentView] = React.useState("welcome"); // 'welcome', 'instructions', 'exam', 'review'
@@ -1152,4 +1152,41 @@ function MainComponent({ onReturnToDashboard }) {
   );
 }
 
-export default MainComponent;
+// Replace onReturnToDashboard prop usage with router navigation
+const handleReturnToDashboard = () => {
+  router.push('/');
+};
+
+function MainComponent() {
+  const router = useRouter();
+  const { currentUser } = useAuth();
+  const [currentView, setCurrentView] = React.useState("welcome"); // 'welcome', 'instructions', 'exam', 'review'
+  const [currentQuestion, setCurrentQuestion] = React.useState(0);
+  const [selectedAnswers, setSelectedAnswers] = React.useState({});
+  const [flaggedQuestions, setFlaggedQuestions] = React.useState(new Set());
+  const [timeRemaining, setTimeRemaining] = React.useState(90 * 60); // 90 minutes in seconds
+  const [instructionTime, setInstructionTime] = React.useState(60); // 60 seconds for instructions
+  const [colorScheme, setColorScheme] = React.useState("default");
+  const [showNavigator, setShowNavigator] = React.useState(false);
+  const [showColorSchemeDropdown, setShowColorSchemeDropdown] =
+    React.useState(false);
+  const [showEndExamModal, setShowEndExamModal] = React.useState(false);
+  
+  // Add missing variables
+  const [user, setUser] = React.useState(null);
+  const [examStartTime, setExamStartTime] = React.useState(null);
+  const [savingResult, setSavingResult] = React.useState(false);
+
+  // Set user from auth context
+  useEffect(() => {
+    if (currentUser) {
+      setUser(currentUser);
+    }
+  }, [currentUser]);
+  
+  // ... rest of component logic ...
+}
+
+export default function Page() {
+  return <MainComponent />;
+}

@@ -26,7 +26,7 @@ function renderWithLatex(str = "") {
   });
 }
 
-function MainComponent({ onReturnToDashboard }) {
+function MainComponent() {
   const router = useRouter();
   const { currentUser } = useAuth();
   const [currentView, setCurrentView] = React.useState("welcome"); // 'welcome', 'instructions', 'exam', 'review'
@@ -1233,4 +1233,6 @@ $$\\sin^2 0° + \\sin^2 1° + \\sin^2 2° + \\sin^2 3° + \\cdots + \\sin^2 87°
   );
 }
 
-export default MainComponent;
+export default function Page() {
+  return <MainComponent />;
+}
