@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^6.30.0",
+    "@heroicons/react": "^2.2.0",
     "@stripe/stripe-js": "^7.8.0",
     "@supabase/supabase-js": "^2.55.0",
     "framer-motion": "^12.23.12",
