@@ -3,12 +3,17 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useUser } from '@clerk/nextjs';
 import Sidebar from '../../components/Sidebar';
+import UpgradeModal from '../../components/UpgradeModal';
+import { checkUserEntitlements, isPaperFree } from '../../lib/supabase';
 
 export default function PapersPage() {
   const router = useRouter();
   const { user, isLoaded } = useUser();
   const [selectedYear, setSelectedYear] = useState('all');
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [userEntitlements, setUserEntitlements] = useState(null);
+  const [upgradeModal, setUpgradeModal] = useState({ isOpen: false, paperName: '' });
+  const [loading, setLoading] = useState(true);
   
   // Auto-collapse sidebar on mobile
   useEffect(() => {
@@ -22,9 +27,24 @@ export default function PapersPage() {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  // Check user entitlements when user loads
+  useEffect(() => {
+    const checkEntitlements = async () => {
+      if (user) {
+        const entitlements = await checkUserEntitlements(user.id);
+        setUserEntitlements(entitlements);
+      }
+      setLoading(false);
+    };
+
+    if (isLoaded) {
+      checkEntitlements();
+    }
+  }, [user, isLoaded]);
   
   // Show loading state while Clerk initializes
-  if (!isLoaded) {
+  if (!isLoaded || loading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-[#150025] to-[#280040] flex items-center justify-center">
         <div className="text-white text-xl">Loading...</div>
@@ -40,8 +60,8 @@ export default function PapersPage() {
   
   // Complete paper list organized by year
   const papersByYear = {
-    'Specimen': ['Specimen Paper 1', 'Specimen Paper 2'],
     'Practice': ['Practice Paper 1', 'Practice Paper 2'],
+    'Specimen': ['Specimen Paper 1', 'Specimen Paper 2'],
     '2017': ['2017 Paper 1', '2017 Paper 2'],
     '2018': ['2018 Paper 1', '2018 Paper 2'],
     '2019': ['2019 Paper 1', '2019 Paper 2'],
@@ -80,9 +100,28 @@ export default function PapersPage() {
   };
   
   const handlePaperClick = (paperName) => {
-    console.log(`Starting: ${paperName}`);
-    const route = getPaperRoute(paperName);
-    router.push(route);
+    // Check if paper is free or user has access
+    const isFree = isPaperFree(paperName);
+    const hasFullAccess = userEntitlements?.hasFullAccess || false;
+    
+    if (isFree || hasFullAccess) {
+      // Allow access
+      console.log(`Starting: ${paperName}`);
+      const route = getPaperRoute(paperName);
+      router.push(route);
+    } else {
+      // Show upgrade modal
+      setUpgradeModal({ isOpen: true, paperName });
+    }
+  };
+
+  const getPaperStatus = (paperName) => {
+    const isFree = isPaperFree(paperName);
+    const hasFullAccess = userEntitlements?.hasFullAccess || false;
+    
+    if (isFree) return 'free';
+    if (hasFullAccess) return 'accessible';
+    return 'locked';
   };
   
   return (
@@ -99,8 +138,21 @@ export default function PapersPage() {
           <div className="px-4 sm:px-6 py-4 flex justify-between items-center">
             <div>
               <h1 className="text-xl sm:text-2xl font-bold text-white">TMUA Papers</h1>
-              <p className="text-gray-300 text-sm sm:text-base">Choose a paper to practice</p>
+              <p className="text-gray-300 text-sm sm:text-base">
+                {userEntitlements?.hasFullAccess 
+                  ? 'Choose any paper to practice' 
+                  : 'Practice Papers 1 & 2 are free • Upgrade for full access'
+                }
+              </p>
             </div>
+            {!userEntitlements?.hasFullAccess && (
+              <button
+                onClick={() => setUpgradeModal({ isOpen: true, paperName: 'All Premium Papers' })}
+                className="bg-[#8e44ad] hover:bg-[#9b59b6] text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium"
+              >
+                Upgrade Now
+              </button>
+            )}
           </div>
         </div>
         
@@ -137,38 +189,69 @@ export default function PapersPage() {
           
           {/* Papers Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-            {displayPapers.map((paper, index) => (
-              <div
-                key={index}
-                className="group bg-gradient-to-br from-[#1a0030] to-[#2a0045] rounded-xl border border-[#5c4d7d] p-4 sm:p-6 hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20 hover:scale-105 cursor-pointer"
-                onClick={() => handlePaperClick(paper)}
-              >
-                <div className="flex items-center justify-between mb-3 sm:mb-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-white font-bold text-sm sm:text-lg">📊</span>
+            {displayPapers.map((paper, index) => {
+              const status = getPaperStatus(paper);
+              const isLocked = status === 'locked';
+              
+              return (
+                <div
+                  key={index}
+                  className={`group rounded-xl border p-4 sm:p-6 transition-all duration-300 cursor-pointer ${
+                    isLocked
+                      ? 'bg-gradient-to-br from-[#1a0030]/50 to-[#2a0045]/50 border-[#5c4d7d]/50 hover:border-[#8e44ad]/50'
+                      : 'bg-gradient-to-br from-[#1a0030] to-[#2a0045] border-[#5c4d7d] hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/20 hover:scale-105'
+                  }`}
+                  onClick={() => handlePaperClick(paper)}
+                >
+                  <div className="flex items-center justify-between mb-3 sm:mb-4">
+                    <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center transition-transform duration-300 ${
+                      isLocked
+                        ? 'bg-gradient-to-br from-gray-500 to-gray-600'
+                        : 'bg-gradient-to-br from-purple-500 to-pink-500 group-hover:scale-110'
+                    }`}>
+                      <span className="text-white font-bold text-sm sm:text-lg">
+                        {isLocked ? '🔒' : '📊'}
+                      </span>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-xs text-gray-400">Duration</div>
+                      <div className="text-xs sm:text-sm font-semibold text-white">75 min</div>
+                    </div>
                   </div>
-                  <div className="text-right">
-                    <div className="text-xs text-gray-400">Duration</div>
-                    <div className="text-xs sm:text-sm font-semibold text-white">75 min</div>
+                  
+                  <h3 className={`text-sm sm:text-lg font-semibold mb-2 transition-colors duration-300 ${
+                    isLocked
+                      ? 'text-gray-400'
+                      : 'text-white group-hover:text-purple-300'
+                  }`}>
+                    {paper}
+                  </h3>
+                  
+                  <p className="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4">
+                    20 questions • Multiple choice
+                  </p>
+                  
+                  <div className="flex justify-between items-center">
+                    <span className={`text-xs ${
+                      status === 'free' ? 'text-green-400' :
+                      status === 'accessible' ? 'text-blue-400' :
+                      'text-gray-500'
+                    }`}>
+                      {status === 'free' ? 'FREE' :
+                       status === 'accessible' ? 'PREMIUM' :
+                       'LOCKED'}
+                    </span>
+                    <div className={`px-2 sm:px-3 py-1 rounded-full text-xs font-medium transition-colors duration-300 ${
+                      isLocked
+                        ? 'bg-gray-600 text-gray-300'
+                        : 'bg-[#8e44ad] text-white group-hover:bg-[#9b59b6]'
+                    }`}>
+                      {isLocked ? 'Upgrade' : 'Start'}
+                    </div>
                   </div>
                 </div>
-                
-                <h3 className="text-sm sm:text-lg font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors duration-300">
-                  {paper}
-                </h3>
-                
-                <p className="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4">
-                  20 questions • Multiple choice
-                </p>
-                
-                <div className="flex justify-between items-center">
-                  <span className="text-xs text-gray-500">TMUA Practice</span>
-                  <div className="bg-[#8e44ad] text-white px-2 sm:px-3 py-1 rounded-full text-xs font-medium group-hover:bg-[#9b59b6] transition-colors duration-300">
-                    Start
-                  </div>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
           
           {displayPapers.length === 0 && (
@@ -178,6 +261,13 @@ export default function PapersPage() {
           )}
         </div>
       </main>
+
+      {/* Upgrade Modal */}
+      <UpgradeModal
+        isOpen={upgradeModal.isOpen}
+        onClose={() => setUpgradeModal({ isOpen: false, paperName: '' })}
+        paperName={upgradeModal.paperName}
+      />
     </div>
   );
 }

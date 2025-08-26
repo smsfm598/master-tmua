@@ -328,3 +328,63 @@ export const getUserExamResults = async (userId) => {
     return []
   }
 }
+
+// Check if user has paid access
+export const checkUserEntitlements = async (userId) => {
+  try {
+    if (!userId) {
+      return { hasFullAccess: false, error: 'No user ID provided' };
+    }
+
+    const { data, error } = await supabase
+      .from('user_entitlements')
+      .select('has_full_access, purchase_date, stripe_session_id')
+      .eq('clerk_user_id', userId)
+      .single();
+
+    if (error) {
+      // If no record found, user doesn't have access
+      if (error.code === 'PGRST116') {
+        return { hasFullAccess: false, error: null };
+      }
+      console.error('Error checking user entitlements:', error);
+      return { hasFullAccess: false, error: error.message };
+    }
+
+    return {
+      hasFullAccess: data?.has_full_access || false,
+      purchaseDate: data?.purchase_date,
+      stripeSessionId: data?.stripe_session_id,
+      error: null
+    };
+  } catch (error) {
+    console.error('Error in checkUserEntitlements:', error);
+    return { hasFullAccess: false, error: error.message };
+  }
+};
+
+// Check if a specific paper is free to access
+export const isPaperFree = (paperName) => {
+  const freePapers = ['Practice Paper 1', 'Practice Paper 2'];
+  return freePapers.includes(paperName);
+};
+
+// Get paper access status for a user
+export const getPaperAccess = async (userId, paperName) => {
+  // Practice papers are always free
+  if (isPaperFree(paperName)) {
+    return { hasAccess: true, reason: 'free_paper' };
+  }
+
+  // Check if user has paid access
+  const entitlements = await checkUserEntitlements(userId);
+  
+  if (entitlements.error) {
+    return { hasAccess: false, reason: 'error', error: entitlements.error };
+  }
+
+  return {
+    hasAccess: entitlements.hasFullAccess,
+    reason: entitlements.hasFullAccess ? 'paid_access' : 'requires_payment'
+  };
+};
