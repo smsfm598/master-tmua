@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "../../contexts/AuthContext";
 import { useUser } from '@clerk/nextjs'
-import { saveExamResult, calculateScore } from '../../lib/supabase'
+import { saveExamResult, calculateScore, testSupabaseConnection } from '../../lib/supabase'
 import { InlineMath, BlockMath } from "react-katex";
 import "katex/dist/katex.min.css";
 
@@ -398,6 +398,12 @@ function MainComponent() {
   const handleSaveExamResult = async () => {
     setSavingResult(true);
     try {
+      // Test Supabase connection first
+      const connectionTest = await testSupabaseConnection();
+      if (!connectionTest) {
+        throw new Error('Unable to connect to database. Please check your internet connection.');
+      }
+      
       if (user) {
         console.log('User object:', user);
         console.log('User ID:', user.id);
@@ -420,7 +426,7 @@ function MainComponent() {
         if (result) {
           alert(`Exam completed! Score: ${result.markingResult.score}/${result.markingResult.totalQuestions} (${Math.round((result.markingResult.score / result.markingResult.totalQuestions) * 100)}%)`);
         } else {
-          throw new Error('Failed to save exam result');
+          throw new Error('Failed to save exam result - no result returned');
         }
       } else {
         console.log('No user object found, skipping save to Supabase');
@@ -429,7 +435,7 @@ function MainComponent() {
       }
     } catch (error) {
       console.error('Error saving exam result:', error);
-      alert('Error saving exam result. Please try again.');
+      alert(`Error saving exam result: ${error.message}. Please try again.`);
     } finally {
       setSavingResult(false);
     }

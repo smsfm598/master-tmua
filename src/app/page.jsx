@@ -7,7 +7,7 @@ import 'katex/dist/katex.min.css';
 
 
 // Import the exam component from the separate file
-import ExamInterface from './specimen-p1/page';
+import ExamInterface from './practice-p1/page';
 
 export default function Home() {
   const [showExam, setShowExam] = useState(false);
