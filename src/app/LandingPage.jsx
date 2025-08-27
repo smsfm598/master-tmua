@@ -245,7 +245,7 @@ export default function LandingPage() {
               <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
               <nav className="flex flex-col space-y-2">
                 <Link href="/" className="text-gray-400 hover:text-white transition-colors">Home</Link>
-                <Link href="/exam-interface" className="text-gray-400 hover:text-white transition-colors">Demo</Link>
+                <Link href="/practice-p1" className="text-gray-400 hover:text-white transition-colors">Demo</Link>
                 <button onClick={() => scrollToSection(pricingRef)} className="text-gray-400 hover:text-white transition-colors text-left">Pricing</button>
                 <Link href="mailto:acetmua@outlook.com" className="text-gray-400 hover:text-white transition-colors">Contact</Link>
               </nav>
