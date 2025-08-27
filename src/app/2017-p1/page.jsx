@@ -43,7 +43,7 @@ function MainComponent() {
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const [selectedAnswers, setSelectedAnswers] = React.useState({});
   const [flaggedQuestions, setFlaggedQuestions] = React.useState(new Set());
-  const [timeRemaining, setTimeRemaining] = React.useState(90 * 60); // 90 minutes in seconds
+  const [timeRemaining, setTimeRemaining] = React.useState(75 * 60); // 90 minutes in seconds
   const [instructionTime, setInstructionTime] = React.useState(60); // 60 seconds for instructions
   const [colorScheme, setColorScheme] = React.useState("default");
   const [showNavigator, setShowNavigator] = React.useState(false);
