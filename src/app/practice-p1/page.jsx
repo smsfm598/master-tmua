@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "../../contexts/AuthContext";
 import { useUser } from '@clerk/nextjs'
-import { saveExamResult, calculateScore, testSupabaseConnection } from '../../lib/supabase'
+import { saveExamResult, calculateScore } from '../../lib/supabase'
 import { InlineMath, BlockMath } from "react-katex";
 import "katex/dist/katex.min.css";
 
@@ -398,12 +398,6 @@ function MainComponent() {
   const handleSaveExamResult = async () => {
     setSavingResult(true);
     try {
-      // Test Supabase connection first
-      const connectionTest = await testSupabaseConnection();
-      if (!connectionTest) {
-        throw new Error('Unable to connect to database. Please check your internet connection.');
-      }
-      
       if (user) {
         console.log('User object:', user);
         console.log('User ID:', user.id);
