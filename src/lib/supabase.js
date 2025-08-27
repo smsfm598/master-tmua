@@ -186,35 +186,61 @@ export const updateUserStats = async (userId, examScore, isNewExam = true, paper
 // Enhanced saveExamResult function with highest score retention
 export const saveExamResult = async (userId, examData) => {
   try {
+    // Add environment variable check at the start
+    console.log('Environment check:', {
+      hasUrl: !!supabaseUrl,
+      hasKey: !!supabaseKey,
+      url: supabaseUrl ? 'Set' : 'Missing',
+      key: supabaseKey ? 'Set' : 'Missing'
+    });
+
+    if (!supabaseUrl || !supabaseKey) {
+      console.error('Supabase environment variables are missing:', {
+        hasUrl: !!supabaseUrl,
+        hasKey: !!supabaseKey
+      });
+      throw new Error('Supabase configuration is incomplete');
+    }
+
+    console.log('Starting saveExamResult with:', { userId, examData });
+
     // Calculate score using marking scheme
-    const markingResult = calculateScore(examData.userAnswers, examData.paperName)
+    const markingResult = calculateScore(examData.userAnswers, examData.paperName);
+    console.log('Marking result:', markingResult);
     
     // Check if user has already taken this paper
+    console.log('Checking for existing results...');
     const { data: existingResults, error: fetchError } = await supabase
       .from('exam_results')
       .select('*')
       .eq('clerk_user_id', userId)
       .eq('paper_name', examData.paperName)
       .order('score', { ascending: false })
-      .limit(1)
+      .limit(1);
     
-    if (fetchError) throw fetchError
+    if (fetchError) {
+      console.error('Error fetching existing results:', fetchError);
+      throw fetchError;
+    }
+    
+    console.log('Existing results found:', existingResults);
     
     // If user has taken this paper before
     if (existingResults && existingResults.length > 0) {
-      const existingResult = existingResults[0]
+      const existingResult = existingResults[0];
       
       // If new score is not higher, don't save and return the existing result
       if (markingResult.score <= existingResult.score) {
-        console.log(`Score ${markingResult.score} not higher than existing ${existingResult.score}, not saving`)
+        console.log(`Score ${markingResult.score} not higher than existing ${existingResult.score}, not saving`);
         return {
           ...existingResult,
           markingResult,
           wasUpdated: false
-        }
+        };
       }
       
       // If new score is higher, update the existing record
+      console.log('Updating existing record with higher score...');
       const { data: updatedData, error: updateError } = await supabase
         .from('exam_results')
         .update({
@@ -222,26 +248,30 @@ export const saveExamResult = async (userId, examData) => {
           total_questions: markingResult.totalQuestions,
           time_taken: examData.timeTaken,
           exam_type: examData.examType || 'TMUA'
-          // Remove the updated_at line since the column doesn't exist
         })
         .eq('id', existingResult.id)
-        .select()
+        .select();
       
-      if (updateError) throw updateError
+      if (updateError) {
+        console.error('Error updating existing result:', updateError);
+        throw updateError;
+      }
       
-      console.log(`Updated score from ${existingResult.score} to ${markingResult.score} for ${examData.paperName}`)
+      console.log('Successfully updated result:', updatedData);
+      console.log(`Updated score from ${existingResult.score} to ${markingResult.score} for ${examData.paperName}`);
       
       // Update user statistics with recalculation
-      await updateUserStats(userId, markingResult.score, false, examData.paperName)
+      await updateUserStats(userId, markingResult.score, false, examData.paperName);
       
       return {
         ...updatedData[0],
         markingResult,
         wasUpdated: true
-      }
+      };
     }
-    
+
     // If user hasn't taken this paper before, insert new record
+    console.log('Inserting new exam result...');
     const { data, error } = await supabase
       .from('exam_results')
       .insert([
@@ -254,25 +284,39 @@ export const saveExamResult = async (userId, examData) => {
           exam_type: examData.examType || 'TMUA',
         }
       ])
-      .select()
-    
-    if (error) throw error
-    
-    console.log(`Saved new result: ${markingResult.score} for ${examData.paperName}`)
-    
+      .select();
+
+    if (error) {
+      console.error('Error inserting new result:', error);
+      throw error;
+    }
+
+    console.log('Successfully inserted new result:', data);
+    console.log(`Saved new result: ${markingResult.score} for ${examData.paperName}`);
+
     // Update user statistics with recalculation
-    await updateUserStats(userId, markingResult.score, true, examData.paperName)
-    
-    return {
+    await updateUserStats(userId, markingResult.score, true, examData.paperName);
+
+    const finalResult = {
       ...data[0],
       markingResult,
       wasUpdated: false
-    }
+    };
+    
+    console.log('Final result being returned:', finalResult);
+    return finalResult;
   } catch (error) {
-    console.error('Error saving exam result:', error)
-    return null
+    console.error('Error saving exam result:', error);
+    console.error('Error details:', {
+      message: error.message,
+      code: error.code,
+      details: error.details,
+      hint: error.hint,
+      stack: error.stack
+    });
+    return null;
   }
-}
+};
 
 export const getUserExamHistory = async (userId) => {
   try {
