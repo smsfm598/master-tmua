@@ -55,7 +55,7 @@ export default function LandingPage() {
     <div className="min-h-screen bg-gradient-to-br from-[#150025] to-[#280040] text-white">
       {/* Navigation */}
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="text-xl font-bold">Ace TMUA</div>
+        <div className="text-xl font-bold">Master TMUA</div>
         <div className="flex gap-4">
           <Link href="/login">
             <button className="px-4 py-2 rounded-full border border-[#5c4d7d] hover:bg-[#5c4d7d]/20 transition-all duration-300">
@@ -187,7 +187,7 @@ export default function LandingPage() {
           {/* Paid Plan */}
           <div className="bg-[#1a0030] rounded-2xl shadow-lg border-2 border-purple-500 p-8 flex flex-col shadow-[0_0_25px_rgba(142,68,173,0.7)] hover:shadow-[0_0_35px_rgba(142,68,173,1)] transition-all duration-300">
             <div className="text-center mb-6">
-              <h3 className="text-3xl font-bold">Ace TMUA Premium</h3>
+              <h3 className="text-3xl font-bold">Master TMUA Premium</h3>
               <span className="text-gray-400 line-through text-xl">£24.99</span>
               <span className="text-3xl font-bold ml-3 text-purple-400">£9.99</span>
             </div>
@@ -247,21 +247,21 @@ export default function LandingPage() {
                 <Link href="/" className="text-gray-400 hover:text-white transition-colors">Home</Link>
                 <Link href="/practice-p1" className="text-gray-400 hover:text-white transition-colors">Demo</Link>
                 <button onClick={() => scrollToSection(pricingRef)} className="text-gray-400 hover:text-white transition-colors text-left">Pricing</button>
-                <Link href="mailto:acetmua@outlook.com" className="text-gray-400 hover:text-white transition-colors">Contact</Link>
+                <Link href="mailto:mastertmua@outlook.com" className="text-gray-400 hover:text-white transition-colors">Contact</Link>
               </nav>
             </div>
 
             {/* Contact */}
             <div className="flex flex-col items-end">
               <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
-              <a href="mailto:acetmua@outlook.com" className="text-gray-400 hover:text-white transition-colors">
+              <a href="mailto:mastertmua@outlook.com" className="text-gray-400 hover:text-white transition-colors">
                 acetmua@outlook.com
               </a>
             </div>
           </div>
 
           <div className="mt-8 pt-8 border-t border-[#5c4d7d] text-center text-gray-500">
-            <p>© {new Date().getFullYear()} Ace TMUA. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Master TMUA. All rights reserved.</p>
           </div>
         </div>
       </footer>

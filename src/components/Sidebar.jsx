@@ -31,7 +31,7 @@ export default function Sidebar({ collapsed, setCollapsed, currentPage = '' }) {
       <div className="p-2 sm:p-3 md:p-4 flex justify-between items-center border-b border-[#5c4d7d]/20 backdrop-blur-sm">
         {!collapsed && (
           <div className="text-sm sm:text-lg md:text-xl font-bold text-white tracking-wide bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Ace TMUA
+            Master TMUA
           </div>
         )}
         <button 

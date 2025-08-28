@@ -40,7 +40,7 @@ function SuccessContent() {
         </h1>
         
         <p className="text-gray-600 mb-6">
-          Thank you for your purchase. You now have full access to all of Ace TMUA's resources. Best of luck!
+          Thank you for your purchase. You now have full access to all of Master TMUA's resources. Best of luck!
         </p>
         
         <div className="space-y-3">
