@@ -38,8 +38,8 @@ export async function POST(request) {
         },
       ],
       mode: 'payment',
-      success_url: `${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'}/`,
+      success_url: `https://mastertmua.online/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `https://mastertmua.online/`,
       metadata: {
         userId: userId,
       },
@@ -50,7 +50,7 @@ export async function POST(request) {
   } catch (error) {
     console.error('Error creating checkout session:', error);
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { error: 'Failed to create checkout session' },
       { status: 500 }
     );
   }
