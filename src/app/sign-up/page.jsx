@@ -146,10 +146,12 @@ export default function SignUp() {
         
         router.push('/dashboard');
       } else {
+        console.log('Verification result:', result); // Add this for debugging
         setError('Verification failed. Please check the code and try again.');
       }
     } catch (err) {
       console.error('Verification error:', err);
+      console.error('Error details:', err.errors); // Add this for more details
       setError('Invalid verification code. Please try again.');
     } finally {
       setLoading(false);
@@ -185,6 +187,9 @@ export default function SignUp() {
                 disabled={loading}
               />
             </div>
+            
+            {/* CAPTCHA widget container for verification step */}
+            <div id="clerk-captcha" data-cl-theme="dark" data-cl-size="normal" className="mb-4" />
             
             <button 
               type="submit" 
@@ -296,6 +301,9 @@ export default function SignUp() {
           <div className="text-xs text-gray-400 mt-2">
             Password must be at least 8 characters long
           </div>
+          
+          {/* CAPTCHA widget container */}
+          <div id="clerk-captcha" data-cl-theme="dark" data-cl-size="normal" className="mb-4" />
           
           <button 
             type="submit" 
