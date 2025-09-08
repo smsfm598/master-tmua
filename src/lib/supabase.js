@@ -146,37 +146,12 @@ export const updateUserStats = async (userId, examScore, isNewExam = true, paper
       });
     }
     
-    // Convert the object back to an array
-    const filteredResults = Object.values(highestScores);
+    // Convert the object back to an array and sort by date (newest first)
+    const filteredResults = Object.values(highestScores).sort((a, b) => {
+      return new Date(b.created_at) - new Date(a.created_at);
+    });
     
-    // Calculate new stats based on highest scores only
-    const newTotalExams = filteredResults.length;
-    
-    // Calculate average from highest scores only
-    let newAverageScore = 0;
-    if (newTotalExams > 0) {
-      const totalScore = filteredResults.reduce((sum, result) => sum + result.score, 0);
-      newAverageScore = totalScore / newTotalExams;
-    }
-    
-    // Calculate best score
-    const newBestScore = filteredResults.length > 0 
-      ? Math.max(...filteredResults.map(result => result.score))
-      : 0;
-
-    const { data, error } = await supabase
-      .from('user_profiles')
-      .update({
-        total_exams: newTotalExams,
-        average_score: newAverageScore,
-        best_score: newBestScore,
-        updated_at: new Date().toISOString()
-      })
-      .eq('clerk_user_id', userId)
-      .select()
-    
-    if (error) throw error
-    return data
+    return filteredResults;
   } catch (error) {
     console.error('Error updating user stats:', error)
     return null
@@ -217,15 +192,14 @@ export const saveExamResult = async (userId, examData) => {
         correctAnswer: detail.correctAnswer
       }));
     
-    // Check if user has already taken this paper
+    // Check if user has already taken this paper - get ALL results for this paper
     console.log('Checking for existing results...');
     const { data: existingResults, error: fetchError } = await supabase
       .from('exam_results')
       .select('*')
       .eq('clerk_user_id', userId)
       .eq('paper_name', examData.paperName)
-      .order('score', { ascending: false })
-      .limit(1);
+      .order('score', { ascending: false });
     
     if (fetchError) {
       console.error('Error fetching existing results:', fetchError);
@@ -236,45 +210,64 @@ export const saveExamResult = async (userId, examData) => {
     
     // If user has taken this paper before
     if (existingResults && existingResults.length > 0) {
-      const existingResult = existingResults[0];
+      const highestExistingResult = existingResults[0];
+      const highestExistingScore = parseInt(highestExistingResult.score) || 0;
+      const newScore = parseInt(markingResult.score) || 0;
       
       // If new score is not higher, don't save and return the existing result
-      if (markingResult.score <= existingResult.score) {
-        console.log(`Score ${markingResult.score} not higher than existing ${existingResult.score}, not saving`);
+      if (newScore <= highestExistingScore) {
+        console.log(`Score ${newScore} not higher than existing ${highestExistingScore}, not saving`);
         return {
-          ...existingResult,
+          ...highestExistingResult,
           markingResult,
           wasUpdated: false
         };
       }
       
-      // If new score is higher, update the existing record
-      console.log('Updating existing record with higher score...');
-      const { data: updatedData, error: updateError } = await supabase
-        .from('exam_results')
-        .update({
-          score: markingResult.score,
-          total_questions: markingResult.totalQuestions,
-          time_taken: examData.timeTaken,
-          exam_type: examData.examType || 'TMUA',
-          wrong_answers: wrongAnswers
-        })
-        .eq('id', existingResult.id)
-        .select();
+      // If new score is higher, delete all old records and insert new one
+      console.log('New score is higher, replacing all existing records...');
       
-      if (updateError) {
-        console.error('Error updating existing result:', updateError);
-        throw updateError;
+      // Delete all existing records for this paper
+      const { error: deleteError } = await supabase
+        .from('exam_results')
+        .delete()
+        .eq('clerk_user_id', userId)
+        .eq('paper_name', examData.paperName);
+      
+      if (deleteError) {
+        console.error('Error deleting existing results:', deleteError);
+        throw deleteError;
       }
       
-      console.log('Successfully updated result:', updatedData);
-      console.log(`Updated score from ${existingResult.score} to ${markingResult.score} for ${examData.paperName}`);
+      // Insert new record
+      const { data: newData, error: insertError } = await supabase
+        .from('exam_results')
+        .insert([
+          {
+            clerk_user_id: userId,
+            paper_name: examData.paperName,
+            score: markingResult.score,
+            total_questions: markingResult.totalQuestions,
+            time_taken: examData.timeTaken,
+            exam_type: examData.examType || 'TMUA',
+            wrong_answers: wrongAnswers
+          }
+        ])
+        .select();
+      
+      if (insertError) {
+        console.error('Error inserting new result:', insertError);
+        throw insertError;
+      }
+      
+      console.log('Successfully replaced result:', newData);
+      console.log(`Updated score from ${highestExistingScore} to ${markingResult.score} for ${examData.paperName}`);
       
       // Update user statistics with recalculation
       await updateUserStats(userId, markingResult.score, false, examData.paperName);
       
       return {
-        ...updatedData[0],
+        ...newData[0],
         markingResult,
         wasUpdated: true
       };
@@ -358,22 +351,32 @@ export const getUserExamResults = async (userId) => {
     if (error) throw error
     
     // Process results to keep only the highest score for each paper
-    const highestScores = {};
+    const highestScores = new Map();
     
     // Group by paper_name and keep only the highest score
     if (data && data.length > 0) {
       data.forEach(result => {
         const paperName = result.paper_name;
+        const currentScore = parseInt(result.score) || 0;
         
         // If we haven't seen this paper before, or if this score is higher than what we've seen
-        if (!highestScores[paperName] || result.score > highestScores[paperName].score) {
-          highestScores[paperName] = result;
+        if (!highestScores.has(paperName)) {
+          highestScores.set(paperName, result);
+        } else {
+          const existingResult = highestScores.get(paperName);
+          const existingScore = parseInt(existingResult.score) || 0;
+          
+          // If current score is higher, or if scores are equal but this result is newer
+          if (currentScore > existingScore || 
+              (currentScore === existingScore && new Date(result.created_at) > new Date(existingResult.created_at))) {
+            highestScores.set(paperName, result);
+          }
         }
       });
     }
     
-    // Convert the object back to an array and sort by date (newest first)
-    const filteredResults = Object.values(highestScores).sort((a, b) => {
+    // Convert the Map back to an array and sort by date (newest first)
+    const filteredResults = Array.from(highestScores.values()).sort((a, b) => {
       return new Date(b.created_at) - new Date(a.created_at);
     });
     

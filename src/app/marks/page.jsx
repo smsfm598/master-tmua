@@ -39,6 +39,19 @@ export default function MarksPage() {
         const results = await getUserExamResults(user.id);
         let processedResults = Array.isArray(results) ? results : [];
         
+        // Add debugging to see what we're getting
+        console.log('Raw exam results from database:', results);
+        results.forEach((result, index) => {
+          console.log(`Result ${index}:`, {
+            paper_name: result.paper_name,
+            score: result.score,
+            total_questions: result.total_questions,
+            wrong_answers: result.wrong_answers,
+            wrong_answers_type: typeof result.wrong_answers,
+            wrong_answers_length: result.wrong_answers ? result.wrong_answers.length : 'null/undefined'
+          });
+        });
+        
         // Filter out attempts with 0% scores
         processedResults = processedResults.filter(result => {
           const percentage = typeof result.percentage === 'number'
