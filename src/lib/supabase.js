@@ -208,6 +208,15 @@ export const saveExamResult = async (userId, examData) => {
     const markingResult = calculateScore(examData.userAnswers, examData.paperName);
     console.log('Marking result:', markingResult);
     
+    // Extract wrong answers for storage
+    const wrongAnswers = markingResult.details
+      .filter(detail => !detail.isCorrect)
+      .map(detail => ({
+        questionNumber: detail.questionNumber,
+        userAnswer: detail.userAnswer,
+        correctAnswer: detail.correctAnswer
+      }));
+    
     // Check if user has already taken this paper
     console.log('Checking for existing results...');
     const { data: existingResults, error: fetchError } = await supabase
@@ -247,7 +256,8 @@ export const saveExamResult = async (userId, examData) => {
           score: markingResult.score,
           total_questions: markingResult.totalQuestions,
           time_taken: examData.timeTaken,
-          exam_type: examData.examType || 'TMUA'
+          exam_type: examData.examType || 'TMUA',
+          wrong_answers: wrongAnswers
         })
         .eq('id', existingResult.id)
         .select();
@@ -282,6 +292,7 @@ export const saveExamResult = async (userId, examData) => {
           total_questions: markingResult.totalQuestions,
           time_taken: examData.timeTaken,
           exam_type: examData.examType || 'TMUA',
+          wrong_answers: wrongAnswers
         }
       ])
       .select();

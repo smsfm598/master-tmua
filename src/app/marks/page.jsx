@@ -9,6 +9,7 @@ export default function MarksPage() {
   const [examResults, setExamResults] = useState([]);
   const [loading, setLoading] = useState(true);
   const [collapsed, setCollapsed] = useState(false);
+  const [expandedResults, setExpandedResults] = useState(new Set());
   const { user, isLoaded } = useUser();
   const router = useRouter();
 
@@ -79,6 +80,54 @@ export default function MarksPage() {
     return null;
   }
 
+  const toggleResultExpansion = (index) => {
+    const newExpanded = new Set(expandedResults);
+    if (newExpanded.has(index)) {
+      newExpanded.delete(index);
+    } else {
+      newExpanded.add(index);
+    }
+    setExpandedResults(newExpanded);
+  };
+
+  const WrongAnswersDisplay = ({ wrongAnswers, isExpanded }) => {
+    if (!wrongAnswers || wrongAnswers.length === 0) {
+      return (
+        <div className="mt-2 text-green-400 text-xs">
+          🎉 Perfect score! No wrong answers.
+        </div>
+      );
+    }
+
+    if (!isExpanded) {
+      const wrongQuestionNumbers = wrongAnswers.map(wa => wa.questionNumber).join(', ');
+      return (
+        <div className="mt-2 text-red-400 text-xs">
+          Wrong questions: {wrongQuestionNumbers}
+        </div>
+      );
+    }
+
+    return (
+      <div className="mt-3 space-y-2">
+        <h4 className="text-red-400 text-sm font-semibold">Wrong Answers Details:</h4>
+        <div className="space-y-1 max-h-32 overflow-y-auto">
+          {wrongAnswers.map((wa, idx) => (
+            <div key={idx} className="bg-[#1a0030] p-2 rounded text-xs border border-red-500/30">
+              <div className="flex justify-between items-center">
+                <span className="text-white font-medium">Q{wa.questionNumber}:</span>
+                <div className="flex gap-2">
+                  <span className="text-red-400">Your: {wa.userAnswer || 'No answer'}</span>
+                  <span className="text-green-400">Correct: {wa.correctAnswer}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#1a002d] to-[#33004d] flex">
       <Sidebar collapsed={collapsed} setCollapsed={setCollapsed} currentPage="marks" />
@@ -90,7 +139,7 @@ export default function MarksPage() {
       } p-3 sm:p-4 md:p-6 lg:p-10`}>
         <div className="mb-4 sm:mb-6">
           <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 sm:mb-2">Your Exam Marks</h1>
-          <p className="text-gray-300 text-xs sm:text-sm md:text-base">View all your test results (excluding 0% scores)</p>
+          <p className="text-gray-300 text-xs sm:text-sm md:text-base">View all your test results and wrong answers (excluding 0% scores)</p>
         </div>
 
         <div className="bg-[#1a0030] rounded-xl border border-[#5c4d7d] shadow-lg p-3 sm:p-4 md:p-6">
@@ -119,7 +168,9 @@ export default function MarksPage() {
                     ? result.percentage
                     : (result.total_questions > 0 && !isNaN(result.score) && !isNaN(result.total_questions))
                       ? Math.round((result.score / result.total_questions) * 100)
-                      : 0; // Handle division by zero and NaN values
+                      : 0;
+                  
+                  const isExpanded = expandedResults.has(index);
 
                   return (
                     <div key={index} className="bg-[#2a0045] rounded-lg p-4 border border-[#5c4d7d]/50">
@@ -140,10 +191,22 @@ export default function MarksPage() {
                           {percentage}%
                         </span>
                       </div>
-                      <div className="flex justify-between items-center">
+                      <div className="flex justify-between items-center mb-2">
                         <span className="text-gray-300 text-sm">Score:</span>
                         <span className="text-white font-medium text-sm">{result.score}/{result.total_questions}</span>
                       </div>
+                      
+                      <WrongAnswersDisplay 
+                        wrongAnswers={result.wrong_answers} 
+                        isExpanded={isExpanded}
+                      />
+                      
+                      <button
+                        onClick={() => toggleResultExpansion(index)}
+                        className="mt-2 text-[#8e44ad] hover:text-[#9b59b6] text-xs underline transition-colors"
+                      >
+                        {isExpanded ? 'Hide Details' : 'Show Wrong Answer Details'}
+                      </button>
                     </div>
                   );
                 })}
@@ -158,6 +221,7 @@ export default function MarksPage() {
                       <th className="py-3 px-2 md:px-4 text-left text-sm md:text-base font-medium">Paper</th>
                       <th className="py-3 px-2 md:px-4 text-left text-sm md:text-base font-medium">Score</th>
                       <th className="py-3 px-2 md:px-4 text-left text-sm md:text-base font-medium">Percentage</th>
+                      <th className="py-3 px-2 md:px-4 text-left text-sm md:text-base font-medium">Wrong Answers</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -171,30 +235,55 @@ export default function MarksPage() {
                       const percentage = typeof result.percentage === 'number'
                         ? result.percentage
                         : Math.round((result.score / result.total_questions) * 100);
+                      
+                      const isExpanded = expandedResults.has(index);
 
                       return (
-                        <tr key={index} className="border-b border-[#5c4d7d] hover:bg-[#2a0045] transition-colors">
-                          <td className="py-3 px-2 md:px-4 text-xs md:text-sm">{formattedDate}</td>
-                          <td className="py-3 px-2 md:px-4 text-xs md:text-sm">
-                            <span className="truncate block max-w-[120px] sm:max-w-none">
-                              {result.paper_name || 'TMUA Practice'}
-                            </span>
-                          </td>
-                          <td className="py-3 px-2 md:px-4 text-xs md:text-sm font-mono">{result.score}/{result.total_questions}</td>
-                          <td className="py-3 px-2 md:px-4 text-xs md:text-sm">
-                            <span className={`px-2 py-1 rounded text-xs font-bold ${
-                              percentage >= 90 ? 'bg-green-600' :
-                              percentage >= 80 ? 'bg-green-500' :
-                              percentage >= 70 ? 'bg-yellow-500' :
-                              percentage >= 60 ? 'bg-yellow-400' :
-                              percentage >= 50 ? 'bg-orange-500' :
-                              percentage >= 40 ? 'bg-orange-400' :
-                              'bg-red-500'
-                            }`}>
-                              {percentage}%
-                            </span>
-                          </td>
-                        </tr>
+                        <React.Fragment key={index}>
+                          <tr className="border-b border-[#5c4d7d] hover:bg-[#2a0045] transition-colors">
+                            <td className="py-3 px-2 md:px-4 text-xs md:text-sm">{formattedDate}</td>
+                            <td className="py-3 px-2 md:px-4 text-xs md:text-sm">
+                              <span className="truncate block max-w-[120px] sm:max-w-none">
+                                {result.paper_name || 'TMUA Practice'}
+                              </span>
+                            </td>
+                            <td className="py-3 px-2 md:px-4 text-xs md:text-sm font-mono">{result.score}/{result.total_questions}</td>
+                            <td className="py-3 px-2 md:px-4 text-xs md:text-sm">
+                              <span className={`px-2 py-1 rounded text-xs font-bold ${
+                                percentage >= 90 ? 'bg-green-600' :
+                                percentage >= 80 ? 'bg-green-500' :
+                                percentage >= 70 ? 'bg-yellow-500' :
+                                percentage >= 60 ? 'bg-yellow-400' :
+                                percentage >= 50 ? 'bg-orange-500' :
+                                percentage >= 40 ? 'bg-orange-400' :
+                                'bg-red-500'
+                              }`}>
+                                {percentage}%
+                              </span>
+                            </td>
+                            <td className="py-3 px-2 md:px-4 text-xs md:text-sm">
+                              <button
+                                onClick={() => toggleResultExpansion(index)}
+                                className="text-[#8e44ad] hover:text-[#9b59b6] underline transition-colors"
+                              >
+                                {result.wrong_answers && result.wrong_answers.length > 0 
+                                  ? `${result.wrong_answers.length} wrong ${isExpanded ? '▼' : '▶'}` 
+                                  : 'Perfect! 🎉'
+                                }
+                              </button>
+                            </td>
+                          </tr>
+                          {isExpanded && (
+                            <tr>
+                              <td colSpan="5" className="py-2 px-2 md:px-4 bg-[#2a0045]">
+                                <WrongAnswersDisplay 
+                                  wrongAnswers={result.wrong_answers} 
+                                  isExpanded={true}
+                                />
+                              </td>
+                            </tr>
+                          )}
+                        </React.Fragment>
                       );
                     })}
                   </tbody>
