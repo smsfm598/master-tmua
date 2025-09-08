@@ -341,46 +341,18 @@ export const getUserExamHistory = async (userId) => {
 // Modified function to get exam results for marks page - only highest scores
 export const getUserExamResults = async (userId) => {
   try {
-    // First, get all results for this user
+    // Get all results for this user, excluding 0% scores
     const { data, error } = await supabase
       .from('exam_results')
       .select('*')
       .eq('clerk_user_id', userId)
+      .neq('percentage', 0)
       .order('created_at', { ascending: false })
     
     if (error) throw error
     
-    // Process results to keep only the highest score for each paper
-    const highestScores = new Map();
-    
-    // Group by paper_name and keep only the highest score
-    if (data && data.length > 0) {
-      data.forEach(result => {
-        const paperName = result.paper_name;
-        const currentScore = parseInt(result.score) || 0;
-        
-        // If we haven't seen this paper before, or if this score is higher than what we've seen
-        if (!highestScores.has(paperName)) {
-          highestScores.set(paperName, result);
-        } else {
-          const existingResult = highestScores.get(paperName);
-          const existingScore = parseInt(existingResult.score) || 0;
-          
-          // If current score is higher, or if scores are equal but this result is newer
-          if (currentScore > existingScore || 
-              (currentScore === existingScore && new Date(result.created_at) > new Date(existingResult.created_at))) {
-            highestScores.set(paperName, result);
-          }
-        }
-      });
-    }
-    
-    // Convert the Map back to an array and sort by date (newest first)
-    const filteredResults = Array.from(highestScores.values()).sort((a, b) => {
-      return new Date(b.created_at) - new Date(a.created_at);
-    });
-    
-    return filteredResults;
+    // Return all results (no filtering by highest score)
+    return data || [];
   } catch (error) {
     console.error('Error fetching exam results:', error)
     return []
