@@ -130,7 +130,7 @@ export default function MarksPage() {
               <div className="flex justify-between items-center">
                 <span className="text-white font-medium">Q{wa.questionNumber}:</span>
                 <div className="flex gap-2">
-                  <span className="text-red-400">Your: {wa.userAnswer || 'No answer'}</span>
+                  <span className="text-red-400">You: {wa.userAnswer || 'No answer'}</span>
                   <span className="text-green-400">Correct: {wa.correctAnswer}</span>
                 </div>
               </div>
@@ -152,7 +152,7 @@ export default function MarksPage() {
       } p-3 sm:p-4 md:p-6 lg:p-10`}>
         <div className="mb-4 sm:mb-6">
           <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 sm:mb-2">Your Exam Marks</h1>
-          <p className="text-gray-300 text-xs sm:text-sm md:text-base">View all your test results and wrong answers (excluding 0% scores)</p>
+          <p className="text-gray-300 text-xs sm:text-sm md:text-base">View all your test results and wrong answers </p>
         </div>
 
         <div className="bg-[#1a0030] rounded-xl border border-[#5c4d7d] shadow-lg p-3 sm:p-4 md:p-6">
