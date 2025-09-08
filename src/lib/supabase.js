@@ -341,17 +341,16 @@ export const getUserExamHistory = async (userId) => {
 // Modified function to get exam results for marks page - only highest scores
 export const getUserExamResults = async (userId) => {
   try {
-    // Get all results for this user, excluding 0% scores
+    // Get all results for this user
     const { data, error } = await supabase
       .from('exam_results')
       .select('*')
       .eq('clerk_user_id', userId)
-      .neq('percentage', 0)
       .order('created_at', { ascending: false })
     
     if (error) throw error
     
-    // Return all results (no filtering by highest score)
+    // Return all results (filtering will be done in the frontend)
     return data || [];
   } catch (error) {
     console.error('Error fetching exam results:', error)

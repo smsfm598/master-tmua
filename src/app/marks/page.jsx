@@ -52,14 +52,20 @@ export default function MarksPage() {
           });
         });
         
-        // Filter out attempts with 0% scores
+        // Filter out attempts with 0% scores - Fixed logic
         processedResults = processedResults.filter(result => {
-          const percentage = typeof result.percentage === 'number'
-            ? result.percentage
-            : (result.total_questions > 0 && !isNaN(result.score) && !isNaN(result.total_questions))
-              ? Math.round((result.score / result.total_questions) * 100)
-              : 0;
-          return percentage > 0;
+          // Ensure we have valid score and total_questions
+          const score = parseInt(result.score) || 0;
+          const totalQuestions = parseInt(result.total_questions) || 0;
+          
+          // Only filter out if both score and total_questions are valid and score is 0
+          if (totalQuestions > 0 && !isNaN(score)) {
+            const percentage = Math.round((score / totalQuestions) * 100);
+            return percentage > 0;
+          }
+          
+          // If we can't calculate percentage properly, include the result
+          return true;
         });
         
         // Sort by newest to oldest (created_at descending)
