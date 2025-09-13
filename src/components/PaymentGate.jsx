@@ -12,6 +12,9 @@ export default function PaymentGate({ children, paperName }) {
   const [loading, setLoading] = useState(true);
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
 
+  // Temporarily bypass all access checks and always render children
+  return children;
+
   useEffect(() => {
     const checkAccess = async () => {
       if (!isLoaded) return;
