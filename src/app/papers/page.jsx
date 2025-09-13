@@ -6,6 +6,34 @@ import Sidebar from '../../components/Sidebar';
 import UpgradeModal from '../../components/UpgradeModal';
 import { checkUserEntitlements, isPaperFree } from '../../lib/supabase';
 
+const PaperCard = ({ paper, userHasFullAccess }) => {
+  const router = useRouter();
+  const { user, isLoaded } = useUser();
+  const [isHovered, setIsHovered] = useState(false);
+  const [isFree, setIsFree] = useState(false);
+
+  useEffect(() => {
+    setIsFree(isPaperFree(paper.name));
+  }, [paper.name]);
+
+  const handlePaperClick = async () => {
+    if (!isLoaded) return;
+
+    if (!user) {
+      router.push('/login');
+      return;
+    }
+
+    if (isFree || userHasFullAccess) {
+      router.push(paper.link);
+    } else {
+      // Commenting out the line that opens the upgrade modal
+      // setUpgradeModal({ isOpen: true, paperName: paper.name });
+      router.push(paper.link); // Redirect directly to the paper
+    }
+  };
+};
+
 export default function PapersPage() {
   const router = useRouter();
   const { user, isLoaded } = useUser();
@@ -271,3 +299,8 @@ export default function PapersPage() {
     </div>
   );
 }
+
+const handleUpgradeClick = () => {
+  // Commenting out the line that opens the upgrade modal
+  // setUpgradeModal({ isOpen: true, paperName: 'All Premium Papers' });
+};
