@@ -1,10 +1,11 @@
 import { auth } from '@clerk/nextjs/server'
 import { NextResponse } from 'next/server'
-import { getUserExamHistory } from '../../../lib/supabase'
+import { getUserExamHistoryWithClient } from '../../../lib/supabase'
+import { supabaseAdmin } from '../../../lib/supabase-admin'
 
 export async function GET() {
   try {
-    const { userId } = auth()
+    const { userId } = await auth()
     
     if (!userId) {
       return NextResponse.json(
@@ -13,10 +14,11 @@ export async function GET() {
       )
     }
 
-    const examHistory = await getUserExamHistory(userId)
+    const examHistory = await getUserExamHistoryWithClient(supabaseAdmin, userId)
     
     return NextResponse.json({
       success: true,
+      results: examHistory,
       exams: examHistory.map(exam => ({
         id: exam.id,
         paperName: exam.paper_name,

@@ -2,6 +2,7 @@ import { createClient } from '@supabase/supabase-js'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+const isBrowser = typeof window !== 'undefined'
 
 // Check if environment variables are defined
 if (!supabaseUrl || !supabaseKey) {
@@ -159,7 +160,7 @@ export const updateUserStats = async (userId, examScore, isNewExam = true, paper
 }
 
 // Enhanced saveExamResult function with highest score retention
-export const saveExamResult = async (userId, examData) => {
+export const saveExamResultWithClient = async (dbClient, userId, examData) => {
   try {
     // Add environment variable check at the start
     console.log('Environment check:', {
@@ -194,7 +195,7 @@ export const saveExamResult = async (userId, examData) => {
     
     // Check if user has already taken this paper - get ALL results for this paper
     console.log('Checking for existing results...');
-    const { data: existingResults, error: fetchError } = await supabase
+    const { data: existingResults, error: fetchError } = await dbClient
       .from('exam_results')
       .select('*')
       .eq('clerk_user_id', userId)
@@ -228,7 +229,7 @@ export const saveExamResult = async (userId, examData) => {
       console.log('New score is higher, replacing all existing records...');
       
       // Delete all existing records for this paper
-      const { error: deleteError } = await supabase
+      const { error: deleteError } = await dbClient
         .from('exam_results')
         .delete()
         .eq('clerk_user_id', userId)
@@ -240,7 +241,7 @@ export const saveExamResult = async (userId, examData) => {
       }
       
       // Insert new record
-      const { data: newData, error: insertError } = await supabase
+      const { data: newData, error: insertError } = await dbClient
         .from('exam_results')
         .insert([
           {
@@ -275,7 +276,7 @@ export const saveExamResult = async (userId, examData) => {
 
     // If user hasn't taken this paper before, insert new record
     console.log('Inserting new exam result...');
-    const { data, error } = await supabase
+    const { data, error } = await dbClient
       .from('exam_results')
       .insert([
         {
@@ -322,9 +323,36 @@ export const saveExamResult = async (userId, examData) => {
   }
 };
 
-export const getUserExamHistory = async (userId) => {
+export const saveExamResult = async (userId, examData) => {
+  if (isBrowser) {
+    try {
+      const response = await fetch('/api/save-exam-result', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(examData)
+      })
+
+      const payload = await response.json().catch(() => ({}))
+
+      if (!response.ok) {
+        throw new Error(payload.error || 'Failed to save exam result')
+      }
+
+      return payload.result || null
+    } catch (error) {
+      console.error('Error saving exam result via API:', error)
+      return null
+    }
+  }
+
+  return saveExamResultWithClient(supabase, userId, examData)
+}
+
+export const getUserExamHistoryWithClient = async (dbClient, userId) => {
   try {
-    const { data, error } = await supabase
+    const { data, error } = await dbClient
       .from('exam_results')
       .select('*')
       .eq('clerk_user_id', userId)
@@ -338,24 +366,33 @@ export const getUserExamHistory = async (userId) => {
   }
 }
 
+export const getUserExamHistory = async (userId) => {
+  if (isBrowser) {
+    try {
+      const response = await fetch('/api/get-exam-history', {
+        method: 'GET',
+        cache: 'no-store'
+      })
+
+      const payload = await response.json().catch(() => ({}))
+
+      if (!response.ok) {
+        throw new Error(payload.error || 'Failed to fetch exam history')
+      }
+
+      return payload.results || []
+    } catch (error) {
+      console.error('Error fetching exam history via API:', error)
+      return []
+    }
+  }
+
+  return getUserExamHistoryWithClient(supabase, userId)
+}
+
 // Modified function to get exam results for marks page - only highest scores
 export const getUserExamResults = async (userId) => {
-  try {
-    // Get all results for this user
-    const { data, error } = await supabase
-      .from('exam_results')
-      .select('*')
-      .eq('clerk_user_id', userId)
-      .order('created_at', { ascending: false })
-    
-    if (error) throw error
-    
-    // Return all results (filtering will be done in the frontend)
-    return data || [];
-  } catch (error) {
-    console.error('Error fetching exam results:', error)
-    return []
-  }
+  return getUserExamHistory(userId)
 }
 
 // Check if user has paid access
