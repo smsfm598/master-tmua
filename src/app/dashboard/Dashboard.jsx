@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useUser, useClerk } from '@clerk/nextjs';
-import { supabase } from '../../lib/supabase';
+import { getUserExamResults } from '../../lib/supabase';
 import Sidebar from '../../components/Sidebar';
 
 // Header Component
@@ -82,17 +82,14 @@ function AverageScoreCard() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchScoresFromSupabase = async () => {
+    const fetchScores = async () => {
       if (!user) return;
       try {
-        // Replace with actual Supabase query
-        const { data, error } = await supabase
-          .from('exam_results')
-          .select('score, total_questions')
-          .eq('clerk_user_id', user.id);
-        if (error) throw error;
-        if (data && data.length > 0) {
-          const allScores = data.map(r => Math.round((r.score / r.total_questions) * 100));
+        // Use our shared helper function
+        const examHistory = await getUserExamResults(user.id);
+        
+        if (examHistory && examHistory.length > 0) {
+          const allScores = examHistory.map(r => Math.round((r.score / r.total_questions) * 100));
           // Filter out 0% scores for calculations
           const nonZeroScores = allScores.filter(score => score > 0);
           
@@ -116,7 +113,7 @@ function AverageScoreCard() {
       }
     };
 
-    fetchScoresFromSupabase();
+    fetchScores();
   }, [user]);
 
   if (loading) {
@@ -160,12 +157,10 @@ function ProgressCircle() {
     if (user) {
       const fetchProgress = async () => {
         try {
-          const { data, error } = await supabase
-            .from('exam_results')
-            .select('paper_name')
-            .eq('clerk_user_id', user.id); // Changed from user_id to clerk_user_id
-          if (error) throw error;
-          const uniquePapers = new Set(data.map(r => r.paper_name));
+          // Use our shared helper function
+          const examHistory = await getUserExamResults(user.id);
+          
+          const uniquePapers = new Set(examHistory.map(r => r.paper_name));
           const totalPapers = 18; // Update as needed
           const completedPapers = uniquePapers.size;
           const progressPercent = Math.min((completedPapers / totalPapers) * 100, 100);
