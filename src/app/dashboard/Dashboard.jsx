@@ -86,28 +86,38 @@ function AverageScoreCard() {
       if (!user) return;
       try {
         // Use our shared helper function
+        console.log('📊 [AverageScoreCard] Calling getUserExamResults with userId:', user.id);
         const examHistory = await getUserExamResults(user.id);
+        console.log('📊 [AverageScoreCard] Received examHistory:', examHistory);
         
         if (examHistory && examHistory.length > 0) {
-          const allScores = examHistory.map(r => Math.round((r.score / r.total_questions) * 100));
+          const allScores = examHistory.map(r => {
+            const percent = Math.round((r.score / r.total_questions) * 100);
+            console.log('📊 [AverageScoreCard] Processing result:', r, '→ percent:', percent);
+            return percent;
+          });
           // Filter out 0% scores for calculations
           const nonZeroScores = allScores.filter(score => score > 0);
+          console.log('📊 [AverageScoreCard] nonZeroScores:', nonZeroScores);
           
           if (nonZeroScores.length > 0) {
             const average = Math.round(nonZeroScores.reduce((a, b) => a + b, 0) / nonZeroScores.length);
             const highest = Math.max(...nonZeroScores);
             const lowest = Math.min(...nonZeroScores);
+            console.log('📊 [AverageScoreCard] Setting scoreData:', { average, highest, lowest });
             setScoreData({ average, highest, lowest });
           } else {
             // No tests taken or all scores are 0%
+            console.log('📊 [AverageScoreCard] No non-zero scores, setting 0s');
             setScoreData({ average: 0, highest: 0, lowest: 0 });
           }
         } else {
           // No exam data found
+          console.log('📊 [AverageScoreCard] No exam history found');
           setScoreData({ average: 0, highest: 0, lowest: 0 });
         }
       } catch (error) {
-        console.error('Error loading user scores:', error);
+        console.error('❌ [AverageScoreCard] Error loading user scores:', error);
       } finally {
         setLoading(false);
       }
@@ -158,15 +168,21 @@ function ProgressCircle() {
       const fetchProgress = async () => {
         try {
           // Use our shared helper function
+          console.log('🔵 [ProgressCircle] Calling getUserExamResults with userId:', user.id);
           const examHistory = await getUserExamResults(user.id);
+          console.log('🔵 [ProgressCircle] Received examHistory:', examHistory);
           
           const uniquePapers = new Set(examHistory.map(r => r.paper_name));
+          console.log('🔵 [ProgressCircle] uniquePapers:', Array.from(uniquePapers));
+          
           const totalPapers = 18; // Update as needed
           const completedPapers = uniquePapers.size;
           const progressPercent = Math.min((completedPapers / totalPapers) * 100, 100);
+          console.log('🔵 [ProgressCircle] Setting progress:', Math.round(progressPercent));
+          
           setProgress(Math.round(progressPercent));
         } catch (error) {
-          console.error('Error loading progress:', error);
+          console.error('❌ [ProgressCircle] Error loading progress:', error);
         }
       };
       fetchProgress();

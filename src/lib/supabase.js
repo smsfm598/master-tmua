@@ -389,26 +389,33 @@ export const getUserExamHistoryWithClient = async (dbClient, userId) => {
 }
 
 export const getUserExamHistory = async (userId) => {
+  console.log('🔍 getUserExamHistory called with userId:', userId, 'isBrowser:', isBrowser);
+  
   if (isBrowser) {
     try {
+      console.log('🌐 Fetching /api/get-exam-history...');
       const response = await fetch('/api/get-exam-history', {
         method: 'GET',
         cache: 'no-store'
       })
 
+      console.log('📡 /api/get-exam-history response status:', response.status);
       const payload = await response.json().catch(() => ({}))
+      console.log('📝 /api/get-exam-history payload:', payload);
 
       if (!response.ok) {
         throw new Error(payload.error || 'Failed to fetch exam history')
       }
 
+      console.log('✅ Returning results:', payload.results || []);
       return payload.results || []
     } catch (error) {
-      console.error('Error fetching exam history via API:', error)
+      console.error('❌ Error fetching exam history via API:', error)
       return []
     }
   }
 
+  console.log('📦 Not browser, using getUserExamHistoryWithClient');
   return getUserExamHistoryWithClient(supabase, userId)
 }
 
