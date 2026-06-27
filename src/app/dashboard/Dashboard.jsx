@@ -68,6 +68,41 @@ function DaysLeftCounter() {
   );
 }
 
+// Debug Component to show raw data
+function RawDataDebugger() {
+  const { user } = useUser();
+  const [rawData, setRawData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchRawData = async () => {
+      if (!user) return;
+      try {
+        console.log('🔍 [RawDataDebugger] Fetching data');
+        const data = await getUserExamResults(user.id);
+        console.log('🔍 [RawDataDebugger] Raw data:', data);
+        setRawData(data);
+      } catch (err) {
+        console.error('🔍 [RawDataDebugger] Error:', err);
+        setRawData({ error: err.message });
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchRawData();
+  }, [user]);
+
+  return (
+    <div className="bg-[#1a0030] p-6 rounded-xl border border-[#5c4d7d] shadow-lg">
+      <h3 className="text-lg font-semibold text-white mb-2">🔍 Raw Exam Data Debug</h3>
+      <pre className="text-xs text-green-400 overflow-x-auto">
+        {loading ? 'Loading...' : JSON.stringify(rawData, null, 2)}
+      </pre>
+    </div>
+  );
+}
+
 // Average Score Card Component (Updated for responsiveness)
 function AverageScoreCard() {
   const { user } = useUser();
@@ -764,6 +799,7 @@ export default function Dashboard({ onReady }) {
           <div className="sm:col-span-1"><DaysLeftCounter /></div>
           <div className="sm:col-span-1 xl:col-span-1"><AverageScoreCard /></div>
           <div className="sm:col-span-1 xl:col-span-1"><ProgressCircle /></div>
+          <div className="sm:col-span-2 xl:col-span-2"><RawDataDebugger /></div>
           <div className="sm:col-span-2 xl:col-span-2"><CalendarWidget /></div>
           <div className="sm:col-span-2 xl:col-span-2"><GradeBoundariesGraph /></div>
         </div>
