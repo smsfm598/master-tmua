@@ -324,8 +324,15 @@ export const saveExamResultWithClient = async (dbClient, userId, examData) => {
 };
 
 export const saveExamResult = async (userId, examData) => {
+  console.log('🔍 [CLIENT] saveExamResult called with:', {
+    userId,
+    examData,
+    isBrowser
+  })
+
   if (isBrowser) {
     try {
+      console.log('🌐 [CLIENT] Making POST request to /api/save-exam-result')
       const response = await fetch('/api/save-exam-result', {
         method: 'POST',
         headers: {
@@ -334,19 +341,34 @@ export const saveExamResult = async (userId, examData) => {
         body: JSON.stringify(examData)
       })
 
-      const payload = await response.json().catch(() => ({}))
+      console.log('📡 [CLIENT] Got response:', {
+        status: response.status,
+        statusText: response.statusText
+      })
+
+      const payload = await response.json().catch((jsonErr) => {
+        console.error('❌ [CLIENT] Failed to parse JSON:', jsonErr)
+        return {}
+      })
+
+      console.log('📝 [CLIENT] Response JSON payload:', payload)
 
       if (!response.ok) {
-        throw new Error(payload.error || 'Failed to save exam result')
+        const errorMsg = payload.error || `HTTP error ${response.status}: ${response.statusText}`
+        console.error('❌ [CLIENT] Response not ok:', errorMsg)
+        throw new Error(errorMsg)
       }
 
+      console.log('✅ [CLIENT] Success, returning payload.result:', payload.result)
       return payload.result || null
     } catch (error) {
-      console.error('Error saving exam result via API:', error)
+      console.error('❌ [CLIENT] Full error saving exam result via API:', error)
+      console.error('❌ [CLIENT] Error stack:', error.stack)
       return null
     }
   }
 
+  console.log('📦 [CLIENT] Not in browser, using saveExamResultWithClient directly')
   return saveExamResultWithClient(supabase, userId, examData)
 }
 
