@@ -16,6 +16,9 @@ export default function UpgradeModal({ isOpen, onClose, paperName }) {
 
     setIsLoading(true);
     try {
+      console.log('🚀 Starting checkout process from UpgradeModal...');
+      console.log('📋 Price ID:', process.env.NEXT_PUBLIC_STRIPE_PRICE_ID);
+      
       const response = await fetch('/api/create-checkout-session', {
         method: 'POST',
         headers: {
@@ -26,7 +29,14 @@ export default function UpgradeModal({ isOpen, onClose, paperName }) {
         }),
       });
 
-      const { sessionId } = await response.json();
+      const data = await response.json();
+      console.log('📡 API Response:', data);
+      
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to create checkout session');
+      }
+
+      const { sessionId } = data;
       
       // Redirect to Stripe Checkout
       const stripe = await import('@stripe/stripe-js').then(m => 
@@ -35,8 +45,8 @@ export default function UpgradeModal({ isOpen, onClose, paperName }) {
       
       await stripe.redirectToCheckout({ sessionId });
     } catch (error) {
-      console.error('Error:', error);
-      alert('Something went wrong. Please try again.');
+      console.error('❌ Purchase error:', error);
+      alert(`Something went wrong: ${error.message || 'Please try again.'}`);
     } finally {
       setIsLoading(false);
     }

@@ -750,6 +750,7 @@ export default function Dashboard({ onReady }) {
     return null;
   }
   
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#1a002d] to-[#33004d] flex">
       <Sidebar collapsed={sidebarCollapsed} setCollapsed={setSidebarCollapsed} currentPage="dashboard" />
