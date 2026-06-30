@@ -87,12 +87,21 @@ export default function Login() {
 
     try {
       setLoading(true);
-      const result = await signIn.create({
+      
+      // First, identify the user
+      const signInAttempt = await signIn.create({
         identifier: email,
-        password,
       });
 
-      console.log('SignIn.create result:', result);
+      console.log('SignIn.create (identifier) result:', signInAttempt);
+
+      // Now, attempt password verification
+      const result = await signInAttempt.attemptFirstFactor({
+        strategy: 'password',
+        password: password,
+      });
+
+      console.log('SignIn.attemptFirstFactor result:', result);
 
       if (result.status === 'complete') {
         await setActive({ session: result.createdSessionId });
@@ -106,9 +115,9 @@ export default function Login() {
         }
         
         router.push('/dashboard');
-      } else if (result.status === 'needs_first_factor') {
-        // Handle first factor (e.g., email code, but password should already be first factor)
-        setError('Please complete additional verification steps.');
+      } else if (result.status === 'needs_second_factor') {
+        // Handle 2FA if needed
+        setError('Please complete two-factor authentication.');
       } else {
         console.log('Sign-in result:', result);
         setError('Login incomplete. Please check your credentials or verify your account.');

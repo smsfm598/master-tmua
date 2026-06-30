@@ -85,13 +85,17 @@ export default function SignUp() {
 
     try {
       setLoading(true);
+      console.log('Starting sign up with email:', email);
       const result = await signUp.create({
         emailAddress: email,
         password,
       });
 
+      console.log('SignUp.create result:', result);
+
       if (result.status === 'missing_requirements') {
         // Email verification required
+        console.log('Preparing email verification');
         await signUp.prepareEmailAddressVerification({ strategy: 'email_code' });
         setVerificationStep(true);
       } else if (result.status === 'complete') {
@@ -116,7 +120,7 @@ export default function SignUp() {
           setError(errorMessage);
         }
       } else {
-        setError('Failed to create account. Please try again.');
+        setError(err.message || 'Failed to create account. Please try again.');
       }
     } finally {
       setLoading(false);
@@ -149,7 +153,7 @@ export default function SignUp() {
         await createUserProfile(result.createdUserId, email);
         
         router.push('/dashboard');
-      } else if (result.status === 'needs_first_factor') {
+      } else if (result.status === 'needs_first_factor' || result.status === 'needs_second_factor') {
         setError('Please complete additional verification steps.');
       } else {
         console.log('Verification result:', result);
