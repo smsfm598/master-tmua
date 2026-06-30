@@ -6,7 +6,7 @@ import { getUserExamResults } from '../../lib/supabase';
 import Sidebar from '../../components/Sidebar';
 
 // Header Component
-function Header({ onTestAuth }) {
+function Header() {
   const { user } = useUser();
   
   return (
@@ -18,12 +18,6 @@ function Header({ onTestAuth }) {
       </div>
       
       <div className="flex items-center space-x-4">
-        <button 
-          onClick={onTestAuth}
-          className="px-4 py-2 rounded-full border border-blue-500 text-blue-400 hover:bg-blue-500/20 transition-all duration-300"
-        >
-          Test Auth
-        </button>
         <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold">
           {user?.firstName?.[0] || user?.emailAddresses?.[0]?.emailAddress?.[0]?.toUpperCase() || 'U'}
         </div>
@@ -725,20 +719,6 @@ export default function Dashboard({ onReady }) {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const { user, isLoaded } = useUser();
   const router = useRouter();
-
-  const testAuth = async () => {
-    console.log('🧪 Testing auth from Dashboard...');
-    console.log('🧪 useUser() result:', user);
-    try {
-      const res = await fetch('/api/test-auth');
-      const data = await res.json();
-      console.log('🧪 Auth test response:', data);
-      alert(`Auth test:\nuseUser User ID: ${user?.id}\nAPI User ID: ${data.userId}\nHas user: ${data.hasUser}`);
-    } catch (e) {
-      console.error('🧪 Auth test error:', e);
-      alert(`Auth test error: ${e.message}`);
-    }
-  };
   
   // Auto-collapse sidebar on mobile
   useEffect(() => {
@@ -752,7 +732,7 @@ export default function Dashboard({ onReady }) {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-  
+
   // Redirect if not logged in
   useEffect(() => {
     if (isLoaded && !user) {
@@ -779,7 +759,7 @@ export default function Dashboard({ onReady }) {
           ? 'ml-12 sm:ml-14 md:ml-16' 
           : 'ml-48 sm:ml-56 md:ml-56 lg:ml-64 xl:ml-72'
       } p-4 sm:p-6 md:p-6 lg:p-8 xl:p-10`}>
-        <Header onTestAuth={testAuth} />
+        <Header />
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mt-1">
           <div className="sm:col-span-1"><ReadyToTestCard onReady={onReady} /></div>
           <div className="sm:col-span-1"><DaysLeftCounter /></div>
