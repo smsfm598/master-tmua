@@ -127,6 +127,8 @@ export default function SignUp() {
     e.preventDefault();
     setError('');
 
+    console.log('handleVerification called with code:', verificationCode);
+
     if (!verificationCode) {
       setError('Please enter the verification code.');
       return;
@@ -138,6 +140,8 @@ export default function SignUp() {
         code: verificationCode,
       });
 
+      console.log('Verification result:', result);
+
       if (result.status === 'complete') {
         await setActive({ session: result.createdSessionId });
         
@@ -145,14 +149,21 @@ export default function SignUp() {
         await createUserProfile(result.createdUserId, email);
         
         router.push('/dashboard');
+      } else if (result.status === 'needs_first_factor') {
+        setError('Please complete additional verification steps.');
       } else {
-        console.log('Verification result:', result); // Add this for debugging
+        console.log('Verification result:', result);
         setError('Verification failed. Please check the code and try again.');
       }
     } catch (err) {
       console.error('Verification error:', err);
-      console.error('Error details:', err.errors); // Add this for more details
-      setError('Invalid verification code. Please try again.');
+      console.error('Verification error details:', err.errors, err.message);
+      
+      if (err.errors && err.errors.length > 0) {
+        setError(err.errors[0].message);
+      } else {
+        setError(err.message || 'Invalid verification code. Please try again.');
+      }
     } finally {
       setLoading(false);
     }

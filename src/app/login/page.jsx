@@ -73,6 +73,8 @@ export default function Login() {
     e.preventDefault();
     setError('');
 
+    console.log('handleSubmit called with email:', email);
+
     if (!isLoaded) {
       setError('Authentication service not ready. Please try again.');
       return;
@@ -90,6 +92,8 @@ export default function Login() {
         password,
       });
 
+      console.log('SignIn.create result:', result);
+
       if (result.status === 'complete') {
         await setActive({ session: result.createdSessionId });
         
@@ -102,24 +106,22 @@ export default function Login() {
         }
         
         router.push('/dashboard');
+      } else if (result.status === 'needs_first_factor') {
+        // Handle first factor (e.g., email code, but password should already be first factor)
+        setError('Please complete additional verification steps.');
       } else {
         console.log('Sign-in result:', result);
         setError('Login incomplete. Please check your credentials or verify your account.');
       }
     } catch (err) {
       console.error('Login error:', err);
+      console.error('Login error details:', err.errors, err.message);
       
       if (err.errors && err.errors.length > 0) {
         const errorMessage = err.errors[0].message;
-        if (errorMessage.includes('Invalid')) {
-          setError('Invalid email or password. Please check your credentials.');
-        } else if (errorMessage.includes('not found')) {
-          setError('No account found with this email. Please sign up first.');
-        } else {
-          setError(errorMessage);
-        }
+        setError(errorMessage);
       } else {
-        setError('Failed to log in. Please check your email and password.');
+        setError(err.message || 'Failed to log in. Please check your email and password.');
       }
     } finally {
       setLoading(false);
