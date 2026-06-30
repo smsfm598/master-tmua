@@ -12,6 +12,19 @@ export default function LandingPage() {
   const { user } = useUser();
   const [isLoading, setIsLoading] = useState(false);
 
+  const testAuth = async () => {
+    console.log('🧪 Testing auth...');
+    try {
+      const res = await fetch('/api/test-auth');
+      const data = await res.json();
+      console.log('🧪 Auth test response:', data);
+      alert(`Auth test:\nUser ID: ${data.userId}\nHas user: ${data.hasUser}`);
+    } catch (e) {
+      console.error('🧪 Auth test error:', e);
+      alert(`Auth test error: ${e.message}`);
+    }
+  };
+
   const scrollToSection = (ref) => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -67,6 +80,11 @@ export default function LandingPage() {
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="text-xl font-bold">Master TMUA</div>
         <div className="flex gap-4">
+          <button 
+            onClick={testAuth} 
+            className="px-4 py-2 rounded-full border border-blue-500 text-blue-400 hover:bg-blue-500/20 transition-all duration-300">
+              Test Auth
+          </button>
           <Link href="/login">
             <button className="px-4 py-2 rounded-full border border-[#5c4d7d] hover:bg-[#5c4d7d]/20 transition-all duration-300">
               Log In
