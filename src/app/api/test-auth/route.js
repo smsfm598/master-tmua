@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 export async function GET(request) {
   console.log('🧪 [TEST] Test auth route called!');
   
-  const authResult = auth();
+  const authResult = await auth(); // <-- ADD AWAIT HERE!
   console.log('🧪 [TEST] Full auth result:', authResult);
   console.log('🧪 [TEST] User ID:', authResult.userId);
   console.log('🧪 [TEST] Headers:', Object.fromEntries(request.headers.entries()));
