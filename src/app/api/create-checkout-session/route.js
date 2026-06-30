@@ -12,11 +12,15 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 export async function POST(request) {
   console.log('🚀 [API] create-checkout-session called');
   try {
-    const { userId } = auth();
-    console.log('🔐 [API] User ID:', userId);
+    const authResult = auth();
+    console.log('🔐 [API] Full auth() result:', authResult);
+    
+    const { userId } = authResult;
+    console.log('🔐 [API] Extracted userId:', userId);
     
     if (!userId) {
       console.warn('⚠️ [API] No user ID, returning 401');
+      console.warn('⚠️ [API] Headers from request:', Object.fromEntries(request.headers.entries()));
       return NextResponse.json(
         { error: 'Unauthorized' },
         { status: 401 }

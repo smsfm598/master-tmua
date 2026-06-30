@@ -218,7 +218,6 @@ export default function LandingPage() {
                 <FaCheck className="text-green-400 mr-3" /> Review your progress over time
               </li>
             </ul>
-            <Link href="/sign-up">
               <button 
                 onClick={handlePurchase}
                 disabled={isLoading}
@@ -233,7 +232,6 @@ export default function LandingPage() {
                   'Join Today'
                 )}
               </button>
-            </Link>
           </div>
         </div>
       </section>
