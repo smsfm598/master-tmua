@@ -26,6 +26,10 @@ export default function SignUpPage() {
               footerText: 'text-gray-400',
               footerActionLink: 'text-purple-400 hover:text-purple-300',
               useAnotherMethodLink: 'text-purple-400 hover:text-purple-300',
+              formFieldAction: 'text-gray-50 hover:text-gray-100',
+              formFieldErrorText: 'text-red-300',
+              formFieldSuccessText: 'text-green-300',
+              identityPreviewText: 'text-gray-50',
             }
           }}
         />
