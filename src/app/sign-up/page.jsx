@@ -22,7 +22,7 @@ export default function SignUpPage() {
               headerSubtitle: 'text-gray-300',
               socialButtonsBlockButton: 'bg-[#2a0040] border border-[#5c4d7d] text-white hover:bg-[#3a0050]',
               formFieldLabel: 'text-gray-300',
-              formFieldInput: 'bg-[#2a0040] border border-[#5c4d7d] text-white',
+              formFieldInput: 'bg-gray-100 border border-[#5c4d7d] text-gray-900',
               footerText: 'text-gray-400',
               footerActionLink: 'text-purple-400 hover:text-purple-300',
               useAnotherMethodLink: 'text-purple-400 hover:text-purple-300',
