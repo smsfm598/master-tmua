@@ -19,17 +19,17 @@ export default function SignUpPage() {
               formButtonPrimary: 'bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white border-none',
               card: 'bg-[#1a0030] border border-[#5c4d7d] shadow-lg rounded-2xl',
               headerTitle: 'text-white',
-              headerSubtitle: 'text-gray-300',
+              headerSubtitle: 'text-gray-100',
               socialButtonsBlockButton: 'bg-[#2a0040] border border-[#5c4d7d] text-white hover:bg-[#3a0050]',
-              formFieldLabel: 'text-gray-300',
+              formFieldLabel: 'text-gray-100',
               formFieldInput: 'bg-gray-100 border border-[#5c4d7d] text-gray-900',
-              footerText: 'text-gray-400',
+              footerText: 'text-gray-100',
               footerActionLink: 'text-purple-400 hover:text-purple-300',
               useAnotherMethodLink: 'text-purple-400 hover:text-purple-300',
-              formFieldAction: 'text-gray-50 hover:text-gray-100',
+              formFieldAction: 'text-gray-100 hover:text-gray-100',
               formFieldErrorText: 'text-red-300',
               formFieldSuccessText: 'text-green-300',
-              identityPreviewText: 'text-gray-50',
+              identityPreviewText: 'text-gray-100',
             }
           }}
         />
