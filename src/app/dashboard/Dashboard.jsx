@@ -52,7 +52,7 @@ function ReadyToTestCard({ onReady }) {
 
 // Days Left Counter Component (Updated for responsiveness)
 function DaysLeftCounter() {
-  const examDate = new Date('2025-10-13');
+  const examDate = new Date('2026-10-13');
   const today = new Date();
   const timeDiff = examDate.getTime() - today.getTime();
   const daysLeft = Math.ceil(timeDiff / (1000 * 3600 * 24));
