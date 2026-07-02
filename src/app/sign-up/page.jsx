@@ -29,7 +29,7 @@ export default function SignUpPage() {
               formFieldAction: 'text-gray-100 hover:text-gray-100',
               formFieldErrorText: 'text-red-300',
               formFieldSuccessText: 'text-green-300',
-              identityPreviewText: 'text-gray-100',
+              identityPreviewText: 'text-gray-50',
             }
           }}
         />

@@ -24,7 +24,7 @@ export default function LoginPage() {
               headerSubtitle: 'text-gray-100',
               socialButtonsBlockButton: 'bg-[#2a0040] border border-[#5c4d7d] text-white hover:bg-[#3a0050]',
               formFieldLabel: 'text-gray-100',
-              formFieldInput: 'bg-gray-50 border border-[#5c4d7d] text-gray-100',
+              formFieldInput: 'border border-[#2a0040] text-gray-100',
               footerText: 'text-gray-100',
               footerActionLink: 'text-purple-400 hover:text-purple-300',
               useAnotherMethodLink: 'text-purple-400 hover:text-purple-300',
