@@ -172,8 +172,10 @@ function ProgressCircle() {
           const examHistory = await getUserExamResults(user.id);
           console.log('🔵 [ProgressCircle] Received examHistory:', examHistory);
           
-          const uniquePapers = new Set(examHistory.map(r => r.paper_name));
-          console.log('🔵 [ProgressCircle] uniquePapers:', Array.from(uniquePapers));
+          // Only include papers with score > 0
+          const eligiblePapers = examHistory.filter(r => r.score > 0);
+          const uniquePapers = new Set(eligiblePapers.map(r => r.paper_name));
+          console.log('🔵 [ProgressCircle] uniquePapers with score > 0:', Array.from(uniquePapers));
           
           const totalPapers = 18; // Update as needed
           const completedPapers = uniquePapers.size;
