@@ -222,7 +222,7 @@ export default function PapersPage() {
                       'text-gray-500'
                     }`}>
                       {status === 'free' ? 'FREE' :
-                       status === 'accessible' ? 'PREMIUM' :
+                       status === 'accessible' ? 'EXAM SIMULATION' :
                        'LOCKED'}
                     </span>
                     <div className={`px-2 sm:px-3 py-1 rounded-full text-xs font-medium transition-colors duration-300 ${

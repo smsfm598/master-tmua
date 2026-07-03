@@ -246,7 +246,7 @@ function CalendarWidget() {
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
   
   const today = new Date();
-  const examDate = new Date('2025-10-13');
+  const examDate = new Date('2026-10-13');
   
   const monthNames = [
     'January', 'February', 'March', 'April', 'May', 'June',

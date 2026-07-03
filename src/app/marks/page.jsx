@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useUser } from '@clerk/nextjs';
 import { useRouter } from 'next/navigation';
-import { getUserExamResults } from '../../lib/supabase';
+import { getAllExamResults } from '../../lib/supabase';
 import Sidebar from '../../components/Sidebar';
 
 export default function MarksPage() {
@@ -36,7 +36,7 @@ export default function MarksPage() {
 
     const loadExamResults = async () => {
       try {
-        const results = await getUserExamResults(user.id);
+        const results = await getAllExamResults(user.id);
         let processedResults = Array.isArray(results) ? results : [];
         
         // Add debugging to see what we're getting
