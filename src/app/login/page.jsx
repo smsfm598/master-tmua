@@ -7,9 +7,7 @@ export default function LoginPage() {
     <div className="min-h-screen bg-gradient-to-br from-[#150025] to-[#280040] flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <SignIn 
-          path="/login" 
-          signUpUrl="/sign-up" 
-          redirectUrl="/dashboard"
+          signUpUrl="/sign-up"
           localization={{
             socialButtonsBlockButton: 'Continue with {{provider|capitalize}}',
             useAnotherMethod: 'Try a different sign in method',
