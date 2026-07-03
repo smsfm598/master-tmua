@@ -100,28 +100,15 @@ export default function PapersPage() {
   };
   
   const handlePaperClick = (paperName) => {
-    // Check if paper is free or user has access
-    const isFree = isPaperFree(paperName);
-    const hasFullAccess = userEntitlements?.hasFullAccess || false;
-    
-    if (isFree || hasFullAccess) {
-      // Allow access
-      console.log(`Starting: ${paperName}`);
-      const route = getPaperRoute(paperName);
-      router.push(route);
-    } else {
-      // Show upgrade modal
-      setUpgradeModal({ isOpen: true, paperName });
-    }
+    // All papers are accessible for now
+    console.log(`Starting: ${paperName}`);
+    const route = getPaperRoute(paperName);
+    router.push(route);
   };
 
   const getPaperStatus = (paperName) => {
-    const isFree = isPaperFree(paperName);
-    const hasFullAccess = userEntitlements?.hasFullAccess || false;
-    
-    if (isFree) return 'free';
-    if (hasFullAccess) return 'accessible';
-    return 'locked';
+    // All papers are accessible for now
+    return 'accessible';
   };
   
   return (
@@ -139,10 +126,7 @@ export default function PapersPage() {
             <div>
               <h1 className="text-xl sm:text-2xl font-bold text-white">TMUA Papers</h1>
               <p className="text-gray-300 text-sm sm:text-base">
-                {userEntitlements?.hasFullAccess 
-                  ? 'Choose any paper to practice' 
-                  : 'Practice Papers 1 & 2 are free • Upgrade for full access'
-                }
+                Choose any paper to practice
               </p>
             </div>
             {!userEntitlements?.hasFullAccess && (

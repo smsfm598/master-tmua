@@ -5,7 +5,7 @@ import { useUser } from '@clerk/nextjs';
 import { getPaperAccess } from '../lib/supabase';
 import UpgradeModal from './UpgradeModal';
 
-export default function PaymentGate({ children, paperName, requirePayment = false }) {
+export default function PaymentGate({ children, paperName }) {
   const router = useRouter();
   const { user, isLoaded } = useUser();
   const [accessStatus, setAccessStatus] = useState(null);
@@ -18,13 +18,6 @@ export default function PaymentGate({ children, paperName, requirePayment = fals
       
       if (!user) {
         router.push('/login');
-        return;
-      }
-
-      // If payment isn't required, grant access immediately
-      if (!requirePayment) {
-        setAccessStatus({ hasAccess: true });
-        setLoading(false);
         return;
       }
 
@@ -45,7 +38,7 @@ export default function PaymentGate({ children, paperName, requirePayment = fals
     };
 
     checkAccess();
-  }, [user, isLoaded, paperName, router, requirePayment]);
+  }, [user, isLoaded, paperName, router]);
 
   const handleUpgradeModalClose = () => {
     setShowUpgradeModal(false);
@@ -61,8 +54,8 @@ export default function PaymentGate({ children, paperName, requirePayment = fals
     );
   }
 
-  // Show upgrade modal if access is denied (only when requirePayment is true)
-  if (requirePayment && !accessStatus?.hasAccess) {
+  // Show upgrade modal if access is denied
+  if (!accessStatus?.hasAccess) {
     return (
       <>
         <div className="min-h-screen bg-gradient-to-br from-[#150025] to-[#280040] flex items-center justify-center">
@@ -77,6 +70,6 @@ export default function PaymentGate({ children, paperName, requirePayment = fals
     );
   }
 
-  // Render the protected content if user has access or payment isn't required
+  // Render the protected content if user has access
   return children;
 }
