@@ -62,7 +62,7 @@ function DaysLeftCounter() {
       <div className="text-center">
         <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-purple-400 mb-2">{daysLeft}</div>
         <h3 className="text-lg sm:text-xl font-semibold text-white mb-1">Days Left</h3>
-        <p className="text-gray-400 text-xs sm:text-sm">Until TMUA 2025</p>
+        <p className="text-gray-400 text-xs sm:text-sm">Until TMUA 2026</p>
       </div>
     </div>
   );
@@ -355,7 +355,7 @@ function CalendarWidget() {
         </div>
         <div className="flex items-center">
           <div className="w-3 h-3 bg-red-600 rounded-full mr-2"></div>
-          <span>Exam Day (Oct 13, 2025)</span>
+          <span>Exam Day (Oct 13, 2026)</span>
         </div>
       </div>
     </div>
