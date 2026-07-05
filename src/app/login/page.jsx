@@ -8,7 +8,6 @@ export default function LoginPage() {
       <div className="w-full max-w-md">
         <SignIn 
           signUpUrl="/sign-up"
-          initialStrategy="password"
           localization={{
             useAnotherMethod: 'Try a different sign in method',
             signInEnterPasswordTitle: 'Enter your password',
