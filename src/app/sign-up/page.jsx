@@ -27,7 +27,6 @@ export default function SignUpPage() {
               card: 'bg-[#1a0030] border border-[#5c4d7d] shadow-xl rounded-2xl',
               headerTitle: 'text-white text-2xl font-bold',
               headerSubtitle: 'text-gray-100',
-              socialButtonsBlockButton: 'hidden',
               formFieldLabel: 'text-gray-100 font-medium',
               formFieldInput: 'bg-purple-900/50 border-2 border-purple-500/60 text-white placeholder:text-gray-300 focus:border-purple-400 focus:ring-2 focus:ring-purple-400/70 focus:outline-none rounded-lg',
               formFieldHintText: 'text-gray-100 text-sm',
