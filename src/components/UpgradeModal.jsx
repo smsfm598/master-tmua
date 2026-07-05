@@ -60,7 +60,9 @@ export default function UpgradeModal({ isOpen, onClose, paperName }) {
         {/* Header */}
         <div className="p-6 border-b border-[#5c4d7d]">
           <div className="flex justify-between items-center">
-            <h2 className="text-2xl font-bold text-white">Upgrade Required</h2>
+            <h2 className="text-2xl font-bold text-white">
+              {paperName ? 'Upgrade Required' : 'Go Premium'}
+            </h2>
             <button
               onClick={onClose}
               className="text-gray-400 hover:text-white transition-colors"
@@ -68,9 +70,11 @@ export default function UpgradeModal({ isOpen, onClose, paperName }) {
               <FaTimes size={20} />
             </button>
           </div>
-          <p className="text-gray-300 mt-2">
-            {paperName} requires a premium subscription to access.
-          </p>
+          {paperName && (
+            <p className="text-gray-300 mt-2">
+              {paperName} requires a premium subscription to access.
+            </p>
+          )}
         </div>
 
         {/* Pricing Card - Reusing from Landing Page */}

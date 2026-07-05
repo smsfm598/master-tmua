@@ -4,9 +4,11 @@ import { useRouter } from 'next/navigation';
 import { useUser, useClerk } from '@clerk/nextjs';
 import { getUserExamResults } from '../../lib/supabase';
 import Sidebar from '../../components/Sidebar';
+import UpgradeModal from '../../components/UpgradeModal';
+import { checkUserEntitlements } from '../../lib/supabase';
 
 // Header Component
-function Header() {
+function Header({ onPremiumClick, showPremiumButton }) {
   const { user } = useUser();
   
   return (
@@ -17,7 +19,15 @@ function Header() {
         </h1>
       </div>
       
-      <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-3 sm:space-x-4">
+        {showPremiumButton && (
+          <button
+            onClick={onPremiumClick}
+            className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg font-semibold text-sm sm:text-base bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-500 text-[#1a0030] shadow-[0_0_15px_rgba(251,191,36,0.4)] hover:from-yellow-300 hover:via-amber-200 hover:to-yellow-400 hover:shadow-[0_0_20px_rgba(251,191,36,0.6)] transition-all duration-300"
+          >
+            Premium
+          </button>
+        )}
         <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold">
           {user?.firstName?.[0] || user?.emailAddresses?.[0]?.emailAddress?.[0]?.toUpperCase() || 'U'}
         </div>
@@ -719,6 +729,8 @@ function GradeBoundariesGraph() {
 // Main Dashboard Layout
 export default function Dashboard({ onReady }) {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [upgradeModalOpen, setUpgradeModalOpen] = useState(false);
+  const [userEntitlements, setUserEntitlements] = useState(null);
   const { user, isLoaded } = useUser();
   const router = useRouter();
   
@@ -734,6 +746,19 @@ export default function Dashboard({ onReady }) {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  useEffect(() => {
+    const checkEntitlements = async () => {
+      if (user) {
+        const entitlements = await checkUserEntitlements(user.id);
+        setUserEntitlements(entitlements);
+      }
+    };
+
+    if (isLoaded && user) {
+      checkEntitlements();
+    }
+  }, [user, isLoaded]);
 
   // Redirect if not logged in
   useEffect(() => {
@@ -761,7 +786,10 @@ export default function Dashboard({ onReady }) {
           ? 'ml-12 sm:ml-14 md:ml-16' 
           : 'ml-48 sm:ml-56 md:ml-56 lg:ml-64 xl:ml-72'
       } p-4 sm:p-6 md:p-6 lg:p-8 xl:p-10`}>
-        <Header />
+        <Header
+          onPremiumClick={() => setUpgradeModalOpen(true)}
+          showPremiumButton={!userEntitlements?.hasFullAccess}
+        />
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mt-1">
           <div className="sm:col-span-1"><ReadyToTestCard onReady={onReady} /></div>
           <div className="sm:col-span-1"><DaysLeftCounter /></div>
@@ -771,6 +799,10 @@ export default function Dashboard({ onReady }) {
           <div className="sm:col-span-2 xl:col-span-2"><GradeBoundariesGraph /></div>
         </div>
       </main>
+      <UpgradeModal
+        isOpen={upgradeModalOpen}
+        onClose={() => setUpgradeModalOpen(false)}
+      />
     </div>
   );
 }
