@@ -66,7 +66,7 @@ function MainComponent() {
       options: [
         "$$\\frac{9}{4}x^{-\\frac{1}{2}} + \\frac{3}{2}x^{-\\frac{3}{2}} - \\frac{3}{4}x^{-\\frac{5}{2}}$$",
         "$$\\frac{9}{4}x^{-\\frac{1}{2}} - \\frac{3}{2}x^{-\\frac{3}{2}} + \\frac{3}{4}x^{-\\frac{5}{2}}$$",
-        "$$-\\frac{9}{4}x^{-\\frac{1}{2}} - \\frac{3}{2}x^{-\\frac{3}{2}} - \\frac{3}{4}x^{-\\frac{5}{2}}$$",
+        "$$\\frac{9}{4}x^{-\\frac{1}{2}} - \\frac{3}{2}x^{-\\frac{3}{2}} - \\frac{3}{4}x^{-\\frac{5}{2}}$$",
         "$$-\\frac{9}{4}x^{-\\frac{1}{2}} + \\frac{3}{2}x^{-\\frac{3}{2}} + \\frac{3}{4}x^{-\\frac{5}{2}}$$",
         "$$-\\frac{9}{4}x^{-\\frac{1}{2}} + \\frac{3}{2}x^{-\\frac{3}{2}} - \\frac{3}{4}x^{-\\frac{5}{2}}$$",
         "$$-\\frac{9}{4}x^{-\\frac{1}{2}} - \\frac{3}{2}x^{-\\frac{3}{2}} - \\frac{3}{4}x^{-\\frac{5}{2}}$$"
@@ -99,7 +99,7 @@ What is the sum to infinity of this geometric progression?`,
         "$4(2\\sqrt{3} - 3)$",
         "$\\frac{16(8\\sqrt{3} + 9)}{37}$",
         "$\\frac{4(2\\sqrt{3} - 3)}{7}$",
-        "$\\frac{4(2\\sqrt{3} + 3)}{3}$",
+        "$\\frac{4(2\\sqrt{3} + 3)}{7}$",
         "$2(2 + \\sqrt{3})$",
         "$4(2\\sqrt{3} + 3)$"
       ],
@@ -112,7 +112,7 @@ Given that $\\tan x = \\sqrt{3}$, find the possible values of $\\sin 2x$.
 
 A student gave the following answer:
 
-$\\tan x = \\sqrt{3} \\Rightarrow x = 60°$ and $2x = 120°$.
+$\\tan x = \\sqrt{3}$ so $ x = 60°$ and $2x = 120°$.
 
 Therefore $\\sin 2x = \\frac{\\sqrt{3}}{2}$.
 
@@ -129,9 +129,9 @@ Which one of the following statements is correct?`,
       id: 5,
       text: `Consider the following three statements:
 
-1. $10p^2 + 1$ and $10p^2 - 1$ are both prime when p is an odd prime.
-2. Every prime greater than 5 is of the form $6n + 1$ for some integer $n$.
-3. No multiple of 7 greater than 7 is prime.
+\\indent 1. $10p^2 + 1$ and $10p^2 - 1$ are both prime when p is an odd prime.
+\\indent 2. Every prime greater than 5 is of the form $6n + 1$ for some integer $n$.
+\\indent 3. No multiple of 7 greater than 7 is prime.
 
 The result $91 = 7 \\times 13$ can be used to provide a counterexample to which of the above statements?`,
       options: [
@@ -168,15 +168,15 @@ What is the value of $u_{1000}$?`,
       id: 7,
       text: `The graphs of two functions are shown here:
 
-• $y = a^x$ is shown with a solid line, where $x$ is a positive real number
-• $y = f(x)$ is shown with a dashed line
+\\indent  • $y = a^x$ is shown with a solid line, where $x$ is a positive real number
+\\indent  • $y = f(x)$ is shown with a dashed line
 
 Which of the following statements (1, 2, 3, 4) could be true?
 
-1. $f(x) = b^x$ for some $k > a$
-2. $f(x) = b^x$ for some $k < a$
-3. $f(x) = a^{kx}$ for some $k > 1$
-4. $f(x) = a^{kx}$ for some $k < 1$`,
+\\indent 1 \\quad $f(x) = b^x$ for some $b > a$
+\\indent 2 \\quad$f(x) = b^x$ for some $b < a$
+\\indent 3 \\quad $f(x) = a^{kx}$ for some $k > 1$
+\\indent 4 \\quad $f(x) = a^{kx}$ for some $k < 1$`,
       options: [
         "1 only",
         "2 only",
@@ -204,24 +204,24 @@ Which of the following statements (1, 2, 3, 4) could be true?
       id: 9,
       text: `Consider the following attempt to prove this true theorem:
 
-Theorem: $a^3 + b^3 = c^3$ has no solutions with $a$, $b$ and $c$ positive integers.
+\\indent Theorem: $a^3 + b^3 = c^3$ has no solutions with $a$, $b$ and $c$ positive integers.
 
-Attempted proof:
-Suppose that there are positive integers $a$, $b$ and $c$ such that $a^3 + b^3 = c^3$.
+\\indent Attempted proof:
+\\indent Suppose that there are positive integers $a$, $b$ and $c$ such that $a^3 + b^3 = c^3$.
 
-$ \\quad I \\quad $ \t\tWe have $a^3 = c^3 - b^3$.
+\\indent $ \\quad I \\quad $ \t\tWe have $a^3 = c^3 - b^3$.
 
-$ \\quad II \\quad $\t\tHence $a^3 = (c - b)(c^2 + cb + b^2)$.
+\\indent $ \\quad II \\quad $\t\tHence $a^3 = (c - b)(c^2 + cb + b^2)$.
 
-$ \\quad III \\quad $\t\tIt follows that $a = c - b$ and $a^2 = c^2 + cb + b^2$, since $a \\leqslant a^2$ and $c - b \\leqslant c^2 + cb + b^2$.
+\\indent $ \\quad III \\quad $\t\tIt follows that $a = c - b$ and $a^2 = c^2 + cb + b^2$, since $a \\leqslant a^2$ and $c - b \\leqslant c^2 + cb + b^2$.
 
-$ \\quad IV \\quad $\t\tEliminating $a$, we have $(c - b)^2 = c^2 + cb + b^2$.
+\\indent $ \\quad IV \\quad $\t\tEliminating $a$, we have $(c - b)^2 = c^2 + cb + b^2$.
 
-$ \\quad V \\quad $\t\tMultiplying out, we have $c^2 - 2cb + b^2 = c^2 + cb + b^2$.
+\\indent $ \\quad V \\quad $\t\tMultiplying out, we have $c^2 - 2cb + b^2 = c^2 + cb + b^2$.
 
-$ \\quad VI \\quad $\t\tHence $3cb = 0$ so one of $b$ and $c$ is zero.
+\\indent $ \\quad VI \\quad $\t\tHence $3cb = 0$ so one of $b$ and $c$ is zero.
 
-But this is a contradiction to the original assumption that all of $a$, $b$ and $c$ are positive. It follows that the equation has no solutions.
+\\indent But this is a contradiction to the original assumption that all of $a$, $b$ and $c$ are positive. It follows that the equation has no solutions.
 
 Comment on this proof by choosing one of the following options:`,
       options: [
@@ -270,7 +270,9 @@ Which of the following is an expression for the area enclosed by the curve $y = 
     },
     {
       id: 12,
-      text: `Which one of the following is **not** true?`,
+      text: `The diagram shows the graphs of $y = sin2x$ and $y = cos2x$ for $-\\frac{\\pi}{2} < x < \\frac{\\pi}{2}$
+      
+      Which one of the following is not true?`,
       options: [
         "$\\cos 2x < \\sin 2x < \\tan x$ for some real number $x$ with $-\\frac{\\pi}{2} < x < \\frac{\\pi}{2}$",
         "$\\cos 2x < \\tan x < \\sin 2x$ for some real number $x$ with $-\\frac{\\pi}{2} < x < \\frac{\\pi}{2}$",
@@ -282,16 +284,14 @@ Which of the following is an expression for the area enclosed by the curve $y = 
     },
     {
       id: 13,
-      text: `The positive real numbers $a \\times 10^{-3}$, $b \\times 10^{-2}$ and $c \\times 10^{-1}$ are each in standard form, and
-
-$(a \\times 10^{-3}) + (b \\times 10^{-2}) = (c \\times 10^{-1})$.
+      text: `The positive real numbers $a \\times 10^{-3}$, $b \\times 10^{-2}$ and $c \\times 10^{-1}$ are each in standard form, and $$(a \\times 10^{-3}) + (b \\times 10^{-2}) = (c \\times 10^{-1})$$.
 
 Which of the following statements (I, II, III, IV) must be true?
 
-I. $a > 9$
-II. $b > 9$  
-III. $a < c$
-IV. $b < c$`,
+\\indent I \\quad $a > 9$
+\\indent II \\quad $b > 9$  
+\\indent III\\quad $a < c$
+\\indent IV \\quad $b < c$`,
       options: [
         "I only",
         "II only",
@@ -343,7 +343,7 @@ What is the value of $f(1000) - g(1000)$?`,
       id: 16,
       text: `Consider the following statement:
 
-($\\star$) If $f(x)$ is an integer for every integer $x$, then $f'(x)$ is an integer for every integer $x$.
+\\indent ($\\star$) If $f(x)$ is an integer for every integer $x$, then $f'(x)$ is an integer for every integer $x$.
 
 Which one of the following is a counterexample to ($\\star$)?`,
       options: [
@@ -355,7 +355,8 @@ Which one of the following is a counterexample to ($\\star$)?`,
     },
     {
       id: 17,
-      text: `A set $S$ of whole numbers is called stapled if and only if for every whole number $a$ which is in $S$ there exists a prime factor of $a$ which does not have any other number in $S$.
+      text: `A set $S$ of whole numbers is called stapled if and only if for every whole number $a$ which is in $S$ there exists a prime factor of $a$ which divides at least one other number
+in $S$.
 
 Let $T$ be a set of whole numbers. Which of the following is true if and only if $T$ is not stapled?`,
       options: [
@@ -374,7 +375,7 @@ Let $T$ be a set of whole numbers. Which of the following is true if and only if
       id: 18,
       text: `Consider the following problem:
 
-Solve the inequality $\\left(\\frac{1}{4}\\right)^n < \\left(\\frac{1}{32}\\right)^{10}$, where $n$ is a positive integer.
+\\indent Solve the inequality $\\left(\\frac{1}{4}\\right)^n < \\left(\\frac{1}{32}\\right)^{10}$, where $n$ is a positive integer.
 
 A student produces the following argument:
 
@@ -402,7 +403,7 @@ Which step (if any) in the argument is invalid?`,
     },
     {
       id: 19,
-      text: `Which one of the following is a sufficient condition for the equation $x^2 - 3x^2 + a = 0$, where $a$ is a constant, to have exactly one real root?`,
+      text: `Which one of the following is a sufficient condition for the equation $x^3 - 3x^2 + a = 0$, where $a$ is a constant, to have exactly one real root?`,
       options: [
         "$a > 0$",
         "$a \\leq 0$",
