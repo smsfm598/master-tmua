@@ -129,9 +129,9 @@ Which one of the following statements is correct?`,
       id: 5,
       text: `Consider the following three statements:
 
-\\indent 1. $10p^2 + 1$ and $10p^2 - 1$ are both prime when p is an odd prime.
-\\indent 2. Every prime greater than 5 is of the form $6n + 1$ for some integer $n$.
-\\indent 3. No multiple of 7 greater than 7 is prime.
+$\\indent$ 1. $10p^2 + 1$ and $10p^2 - 1$ are both prime when p is an odd prime.
+$\\indent$ 2. Every prime greater than 5 is of the form $6n + 1$ for some integer $n$.
+$\\indent$ 3. No multiple of 7 greater than 7 is prime.
 
 The result $91 = 7 \\times 13$ can be used to provide a counterexample to which of the above statements?`,
       options: [
@@ -168,15 +168,15 @@ What is the value of $u_{1000}$?`,
       id: 7,
       text: `The graphs of two functions are shown here:
 
-\\indent  • $y = a^x$ is shown with a solid line, where $x$ is a positive real number
-\\indent  • $y = f(x)$ is shown with a dashed line
+$\\indent$  • $y = a^x$ is shown with a solid line, where $x$ is a positive real number
+$\\indent$  • $y = f(x)$ is shown with a dashed line
 
 Which of the following statements (1, 2, 3, 4) could be true?
 
-\\indent 1 \\quad $f(x) = b^x$ for some $b > a$
-\\indent 2 \\quad$f(x) = b^x$ for some $b < a$
-\\indent 3 \\quad $f(x) = a^{kx}$ for some $k > 1$
-\\indent 4 \\quad $f(x) = a^{kx}$ for some $k < 1$`,
+$\\indent$ 1 $\\quad$ $f(x) = b^x$ for some $b > a$
+$\\indent$ 2 $\\quad$ $f(x) = b^x$ for some $b < a$
+$\\indent$ 3 $\\quad$ $f(x) = a^{kx}$ for some $k > 1$
+$\\indent$ 4 $\\quad$ $f(x) = a^{kx}$ for some $k < 1$`,
       options: [
         "1 only",
         "2 only",
@@ -204,24 +204,24 @@ Which of the following statements (1, 2, 3, 4) could be true?
       id: 9,
       text: `Consider the following attempt to prove this true theorem:
 
-\\indent Theorem: $a^3 + b^3 = c^3$ has no solutions with $a$, $b$ and $c$ positive integers.
+$\\indent$ Theorem: $a^3 + b^3 = c^3$ has no solutions with $a$, $b$ and $c$ positive integers.
 
-\\indent Attempted proof:
-\\indent Suppose that there are positive integers $a$, $b$ and $c$ such that $a^3 + b^3 = c^3$.
+$\\indent$ Attempted proof:
+$\\indent$ Suppose that there are positive integers $a$, $b$ and $c$ such that $a^3 + b^3 = c^3$.
 
-\\indent $ \\quad I \\quad $ \t\tWe have $a^3 = c^3 - b^3$.
+$\\indent$ $ \\quad I \\quad $ \t\tWe have $a^3 = c^3 - b^3$.
 
-\\indent $ \\quad II \\quad $\t\tHence $a^3 = (c - b)(c^2 + cb + b^2)$.
+$\\indent$ $ \\quad II \\quad $\t\tHence $a^3 = (c - b)(c^2 + cb + b^2)$.
 
-\\indent $ \\quad III \\quad $\t\tIt follows that $a = c - b$ and $a^2 = c^2 + cb + b^2$, since $a \\leqslant a^2$ and $c - b \\leqslant c^2 + cb + b^2$.
+$\\indent$ $ \\quad III \\quad $\t\tIt follows that $a = c - b$ and $a^2 = c^2 + cb + b^2$, since $a \\leqslant a^2$ and $c - b \\leqslant c^2 + cb + b^2$.
 
-\\indent $ \\quad IV \\quad $\t\tEliminating $a$, we have $(c - b)^2 = c^2 + cb + b^2$.
+$\\indent$ $ \\quad IV \\quad $\t\tEliminating $a$, we have $(c - b)^2 = c^2 + cb + b^2$.
 
-\\indent $ \\quad V \\quad $\t\tMultiplying out, we have $c^2 - 2cb + b^2 = c^2 + cb + b^2$.
+$\\indent$ $ \\quad V \\quad $\t\tMultiplying out, we have $c^2 - 2cb + b^2 = c^2 + cb + b^2$.
 
-\\indent $ \\quad VI \\quad $\t\tHence $3cb = 0$ so one of $b$ and $c$ is zero.
+$\\indent$ $ \\quad VI \\quad $\t\tHence $3cb = 0$ so one of $b$ and $c$ is zero.
 
-\\indent But this is a contradiction to the original assumption that all of $a$, $b$ and $c$ are positive. It follows that the equation has no solutions.
+$\\indent$ But this is a contradiction to the original assumption that all of $a$, $b$ and $c$ are positive. It follows that the equation has no solutions.
 
 Comment on this proof by choosing one of the following options:`,
       options: [
@@ -288,10 +288,10 @@ Which of the following is an expression for the area enclosed by the curve $y = 
 
 Which of the following statements (I, II, III, IV) must be true?
 
-\\indent I \\quad $a > 9$
-\\indent II \\quad $b > 9$  
-\\indent III\\quad $a < c$
-\\indent IV \\quad $b < c$`,
+$\\indent$ I \\quad $a > 9$
+$\\indent$ II \\quad $b > 9$  
+$\\indent$ III\\quad $a < c$
+$\\indent$ IV \\quad $b < c$`,
       options: [
         "I only",
         "II only",
@@ -343,7 +343,7 @@ What is the value of $f(1000) - g(1000)$?`,
       id: 16,
       text: `Consider the following statement:
 
-\\indent ($\\star$) If $f(x)$ is an integer for every integer $x$, then $f'(x)$ is an integer for every integer $x$.
+$\\indent$ ($\\star$) If $f(x)$ is an integer for every integer $x$, then $f'(x)$ is an integer for every integer $x$.
 
 Which one of the following is a counterexample to ($\\star$)?`,
       options: [
@@ -375,7 +375,7 @@ Let $T$ be a set of whole numbers. Which of the following is true if and only if
       id: 18,
       text: `Consider the following problem:
 
-\\indent Solve the inequality $\\left(\\frac{1}{4}\\right)^n < \\left(\\frac{1}{32}\\right)^{10}$, where $n$ is a positive integer.
+$\\indent$ Solve the inequality $\\left(\\frac{1}{4}\\right)^n < \\left(\\frac{1}{32}\\right)^{10}$, where $n$ is a positive integer.
 
 A student produces the following argument:
 
