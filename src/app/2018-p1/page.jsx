@@ -362,7 +362,7 @@ What is the value of $\\cos \\theta$?`,
       id: 20,
       text: `Find the value of
 
-$$\\sin^2 0° + \\sin^2 1° + \\sin^2 2° + \\sin^2 3° + \\cdots + \\sin^2 87° + \\sin^2 88° + \\sin^2 89° + \\sin^2 90°$$`,
+$$\\sin^2 0° + \\sin^2 1° + \\sin^2 2° + \\sin^2 3° + \\cdots $$ $$+ \\sin^2 87° + \\sin^2 88° + \\sin^2 89° + \\sin^2 90°$$`,
       options: [
         "$0.5$",
         "$1$",
