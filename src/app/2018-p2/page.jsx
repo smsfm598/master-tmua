@@ -61,7 +61,7 @@ function MainComponent() {
       id: 1,
       text: `The function f is given, for $x > 0$, by
 
-$$f(x) = \\frac{x^2 - 4x}{2\\sqrt{x}}$$
+$$f(x) = \\frac{x^3 - 4x}{2\\sqrt{x}}$$
 
 Find the value of f'(4).`,
       options: [
@@ -92,19 +92,21 @@ $$\\left(x^6 - \\frac{1}{x^2}\\right)^{12}$$`,
       text: `Consider the following statement:
 
 A car journey consists of two parts. In the first part, the average speed is
-$$u \\text{ km/h}$$
+$u \\text{ km/h}$
 In the second part, the average speed is 
-$$v \\text{ km/h}$$
+$v \\text{ km/h}$
 Hence the average speed for the whole journey is 
-$$\\frac{1}{2}(u + v) \\text{ km/h}$$
+$\\frac{1}{2}(u + v) \\text{ km/h}$
+
 
 Which of the following examples of car journeys provide(s) a counterexample to the statement?
 
-(I)  In the first part of the journey, the car travels at a constant speed of 50 km/h for 100 km. In the second part of the journey, the car travels at a constant speed of 40 km/h for 100 km.
 
-(II)  In the first part of the journey, the car travels at a constant speed of 50 km/h for one hour. In the second part of the journey, the car travels at a constant speed of 40 km/h for one hour.
+I $\\quad$ In the first part of the journey, the car travels at a constant speed of 50 km/h for 100 km. In the second part of the journey, the car travels at a constant speed of 40 km/h for 100 km.
 
-(III)  In the first part of the journey, the car travels at a constant speed of 50 km/h for 80 km. In the second part of the journey, the car travels at a constant speed of 40 km/h for 100 km.`,
+II $\\quad$  In the first part of the journey, the car travels at a constant speed of 50 km/h for one hour. In the second part of the journey, the car travels at a constant speed of 40 km/h for one hour.
+
+III $\\quad$  In the first part of the journey, the car travels at a constant speed of 50 km/h for 80 km. In the second part of the journey, the car travels at a constant speed of 40 km/h for 100 km.`,
       options: [
         "none of them",
         "I only",
