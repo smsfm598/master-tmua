@@ -130,12 +130,12 @@ export default function PapersPage() {
               </p>
             </div>
             {!userEntitlements?.hasFullAccess && (
-              <button
-                onClick={() => setUpgradeModal({ isOpen: true, paperName: 'All Premium Papers' })}
-                className="bg-[#8e44ad] hover:bg-[#9b59b6] text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium"
-              >
-                Upgrade Now
-              </button>
+          <button
+            onClick={onPremiumClick}
+            className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg font-semibold text-sm sm:text-base bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-500 text-[#1a0030] shadow-[0_0_15px_rgba(251,191,36,0.4)] hover:from-yellow-300 hover:via-amber-200 hover:to-yellow-400 hover:shadow-[0_0_20px_rgba(251,191,36,0.6)] transition-all duration-300"
+          >
+            Premium
+          </button>
             )}
           </div>
         </div>
