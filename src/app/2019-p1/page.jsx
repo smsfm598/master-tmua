@@ -83,7 +83,7 @@ is positive for all real values of $x$.`,
         "$-12 < k < 0$",
         "$k < -12$ or $k > 0$",
         "$-\\sqrt{6} - 3 < k < \\sqrt{6} - 3$",
-        "$k < -\\sqrt{6} - 4$ or $k > \\sqrt{6} - 3$",
+        "$k < -\\sqrt{6} - 3$ or $k > \\sqrt{6} - 3$",
         "$-2 < k < \\frac{1}{2}$",
         "$k < -2$ or $k > \\frac{1}{2}$",
         "$0 < k < 4$",
@@ -150,9 +150,9 @@ Find the $1^{st}$ term of $S$.`,
       id: 6,
       text: `The circles with equations
 
-$$(x + 4)^2 + (y + 1)^2 = 64$$ and
+$$(x + 4)^2 + (y + 1)^2 = 64 \\text { and }$$ 
 
-$$(x - 8)^2 + (y - 4)^2 = r^2 \\text{  where  } r > 0$$
+$$(x - 8)^2 + (y - 4)^2 = r^2 \\quad  \\text{  where  }  r > 0$$
 
 have exactly one point in common.
 
@@ -250,7 +250,7 @@ $$(\\log_3 x)(\\log_3 y) = -3$$`,
       id: 12,
       text: `It is given that
 
-$$\\frac{dV}{dt} = \\frac{24\\pi(t - 1)}{(1 + \\sqrt{t})}$$ for $t \\geq 1$
+$$\\frac{dV}{dt} = \\frac{24\\pi(t - 1)}{(1 + \\sqrt{t})}$$ \\text {for} $t \\geq 1$
 
 and $V = 7$ when $t = 1$.
 
@@ -268,7 +268,7 @@ Find the value of $V$ when $t = 9$.`,
       id: 13,
       text: `Find the maximum value of
 
-$$4^{\\sin x} - 4 \\cdot 2^{2\\sin x} + \\frac{17}{4}$$
+$$4^{\\sin x} - 4 \\times 2^{2\\sin x} + \\frac{17}{4}$$
 
 for real $x$.`,
       options: [

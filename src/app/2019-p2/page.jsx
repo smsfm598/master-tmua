@@ -130,7 +130,7 @@ Which of these provide(s) a counterexample to the conjecture?`,
       id: 5,
       text: `Consider the following statement about the positive integers $a$, $b$ and $n$:
 
-(*) $ab$ is divisible by $n$
+(*): $ab$ is divisible by $n$
 
 The condition 'either $a$ or $b$ is divisible by $n$' is:`,
       options: [
@@ -150,7 +150,7 @@ $$\\cos x + \\sin x \\tan x = 2 \\sin x - 1$$
 
 The student's attempt is as follows:
 
-$\\cos x + \\sin x \\tan x = 2 \\sin x - 1$
+$\\cos x - \\sin x + \\sin x \\tan x - \\sin x = - 1$
 
 So $\\quad \\cos x + \\sin x \\tan x = 2 \\sin x - 1 \\quad \\quad $(I)
 
@@ -193,7 +193,7 @@ Which of the following statements must be true?
 
 $ \\quad I \\quad ac < ab < c^2$
 $ \\quad II \\quad b(c + a) > 0$
-$ \\quad III \\quad \\frac{c}{a} > \\frac{b}{a}$`,
+$ \\quad III \\quad \\frac{c}{b} > \\frac{a}{b}$`,
       options: [
         "none of them",
         "I only",

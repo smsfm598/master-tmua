@@ -86,7 +86,7 @@ What is the value of $2p + q$?`,
       id: 3,
       text: `Find the complete set of values of $x$ for which
 
-$$(x + 4)(x + 3)(1 - x) > 0$$ and $$(x + 2)(x - 2) < 0$$`,
+$$(x + 4)(x + 3)(1 - x) > 0 \\quad \\text { and } \\quad (x + 2)(x - 2) < 0$$`,
       options: [
         "$1 < x < 2$",
         "$-2 < x < 1$",
@@ -192,7 +192,7 @@ Which quadratic expression can be factorised as $(x - \\sqrt{\\alpha})(x - \\sqr
         "$x^2 - \\sqrt{14}x + 3$",
         "$x^2 - \\sqrt{20}x + 3$",
         "$x^2 - 178x + 81$",
-        "$x^2 + 176x + 81$",
+        "$x^2 - 176x + 81$",
         "$x^2 + 196x + 81$"
       ],
     },
@@ -279,7 +279,7 @@ What is the value of $m$?`,
       id: 15,
       text: `Find the positive difference between the two real values of $x$ for which
 
-$$(\\log_2 x)^4 + 12 \\left( \\log_2 \\frac{1}{x} \\right)^2 - 2^6 = 0$$`,
+$$(\\log_2 x)^4 + 12 \\left( \\log_2 (\\frac{1}{x}) \\right)^2 - 2^6 = 0$$`,
       options: [
         "$4$",
         "$16$",
@@ -327,7 +327,7 @@ Find the value of $\\tan \\theta$`,
       id: 18,
       text: `Find the number of solutions and the sum of the solutions of the equation
 
-$1 - 2 \\cos^2 x = |\\cos x|$
+$$1 - 2 \\cos^2 x = |\\cos x|$$
 
 where $0 \\leq x \\leq 180°$`,
       options: [
