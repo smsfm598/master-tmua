@@ -89,13 +89,13 @@ export default function UpgradeModal({ isOpen, onClose, paperName }) {
                 <FaCheck className="text-green-400 mr-3" /> Access to all past papers (2017-2023)
               </li>
               <li className="flex items-center text-gray-300">
-                <FaCheck className="text-green-400 mr-3" /> Specimen and practice papers
+                <FaCheck className="text-green-400 mr-3" /> Instant automatic marking
               </li>
               <li className="flex items-center text-gray-300">
                 <FaCheck className="text-green-400 mr-3" /> Detailed analytics and progress tracking
               </li>
               <li className="flex items-center text-gray-300">
-                <FaCheck className="text-green-400 mr-3" /> Authentic exam interface
+                <FaCheck className="text-green-400 mr-3" /> Authentic identical exam interface
               </li>
               <li className="flex items-center text-gray-300">
                 <FaCheck className="text-green-400 mr-3" /> Unlimited practice attempts
