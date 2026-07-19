@@ -91,12 +91,7 @@ $$\\left(x^6 - \\frac{1}{x^2}\\right)^{12}$$`,
       id: 3,
       text: `Consider the following statement:
 
-A car journey consists of two parts. In the first part, the average speed is
-$u \\text{ km/h}$
-In the second part, the average speed is 
-$v \\text{ km/h}$
-Hence the average speed for the whole journey is 
-$\\frac{1}{2}(u + v) \\text{ km/h}$
+A car journey consists of two parts. In the first part, the average speed is $u \\text{ km/h}$ In the second part, the average speed is $v \\text{ km/h}$ Hence the average speed for the whole journey is $\\frac{1}{2}(u + v) \\text{ km/h}$
 
 
 Which of the following examples of car journeys provide(s) a counterexample to the statement?
@@ -151,9 +146,9 @@ Which of these statements is/are necessarily true for the quadrilateral $Q$?`,
     },
     {
       id: 6,
-      text: `Which one of the following functions provides a counterexample to the statement
+      text: `Which one of the following functions provides a counterexample to the statement:
 
-if $f'(x) > 0$ for all real $x$ then $f(x) > 0$ for all real $x$?`,
+if $f'(x) > 0$ for all real $x$, then $f(x) > 0$ for all real $x$?`,
       options: [
         "$f(x) = x^2 + 1$",
         "$f(x) = x^2 - 1$",
@@ -285,14 +280,14 @@ For any positive integer $N$ there is a positive integer $K$ such that $N(Km + 1
 
 Which one of the following is the negation of this statement?`,
       options: [
-        "For any positive integer $N$ there is a positive integer $K$ such that there is a positive integer $n$ for which $N(Km + 1) - 1$ is prime.",
-        "For any positive integer $N$ there is a positive integer $K$ such that there is a positive integer $n$ for which $N(Km + 1) - 1$ is not prime.",
-        "For any positive integer $N$ there is a positive integer $K$ such that for any positive integer $n$, $N(Km + 1) - 1$ is prime.",
-        "For any positive integer $N$ and any positive integer $K$ there is a positive integer $n$ for which $N(Km + 1) - 1$ is not prime.",
-        "There is a positive integer $N$ such that for any positive integer $K$ there is a positive integer $n$ for which $N(Km + 1) - 1$ is prime.",
-        "There is a positive integer $N$ such that for any positive integer $K$ and any positive integer $n$, $N(Km + 1) - 1$ is prime.",
-        "There is a positive integer $N$ and a positive integer $K$ for which $N(Km + 1) - 1$ is prime.",
-        "There is a positive integer $N$ and a positive integer $K$ for which there is no positive integer $n$ for which $N(Km + 1) - 1$ is prime."
+        "For any positive integer $N$ there is a positive integer $K$ such that there is a positive integer $m$ for which $N(Km + 1) - 1$ is prime.",
+        "For any positive integer $N$ there is a positive integer $K$ such that there is a positive integer $m$ for which $N(Km + 1) - 1$ is not prime.",
+        "For any positive integer $N$ there is a positive integer $K$ such that for any positive integer $m$, $N(Km + 1) - 1$ is not prime.",
+        "For any positive integer $N$, any positive integer $K$ and any positive integer $m$, there is a positive integer $m$ for which $N(Km + 1) - 1$ is not prime.",
+        "There is a positive integer $N$ such that for any positive integer $K$ there is a positive integer $n$ for which $N(Km + 1) - 1$ is not prime.",
+        "There is a positive integer $N$ such that for any positive integer $K$ there is a positive integer $m$ for which $N(Km + 1) - 1$ is prime.",
+        "There is a positive integer $N$ such that for any positive integer $K$ and for any positive integer $m$, $N(Km + 1) - 1$ is prime.",
+        "There is a positive integer $N$ and a positive integer $K$ for which there is no positive integer $m$ for which $N(Km + 1) - 1$ is prime."
       ],
     },
     {
@@ -303,15 +298,15 @@ If $\\tan \\theta > 0$, then $\\sin \\theta + \\cos \\theta > 1$.
 
 Suppose $\\tan \\theta > 0$, so in particular $\\cos \\theta \\neq 0$.
 
-Since $\\tan \\theta = \\frac{\\sin \\theta}{\\cos \\theta}$, then $\\sin \\theta \\cos \\theta = \\tan \\theta \\cos^2 \\theta > 0$. ... (I)
+Since $\\tan \\theta = \\frac{\\sin \\theta}{\\cos \\theta}$, then $\\sin \\theta \\cos \\theta = \\tan \\theta \\cos^2 \\theta > 0$. $\\quad$(I)
 
-It follows that $1 + 2 \\sin \\theta \\cos \\theta > 1$. ... (II)
+It follows that $1 + 2 \\sin \\theta \\cos \\theta > 1$. $\\quad$ (II)
 
-Therefore $\\sin^2 \\theta + 2 \\sin \\theta \\cos \\theta + \\cos^2 \\theta > 1$. ... (III)
+Therefore $\\sin^2 \\theta + 2 \\sin \\theta \\cos \\theta + \\cos^2 \\theta > 1$, $\\quad$ (III)
 
-which factorises to give $(\\sin \\theta + \\cos \\theta)^2 > 1$. ... (IV)
+which factorises to give $(\\sin \\theta + \\cos \\theta)^2 > 1$. $\\quad$ (IV)
 
-Therefore $\\sin \\theta + \\cos \\theta > 1$. ... (V)
+Therefore $\\sin \\theta + \\cos \\theta > 1$. $\\quad$ (V)
 
 Which one of the following is the case?`,
       options: [
@@ -345,11 +340,12 @@ What is the set of all the values of $p$ for which this information uniquely det
 
 The equation $f(x) = 0$ has 3 distinct real roots.
 
-Which of the following statements is/are necessarily true?`,
-      options: [
-        "I. The equation $f(x) + 1 = 0$ has 3 distinct real roots.",
-        "II. The equation $f(x + 1) = 0$ has 3 distinct real roots.",
-        "III. The equation $f(-x) - 1 = 0$ has 3 distinct real roots.",
+Which of the following statements is/are necessarily true?
+
+        I $\\quad$ The equation $f(x) + 1 = 0$ has 3 distinct real roots.
+        II $\\quad$  The equation $f(x + 1) = 0$ has 3 distinct real roots.
+        III $\\quad$  The equation $f(-x) - 1 = 0$ has 3 distinct real roots.`,
+        options: [
         "none of them",
         "I only",
         "II only",
@@ -366,9 +362,9 @@ Which of the following statements is/are necessarily true?`,
 
 Let $n$ be a positive integer. If the median of the first $n$ terms of the sequence is an integer, which of the following three statements must be true?
 
-I. The median of the first $n + 2$ terms is an integer.
-II. The median of the first $2n$ terms is an integer.
-III. The median of $x_2, x_4, x_6, \\ldots, x_{2n}$ is an integer.`,
+I $\\quad$  The median of the first $n + 2$ terms is an integer.
+II $\\quad$  The median of the first $2n$ terms is an integer.
+III $\\quad$  The median of $x_2, x_4, x_6, \\ldots, x_{2n}$ is an integer.`,
       options: [
         "none of them",
         "I only",
@@ -424,7 +420,7 @@ to be true for all real numbers $a$ and $b$ with $a < b$?`,
 
 Which one of the following statements must be true?`,
       options: [
-        "$\\frac{2^{x+1}}{2^z} > \\frac{2^y + 2^z}{2^y}$",
+        "$\\frac{2^{z+1}}{2^x} > \\frac{2^x + 2^z}{2^y}$",
         "$2 > \\frac{3^x + 3^z}{3^y}$",
         "$\\frac {2 \\times 5^x}{5^z} < \\frac{5^x + 5^z}{5^y}$",
         "$2 < \\frac{7^x + 7^z}{7^y}$"
