@@ -5,7 +5,6 @@ import { useUser } from '@clerk/nextjs';
 import Sidebar from '../../components/Sidebar';
 import UpgradeModal from '../../components/UpgradeModal';
 import { checkUserEntitlements, isPaperFree } from '../../lib/supabase';
-import { useState } from "react";
 
 export default function PapersPage() {
   const router = useRouter();
