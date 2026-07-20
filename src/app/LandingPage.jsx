@@ -65,7 +65,16 @@ export default function LandingPage() {
     <div className="min-h-screen bg-gradient-to-br from-[#150025] to-[#280040] text-white">
       {/* Navigation */}
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="text-xl font-bold">Master TMUA</div>
+       <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/logo.png"
+            alt="Master TMUA Logo"
+            width={42}
+            height={42}
+            priority
+          />
+          <span className="text-xl font-bold">MasterTMUA</span>
+        </Link>
         <div className="flex gap-4">
           <Link href="/login">
             <button className="px-4 py-2 rounded-full border border-[#5c4d7d] hover:bg-[#5c4d7d]/20 transition-all duration-300">
