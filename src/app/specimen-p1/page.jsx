@@ -57,7 +57,7 @@ function MainComponent() {
   const questionsRaw = [
     {
       id: 1,
-      text: `The sum of the two values of $x$ that satisfy the simultaneous equations\n $x - 3y + 1 = 0$ and $3x^2 - 7xy = 5$ is`,
+      text: `The sum of the two values of $x$ that satisfy the simultaneous equations $x - 3y + 1 = 0$ and $3x^2 - 7xy = 5$ is`,
       options: ["$-8.5$", "$-7.5$", "$-1.5$", "$3.5$", "$4.5$", "$5$"],
     },
     {

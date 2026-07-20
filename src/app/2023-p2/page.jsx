@@ -122,23 +122,23 @@ $\\quad III \\quad$ $x = 3, y = 4$`,
       id: 4,
       text: `A student attempts to answer the following question.
 
-$$\text{What is the largest number of consecutive odd integers that are all prime?}$$
+$$\\text{What is the largest number of consecutive odd integers that are all prime?}$$
 
 The student's attempt is as follows:
 
-$\\quad$I$\\quad$ There are two consecutive odd integers that are prime (for example: 17, 19).
+$\\quad I \\quad$ There are two consecutive odd integers that are prime (for example: 17, 19).
 
-$\\quad$II$\\quad$ Any three consecutive odd integers can be written in the form $n - 2, n, n + 2$ for some $n$.
+$\\quad II \\quad$ Any three consecutive odd integers can be written in the form $n - 2, n, n + 2$ for some $n$.
 
-$\\quad$III$\\quad$ If $n$ is one more than a multiple of 3, then $n + 2$ is a multiple of 3.
+$\\quad III \\quad$ If $n$ is one more than a multiple of 3, then $n + 2$ is a multiple of 3.
 
-$\\quad$IV$\\quad$ If $n$ is two more than a multiple of 3, then $n - 2$ is a multiple of 3.
+$\\quad IV \\quad$ If $n$ is two more than a multiple of 3, then $n - 2$ is a multiple of 3.  
 
-$\\quad$V$\\quad$ The only other possibility is that $n$ is a multiple of 3.
+$\\quad V \\quad$ The only other possibility is that $n$ is a multiple of 3.
 
-$\\quad$VI$\\quad$ In each case, one of the integers is a multiple of 3, so not prime.
+$\\quad VI \\quad$ In each case, one of the integers is a multiple of 3, so not prime.
 
-$\\quad$VII$\\quad$ Therefore the largest number of consecutive odd integers that are all prime is two.
+$\\quad VII \\quad$ Therefore the largest number of consecutive odd integers that are all prime is two.
 
 Which of the following best describes this attempt?`,
       options: [

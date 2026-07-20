@@ -33,7 +33,7 @@ function MainComponent() {
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const [selectedAnswers, setSelectedAnswers] = React.useState({});
   const [flaggedQuestions, setFlaggedQuestions] = React.useState(new Set());
-  const [timeRemaining, setTimeRemaining] = React.useState(90 * 60); // 90 minutes in seconds
+  const [timeRemaining, setTimeRemaining] = React.useState(75 * 60); // 90 minutes in seconds
   const [instructionTime, setInstructionTime] = React.useState(60); // 60 seconds for instructions
   const [colorScheme, setColorScheme] = React.useState("default");
   const [showNavigator, setShowNavigator] = React.useState(false);
@@ -59,7 +59,9 @@ function MainComponent() {
   const questionsRaw = [
     {
       id: 1,
-      text: `It is given that the expansion of $(ax + b)^3$ is $8x^3 - px^2 + 18x - 3\\sqrt{3}$ where a, b and p are real constants. What is the value of p?`,
+      text: `It is given that the expansion of $(ax + b)^3$ is $8x^3 - px^2 + 18x - 3\\sqrt{3}$ where a, b and p are real constants. 
+      
+      What is the value of p?`,
       options: [
         "$-12\\sqrt{3}$",
         "$-6\\sqrt{3}$",
@@ -73,7 +75,9 @@ function MainComponent() {
     },
     {
       id: 2,
-      text: "The expression $3x^2 + 13x^2 + 8x + a$, where a is a constant, has $(x + 2)$ as a factor.\n\nWhich one of the following is a complete factorisation of the expression?",
+      text: `The expression $3x^3 + 13x^2 + 8x + a$, where a is a constant, has $(x + 2)$ as a factor.
+      
+      Which one of the following is a complete factorisation of the expression?`,
       options: [
         "$(x + 2)(x - 1)(3x - 2)$",
         "$(x + 2)(x + 1)(3x - 2)$",
@@ -85,7 +89,11 @@ function MainComponent() {
     },
     {
       id: 3,
-      text: "A line is drawn normal to the curve $y = \\frac{2}{x^2}$ at the point on the curve where $x = 1$.\n\nThis line cuts the x-axis at P and the y-axis at Q.\n\nThe length of PQ is",
+      text: `A line is drawn normal to the curve $y = \\frac{2}{x^2}$ at the point on the curve where $x = 1$.
+      
+      This line cuts the x-axis at P and the y-axis at Q.
+      
+      The length of PQ is`,
       options: [
         "$\\frac{3\\sqrt{5}}{2}$",
         "$\\frac{3\\sqrt{17}}{4}$",
@@ -97,7 +105,10 @@ function MainComponent() {
     },
     {
       id: 4,
-      text: "The sequence $a_n$ is defined by the rule:\n\n$$a_n = (-1)^n - (-1)^{n+1} + (-1)^{n+2}\\text{ for }n \\geq 1$$\n\nFind the value of\n\n$$\\sum_{n=1}^{39} a_n$$",
+      text: `The sequence $a_n$ is defined by the rule:
+      $$a_n = (-1)^n - (-1)^{n+1} + (-1)^{n+2}\\text{ for }n \\geq 1$$
+      Find the value of
+      $$\\sum_{n=1}^{39} a_n$$`,
       options: [
         "-39",
         "-3",
@@ -110,7 +121,7 @@ function MainComponent() {
     },
     {
       id: 5,
-      text: "What is the total area enclosed between the curve $y = x^2 - 1$, the x-axis and the lines $x = -2$ and $x = 2$?",
+      text: `What is the total area enclosed between the curve $y = x^2 - 1$, the x-axis and the lines $x = -2$ and $x = 2$?`,
       options: [
         "$\\frac{4}{3}$",
         "$\\frac{8}{3}$",
@@ -122,7 +133,15 @@ function MainComponent() {
     },
     {
       id: 6,
-      text: "P, Q, and R are each mixtures of red and white paint.\n\nThe percentage by volume of red paint in P is 30%.\n\nThe percentage by volume of red paint in Q is 20%.\n\nThe mixtures P, Q, and R are combined in the proportion 12 : 5 : 3 respectively.\n\nIf the resulting mixture contains 25% by volume of red paint, what percentage by volume of mixture R is red paint?",
+      text: `P, Q, and R are each mixtures of red and white paint.
+      
+      The percentage by volume of red paint in P is 30%.
+      
+      The percentage by volume of red paint in Q is 20%.
+      
+      The mixtures P, Q, and R are combined in the proportion 12 : 5 : 3 respectively.
+      
+      If the resulting mixture contains 25% by volume of red paint, what percentage by volume of mixture R is red paint?`,
       options: [
         "25%",
         "23%",
@@ -134,7 +153,15 @@ function MainComponent() {
     },
     {
       id: 7,
-      text: "60% of a sports club's members are women and the remainder are men.\n\nThis sports club offers the opportunity to play tennis or cricket. Every member plays\nexactly one of the two sports.\n\n$\\frac{2}{5}$ of the male members of the club play cricket;\n\n$\\frac{2}{3}$ of the cricketing members of the club are women.\n\nWhat is the probability that a member of the club, chosen at random, is a woman who\nplays tennis?",
+      text: `60% of a sports club's members are women and the remainder are men.
+      
+      This sports club offers the opportunity to play tennis or cricket. Every member plays exactly one of the two sports.
+      
+      $\\frac{2}{5}$ of the male members of the club play cricket.
+      
+      $\\frac{2}{3}$ of the cricketing members of the club are women.
+      
+      What is the probability that a member of the club, chosen at random, is a woman who plays tennis?`,
       options: [
         "$\\frac{1}{5}$",
         "$\\frac{7}{25}$",
@@ -145,7 +172,9 @@ function MainComponent() {
     },
     {
       id: 8,
-      text: "Find the maximum angle x in the range $0° \\leq x \\leq 360°$ which satisfies the equation\n\n$$\\cos^2(2x) + \\sqrt{3}\\sin(2x) - \\frac{7}{4} = 0$$",
+      text: `Find the maximum angle x in the range $0° \\leq x \\leq 360°$ which satisfies the equation
+      
+      $$\\cos^2(2x) + \\sqrt{3}\\sin(2x) - \\frac{7}{4} = 0$$`,
       options: [
         "30°",
         "60°",
@@ -159,7 +188,11 @@ function MainComponent() {
     },
     {
       id: 9,
-      text: "The line segment joining the points (3, 3) and (7, 5) is a diameter of a circle.\n\nThis circle is translated by 3 units in the negative x-direction, then reflected in the x-axis,  and then enlarged by a scale factor of 4 about the centre of the resulting circle.\n\nThe equation of the final circle is",
+      text: `The line segment joining the points (3, 3) and (7, 5) is a diameter of a circle.
+      
+      This circle is translated by 3 units in the negative x-direction, then reflected in the x-axis,  and then enlarged by a scale factor of 4 about the centre of the resulting circle.
+      
+      The equation of the final circle is`,
       options: [
         "$(x - 2)^2 + (y - 4)^2 = 320$",
         "$(x - 2)^2 + (y + 4)^2 = 320$",
@@ -171,7 +204,7 @@ function MainComponent() {
     },
     {
       id: 10,
-      text: "How many solutions does the equation $x \\tan x = 1$ have in the interval $-2\\pi \\leq x \\leq 2\\pi$ ?",
+      text: `How many solutions does the equation $x \\tan x = 1$ have in the interval $-2\\pi \\leq x \\leq 2\\pi$ ?`,
       options: [
         "0",
         "1",
@@ -184,7 +217,9 @@ function MainComponent() {
        },
     {
       id: 11,
-      text: "The real roots of the equation $4^{2x} + 12 = 2^{2x+3}$ are p and q, where $p > q$.\n\nThe value of $p - q$ can be expressed as",
+      text: `The real roots of the equation $4^{2x} + 12 = 2^{2x+3}$ are p and q, where $p > q$.
+      
+      The value of $p - q$ can be expressed as`,
       options: [
         "$\\frac{3}{4}$",
         "1",
@@ -196,7 +231,11 @@ function MainComponent() {
     },
     {
       id: 12,
-      text: "A right circular cylinder is contained within a sphere of radius 5 cm in such a way that the whole of the circumferences of both ends of the cylinder are in contact with the sphere.\n\nThe diagram shows a planar cross section through the centre of the sphere and cylinder.\n\nFind, in cubic centimetres, the maximum possible volume of the cylinder.",
+      text: `A right circular cylinder is contained within a sphere of radius 5 cm in such a way that the whole of the circumferences of both ends of the cylinder are in contact with the sphere.
+      
+      The diagram shows a planar cross section through the centre of the sphere and cylinder.
+      
+      Find, in cubic centimetres, the maximum possible volume of the cylinder.`,
       options: [
         "$250\\pi$",
         "$500\\pi$",
@@ -208,7 +247,7 @@ function MainComponent() {
     },
     {
       id: 13,
-      text: "How many real roots does the equation $3x^5 - 10x^3 - 120x + 30 = 0$ have?",
+      text: `How many real roots does the equation $3x^5 - 10x^3 - 120x + 30 = 0$ have?`,
       options: [
         "1",
         "2",
@@ -219,7 +258,13 @@ function MainComponent() {
     },
     {
       id: 14,
-      text: "The terms of an infinite series S are formed by adding together the corresponding terms in two infinite geometric series, T and U.\n\nThe first term of T and the first term of U are each 4.\n\nIn order, the first three terms of the combined series S are 8, 3, and $\\frac{5}{4}$.\n\nWhat is the sum to infinity of S?",
+      text: `The terms of an infinite series S are formed by adding together the corresponding terms in two infinite geometric series, T and U.
+      
+      The first term of T and the first term of U are each 4.
+      
+      In order, the first three terms of the combined series S are 8, 3, and $\\frac{5}{4}$.
+      
+      What is the sum to infinity of S?`,
       options: [
         "$\\frac{32}{5}$",
         "$\\frac{20}{3}$",
@@ -231,7 +276,7 @@ function MainComponent() {
     },
     {
       id: 15,
-      text: "The least possible value of the gradient of the curve $y = (2x + a)(x - 2a)^2$ at the point\nwhere $x = 1$, as a varies, is",
+      text: `The least possible value of the gradient of the curve $y = (2x + a)(x - 2a)^2$ at the point where $x = 1$, as a varies, is`,
       options: [
         "$-\\frac{49}{4}$",
         "-8",
@@ -242,7 +287,11 @@ function MainComponent() {
     },
     {
       id: 16,
-      text: "Given the simultaneous equations\n\n$$\\log_{10} 2 + \\log_{10}(y - 1) = 2 \\log_{10} x$$\n\n$$\\log_{10}(y + 3 - 3x) = 0$$\n\nthe values of y are",
+      text: `Given the simultaneous equations
+      
+      $$\\log_{10} 2 + \\log_{10}(y - 1) = 2 \\log_{10} x$$ 
+      $$\\log_{10}(y + 3 - 3x) = 0$$
+      the values of y are`,
       options: [
         "$\\frac{5}{2} \\pm \\frac{3\\sqrt{5}}{2}$",
         "$3 \\pm \\sqrt{3}$",
@@ -253,7 +302,9 @@ function MainComponent() {
     },
     {
       id: 17,
-      text: "It is given that\n\n$$y = (1 + 2 \\cos x) \\cos 2x \\quad \\text{ for } 0 < x < \\pi$$\n\nThe complete set of values of x for which y is negative is",
+      text: `It is given that
+      $$y = (1 + 2 \\cos x) \\cos 2x \\quad \\text{ for } 0 < x < \\pi$$
+      The complete set of values of x for which y is negative is`,
       options: [
         "$0 < x < \\frac{\\pi}{4}, \\frac{2\\pi}{3} < x < \\frac{3\\pi}{4}$",
         "$0 < x < \\frac{\\pi}{4}, \\frac{3\\pi}{4} < x < \\pi$",
@@ -265,7 +316,9 @@ function MainComponent() {
     },
     {
       id: 18,
-      text: "The function $\\frac{1-x}{\\sqrt[3]{x^2}}$ is defined for all $x \\neq 0$.\n\nThe complete set of values of x for which the function is decreasing is",
+      text: `The function $\\frac{1-x}{\\sqrt[3]{x^2}}$ is defined for all $x \\neq 0$.
+      
+      The complete set of values of x for which the function is decreasing is`,
       options: [
         "$x \\leq -2, x > 0$",
         "$-2 \\leq x < 0$",
@@ -277,7 +330,7 @@ function MainComponent() {
     },
     {
       id: 19,
-      text: "The coefficient of $x^3$ in the expansion of $(1 + 2x + 3x^2)^6$ is equal to twice the coefficient of $x^4$ in the expansion of $(1 - ax^2)^{5}$.\n\nFind all possible values of the constant a.",
+      text: `The coefficient of $x^3$ in the expansion of $(1 + 2x + 3x^2)^6$ is equal to twice the coefficient of $x^4$ in the expansion of $(1 - ax^2)^{5}$.\n\nFind all possible values of the constant a.`,
       options: [
         "$\\pm 2\\sqrt{2}$",
         "$\\pm \\sqrt{17}$",
@@ -288,7 +341,9 @@ function MainComponent() {
     },
     {
       id: 20,
-      text: "The diagram shows a square-based pyramid with base PQRS and vertex O. All the edges of the pyramid are of length 20 metres.\n\nFind the shortest distance, in metres, along the outer surface of the pyramid from P to the midpoint of QR.",
+      text: `The diagram shows a square-based pyramid with base PQRS and vertex O. All the edges of the pyramid are of length 20 metres.
+      
+      Find the shortest distance, in metres, along the outer surface of the pyramid from P to the midpoint of QR.`,
       options: [
         "$10\\sqrt{5 - 2\\sqrt{3}}$",
         "$10\\sqrt{3}$",
@@ -406,7 +461,7 @@ function MainComponent() {
         const examData = {
           paperName: 'Practice Paper 1',
           userAnswers: selectedAnswers,
-          timeTaken: (90 * 60) - timeRemaining,
+          timeTaken: (75 * 60) - timeRemaining,
           examType: 'TMUA'
         };
         
