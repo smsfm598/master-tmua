@@ -157,7 +157,7 @@ Which of the following best describes this attempt?`,
       text: `Consider the two statements
 
 $\\quad$R:$\\quad$ $k$ is an integer multiple of $\\pi$.
-$\\quad$S:$\\quad$ $\\int_0^k \\sin 2x dx = 0$
+$\\quad$S:$\\quad$ $\\int_0^k \\sin 2x  dx = 0$
 
 Which of the following statements is true?`,
       options: [

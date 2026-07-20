@@ -69,8 +69,8 @@ export default function LandingPage() {
           <Image
             src="/logo.png"
             alt="Master TMUA Logo"
-            width={42}
-            height={42}
+            width={50}
+            height={50}
             priority
           />
           <span className="text-xl font-bold">MasterTMUA</span>
