@@ -59,7 +59,7 @@ function MainComponent() {
   const questionsRaw = [
     {
       id: 1,
-      text: "It is given that the expansion of $(ax + b)^3$ is $8x^3 - px^2 + 18x - 3\\sqrt{3}$ where a, b and p are\nreal constants.\n\nWhat is the value of p?",
+      text: `It is given that the expansion of $(ax + b)^3$ is $8x^3 - px^2 + 18x - 3\\sqrt{3}$ where a, b and p are real constants. What is the value of p?`,
       options: [
         "$-12\\sqrt{3}$",
         "$-6\\sqrt{3}$",
@@ -110,7 +110,7 @@ function MainComponent() {
     },
     {
       id: 5,
-      text: "What is the total area enclosed between the curve $y = x^2 - 1$, the x-axis and\nthe lines $x = -2$ and $x = 2$?",
+      text: "What is the total area enclosed between the curve $y = x^2 - 1$, the x-axis and the lines $x = -2$ and $x = 2$?",
       options: [
         "$\\frac{4}{3}$",
         "$\\frac{8}{3}$",

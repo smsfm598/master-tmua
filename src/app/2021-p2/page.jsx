@@ -178,7 +178,7 @@ What is the $x$-coordinate of the point where this straight line meets the $x$-a
       id: 8,
       text: `Consider the following statement about the polynomial $p(x)$, where $a$ and $b$ are real numbers with $a < b$:
 
-$\\quad (\\star) \\quad$ There exists a number $c$ with $a < c < b$ such that $p'(c) = 0$.
+$\\quad (*) \\quad$ There exists a number $c$ with $a < c < b$ such that $p'(c) = 0$.
 
 Which one of the following is true?`,
       options: [
@@ -192,9 +192,9 @@ Which one of the following is true?`,
       id: 9,
       text: `Consider the following statements about a polynomial $f(x)$:
 
-$\\quad I \\quad$ $f(x) = ax^3 + bx^2 + cx + d$, where $a \\neq 0$
+$\\quad I \\quad$ $f(x) = px^3 + qx^2 + rx + s$, where $p \\neq 0$
 $\\quad II \\quad$ There is a real number $t$ for which $f'(t) = 0$
-$\\quad III \\quad$ There are two numbers $s$ and $t$ for which $f(s) \\cdot f(t) < 0$
+$\\quad III \\quad$ There are two numbers $u$ and $v$ for which $f(u) f(v) < 0$
 
 Which of these statements is/are sufficient for the equation $f(x) = 0$ to have a real solution?`,
       options: [
@@ -222,7 +222,7 @@ $$u_7 = 59$$
 
 Consider the following statement about this sequence:
 
-$\\quad (\\star) \\quad$ If $n$ is a prime number, then $u_n$ is a multiple of 3 or $u_n$ is a multiple of 5.
+$$ \\text{$\\quad (\\star) \\quad$ If $n$ is a prime number, then $u_n$ is a multiple of 3 or $u_n$ is a multiple of 5.} $$
 
 What is the smallest value of $n$ that provides a counterexample to (*)?`,
       options: [
@@ -392,9 +392,9 @@ $$\\sin B = y$$
 
 Which of the following statements is/are correct?
 
-$\\quad I. \\quad$ For some choice of $x$ and $y$, there is exactly one triangle the student could draw.
-$\\quad II. \\quad$ For some choice of $x$ and $y$, there are exactly two different triangles the student could draw.
-$\\quad III. \\quad$ For some choice of $x$ and $y$, there are exactly three different triangles the student could draw.
+$\\quad I \\quad$ For some choice of $x$ and $y$, there is exactly one triangle the student could draw.
+$\\quad II \\quad$ For some choice of $x$ and $y$, there are exactly two different triangles the student could draw.
+$\\quad III \\quad$ For some choice of $x$ and $y$, there are exactly three different triangles the student could draw.
 
 (Note that congruent triangles are considered to be the same.)`,
       options: [

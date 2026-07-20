@@ -93,9 +93,9 @@ describes a circle in the $xy$-plane.`,
       id: 3,
       text: `Given the following statements about a function $f$:
 
-$\\quad $• $f''(x) = a$ for all $x$
-$\\quad $• $f(0) = 1, f(1) = 2$
-$\\quad $• $\\int_0^1 f(x) dx = 1$
+$\\quad $• $\\quad $ $f''(x) = a$ for all $x$
+$\\quad $• $\\quad $ $f(0) = 1, f(1) = 2$
+$\\quad $• $\\quad $ $\\int_0^1 f(x) dx = 1$
 
 find the value of $a$.`,
       options: [
@@ -333,9 +333,9 @@ What is the maximum possible area of the rectangle?`,
     },
     {
       id: 16,
-      text: `The solutions to $7x^4 - 6x^2 + 1 = 0$ are $\\pm \\cos \\theta$ and $\\pm \\sin \\beta$.
+      text: `The solutions to $7x^4 - 6x^2 + 1 = 0$ are $\\pm \\cos \\theta$ and $\\pm \\cos \\beta$.
 
-Which one of the following equations has solutions $\\pm \\sin \\theta$ and $\\pm \\cos \\beta$?`,
+Which one of the following equations has solutions $\\pm \\sin \\theta$ and $\\pm \\sin \\beta$?`,
       options: [
         "$7x^4 - 8x^2 - 5 = 0$",
         "$7x^4 - 8x^2 + 2 = 0$",
@@ -347,7 +347,7 @@ Which one of the following equations has solutions $\\pm \\sin \\theta$ and $\\p
     },
     {
       id: 17,
-      text: `Find the complete set of values of $x$ for which there are two non-congruent triangles with the side lengths and angles as shown in the diagram.`,
+      text: `Find the complete set of values of $x$ for which there are two non-congruent triangles with the side lengths and angle as shown in the diagram.`,
       options: [
         "$1 < x < 3$",
         "$1 < x < 4$",
@@ -367,7 +367,7 @@ $$g(x) = -p(x - q)^2(x - r)^2$$
 
 where $p$, $q$ and $r$ are positive and $q < r$.
 
-Find the set of values of $q$ and $r$ that guarantees the greatest number of distinct real solutions to the equation $f(x) = g(x)$ for all $p$.`,
+Find the set of values of $q$ and $r$ that guarantees the greatest number of distinct real solutions of the equation $f(x) = g(x)$ for all $p$.`,
       options: [
         "$q < 1$ and $r < 1$",
         "$q < 1$ and $1 < r < 2$",
@@ -385,7 +385,7 @@ A second circle $C_2$ has radius 4 and centre $(a, b)$ where
 
 $$-2 \\leq a \\leq 2 \\text{ and } -3 \\leq b \\leq 3$$
 
-If the centre of $C_2$ is equally likely to be located anywhere within the given range, what is the probability that $C_1$ intersects $C_2$?`,
+If the centre of $C_2$ is equally likely to be located anywhere within the given range, what is the probability that $C_2$ intersects $C_1$?`,
       options: [
         "$\\frac{1}{25}$",
         "$\\frac{9}{25}$",
@@ -399,7 +399,7 @@ If the centre of $C_2$ is equally likely to be located anywhere within the given
       id: 20,
       text: `$n$ is the number of points of intersection of the graphs
 
-$y = |x^2 - a^2|$ and $y = a^2|x - 1|$
+$$y = |x^2 - a^2|$ and $y = a^2|x - 1|$$
 
 where $a$ is a real number.
 

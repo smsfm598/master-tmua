@@ -100,13 +100,13 @@ $$\\int_9^{16} \\left(\\frac{1}{\\sqrt{x}} + \\sqrt{x}\\right)^2 dx - \\int_9^{1
 
 For all positive real numbers $x$ and $y$,
 
-$\\sqrt{x^y} = x^{\\sqrt{y}}$
+$$\\sqrt{x^y} = x^{\\sqrt{y}}$$
 
 Which of the following is/are a counterexample to the claim?
 
-$\\quad$I$\\quad$ $x = 1, y = 16$
-$\\quad$II$\\quad$ $x = 2, y = 8$
-$\\quad$III$\\quad$ $x = 3, y = 4$`,
+$\\quad I \\quad$ $x = 1, y = 16$
+$\\quad II \\quad$ $x = 2, y = 8$
+$\\quad III \\quad$ $x = 3, y = 4$`,
       options: [
         "none of them",
         "I only",
@@ -122,7 +122,7 @@ $\\quad$III$\\quad$ $x = 3, y = 4$`,
       id: 4,
       text: `A student attempts to answer the following question.
 
-What is the largest number of consecutive odd integers that are all prime?
+$$\text{What is the largest number of consecutive odd integers that are all prime?}$$
 
 The student's attempt is as follows:
 
@@ -175,9 +175,9 @@ $$(*) \\quad a^x = x$$
 
 Which of the following equations must have the same number of real solutions as $(*)$?
 
-$\\quad$ I $\\quad \\log_a x = x$
-$\\quad$ II $\\quad a^{2x} = x^2$
-$\\quad$ III $\\quad a^{2x} = 2x$`,
+$\\quad I \\quad \\log_a x = x$
+$\\quad II \\quad a^{2x} = x^2$
+$\\quad III \\quad a^{2x} = 2x$`,
       options: [
         "none of them",
         "I only",
@@ -205,15 +205,15 @@ Which one of the following is a necessary but not sufficient condition for the l
     },
     {
       id: 8,
-      text: `A student draws a triangle that is acute-angled or obtuse-angled but **not** right-angled.
+      text: `A student draws a triangle that is acute-angled or obtuse-angled but not right-angled.
 
 The student counts the number of straight lines that divide the triangle into two triangles, at least one of which is right-angled.
 
 Which of the following statements is/are true?
 
-$\\quad$ I$ \\quad$ The student can draw a triangle for which there is exactly 1 such straight line.
-$\\quad $II $\\quad$ The student can draw a triangle for which there are exactly 2 such straight lines.
-$\\quad $III$ \\quad$ The student can draw a triangle for which there are exactly 3 such straight lines.`,
+$\\quad I \\quad$ The student can draw a triangle for which there is exactly 1 such straight line.
+$\\quad II \\quad$ The student can draw a triangle for which there are exactly 2 such straight lines.
+$\\quad III \\quad$ The student can draw a triangle for which there are exactly 3 such straight lines.`,
       options: [
         "none of them",
         "I only",
@@ -232,9 +232,9 @@ $\\quad $III$ \\quad$ The student can draw a triangle for which there are exactl
 $(*)$ If at least one of the interior angles in $P$ is $108°$, then all the interior angles in $P$ form an arithmetic sequence.
 
 Which of the following is/are true?
-$\\quad$ I $\\quad$ The statement (*)
-$\\quad$ II $\\quad $The contrapositive of (*)
-$\\quad$ III $\\quad$ The converse of (*)`,
+$\\quad I \\quad$ The statement (*)
+$\\quad II \\quad$ The contrapositive of (*)
+$\\quad III \\quad$ The converse of (*)`,
       options: [
         "none of them",
         "I only",
@@ -252,12 +252,12 @@ $\\quad$ III $\\quad$ The converse of (*)`,
 
 $$x^4 - 2x^2 - 3 > 0$$
 
-$\\quad$ I$\\quad$ if and only if $x^4 - 2x^2 + 1 < 4$
-$\\quad$ II $\\quad$if and only if $(x^2 - 1)^2 < 4$
-$\\quad$ III$\\quad$ if and only if $-2 < x^2 - 1 < 2$
-$\\quad$ IV$\\quad$ if and only if $x^2 -1 < 0$
-$\\quad$ V$\\quad$ if and only if $x^2 < 3$
-$\\quad$ VI$\\quad$ if and only if $-\\sqrt{3} < x < \\sqrt{3}$
+$\\quad I \\quad$ if and only if $x^4 - 2x^2 + 1 < 4$
+$\\quad II \\quad$ if and only if $(x^2 - 1)^2 < 4$
+$\\quad III \\quad$ if and only if $-2 < x^2 - 1 < 2$
+$\\quad IV \\quad$ if and only if $x^2 -1 < 0$
+$\\quad V \\quad$ if and only if $x^2 < 3$
+$\\quad VI \\quad$ if and only if $-\\sqrt{3} < x < \\sqrt{3}$
 
 Which of the following statements is true?`,
       options: [
@@ -280,9 +280,9 @@ $$\\text{If $2^k + 1$ is a prime, then $k$ is a power of $2$. $(*)$} $$
 
 Which of the following statements, taken individually, is/are equivalent to $(*)$?
 
-$\\quad$ I $\\quad$ If $k$ is a power of $2$, then $2^k + 1$ is prime.
-$\\quad$ II $\\quad$ $2^k + 1$ is not prime only if $k$ is not a power of $2$.
-$\\quad$ III $\\quad$ A sufficient condition for $k$ to be a power of $2$ is that $2^k + 1$ is prime.`,
+$\\quad I \\quad$ If $k$ is a power of $2$, then $2^k + 1$ is prime.
+$\\quad II \\quad$ $2^k + 1$ is not prime only if $k$ is not a power of $2$.
+$\\quad III \\quad$ A sufficient condition for $k$ to be a power of $2$ is that $2^k + 1$ is prime.`,
       options: [
         "A",
         "B",
@@ -299,8 +299,8 @@ $\\quad$ III $\\quad$ A sufficient condition for $k$ to be a power of $2$ is tha
       text: `In this question, $p$ is a real constant.
 
 The equation $\\sin x \\cos^2 x = p^2 \\sin x$ has $n$ distinct solutions in the range $0 \\leq x \\leq 2\\pi$.
-$\\quad$ I. $\\quad$ $n = 3$ is sufficient for $ p > 1$
-$\\quad$ II. $\\quad$ $n = 7$ only if  $ -1<p<1$
+$\\quad I \\quad$ $n = 3$ is sufficient for $ p > 1$
+$\\quad II \\quad$ $n = 7$ only if  $ -1<p<1$
 Which of the following statements is/are true?`,
       options: [
         "none of them",
@@ -347,11 +347,11 @@ Which one of the following is correct?`,
       id: 15,
       text: `The base 10 number 0.03841 has the value
 
-$0 \\times 10^{-1} + 3 \\times 10^{-2} + 8 \\times 10^{-3} + 4 \\times 10^{-4} + 1 \\times 10^{-5} = 0.03841$
+$$0 \\times 10^{-1} + 3 \\times 10^{-2} + 8 \\times 10^{-3} + 4 \\times 10^{-4} + 1 \\times 10^{-5} = 0.03841$$
 
 Similarly, the base 2 number 0.01101 has the value
 
-$0 \\times 2^{-1} + 1 \\times 2^{-2} + 1 \\times 2^{-3} + 0 \\times 2^{-4} + 1 \\times 2^{-5} = \\frac{13}{32}$
+$$0 \\times 2^{-1} + 1 \\times 2^{-2} + 1 \\times 2^{-3} + 0 \\times 2^{-4} + 1 \\times 2^{-5} = \\frac{13}{32}$$
 
 What is the value of the recurring base 2 number $0.\\overline{0}01\\overline{1} = 0.001100110011...$?`,
       options: [
@@ -373,15 +373,15 @@ $$u_1 = a$$
 $$u_2 = b$$
 $$u_{n+1} = u_n + u_{n-1} \\text{ for } n \\geq 1$$
 
-where $a$ and $b$ are positive integers. The highest common factor of $a$ and $u_7$ is $7$.
+where $a$ and $b$ are positive integers. The highest common factor of $a$ and $b$ is $7$.
 
 Which of the following statements must be true?
 
-$\\quad$ I $\\quad$ $u_{2023}$ is a multiple of 7
+$\\quad I \\quad$ $u_{2023}$ is a multiple of 7
 
-$\\quad$ II $\\quad$ If $u_1$ is not a factor of $u_2$, then $u_1$ is not a factor of $u_n$ for any $n > 1$
+$\\quad II \\quad$ If $u_1$ is not a factor of $u_2$, then $u_1$ is not a factor of $u_n$ for any $n > 1$
 
-$\\quad$ III $\\quad$ The highest common factor of $u_1$ and $u_5$ is 7`,
+$\\quad III \\quad$ The highest common factor of $u_1$ and $u_5$ is 7`,
       options: [
         "none of them",
         "I only",
@@ -433,11 +433,11 @@ $g(x) = 0$ for exactly $N$ values of $x$.
 
 Which of the following statements is/are true?
 
-$\\quad$ I $\\quad$ It is possible that $M < N$
+$\\quad I \\quad$ It is possible that $M < N$
 
-$\\quad$ II $\\quad$ It is possible that $M = N$
+$\\quad II \\quad$ It is possible that $M = N$
 
-$\\quad$ III $\\quad$ It is possible that $M > N$`,
+$\\quad III \\quad$ It is possible that $M > N$`,
       options: [
         "none of them",
         "I only",

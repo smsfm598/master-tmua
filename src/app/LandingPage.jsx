@@ -199,23 +199,23 @@ export default function LandingPage() {
             <div className="text-center mb-6">
               <h3 className="text-3xl font-bold">Master TMUA Premium</h3>
               <span className="text-gray-400 line-through text-xl">£24.99</span>
-              <span className="text-3xl font-bold ml-3 text-purple-400">£9.99</span>
+              <span className="text-3xl font-bold ml-3 text-purple-400">£14.99</span>
             </div>
             <ul className="flex-1 space-y-3 mb-6">
               <li className="flex items-center text-gray-300">
-                <FaCheck className="text-green-400 mr-3" /> 1:1 replica of Pearson exam interface
+                <FaCheck className="text-green-400 mr-3" /> 1:1 identical replica of Pearson exam interface
               </li>
               <li className="flex items-center text-gray-300">
                 <FaCheck className="text-green-400 mr-3" /> In depth analytics for personal growth
               </li>
               <li className="flex items-center text-gray-300">
-                <FaCheck className="text-green-400 mr-3" /> All your papers in one place
+                <FaCheck className="text-green-400 mr-3" /> Instant automatic marking
               </li>
               <li className="flex items-center text-gray-300">
                 <FaCheck className="text-green-400 mr-3" /> Very high value for money, lowest price on the market
               </li>
               <li className="flex items-center text-gray-300">
-                <FaCheck className="text-green-400 mr-3" /> Review your progress over time
+                <FaCheck className="text-green-400 mr-3" /> Track your progress over time
               </li>
             </ul>
               <button 
@@ -263,7 +263,7 @@ export default function LandingPage() {
             <div className="flex flex-col items-end">
               <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
               <a href="mailto:mastertmua@outlook.com" className="text-gray-400 hover:text-white transition-colors">
-                acetmua@outlook.com
+                mastertmua@outlook.com
               </a>
             </div>
           </div>

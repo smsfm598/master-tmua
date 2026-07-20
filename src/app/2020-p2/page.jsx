@@ -328,7 +328,7 @@ $\\quad II \\quad$ For $T$ to have property P, it is necessary that $d$ is even.
       id: 15,
       text: `Which one of the following is a necessary and sufficient condition for
 
-$\\sum_{k=1}^{n} \\sin\\left(\\frac{k\\pi}{3}\\right) = \\frac{\\sqrt{3}}{2}$
+$$\\sum_{k=1}^{n} \\sin\\left(\\frac{k\\pi}{3}\\right) = \\frac{\\sqrt{3}}{2}$$
 
 to be true?`,
       options: [
@@ -434,21 +434,14 @@ Given only this information, what are the smallest number and the largest number
       id: 20,
       text: `$x$ is a real number and $f$ is a function.
 
-Given that exactly one of the following statements is true, which one is it?
-
-A. $x \\geq 0$ only if $f(x) < 0$
-B. $x < 0$ if $f(x) \\geq 0$
-C. $x \\geq $ only if $f(x) \\geq 0$
-D. $f(x) < 0$ if $x < 0$
-E. $f(x) \\geq 0$ only if $x ≥ 0$
-F. $f(x) ≥ 0$ if and only if $x < 0$`,
+Given that exactly one of the following statements is true, which one is it? `,
       options: [
-        "A",
-        "B",
-        "C",
-        "D",
-        "E",
-        "F"
+        "$x \\geq 0$ only if $f(x) < 0$",
+        "$x < 0$ if $f(x) \\geq 0$",
+        "$x \\geq $ only if $f(x) \\geq 0$",
+        "$f(x) < 0$ if $x < 0$",
+        "$f(x) \\geq 0$ only if $x ≥ 0$",
+        "$f(x) ≥ 0$ if and only if $x < 0$"
       ],
     },
   ];

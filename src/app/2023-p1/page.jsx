@@ -98,7 +98,7 @@ $$\\int_n^{n+1} f(x) dx = n + 1$$
 
 Evaluate
 
-$\\int_0^3 f(x) dx + \\int_1^3 f(x) dx + \\int_2^3 f(x) dx + \\int_4^3 f(x) dx + \\int_5^3 f(x) dx$`,
+$$\\int_0^3 f(x) dx + \\int_1^3 f(x) dx + \\int_2^3 f(x) dx + \\int_4^3 f(x) dx + \\int_5^3 f(x) dx$$`,
       options: [
         "$-2$",
         "$0$",
@@ -112,7 +112,7 @@ $\\int_0^3 f(x) dx + \\int_1^3 f(x) dx + \\int_2^3 f(x) dx + \\int_4^3 f(x) dx +
       id: 4,
       text: `Evaluate
 
-$$\\sum_{n=0}^{\\infty} \\frac{\\sin\\left(n\\pi + \\frac{\\pi}{3}\\right)}{2^\\pi}$$`,
+$$\\sum_{n=0}^{\\infty} \\frac{\\sin\\left(n\\pi + \\frac{\\pi}{3}\\right)}{2^n}$$`,
       options: [
         "$0$",
         "$\\frac{1}{3}$",
@@ -176,7 +176,7 @@ Find the largest value of $x$ such that $P(x)$ and $Q(x)$ are in the ratio $4 : 
     },
     {
       id: 8,
-      text: `A triangle $XYZ$ is called $fun$ if it has the following properties:
+      text: `A triangle $XYZ$ is called fun if it has the following properties:
 
 $\\quad \\quad $ angle $YXZ = 30°$
 
