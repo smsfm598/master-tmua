@@ -64,7 +64,7 @@ export default function MarksPage() {
 
     const loadPageData = async () => {
       try {
-        const [results, mistakePaperResponse] = await Promise.all([
+        const [resultsOutcome, mistakePapersOutcome] = await Promise.allSettled([
           getAllExamResults(user.id),
           fetch("/api/mistake-papers", {
             method: "GET",
@@ -72,7 +72,12 @@ export default function MarksPage() {
           }),
         ]);
 
-        let processedResults = Array.isArray(results) ? results : [];
+        const results =
+          resultsOutcome.status === "fulfilled" && Array.isArray(resultsOutcome.value)
+            ? resultsOutcome.value
+            : [];
+
+        let processedResults = results;
 
         processedResults = processedResults.filter((result) => {
           const score = parseInt(result.score, 10) || 0;
@@ -92,17 +97,31 @@ export default function MarksPage() {
           return dateB - dateA;
         });
 
-        const mistakePaperPayload = await mistakePaperResponse.json().catch(() => ({}));
-
-        if (!mistakePaperResponse.ok) {
-          throw new Error(mistakePaperPayload.error || "Failed to load mistake papers");
-        }
-
         setExamResults(processedResults);
-        setMistakePapers(Array.isArray(mistakePaperPayload.mistakePapers) ? mistakePaperPayload.mistakePapers : []);
+
+        if (mistakePapersOutcome.status === "fulfilled") {
+          const mistakePaperResponse = mistakePapersOutcome.value;
+          const mistakePaperPayload = await mistakePaperResponse.json().catch(() => ({}));
+
+          if (mistakePaperResponse.ok) {
+            setMistakePapers(
+              Array.isArray(mistakePaperPayload.mistakePapers)
+                ? mistakePaperPayload.mistakePapers
+                : [],
+            );
+          } else {
+            console.error(
+              "Failed to load mistake papers:",
+              mistakePaperPayload.error || "Unknown error",
+            );
+            setMistakePapers([]);
+          }
+        } else {
+          console.error("Failed to load mistake papers:", mistakePapersOutcome.reason);
+          setMistakePapers([]);
+        }
       } catch (error) {
         console.error("Error loading marks page data:", error);
-        setExamResults([]);
         setMistakePapers([]);
       } finally {
         setLoading(false);

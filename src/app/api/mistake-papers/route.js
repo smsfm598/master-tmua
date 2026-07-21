@@ -24,7 +24,17 @@ export async function GET() {
     }
 
     const mistakePapers = (data || [])
-      .map((examResult) => buildMistakePaperFromExam(examResult))
+      .map((examResult) => {
+        try {
+          return buildMistakePaperFromExam(examResult);
+        } catch (error) {
+          console.error(
+            `Error building mistake paper for result ${examResult.id}:`,
+            error,
+          );
+          return null;
+        }
+      })
       .filter(Boolean)
       .map((paper) => ({
         id: paper.id,
