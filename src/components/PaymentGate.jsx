@@ -22,6 +22,8 @@ export default function PaymentGate({ children, paperName }) {
       }
 
       // Check paper access status
+      console.log("Current Clerk user:", user.id);
+      console.log("Access result:", access);
       const access = await getPaperAccess(user.id, paperName);
       setAccessStatus(access);
       setLoading(false);

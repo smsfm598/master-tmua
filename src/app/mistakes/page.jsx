@@ -118,7 +118,7 @@ export default function MistakesPage() {
                   onClick={() => router.push(`/mistake-papers/${paper.id}`)}
                 >
                   <div className="flex items-center justify-between mb-3 sm:mb-4">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center transition-transform duration-300 bg-gradient-to-br from-orange-500 to-red-500 group-hover:scale-110">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center transition-transform duration-300 bg-gradient-to-br from-orange-500 to-red-600 group-hover:scale-110">
                       <span className="text-white font-bold text-sm sm:text-lg">📈</span>
                     </div>
                     <div className="text-right">
@@ -131,9 +131,7 @@ export default function MistakesPage() {
                     {paper.title}
                   </h3>
 
-                  <p className="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4">
-                    Multiple choice
-                  </p>
+                  
 
                   <div className="flex justify-between items-center">
                     <span className="text-xs text-yellow-300">{paper.questionCount} QUESTIONS</span>
