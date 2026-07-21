@@ -12,6 +12,7 @@ export default function PapersPage() {
   const [selectedYear, setSelectedYear] = useState('all');
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [userEntitlements, setUserEntitlements] = useState(null);
+  const [debug, setDebug] = useState("");
   const [upgradeModal, setUpgradeModal] = useState({ isOpen: false, paperName: '' });
   const [loading, setLoading] = useState(true);
   
@@ -32,7 +33,12 @@ export default function PapersPage() {
   useEffect(() => {
     const checkEntitlements = async () => {
       if (user) {
+        console.log("Clerk user:", user.id);
+
         const entitlements = await checkUserEntitlements(user.id);
+
+        setDebug(JSON.stringify(entitlements, null, 2));
+
         setUserEntitlements(entitlements);
       }
       setLoading(false);
@@ -186,7 +192,9 @@ export default function PapersPage() {
               ))}
             </div>
           </div>
-          
+          <pre className="text-white text-xs mb-4">
+  {debug}
+</pre>
           {/* Papers Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {displayPapers.map((paper, index) => {
