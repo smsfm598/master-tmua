@@ -219,7 +219,10 @@ export default function MarksPage() {
                 <div key={index} className="bg-[#2a0045] rounded-lg p-4 border border-[#5c4d7d]/50">
                   <div className="flex justify-between items-start mb-2">
                     <div>
-                      <h3 className="text-white font-semibold text-sm">{result.paper_name || "TMUA Practice"}</h3>
+                      <h3 className="text-white font-semibold text-sm">
+                        {result.exam_type === "Mistake" ? "Mistake Paper: " : ""}
+                        {result.paper_name || "TMUA Practice"}
+                      </h3>
                       <p className="text-gray-400 text-xs">{formatShortDate(result.created_at || result.date)}</p>
                     </div>
                     <span className={`px-2 py-1 rounded text-xs font-bold ${
@@ -280,6 +283,9 @@ export default function MarksPage() {
                         <td className="py-3 px-2 md:px-4 text-xs md:text-sm">{formatLongDate(result.created_at || result.date)}</td>
                         <td className="py-3 px-2 md:px-4 text-xs md:text-sm">
                           <span className="truncate block max-w-[120px] sm:max-w-none">
+                            {result.exam_type === "Mistake" ? (
+                              <span className="text-yellow-400 font-semibold mr-1">Mistake Paper:</span>
+                            ) : null}
                             {result.paper_name || "TMUA Practice"}
                           </span>
                         </td>

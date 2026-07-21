@@ -119,14 +119,44 @@ export default function Page({ params }) {
     return "Unseen";
   };
 
-  const finishMistakePaper = () => {
+  const finishMistakePaper = async () => {
     const score = questions.reduce((total, question) => {
       return total + (selectedAnswers[question.id] === question.correctAnswer ? 1 : 0);
     }, 0);
 
-    alert(
-      `Mistake paper completed! Score: ${score}/${questions.length}.`,
-    );
+    const wrongAnswers = questions
+      .filter((q) => selectedAnswers[q.id] !== q.correctAnswer)
+      .map((q) => ({
+        questionNumber: q.originalQuestionNumber,
+        userAnswer: selectedAnswers[q.id] || "No answer",
+        correctAnswer: q.correctAnswer,
+      }));
+
+    try {
+      const response = await fetch("/api/save-mistake-result", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          paperName: mistakePaper.paperName,
+          score: score,
+          totalQuestions: questions.length,
+          wrongAnswers: wrongAnswers,
+          timeTaken: 0, // Mistake papers are untimed
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to save result");
+      }
+
+      alert(`Mistake paper completed! Score: ${score}/${questions.length}. Your result has been saved.`);
+    } catch (error) {
+      console.error("Error saving result:", error);
+      alert(`Mistake paper completed! Score: ${score}/${questions.length}. (Error saving result)`);
+    }
+
     router.push("/marks?tab=mistakes");
   };
 

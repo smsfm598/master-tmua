@@ -15,8 +15,9 @@ export async function GET() {
 
     const { data, error } = await supabaseAdmin
       .from("exam_results")
-      .select("id, clerk_user_id, paper_name, score, total_questions, wrong_answers, created_at")
+      .select("id, clerk_user_id, paper_name, score, total_questions, wrong_answers, created_at, exam_type")
       .eq("clerk_user_id", userId)
+      .not("exam_type", "eq", "Mistake")
       .order("created_at", { ascending: false });
 
     if (error) {
