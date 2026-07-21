@@ -71,7 +71,11 @@ export default function PapersPage() {
     '2023': ['2023 Paper 1', '2023 Paper 2']
   };
   
-  const allPapers = Object.values(papersByYear).flat();
+  // Explicitly define the order of year groups to avoid numeric key ordering issues
+  const yearOrder = ['Specimen', 'Practice', '2017', '2018', '2019', '2020', '2021', '2022', '2023'];
+  
+  // Flatten papers in our desired order
+  const allPapers = yearOrder.flatMap(year => papersByYear[year]);
   const displayPapers = selectedYear === 'all' ? allPapers : papersByYear[selectedYear] || [];
   
   // Function to map paper names to their corresponding routes
@@ -167,7 +171,7 @@ export default function PapersPage() {
               >
                 All Papers
               </button>
-              {Object.keys(papersByYear).map((year) => (
+              {yearOrder.map((year) => (
                 <button
                   key={year}
                   onClick={() => setSelectedYear(year)}
