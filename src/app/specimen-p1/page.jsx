@@ -357,8 +357,9 @@ function MainComponent() {
           throw new Error('Failed to save exam result');
         }
       } else {
-        // Guest users: do not save, just redirect
-        alert('Exam completed! Please sign up to see your marks and dashboard.');
+        // Guest users: calculate score but don't save
+        const markingResult = calculateScore(selectedAnswers, 'Specimen Paper 1');
+        alert(`Exam completed: You scored ${markingResult.score}/${markingResult.totalQuestions}. Please sign up to save future marks and access your personalised dashboard!`);
         router.push('/sign-up');
       }
     } catch (error) {
