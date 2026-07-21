@@ -435,6 +435,9 @@ What is the smallest value of $n$ that is not possible?`,
         setTimeRemaining((prev) => prev - 1);
       }, 1000);
       return () => clearInterval(timer);
+    } else if (currentView === "exam" && timeRemaining === 0) {
+      // Auto-end exam when time runs out
+      confirmEndExam();
     }
   }, [currentView, timeRemaining]);
 
@@ -961,7 +964,7 @@ What is the smallest value of $n$ that is not possible?`,
       <div className={`${getHeaderTheme()} p-2`}>
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <h1 className="text-base font-normal pl-2">
+            <h1 className="text-base font-normal pl-2 font-mono text-white">
               Test of Mathematics for University Admission
             </h1>
           </div>
@@ -1017,30 +1020,6 @@ What is the smallest value of $n$ that is not possible?`,
                     onClick={() => applyColorScheme("default")}
                   >
                     Color Scheme
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("light-yellow")}
-                  >
-                    Black on Light Yellow
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("salmon")}
-                  >
-                    Black on Salmon
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("high-contrast")}
-                  >
-                    Black on White
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("yellow")}
-                  >
-                    Black on Yellow
                   </button>
                 </div>
               )}
@@ -1253,6 +1232,7 @@ What is the smallest value of $n$ that is not possible?`,
                 className="h-6 w-auto"
               />
             </button>
+            {currentQuestion < questions.length - 1 && (
             <button
               className="text-sm text-white hover:text-gray-200 bg-transparent border-none"
               onClick={handleNext}
@@ -1264,6 +1244,7 @@ What is the smallest value of $n$ that is not possible?`,
                 className="h-6 w-auto"
               />
             </button>
+            )}
           </div>
         </div>
       </div>
