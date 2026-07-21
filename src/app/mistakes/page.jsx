@@ -132,11 +132,11 @@ export default function MistakesPage() {
                   </h3>
 
                   <p className="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4">
-                    {paper.questionCount} questions • Multiple choice
+                    Multiple choice
                   </p>
 
                   <div className="flex justify-between items-center">
-                    <span className="text-xs text-yellow-300">No duration</span>
+                    <span className="text-xs text-yellow-300">{paper.questionCount} QUESTIONS</span>
                     <div className="px-2 sm:px-3 py-1 rounded-full text-xs font-medium transition-colors duration-300 bg-[#8e44ad] text-white group-hover:bg-[#9b59b6]">
                       Start
                     </div>

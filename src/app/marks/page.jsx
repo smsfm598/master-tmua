@@ -306,14 +306,6 @@ export default function MarksPage() {
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-3 mb-4 sm:mb-6">
-          <button
-            className="px-4 py-2 rounded-lg text-sm sm:text-base transition-all duration-300 bg-[#8e44ad] text-white shadow-lg"
-          >
-            Marks
-          </button>
-        </div>
-
         {renderExamResults()}
       </main>
     </div>
