@@ -1,7 +1,7 @@
 import { auth } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 import { supabaseAdmin } from "../../../lib/supabase-admin";
-import { buildMistakePaperFromExam } from "../../../lib/mistake-papers";
+import { buildMistakePaperCardFromExam } from "../../../lib/mistake-papers";
 
 export const dynamic = "force-dynamic";
 
@@ -26,7 +26,7 @@ export async function GET() {
     const mistakePapers = (data || [])
       .map((examResult) => {
         try {
-          return buildMistakePaperFromExam(examResult);
+          return buildMistakePaperCardFromExam(examResult);
         } catch (error) {
           console.error(
             `Error building mistake paper for result ${examResult.id}:`,
@@ -36,13 +36,7 @@ export async function GET() {
         }
       })
       .filter(Boolean)
-      .map((paper) => ({
-        id: paper.id,
-        paperName: paper.paperName,
-        title: paper.title,
-        createdAt: paper.createdAt,
-        questionCount: paper.questionCount,
-      }));
+      .map((paper) => paper);
 
     return NextResponse.json({
       success: true,

@@ -139,3 +139,25 @@ export function buildMistakePaperFromExam(examResult) {
     questions,
   };
 }
+
+export function buildMistakePaperCardFromExam(examResult) {
+  const score = Number(examResult?.score ?? 0);
+  const totalQuestions = Number(examResult?.total_questions ?? 0);
+  const wrongAnswers = parseWrongAnswers(examResult?.wrong_answers);
+
+  if (totalQuestions > 0 && score <= 0) {
+    return null;
+  }
+
+  if (wrongAnswers.length === 0) {
+    return null;
+  }
+
+  return {
+    id: examResult.id,
+    paperName: examResult.paper_name,
+    title: `${examResult.paper_name} Mistakes`,
+    createdAt: examResult.created_at,
+    questionCount: wrongAnswers.length,
+  };
+}
