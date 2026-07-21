@@ -21,13 +21,19 @@ export default function PaymentGate({ children, paperName }) {
         return;
       }
 
-      // All papers are accessible now!
-      setAccessStatus({ hasAccess: true });
+      // Check paper access status
+      const access = await getPaperAccess(user.id, paperName);
+      setAccessStatus(access);
       setLoading(false);
+      
+      // Show upgrade modal if no access
+      if (!access.hasAccess) {
+        setShowUpgradeModal(true);
+      }
     };
 
     checkAccess();
-  }, [user, isLoaded, router]);
+  }, [user, isLoaded, router, paperName]);
 
   const handleUpgradeModalClose = () => {
     setShowUpgradeModal(false);

@@ -100,15 +100,25 @@ export default function PapersPage() {
   };
   
   const handlePaperClick = (paperName) => {
-    // All papers are accessible for now
-    console.log(`Starting: ${paperName}`);
-    const route = getPaperRoute(paperName);
-    router.push(route);
+    // Check if paper is free or user has access
+    if (isPaperFree(paperName) || userEntitlements?.hasFullAccess) {
+      console.log(`Starting: ${paperName}`);
+      const route = getPaperRoute(paperName);
+      router.push(route);
+    } else {
+      // Show upgrade modal
+      setUpgradeModal({ isOpen: true, paperName });
+    }
   };
 
   const getPaperStatus = (paperName) => {
-    // All papers are accessible for now
-    return 'accessible';
+    if (isPaperFree(paperName)) {
+      return 'free';
+    } else if (userEntitlements?.hasFullAccess) {
+      return 'accessible';
+    } else {
+      return 'locked';
+    }
   };
   
   return (

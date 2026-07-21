@@ -398,7 +398,7 @@ export const checkUserEntitlements = async (userId) => {
 
 // Check if a specific paper is free to access
 export const isPaperFree = (paperName) => {
-  const freePapers = ['Practice Paper 1', 'Practice Paper 2'];
+  const freePapers = ['Specimen Paper 1', 'Specimen Paper 2', 'Practice Paper 1', 'Practice Paper 2'];
   return freePapers.includes(paperName);
 };
 
