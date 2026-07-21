@@ -23,14 +23,11 @@ function formatLongDate(value) {
 
 export default function MarksPage() {
   const [examResults, setExamResults] = useState([]);
-  const [mistakePapers, setMistakePapers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [collapsed, setCollapsed] = useState(false);
   const [expandedResults, setExpandedResults] = useState(new Set());
-  const [activeTab, setActiveTab] = useState("results");
   const { user, isLoaded } = useUser();
   const router = useRouter();
-  const searchParams = useSearchParams();
 
   // Auto-collapse sidebar on mobile
   useEffect(() => {
@@ -46,15 +43,6 @@ export default function MarksPage() {
   }, []);
 
   useEffect(() => {
-    const tabFromQuery = searchParams.get("tab");
-    if (tabFromQuery === "mistakes") {
-      setActiveTab("mistakes");
-    } else {
-      setActiveTab("results");
-    }
-  }, [searchParams]);
-
-  useEffect(() => {
     if (!isLoaded) return;
 
     if (!user) {
@@ -64,20 +52,9 @@ export default function MarksPage() {
 
     const loadPageData = async () => {
       try {
-        const [resultsOutcome, mistakePapersOutcome] = await Promise.allSettled([
-          getAllExamResults(user.id),
-          fetch("/api/mistake-papers", {
-            method: "GET",
-            cache: "no-store",
-          }),
-        ]);
-
-        const results =
-          resultsOutcome.status === "fulfilled" && Array.isArray(resultsOutcome.value)
-            ? resultsOutcome.value
-            : [];
-
-        let processedResults = results;
+        const results = await getAllExamResults(user.id);
+        
+        let processedResults = Array.isArray(results) ? results : [];
 
         processedResults = processedResults.filter((result) => {
           const score = parseInt(result.score, 10) || 0;
@@ -98,31 +75,8 @@ export default function MarksPage() {
         });
 
         setExamResults(processedResults);
-
-        if (mistakePapersOutcome.status === "fulfilled") {
-          const mistakePaperResponse = mistakePapersOutcome.value;
-          const mistakePaperPayload = await mistakePaperResponse.json().catch(() => ({}));
-
-          if (mistakePaperResponse.ok) {
-            setMistakePapers(
-              Array.isArray(mistakePaperPayload.mistakePapers)
-                ? mistakePaperPayload.mistakePapers
-                : [],
-            );
-          } else {
-            console.error(
-              "Failed to load mistake papers:",
-              mistakePaperPayload.error || "Unknown error",
-            );
-            setMistakePapers([]);
-          }
-        } else {
-          console.error("Failed to load mistake papers:", mistakePapersOutcome.reason);
-          setMistakePapers([]);
-        }
       } catch (error) {
         console.error("Error loading marks page data:", error);
-        setMistakePapers([]);
       } finally {
         setLoading(false);
       }
@@ -336,54 +290,6 @@ export default function MarksPage() {
     </div>
   );
 
-  const renderMistakePapers = () => (
-    <div className="bg-[#1a0030] rounded-xl border border-[#5c4d7d] shadow-lg p-4 sm:p-6">
-      {mistakePapers.length === 0 ? (
-        <div className="text-center py-8 text-gray-400">
-          <p className="text-sm sm:text-base">No mistake papers are available yet.</p>
-          <p className="text-xs sm:text-sm mt-2">
-            Complete a paper with a score above 0 and at least one mistake to generate one.
-          </p>
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-          {mistakePapers.map((paper) => (
-            <div
-              key={paper.id}
-              className="group rounded-xl border p-4 sm:p-6 transition-all duration-300 cursor-pointer bg-gradient-to-br from-[#1a0030] to-[#2a0045] border-[#5c4d7d] hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/20 hover:scale-105"
-              onClick={() => router.push(`/mistake-papers/${paper.id}`)}
-            >
-              <div className="flex items-center justify-between mb-3 sm:mb-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center transition-transform duration-300 bg-gradient-to-br from-purple-500 to-pink-500 group-hover:scale-110">
-                  <span className="text-white font-bold text-sm sm:text-lg">✎</span>
-                </div>
-                <div className="text-right">
-                  <div className="text-xs text-gray-400">Test Date</div>
-                  <div className="text-xs sm:text-sm font-semibold text-white">{formatShortDate(paper.createdAt)}</div>
-                </div>
-              </div>
-
-              <h3 className="text-sm sm:text-lg font-semibold mb-2 text-white group-hover:text-purple-300 transition-colors duration-300">
-                {paper.title}
-              </h3>
-
-              <p className="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4">
-                {paper.questionCount} questions • Multiple choice
-              </p>
-
-              <div className="flex justify-between items-center">
-                <span className="text-xs text-yellow-300">No duration</span>
-                <div className="px-2 sm:px-3 py-1 rounded-full text-xs font-medium transition-colors duration-300 bg-[#8e44ad] text-white group-hover:bg-[#9b59b6]">
-                  Start
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#1a002d] to-[#33004d] flex">
       <Sidebar collapsed={collapsed} setCollapsed={setCollapsed} currentPage="marks" />
@@ -402,34 +308,13 @@ export default function MarksPage() {
 
         <div className="flex flex-wrap gap-3 mb-4 sm:mb-6">
           <button
-            onClick={() => {
-              setActiveTab("results");
-              router.push("/marks");
-            }}
-            className={`px-4 py-2 rounded-lg text-sm sm:text-base transition-all duration-300 ${
-              activeTab === "results"
-                ? "bg-[#8e44ad] text-white shadow-lg"
-                : "bg-[#1a0030] text-gray-300 border border-[#5c4d7d] hover:bg-[#2a0045]"
-            }`}
+            className="px-4 py-2 rounded-lg text-sm sm:text-base transition-all duration-300 bg-[#8e44ad] text-white shadow-lg"
           >
             Marks
           </button>
-          <button
-            onClick={() => {
-              setActiveTab("mistakes");
-              router.push("/marks?tab=mistakes");
-            }}
-            className={`px-4 py-2 rounded-lg text-sm sm:text-base transition-all duration-300 ${
-              activeTab === "mistakes"
-                ? "bg-[#8e44ad] text-white shadow-lg"
-                : "bg-[#1a0030] text-gray-300 border border-[#5c4d7d] hover:bg-[#2a0045]"
-            }`}
-          >
-            Mistake Papers
-          </button>
         </div>
 
-        {activeTab === "mistakes" ? renderMistakePapers() : renderExamResults()}
+        {renderExamResults()}
       </main>
     </div>
   );

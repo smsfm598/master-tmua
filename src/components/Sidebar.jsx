@@ -88,6 +88,27 @@ export default function Sidebar({ collapsed, setCollapsed, currentPage = '' }) {
               )}
             </button>
           </li>
+
+          {/* Mistakes Section */}
+          <li>
+            <button 
+              onClick={() => handleNavigation('/mistakes')}
+              className={`group w-full flex items-center px-2 sm:px-3 md:px-4 py-2 sm:py-3 transition-all duration-300 ease-in-out rounded-xl transform hover:scale-[1.02] active:scale-[0.98] ${
+                currentPage === 'mistakes'
+                  ? 'text-white bg-gradient-to-r from-[#2a0045] to-[#3a0055] shadow-lg shadow-purple-500/20'
+                  : 'text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-[#2a0045] hover:to-[#3a0055] hover:shadow-lg hover:shadow-purple-500/20'
+              }`}
+            >
+              {!collapsed && (
+                <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-lg bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                  <span className="text-xs sm:text-sm font-bold">📈</span>
+                </div>
+              )}
+              {!collapsed && (
+                <span className="font-medium ml-2 sm:ml-3 text-xs sm:text-sm md:text-base">Mistakes</span>
+              )}
+            </button>
+          </li>
           
           {/* Marks Section */}
           <li>
