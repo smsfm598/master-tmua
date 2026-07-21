@@ -60,8 +60,8 @@ export default function PapersPage() {
   
   // Complete paper list organized by year
   const papersByYear = {
-    'Practice': ['Practice Paper 1', 'Practice Paper 2'],
     'Specimen': ['Specimen Paper 1', 'Specimen Paper 2'],
+    'Practice': ['Practice Paper 1', 'Practice Paper 2'],
     '2017': ['2017 Paper 1', '2017 Paper 2'],
     '2018': ['2018 Paper 1', '2018 Paper 2'],
     '2019': ['2019 Paper 1', '2019 Paper 2'],
