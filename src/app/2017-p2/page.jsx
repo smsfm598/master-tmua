@@ -6,6 +6,7 @@ import { useUser } from '@clerk/nextjs'
 import { saveExamResult, calculateScore } from '../../lib/supabase'
 import { InlineMath, BlockMath } from "react-katex";
 import "katex/dist/katex.min.css";
+import PaymentGate from "../../../components/PaymentGate";
 
 // ✅ Define this once
 function renderWithLatex(str = "") {
@@ -1270,5 +1271,5 @@ Using the best strategy, how many further attempts must I make in order to guara
 }
 
 export default function Page() {
-  return <MainComponent />;
+  return <PaymentGate paperName="2017 Paper 2"><MainComponent /></PaymentGate>;
 }

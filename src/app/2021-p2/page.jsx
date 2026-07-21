@@ -6,6 +6,7 @@ import { useUser } from '@clerk/nextjs'
 import { saveExamResult, calculateScore } from '../../lib/supabase'
 import { InlineMath, BlockMath } from "react-katex";
 import "katex/dist/katex.min.css";
+import PaymentGate from "../../../components/PaymentGate";
 
 // ✅ Define this once
 function renderWithLatex(str = "") {
@@ -1288,5 +1289,5 @@ $$\\int_{-1}^1 f_{99}(x) dx$$`,
 }
 
 export default function Page() {
-  return <MainComponent />;
+  return <PaymentGate paperName="2021 Paper 2"><MainComponent /></PaymentGate>;
 }

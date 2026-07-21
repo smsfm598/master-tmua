@@ -6,6 +6,7 @@ import { useUser } from '@clerk/nextjs'
 import { saveExamResult, calculateScore } from '../../lib/supabase'
 import { InlineMath, BlockMath } from "react-katex";
 import "katex/dist/katex.min.css";
+import PaymentGate from "../../../components/PaymentGate";
 
 // ✅ Define this once
 function renderWithLatex(str = "") {
@@ -1215,5 +1216,5 @@ $$\\sin^2 0° + \\sin^2 1° + \\sin^2 2° + \\sin^2 3° + \\cdots $$ $$+ \\sin^2
 }
 
 export default function Page() {
-  return <MainComponent />;
+  return <PaymentGate paperName="2018 Paper 1"><MainComponent /></PaymentGate>;
 }

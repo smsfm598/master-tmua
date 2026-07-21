@@ -6,6 +6,7 @@ import { useUser } from '@clerk/nextjs'
 import { saveExamResult, calculateScore } from '../../lib/supabase'
 import { InlineMath, BlockMath } from "react-katex";
 import "katex/dist/katex.min.css";
+import PaymentGate from "../../../components/PaymentGate";
 
 // ✅ Define this once
 function renderWithLatex(str = "") {
@@ -1205,5 +1206,5 @@ satisfied by exactly two distinct values of $x$?`,
 }
 
 export default function Page() {
-  return <MainComponent />;
+  return <PaymentGate paperName="2020 Paper 1"><MainComponent /></PaymentGate>;
 }

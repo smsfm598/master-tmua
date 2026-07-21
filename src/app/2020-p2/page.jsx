@@ -6,6 +6,7 @@ import { useUser } from '@clerk/nextjs'
 import { saveExamResult, calculateScore } from '../../lib/supabase'
 import { InlineMath, BlockMath } from "react-katex";
 import "katex/dist/katex.min.css";
+import PaymentGate from "../../../components/PaymentGate";
 
 // ✅ Define this once
 function renderWithLatex(str = "") {
@@ -1286,5 +1287,5 @@ Given that exactly one of the following statements is true, which one is it? `,
 }
 
 export default function Page() {
-  return <MainComponent />;
+  return <PaymentGate paperName="2020 Paper 2"><MainComponent /></PaymentGate>;
 }
