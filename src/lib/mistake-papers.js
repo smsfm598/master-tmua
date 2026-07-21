@@ -33,6 +33,7 @@ export function getPaperQuestions(paperName) {
     id: Number(question.id ?? index + 1),
     text: question.text ?? "",
     options: Array.isArray(question.options) ? question.options : [],
+    image: question.image || null,
   }));
 
   return normalizedQuestions;
@@ -66,6 +67,7 @@ export function buildMistakePaperFromExam(examResult) {
         originalQuestionNumber: Number(question.id),
         text: question.text,
         options: question.options,
+        image: question.image,
         correctAnswer: wrongAnswer?.correctAnswer ?? "",
         previousUserAnswer: wrongAnswer?.userAnswer ?? "",
       };

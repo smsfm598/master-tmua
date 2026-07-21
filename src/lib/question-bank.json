@@ -10,7 +10,8 @@
         "$$y = x^3 + x^{-2} - x^{-1} + 4$$",
         "$$y = x^3 + 2x^{-2} - x^{-1} + 3$$",
         "$$y = 3x^3 + x^{-2} - x^{-1} + 2$$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 2,
@@ -22,7 +23,8 @@
         "$17$",
         "$29$",
         "$80$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 3,
@@ -33,7 +35,8 @@
         "$21 \\frac{3}{5}$",
         "$27$",
         "$40 \\frac{1}{2}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 4,
@@ -44,7 +47,8 @@
         "$4$",
         "$\\frac{8}{7}$",
         "$\\frac{11}{4}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 5,
@@ -58,7 +62,8 @@
         "$x^2 - 6x + 8 > 0$",
         "$x < 2$",
         "$x > 6$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 6,
@@ -70,7 +75,8 @@
         "$20$",
         "$\\frac{64}{3}$",
         "$\\frac{80}{3}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 7,
@@ -80,7 +86,8 @@
         "$\\frac{95}{8}$",
         "$\\frac{115}{8}$",
         "$\\frac{185}{8}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 8,
@@ -90,7 +97,8 @@
         "$$0 \\le x \\le \\frac{\\pi}{6}, \\frac{5\\pi}{6} \\le x \\le \\pi$$",
         "$$\\frac{\\pi}{6} \\le x \\le \\frac{\\pi}{2}, \\frac{5\\pi}{6} \\le x \\le \\pi$$",
         "$$\\frac{\\pi}{6} \\le x \\le \\frac{5\\pi}{6}$$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 9,
@@ -104,7 +112,8 @@
         "$36\\sqrt{3}$",
         "$48$",
         "$48\\sqrt{3}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 10,
@@ -116,7 +125,8 @@
         "$\\frac{1}{4}$",
         "$\\frac{2}{3}$",
         "$\\frac{3}{2}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 11,
@@ -127,7 +137,8 @@
         "$1$",
         "$3$",
         "$7$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 12,
@@ -139,7 +150,8 @@
         "$\\int_{2}^{4} [f(x + 2) + 1] dx = A + 2$",
         "$\\int_{4}^{6} [f(x + 2) + 1] dx = A + 1$",
         "$\\int_{4}^{6} [f(x + 2) + 1] dx = A + 2$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 13,
@@ -151,7 +163,8 @@
         "$9$",
         "$13$",
         "$17$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 14,
@@ -163,7 +176,8 @@
         "$\\log_2 \\frac{7}{3}$",
         "$\\log_2 9$",
         "$\\log_2 15$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 15,
@@ -177,7 +191,8 @@
         "(1) overestimate, (2) underestimate, (3) overestimate",
         "(1) overestimate, (2) overestimate, (3) underestimate",
         "(1) overestimate, (2) overestimate, (3) overestimate"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 16,
@@ -190,7 +205,8 @@
         "$x \\le -3, -2 \\le x \\le -1$",
         "$x \\le -3, x \\ge -2$",
         "$-2 \\le x \\le -1$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 17,
@@ -201,7 +217,8 @@
         "$24$",
         "$25$",
         "$26$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 18,
@@ -213,7 +230,8 @@
         "$2$",
         "$\\log_{2} 10$",
         "$100$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 19,
@@ -225,7 +243,8 @@
         "$qc < x < pc$",
         "$pc^2 < x < qc^2$",
         "$qc^2 < x < pc^2$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 20,
@@ -236,7 +255,8 @@
         "$60 < \\text{angle PRQ} < 120$",
         "$60 < \\text{angle PRQ} < 180$",
         "$120 < \\text{angle PRQ} < 180$"
-      ]
+      ],
+      "image": null
     }
   ],
   "2017 Paper 2": [
@@ -250,7 +270,8 @@
         "$$-\\frac{9}{4}x^{-\\frac{1}{2}} + \\frac{3}{2}x^{-\\frac{3}{2}} + \\frac{3}{4}x^{-\\frac{5}{2}}$$",
         "$$-\\frac{9}{4}x^{-\\frac{1}{2}} + \\frac{3}{2}x^{-\\frac{3}{2}} - \\frac{3}{4}x^{-\\frac{5}{2}}$$",
         "$$-\\frac{9}{4}x^{-\\frac{1}{2}} - \\frac{3}{2}x^{-\\frac{3}{2}} - \\frac{3}{4}x^{-\\frac{5}{2}}$$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 2,
@@ -261,7 +282,8 @@
         "$20$",
         "$8\\sqrt{10}$",
         "$40$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 3,
@@ -274,7 +296,8 @@
         "$\\frac{4(2\\sqrt{3} + 3)}{7}$",
         "$2(2 + \\sqrt{3})$",
         "$4(2\\sqrt{3} + 3)$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 4,
@@ -285,7 +308,8 @@
         "$\\frac{\\sqrt{3}}{2}$ is the only possible value, but the reasoning given should consider other possible values of $2x$ for which $\\sin 2x = \\frac{\\sqrt{3}}{2}$.",
         "$\\frac{\\sqrt{3}}{2}$ is not the only possible value because the reasoning given should have considered other possible values of $x$ for which $\\tan x = \\sqrt{3}$.",
         "$\\frac{\\sqrt{3}}{2}$ is not the only possible value because the reasoning given should have considered other possible values of $x$ for which $\\sin 2x = \\frac{\\sqrt{3}}{2}$."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 5,
@@ -299,7 +323,8 @@
         "1 and 3 only",
         "2 and 3 only",
         "1, 2 and 3"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 6,
@@ -313,7 +338,8 @@
         "$\\frac{4^{1000}}{1000!}$",
         "$\\frac{2^{1000}}{1001!}$",
         "$\\frac{4^{1000}}{1001!}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 7,
@@ -327,7 +353,8 @@
         "1 and 4 only",
         "2 and 3 only",
         "2 and 4 only"
-      ]
+      ],
+      "image": "/images/2017p2q7.png"
     },
     {
       "id": 8,
@@ -338,7 +365,8 @@
         "$2^{\\frac{\\pi}{3}}$",
         "$\\frac{1}{4{(\\sqrt{2}-1)}^3}$",
         "$4\\sin^{2}\\left(\\frac{\\pi}{4}\\right)$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 9,
@@ -351,7 +379,8 @@
         "The proof is incorrect and the first mistake occurs on line IV.",
         "The proof is incorrect and the first mistake occurs on line V.",
         "The proof is incorrect and the first mistake occurs on line VI."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 10,
@@ -362,7 +391,8 @@
         "$f(-x) = -f(x)$ for all $x$",
         "$f(x + 2) = -f(2 - x)$ for all $x$",
         "$f(x - 2) = -f(2 - x)$ for all $x$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 11,
@@ -375,7 +405,8 @@
         "$R + (f(b))^2$",
         "$R + (f(b))^2 - (f(a))^2$",
         "$R + 2(f(b) - f(a))f(b)$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 12,
@@ -387,7 +418,8 @@
         "$\\sin 2x < \\tan x < \\cos 2x$ for some real number $x$ with $-\\frac{\\pi}{2} < x < \\frac{\\pi}{2}$",
         "$\\tan x < \\sin 2x < \\cos 2x$ for some real number $x$ with $-\\frac{\\pi}{2} < x < \\frac{\\pi}{2}$",
         "$\\tan x < \\cos 2x < \\sin 2x$ for some real number $x$ with $-\\frac{\\pi}{2} < x < \\frac{\\pi}{2}$"
-      ]
+      ],
+      "image": "/images/2017p2q12.png"
     },
     {
       "id": 13,
@@ -401,7 +433,8 @@
         "II and III only",
         "II and IV only",
         "I, II, III and IV"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 14,
@@ -415,7 +448,8 @@
         "F",
         "G",
         "H"
-      ]
+      ],
+      "image": "/images/2017p2q14.png"
     },
     {
       "id": 15,
@@ -427,7 +461,8 @@
         "$2$",
         "$4$",
         "$8$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 16,
@@ -437,7 +472,8 @@
         "$f(x) = \\frac{x^4 + x^2 + x}{2}$",
         "$f(x) = \\frac{x^4 + x^3 + x^2 + x}{2}$",
         "$f(x) = \\frac{x^4 + 2x^3 + x^2}{4}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 17,
@@ -451,7 +487,8 @@
         "There exists a number $a$ which is in $T$ such that there is no prime factor of $a$ which divides at least one other number in $T$.",
         "There exists a number $a$ which is in $T$ such that there is a prime factor of $a$ which does not divide any other number in $T$.",
         "There exists a number $a$ which is in $T$ such that there is a prime factor of $a$ which does not divide at least one other number in $T$."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 18,
@@ -463,7 +500,8 @@
         "Only step (III) is invalid; the rest are correct",
         "Only step (IV) is invalid; the rest are correct",
         "Only step (V) is invalid; the rest are correct"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 19,
@@ -477,7 +515,8 @@
         "$|a| \\leq 4$",
         "$a = \\frac{9}{4}$",
         "$|a| = \\frac{3}{2}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 20,
@@ -488,7 +527,8 @@
         "Two",
         "Three",
         "More than three"
-      ]
+      ],
+      "image": null
     }
   ],
   "2018 Paper 1": [
@@ -503,7 +543,8 @@
         "$-\\frac{1}{4}$",
         "$\\frac{7}{4}$",
         "$7$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 2,
@@ -515,7 +556,8 @@
         "$a = 6d$",
         "$a = 7d$",
         "$a = \\frac{38}{3}d$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 3,
@@ -526,7 +568,8 @@
         "$16$",
         "$2\\sqrt{2}$",
         "$5\\sqrt{2}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 4,
@@ -539,7 +582,8 @@
         "$a < -1$ or $a > 1$",
         "$a < -2$ or $a > 2$",
         "All real values of $a$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 5,
@@ -550,7 +594,8 @@
         "$7$",
         "$17$",
         "$29$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 6,
@@ -561,7 +606,8 @@
         "$2$",
         "$3$",
         "$4$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 7,
@@ -573,7 +619,8 @@
         "$\\sqrt{6}$",
         "$\\frac{\\sqrt{30}}{30}$",
         "$\\sqrt{30}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 8,
@@ -585,7 +632,8 @@
         "$\\frac{216}{7}$",
         "$72$",
         "$216$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 9,
@@ -597,7 +645,8 @@
         "$c > -7$",
         "$c < 20$",
         "$c < -20$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 10,
@@ -609,7 +658,8 @@
         "$40$",
         "$48$",
         "There is no greatest possible value."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 11,
@@ -621,7 +671,8 @@
         "$-\\frac{3\\sqrt{2}}{2}$",
         "$\\sqrt{5}$",
         "$-\\sqrt{5}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 12,
@@ -633,7 +684,8 @@
         "$5$",
         "$6$",
         "$10$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 13,
@@ -645,7 +697,8 @@
         "$D$",
         "$E$",
         "$F$"
-      ]
+      ],
+      "image": "/images/2018p1q13.png"
     },
     {
       "id": 14,
@@ -657,7 +710,8 @@
         "$p = \\frac{1}{4}$ and $p = 64$",
         "$p = \\frac{1}{64}$ and $p = 4$",
         "$p = \\frac{1}{64}$ and $p = 16$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 15,
@@ -669,7 +723,8 @@
         "$\\log_3 20$",
         "$2 \\log_3 20$",
         "$4 \\log_3 20$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 16,
@@ -681,7 +736,8 @@
         "$b = \\frac{\\sqrt{6}}{2}$",
         "$b = \\sqrt{2}$",
         "$b = \\sqrt{6}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 17,
@@ -692,7 +748,8 @@
         "$16\\frac{1}{2}$",
         "$16\\frac{2}{3}$",
         "$16\\frac{3}{4}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 18,
@@ -703,7 +760,8 @@
         "$\\frac{7\\pi}{12}$",
         "$\\frac{11\\pi}{12}$",
         "$\\frac{19\\pi}{12}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 19,
@@ -715,7 +773,8 @@
         "$\\frac{\\sqrt{17}}{5}$",
         "$\\frac{\\sqrt{51}}{8}$",
         "$\\frac{\\sqrt{34}}{8}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 20,
@@ -727,7 +786,8 @@
         "$45$",
         "$45.5$",
         "$46$"
-      ]
+      ],
+      "image": null
     }
   ],
   "2018 Paper 2": [
@@ -741,7 +801,8 @@
         "12",
         "39.5",
         "88"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 2,
@@ -753,7 +814,8 @@
         "66",
         "220",
         "495"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 3,
@@ -767,7 +829,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 4,
@@ -779,7 +842,8 @@
         "6",
         "7",
         "8"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 5,
@@ -789,7 +853,8 @@
         "I only",
         "II only",
         "I and II"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 6,
@@ -800,7 +865,8 @@
         "$f(x) = x^3 + x + 1$",
         "$f(x) = 1 - x$",
         "$f(x) = 2^x$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 7,
@@ -813,7 +879,8 @@
         "4",
         "5",
         "6"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 8,
@@ -827,7 +894,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": "/images/2018p2q8.png"
     },
     {
       "id": 9,
@@ -840,7 +908,8 @@
         "There is another value of $x$ that satisfies the original equation and the error arises as a result of step (II).",
         "There is another value of $x$ that satisfies the original equation and the error arises as a result of step (III).",
         "There is another value of $x$ that satisfies the original equation and the error arises as a result of step (IV)."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 10,
@@ -854,7 +923,8 @@
         "F",
         "G",
         "H"
-      ]
+      ],
+      "image": "/images/2018p2q10.png"
     },
     {
       "id": 11,
@@ -868,7 +938,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 12,
@@ -882,7 +953,8 @@
         "There is a positive integer $N$ such that for any positive integer $K$ there is a positive integer $m$ for which $N(Km + 1) - 1$ is prime.",
         "There is a positive integer $N$ such that for any positive integer $K$ and for any positive integer $m$, $N(Km + 1) - 1$ is prime.",
         "There is a positive integer $N$ and a positive integer $K$ for which there is no positive integer $m$ for which $N(Km + 1) - 1$ is prime."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 13,
@@ -894,7 +966,8 @@
         "The proof is incorrect, and the first error occurs in line (III).",
         "The proof is incorrect, and the first error occurs in line (IV).",
         "The proof is incorrect, and the first error occurs in line (V)."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 14,
@@ -908,7 +981,8 @@
         "$p = \\sqrt{3}$ or $p \\geq 2$",
         "$p < 2$",
         "$p \\geq 2$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 15,
@@ -922,7 +996,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 16,
@@ -936,7 +1011,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 17,
@@ -946,7 +1022,8 @@
         "If $N$ and $M$ are squaresums, then so is $NM$.",
         "If $NM$ is a squaresum, then $N$ and $M$ are squaresums.",
         "If $N$ is not a squaresum, then $kN$ is a squaresum for some number $k$ which is a product of awkward primes."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 18,
@@ -958,7 +1035,8 @@
         "$f(x) \\leq 0$ for all real $x$",
         "$f'(x) \\leq 0$ for all real $x$",
         "$f''(x) \\leq 0$ for all real $x$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 19,
@@ -968,7 +1046,8 @@
         "$2 > \\frac{3^x + 3^z}{3^y}$",
         "$\\frac {2 \\times 5^x}{5^z} < \\frac{5^x + 5^z}{5^y}$",
         "$2 < \\frac{7^x + 7^z}{7^y}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 20,
@@ -980,7 +1059,8 @@
         "$p \\geq \\sqrt{x}$",
         "$p \\geq 0$",
         "$p \\geq 1$"
-      ]
+      ],
+      "image": null
     }
   ],
   "2019 Paper 1": [
@@ -994,7 +1074,8 @@
         "$x^2 + 2x - 4$",
         "$2x^2 + 4x + 1$",
         "$-2x^2 - 4x + 5$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 2,
@@ -1008,7 +1089,8 @@
         "$k < -2$ or $k > \\frac{1}{2}$",
         "$0 < k < 4$",
         "$k < 0$ or $k > 4$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 3,
@@ -1022,7 +1104,8 @@
         "3321",
         "6480",
         "6642"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 4,
@@ -1036,7 +1119,8 @@
         "$10^{-2^{100}}$",
         "$10^{-2^{-99}}$",
         "$10^{-2^{-100}}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 5,
@@ -1048,7 +1132,8 @@
         "$\\frac{45}{16}$",
         "$\\frac{45}{8}$",
         "$\\frac{45}{4}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 6,
@@ -1059,7 +1144,8 @@
         "16",
         "26",
         "50"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 7,
@@ -1072,7 +1158,8 @@
         "$\\frac{1}{2}$",
         "$\\frac{3}{4}$",
         "$1$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 8,
@@ -1083,7 +1170,8 @@
         "$\\int_{-1}^0 f(x + 1) dx$",
         "$\\int_{-1}^0 f(-x) dx$",
         "$\\int_0^1 (1 - f(x)) dx$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 9,
@@ -1096,7 +1184,8 @@
         "$\\frac{2}{3}p^3 - \\frac{1}{2}p^4$",
         "$\\frac{4}{3}p^3 - p^4$",
         "$2p^4$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 10,
@@ -1108,7 +1197,8 @@
         "$-\\frac{16}{3}$",
         "$\\frac{11}{3}$",
         "$-\\frac{11}{3}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 11,
@@ -1122,7 +1212,8 @@
         "$9\\frac{1}{3}$",
         "$27$",
         "$27\\frac{1}{9}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 12,
@@ -1134,7 +1225,8 @@
         "$416\\pi + 7$",
         "$608\\pi + 7$",
         "$744\\pi + 7$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 13,
@@ -1146,7 +1238,8 @@
         "$\\frac{21}{2}$",
         "$\\frac{65}{4}$",
         "There is no maximum value."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 14,
@@ -1158,7 +1251,8 @@
         "$660°$",
         "$780°$",
         "$930°$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 15,
@@ -1170,7 +1264,8 @@
         "$2$",
         "$\\log_2 3$",
         "$2 \\log_2 3$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 16,
@@ -1184,7 +1279,8 @@
         "$\\frac{29}{5}$",
         "$\\frac{32}{5}$",
         "$14$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 17,
@@ -1198,7 +1294,8 @@
         "$\\frac{3}{4}$",
         "$\\frac{5}{6}$",
         "$\\frac{11}{12}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 18,
@@ -1211,7 +1308,8 @@
         "$\\frac{5\\sqrt{5}}{3}$",
         "$5$",
         "$6$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 19,
@@ -1223,7 +1321,8 @@
         "$\\sin 190°$",
         "$\\sin 280°$",
         "$1$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 20,
@@ -1235,7 +1334,8 @@
         "$-16 < k < 0$",
         "$-16 < k < 4$",
         "$-16 < k < 16$"
-      ]
+      ],
+      "image": null
     }
   ],
   "2019 Paper 2": [
@@ -1248,7 +1348,8 @@
         "60",
         "120",
         "240"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 2,
@@ -1260,7 +1361,8 @@
         "$\\frac{22}{3}$",
         "$\\frac{38}{5}$",
         "10"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 3,
@@ -1274,7 +1376,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 4,
@@ -1288,7 +1391,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 5,
@@ -1298,7 +1402,8 @@
         "sufficient but not necessary for (*)",
         "necessary and sufficient for (*)",
         "not necessary and not sufficient for (*)"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 6,
@@ -1311,7 +1416,8 @@
         "It is incorrect, and the first error is that extra solutions were introduced on line (IV)",
         "It is incorrect, and the first error is that extra solutions were introduced on line (V)",
         "It is incorrect, and the first error is not eliminating the values where $\\tan x$ is undefined on line (VI)"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 7,
@@ -1321,7 +1427,8 @@
         "The equation $a^4 + b^2 = c^2$ has no solutions for which $a$, $b$ and $c$ are positive integers.",
         "The equation $a^4 + b^4 = c^4$ has no solutions for which $a$, $b$ and $c$ are positive integers.",
         "If $a$, $b$ and $c$ are positive integers which satisfy the equation $a^2 + b^2 = c^2$, then one is the arithmetic mean of the other two."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 8,
@@ -1335,7 +1442,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 9,
@@ -1347,7 +1455,8 @@
         "14",
         "19",
         "20"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 10,
@@ -1357,7 +1466,8 @@
         "$PQ = SR$ and $PQ$ is parallel to $SR$",
         "$PQ = QR = SR = PS$",
         "$PR = QS$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 11,
@@ -1371,7 +1481,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 12,
@@ -1383,7 +1494,8 @@
         "$S < T < R$",
         "$T < R < S$",
         "$T < S < R$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 13,
@@ -1393,7 +1505,8 @@
         "I only",
         "II only",
         "I and II"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 14,
@@ -1407,7 +1520,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 15,
@@ -1418,7 +1532,8 @@
         "$c$",
         "It is possible to determine the base, but the base is not $a$, $b$ or $c$",
         "There is insufficient information given to determine the base"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 16,
@@ -1432,7 +1547,8 @@
         "F",
         "G",
         "H"
-      ]
+      ],
+      "image": "/images/2019p2q16.png"
     },
     {
       "id": 17,
@@ -1442,7 +1558,8 @@
         "B",
         "C",
         "D"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 18,
@@ -1456,7 +1573,8 @@
         "$a \\leq -1$",
         "$a \\leq -\\frac{3}{2}$",
         "There are no such values of $a$."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 19,
@@ -1469,7 +1587,8 @@
         "$2$",
         "$\\sqrt{26} - 4\\sqrt{2}$",
         "$1$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 20,
@@ -1482,7 +1601,8 @@
         "$f(x) = f(2 - x)$ for all $x$",
         "$f(x) = f(4 - x)$ for all $x$",
         "$f(x) = f(8 - x)$ for all $x$"
-      ]
+      ],
+      "image": null
     }
   ],
   "2020 Paper 1": [
@@ -1496,7 +1616,8 @@
         "$\\frac{3\\sqrt{x} - 5}{4\\sqrt{x}}$",
         "$\\frac{3\\sqrt{x} - 10}{3\\sqrt{x}}$",
         "$\\frac{3x^2 - 10x}{3\\sqrt{x}}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 2,
@@ -1508,7 +1629,8 @@
         "$\\frac{22}{3}$",
         "$\\frac{38}{5}$",
         "$10$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 3,
@@ -1521,7 +1643,8 @@
         "$x < -4$ or $x > 2$",
         "$x < -4$ or $-3 < x < 1$",
         "$-4 < x < -2$ or $x > 1$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 4,
@@ -1533,7 +1656,8 @@
         "$4$",
         "$5$",
         "$6$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 5,
@@ -1544,7 +1668,8 @@
         "$21$",
         "$25$",
         "$38$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 6,
@@ -1556,7 +1681,8 @@
         "$3$",
         "$4$",
         "$7$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 7,
@@ -1568,7 +1694,8 @@
         "$-14$",
         "$-11$",
         "$-10$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 8,
@@ -1580,7 +1707,8 @@
         "$-6 < p < 2$",
         "$-4 < p < 0$",
         "$-2 < p < 2$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 9,
@@ -1592,7 +1720,8 @@
         "$x^2 - 178x + 81$",
         "$x^2 - 176x + 81$",
         "$x^2 + 196x + 81$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 10,
@@ -1606,7 +1735,8 @@
         "$y = -16x^2 + 48x - 41$",
         "$y = 16x^2 - 48x + 31$",
         "$y = 16x^2 - 48x + 41$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 11,
@@ -1618,7 +1748,8 @@
         "$4$",
         "$6$",
         "$\\frac{33}{5}$"
-      ]
+      ],
+      "image": "/images/2020p1q11.png"
     },
     {
       "id": 12,
@@ -1631,7 +1762,8 @@
         "$4$",
         "$5$",
         "infinitely many"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 13,
@@ -1643,7 +1775,8 @@
         "$35$",
         "$105$",
         "$210$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 14,
@@ -1655,7 +1788,8 @@
         "$\\sqrt{6}$",
         "$2\\sqrt{3}$",
         "$2\\sqrt{6}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 15,
@@ -1667,7 +1801,8 @@
         "$\\frac{17}{4}$",
         "$\\frac{255}{16}$",
         "$\\frac{257}{16}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 16,
@@ -1681,7 +1816,8 @@
         "$\\frac{\\sqrt{6}}{3}$",
         "$\\frac{\\sqrt{3}}{3}$",
         "$\\sqrt{3}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 17,
@@ -1693,7 +1829,8 @@
         "$m < \\frac{1}{4c}$",
         "$m > 4c^2$",
         "$m < 4c^2$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 18,
@@ -1705,7 +1842,8 @@
         "Number of solutions = 3    Sum of solutions = 360°",
         "Number of solutions = 4    Sum of solutions = 240°",
         "Number of solutions = 4    Sum of solutions = 360°"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 19,
@@ -1717,7 +1855,8 @@
         "$52$",
         "$53$",
         "$54$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 20,
@@ -1729,7 +1868,8 @@
         "$3$",
         "$4$",
         "more than 4"
-      ]
+      ],
+      "image": null
     }
   ],
   "2020 Paper 2": [
@@ -1743,7 +1883,8 @@
         "$k \\leq -1$ or $k \\geq 3$",
         "$k \\leq -3$ or $k \\geq 5$",
         "$k \\leq -4$ or $k \\geq 4$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 2,
@@ -1757,7 +1898,8 @@
         "$-\\frac{\\sqrt{5}}{5}$",
         "$\\frac{2\\sqrt{5}}{5}$",
         "$-\\frac{2\\sqrt{5}}{5}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 3,
@@ -1770,7 +1912,8 @@
         "The argument is incorrect. There is an error in step (IV).",
         "The argument is incorrect. There is an error in step (V).",
         "The argument is incorrect. There is an error in step (VI)."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 4,
@@ -1784,7 +1927,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 5,
@@ -1796,7 +1940,8 @@
         "D",
         "E",
         "F"
-      ]
+      ],
+      "image": "/images/2020p2q5.png"
     },
     {
       "id": 6,
@@ -1810,7 +1955,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 7,
@@ -1824,7 +1970,8 @@
         "F",
         "G",
         "H"
-      ]
+      ],
+      "image": "/images/2020p2q7.png"
     },
     {
       "id": 8,
@@ -1835,7 +1982,8 @@
         "The statement (*) is false, but the student's proof is not correct: the student needs to give all the values of $a$ and $b$ where $|a + b| < |a| + |b|$ is false.",
         "The statement (*) is false, but the student's proof is not correct: the student should have instead stated that for all real numbers $a$ and $b$, $|a + b| \\leq |a| + |b|$.",
         "The statement (*) is false, and the student's proof is fully correct."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 9,
@@ -1847,7 +1995,8 @@
         "$(180 \\times 4 \\div \\pi) \\times \\sin(4)$",
         "$(180 \\times 4 \\div \\pi) \\times \\sin(180 \\times 4 \\div \\pi)$",
         "$4 \\times \\sin(180 \\times 4 \\div \\pi)$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 10,
@@ -1861,7 +2010,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 11,
@@ -1875,7 +2025,8 @@
         "$(100, -99)$",
         "$(-100, 99)$",
         "$(-100, -99)$"
-      ]
+      ],
+      "image": "/images/2020p2q11.png"
     },
     {
       "id": 12,
@@ -1887,7 +2038,8 @@
         "... if $f'(x) < 0$ and $f''(x) > 0$ for all $x$ with $a < x < b$",
         "... only if $f'(x) < 0$ and $f''(x) > 0$ for all $x$ with $a < x < b$",
         "... if and only if $f'(x) < 0$ and $f''(x) > 0$ for all $x$ with $a < x < b$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 13,
@@ -1897,7 +2049,8 @@
         "I only",
         "II only",
         "I and II"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 14,
@@ -1907,7 +2060,8 @@
         "I only",
         "II only",
         "I and II"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 15,
@@ -1919,7 +2073,8 @@
         "$n$ is 1 more than a multiple of 3",
         "$n$ is 1 more than a multiple of 6",
         "$n$ is 1 more than a multiple of 6 or $n$ is 2 more than a multiple of 6"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 16,
@@ -1931,7 +2086,8 @@
         "The calculation is incorrect, and the first error occurs on line (III).",
         "The calculation is incorrect, and the first error occurs on line (IV).",
         "The calculation is incorrect, and the first error occurs on line (V)."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 17,
@@ -1943,7 +2099,8 @@
         "12",
         "14",
         "15"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 18,
@@ -1957,7 +2114,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 19,
@@ -1971,7 +2129,8 @@
         "smallest: 4, largest: 4",
         "smallest: 4, largest: 5",
         "smallest: 5, largest: 5"
-      ]
+      ],
+      "image": "/images/2020p2q19.png"
     },
     {
       "id": 20,
@@ -1983,7 +2142,8 @@
         "$f(x) < 0$ if $x < 0$",
         "$f(x) \\geq 0$ only if $x ≥ 0$",
         "$f(x) ≥ 0$ if and only if $x < 0$"
-      ]
+      ],
+      "image": null
     }
   ],
   "2021 Paper 1": [
@@ -1998,7 +2158,8 @@
         "$5x - 3y = 1$",
         "$5x - 3y = 4$",
         "$5x + 3y = 1$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 2,
@@ -2011,7 +2172,8 @@
         "$12 - 8\\sqrt{2}$",
         "$6\\sqrt{2}$",
         "$12$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 3,
@@ -2025,7 +2187,8 @@
         "$\\frac{1}{2}$",
         "$1$",
         "$2$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 4,
@@ -2037,7 +2200,8 @@
         "$0$",
         "$4$",
         "$20$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 5,
@@ -2049,7 +2213,8 @@
         "$\\frac{16}{5}$",
         "$3\\sqrt{2}$",
         "$4$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 6,
@@ -2061,7 +2226,8 @@
         "$\\frac{2}{3}$",
         "$1$",
         "$2$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 7,
@@ -2075,7 +2241,8 @@
         "$4$",
         "$6$",
         "$8$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 8,
@@ -2087,7 +2254,8 @@
         "$5$",
         "$6$",
         "$14$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 9,
@@ -2100,7 +2268,8 @@
         "$\\frac{1}{2}\\sqrt{2}$",
         "$\\sqrt{2}$",
         "$2\\sqrt{2}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 10,
@@ -2112,7 +2281,8 @@
         "$\\log_{10} 3$",
         "$\\log_{10} \\frac{81}{16}$",
         "$\\log_{10} \\frac{\\sqrt{23}}{2}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 11,
@@ -2125,7 +2295,8 @@
         "$\\frac{2}{3}$",
         "$\\frac{4}{5}$",
         "$\\frac{13}{15}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 12,
@@ -2137,7 +2308,8 @@
         "$3$",
         "$\\frac{9}{2}$",
         "$6 + \\frac{3\\sqrt{2}}{2}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 13,
@@ -2149,7 +2321,8 @@
         "$165$",
         "$204$",
         "$288$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 14,
@@ -2161,7 +2334,8 @@
         "$5$",
         "$6$",
         "$7$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 15,
@@ -2173,7 +2347,8 @@
         "$10$",
         "$\\frac{55}{2}$",
         "$55$"
-      ]
+      ],
+      "image": "/images/2021p1q15.png"
     },
     {
       "id": 16,
@@ -2184,7 +2359,8 @@
         "$\\frac{25}{36}$",
         "$\\frac{5}{6}$",
         "$1$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 17,
@@ -2195,7 +2371,8 @@
         "C",
         "D",
         "E"
-      ]
+      ],
+      "image": "/images/2021p1q17.png"
     },
     {
       "id": 18,
@@ -2209,7 +2386,8 @@
         "$y = x^2 + 4x + 3$",
         "$y = x^2 - 6x + 11$",
         "$y = x^2 + 6x + 7$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 19,
@@ -2221,7 +2399,8 @@
         "$270 \\leq x < 300$",
         "$300 \\leq x < 360$",
         "$450 \\leq x < 630$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 20,
@@ -2233,7 +2412,8 @@
         "$3\\pi$",
         "$9\\pi$",
         "$12\\pi$"
-      ]
+      ],
+      "image": null
     }
   ],
   "2021 Paper 2": [
@@ -2248,7 +2428,8 @@
         "$18$",
         "$21.875$",
         "$34.5$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 2,
@@ -2260,7 +2441,8 @@
         "$y = x$",
         "$y = 2x - 3$",
         "$y = 2x + 2$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 3,
@@ -2274,7 +2456,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 4,
@@ -2288,7 +2471,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 5,
@@ -2299,7 +2483,8 @@
         "Hence $1 + \\cos x = 1 + \\sqrt{1 - \\sin^2 x}$ for all values of $x$.",
         "Thus $(1 + \\cos x)^2 = \\left(1 + \\sqrt{1 - \\sin^2 x}\\right)^2$ for all values of $x$.",
         "Substituting $x = \\pi$ gives $0 = 4$."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 6,
@@ -2309,7 +2494,8 @@
         "$P$ is sufficient but not necessary for $Q$",
         "$P$ is necessary and sufficient for $Q$",
         "$P$ is not necessary and not sufficient for $Q$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 7,
@@ -2323,7 +2509,8 @@
         "$6$",
         "The straight line is not uniquely determined by the information given, so there is more than one possible point of intersection.",
         "There is no straight line that bisects both the area of the circle and the area of the square."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 8,
@@ -2333,7 +2520,8 @@
         "The condition $p(a) = p(b)$ is necessary but not sufficient for (*)",
         "The condition $p(a) = p(b)$ is sufficient but not necessary for (*)",
         "The condition $p(a) = p(b)$ is not necessary and not sufficient for (*)"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 9,
@@ -2347,7 +2535,8 @@
         "F",
         "G",
         "H"
-      ]
+      ],
+      "image": "/images/2021p2q9.png"
     },
     {
       "id": 10,
@@ -2360,7 +2549,8 @@
         "$5$",
         "$6$",
         "$7$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 11,
@@ -2372,7 +2562,8 @@
         "It is incorrect because there is an error in line (II)",
         "It is incorrect because there is an error in line (III)",
         "It is incorrect because there is an error in line (IV)"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 12,
@@ -2386,7 +2577,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 13,
@@ -2400,7 +2592,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 14,
@@ -2414,7 +2607,8 @@
         "$p > 1$ and $p < 2$",
         "$p > 2$",
         "All real values of $p$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 15,
@@ -2426,7 +2620,8 @@
         "$\\frac{b}{2} = \\sqrt{\\frac{a^2 + b^2}{4} - c}$",
         "$-\\frac{a}{2} = \\sqrt{\\frac{a^2 + b^2}{4} - c}$",
         "$-\\frac{b}{2} = \\sqrt{\\frac{a^2 + b^2}{4} - c}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 16,
@@ -2438,7 +2633,8 @@
         "$0, 2, 4$",
         "$1, 2, 3$",
         "$1, 2, 3, 4$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 17,
@@ -2450,7 +2646,8 @@
         "$\\frac{1}{2} \\leq g(x) \\leq f(x)$ or $f(x) \\leq g(x) \\leq \\frac{1}{2}$",
         "$1 \\leq f(x) \\leq g(x)$ or $g(x) \\leq f(x) \\leq 1$",
         "$1 \\leq g(x) \\leq f(x)$ or $f(x) \\leq g(x) \\leq 1$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 18,
@@ -2464,7 +2661,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 19,
@@ -2478,7 +2676,8 @@
         "$182$",
         "$271$",
         "$360$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 20,
@@ -2492,7 +2691,8 @@
         "$99$",
         "$99.5$",
         "$100$"
-      ]
+      ],
+      "image": null
     }
   ],
   "2022 Paper 1": [
@@ -2508,7 +2708,8 @@
         "6",
         "7",
         "8"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 2,
@@ -2520,7 +2721,8 @@
         "$p < 0$ or $p > 4$",
         "$p < -1$ or $p > 9$",
         "all real values of $p$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 3,
@@ -2532,7 +2734,8 @@
         "$2$",
         "$3$",
         "$6$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 4,
@@ -2545,7 +2748,8 @@
         "10.5",
         "14",
         "15"
-      ]
+      ],
+      "image": "/images/2022p1q4.png"
     },
     {
       "id": 5,
@@ -2559,7 +2763,8 @@
         "$9$",
         "$11$",
         "$13$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 6,
@@ -2572,7 +2777,8 @@
         "25",
         "100",
         "10000"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 7,
@@ -2584,7 +2790,8 @@
         "$108$",
         "$144$",
         "$288$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 8,
@@ -2595,7 +2802,8 @@
         "$2^{30}$",
         "$\\frac{2^{10}}{2^{10} - 1}$",
         "$2^{10}(2^{10} - 1)$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 9,
@@ -2608,7 +2816,8 @@
         "$-2$",
         "$-3$",
         "$-4$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 10,
@@ -2622,7 +2831,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 11,
@@ -2636,7 +2846,8 @@
         "$1 + 4950 \\log_{10} 3$",
         "$1 - 5050 \\log_{10} 3$",
         "$1 + 5050 \\log_{10} 3$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 12,
@@ -2647,7 +2858,8 @@
         "$-5$",
         "$-7$",
         "$-9$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 13,
@@ -2661,7 +2873,8 @@
         "$\\frac{\\sqrt{2}}{2}$",
         "$-2^{\\frac{1}{6}}$",
         "$2^{\\frac{1}{6}}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 14,
@@ -2673,7 +2886,8 @@
         "$27\\sqrt{3}$",
         "$36 + 9\\sqrt{3}$",
         "$36\\sqrt{3}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 15,
@@ -2687,7 +2901,8 @@
         "$8\\sqrt{2}$",
         "$\\frac{20\\sqrt{10}}{9}$",
         "$\\frac{40\\sqrt{10}}{9}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 16,
@@ -2699,7 +2914,8 @@
         "$7x^4 - 6x^2 + 1 = 0$",
         "$7x^4 + 6x^2 - 1 = 0$",
         "$7x^4 + 6x^2 + 5 = 0$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 17,
@@ -2711,7 +2927,8 @@
         "$3 < x < 4$",
         "$3 < x < 5$",
         "$4 < x < 5$"
-      ]
+      ],
+      "image": "/images/2022p1q17.png"
     },
     {
       "id": 18,
@@ -2723,7 +2940,8 @@
         "$1 < q < 2$ and $1 < r < 2$",
         "$1 < q < 2$ and $r > 2$",
         "$q > 2$ and $r > 2$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 19,
@@ -2735,7 +2953,8 @@
         "$\\frac{6 - \\pi}{6}$",
         "$\\frac{16 - \\pi}{24}$",
         "$\\frac{24 - \\pi}{24}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 20,
@@ -2746,7 +2965,8 @@
         "$n = 3$",
         "$n = 4$",
         "$n = 5$"
-      ]
+      ],
+      "image": null
     }
   ],
   "2022 Paper 2": [
@@ -2759,7 +2979,8 @@
         "2",
         "3",
         "4"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 2,
@@ -2770,7 +2991,8 @@
         "16",
         "25",
         "32"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 3,
@@ -2784,7 +3006,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 4,
@@ -2795,7 +3018,8 @@
         "the values of $f, h, p$ and $q$",
         "the values of $g, h, p$ and $q$",
         "none of the options A-D is sufficient on its own"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 5,
@@ -2809,7 +3033,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 6,
@@ -2819,7 +3044,8 @@
         "P is necessary but not sufficient for Q.",
         "P is sufficient but not necessary for Q.",
         "P is not necessary and not sufficient for Q."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 7,
@@ -2832,7 +3058,8 @@
         "The proof is wrong, and the first error occurs on line III.",
         "The proof is wrong, and the first error occurs on line IV.",
         "The proof is wrong, and the first error occurs on line V."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 8,
@@ -2844,7 +3071,8 @@
         "21",
         "22",
         "23"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 9,
@@ -2857,7 +3085,8 @@
         "$0 < k < 1$",
         "$0 \\leq k \\leq 1$",
         "all real numbers"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 10,
@@ -2871,7 +3100,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 11,
@@ -2882,7 +3112,8 @@
         "$x^2 = yz$",
         "$y = z$",
         "$y^2 = x^2 + z^2$"
-      ]
+      ],
+      "image": "/images/2022p2q11.png"
     },
     {
       "id": 12,
@@ -2894,7 +3125,8 @@
         "$Q < R < P$",
         "$R < P < Q$",
         "$R < Q < P$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 13,
@@ -2906,7 +3138,8 @@
         "all except exactly two values of $x$",
         "all except exactly one value of $x$",
         "all values of $x$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 14,
@@ -2919,7 +3152,8 @@
         "The real numbers for which both inequalities are true form an interval of length 3.",
         "The real numbers for which both inequalities are true form an interval of length 4.",
         "The real numbers for which both inequalities are true form an interval of length 5."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 15,
@@ -2933,7 +3167,8 @@
         "$\\log_z x = \\frac{1}{xz}$",
         "$\\log_z x = yz$",
         "$\\log_z x = \\frac{1}{yz}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 16,
@@ -2947,7 +3182,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 17,
@@ -2958,7 +3194,8 @@
         "The solution is wrong, because the student should have stated step II after step III.",
         "The solution is wrong, because the student should have shown the converse of the result in step II.",
         "The solution is wrong, because the student should have shown the converse of the result in step III."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 18,
@@ -2972,7 +3209,8 @@
         "F",
         "G",
         "H"
-      ]
+      ],
+      "image": "/images/2022p2q18.png"
     },
     {
       "id": 19,
@@ -2983,7 +3221,8 @@
         "$n = 3$ and $n = 4$ only",
         "$n = 3$ and $n ≥ 5$ only",
         "all values of $n$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 20,
@@ -2995,7 +3234,8 @@
         "$m_1 = m_3 = m_5 = 1$ and $0 < m_4 < m_2 < 1$",
         "$m_1 = m_3 = 1$ and $0 < m_2 = m_4 < 1$ and $0 < m_5 < 1$",
         "$m_1 = m_3 = 1$ and $0 < m_4 < m_2 < 1$ and $0 < m_5 < 1$"
-      ]
+      ],
+      "image": null
     }
   ],
   "2023 Paper 1": [
@@ -3010,7 +3250,8 @@
         "$3$",
         "$4$",
         "$5$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 2,
@@ -3022,7 +3263,8 @@
         "$m < -\\sqrt{11}, m > \\sqrt{11}$",
         "$-11 < m < 1$",
         "$m < -11, m > 1$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 3,
@@ -3034,7 +3276,8 @@
         "$4$",
         "$18$",
         "$27$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 4,
@@ -3045,7 +3288,8 @@
         "$\\frac{\\sqrt{3}}{3}$",
         "$\\sqrt{3}$",
         "$3$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 5,
@@ -3057,7 +3301,8 @@
         "$10\\sqrt{2}$",
         "$5 + \\sqrt{5}$",
         "$5 + \\sqrt{15}$"
-      ]
+      ],
+      "image": "/images/2023p1q5.png"
     },
     {
       "id": 6,
@@ -3070,7 +3315,8 @@
         "$11$",
         "$12$",
         "$13$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 7,
@@ -3083,7 +3329,8 @@
         "$\\log_2 5$",
         "$\\log_2 12$",
         "$\\log_2 20$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 8,
@@ -3094,7 +3341,8 @@
         "$2 : \\sqrt{3}$",
         "$\\sqrt{3} : 1$",
         "$3 : 1$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 9,
@@ -3106,7 +3354,8 @@
         "$4$",
         "$5$",
         "$6$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 10,
@@ -3118,7 +3367,8 @@
         "$4(\\pi - 1 - \\sqrt{3})$",
         "$2\\pi - 3\\sqrt{3}$",
         "$4\\pi - 6\\sqrt{3}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 11,
@@ -3130,7 +3380,8 @@
         "$k = \\frac{6}{6 - c}$",
         "$k = \\frac{c + 9}{9}$",
         "$k = \\frac{9}{c - 9}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 12,
@@ -3143,7 +3394,8 @@
         "$6$",
         "$7$",
         "$8$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 13,
@@ -3156,7 +3408,8 @@
         "$10\\sqrt{2}$",
         "$8 + 2\\sqrt{10}$",
         "$16 + 2\\sqrt{6}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 14,
@@ -3170,7 +3423,8 @@
         "$n < \\frac{3}{2} m^2$",
         "$n > -\\frac{4}{3} m^3$",
         "$n > \\frac{40}{3} m^3$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 15,
@@ -3182,7 +3436,8 @@
         "$3$",
         "$\\sqrt{10}$",
         "$\\sqrt{13}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 16,
@@ -3195,7 +3450,8 @@
         "$2.25$",
         "$8.25$",
         "$10.25$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 17,
@@ -3207,7 +3463,8 @@
         "$5050\\pi$",
         "$10100\\pi$",
         "$40400\\pi$"
-      ]
+      ],
+      "image": "/images/2023p1q17.png"
     },
     {
       "id": 18,
@@ -3221,7 +3478,8 @@
         "$\\frac{1}{2}$",
         "$\\frac{7}{11}$",
         "$\\frac{7}{10}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 19,
@@ -3235,7 +3493,8 @@
         "$3x^2$",
         "$-x^3$",
         "$x^3$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 20,
@@ -3249,7 +3508,8 @@
         "$\\frac{25}{4}$",
         "$8$",
         "$\\frac{33}{4}$"
-      ]
+      ],
+      "image": "/images/2023p1q20.png"
     }
   ],
   "2023 Paper 2": [
@@ -3265,7 +3525,8 @@
         "$58$",
         "$60$",
         "$80$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 2,
@@ -3279,7 +3540,8 @@
         "$28$",
         "$75$",
         "$175$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 3,
@@ -3293,7 +3555,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 4,
@@ -3307,7 +3570,8 @@
         "It is incorrect, and the first error is on line V.",
         "It is incorrect, and the first error is on line VI.",
         "It is incorrect, and the first error is on line VII."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 5,
@@ -3317,7 +3581,8 @@
         "R is necessary but not sufficient for S.",
         "R is sufficient but not necessary for S.",
         "R is not necessary and not sufficient for S."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 6,
@@ -3331,7 +3596,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 7,
@@ -3343,7 +3609,8 @@
         "$a < b < c$",
         "$a$ and $c$ have opposite signs",
         "$a$ and $c$ have the same sign"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 8,
@@ -3357,7 +3624,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 9,
@@ -3371,7 +3639,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 10,
@@ -3384,7 +3653,8 @@
         "The first error occurs in line IV.",
         "The first error occurs in line V.",
         "The first error occurs in line VI."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 11,
@@ -3398,7 +3668,8 @@
         "F",
         "G",
         "H"
-      ]
+      ],
+      "image": "/images/2023p2q11.png"
     },
     {
       "id": 12,
@@ -3408,7 +3679,8 @@
         "I only",
         "II only",
         "I and II only"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 13,
@@ -3419,7 +3691,8 @@
         "$x = 0$ or $x = 1$",
         "$x \\geq 0$ or $x \\leq 1$",
         "$x \\geq 0$ and $x \\leq 1$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 14,
@@ -3432,7 +3705,8 @@
         "If two of the lines are perpendicular, then all three meet at a point.",
         "If two of the lines are perpendicular, then the third is parallel to $y = x$.",
         "If two of the lines are perpendicular, then the third is perpendicular to $y = x$."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 15,
@@ -3446,7 +3720,8 @@
         "$\\frac{3}{16}$",
         "$\\frac{5}{16}$",
         "$\\frac{6}{31}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 16,
@@ -3460,7 +3735,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 17,
@@ -3472,7 +3748,8 @@
         "$2^{100}$",
         "$2^{100} - 1$",
         "$2^{100} - 2$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 18,
@@ -3484,7 +3761,8 @@
         "$c > 0$ and $b < -2\\sqrt{c}$",
         "$c < 0$ and $b < 0$",
         "$c < 0$ and $b > 0$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 19,
@@ -3498,7 +3776,8 @@
         "I and III only",
         "II and III only",
         "I, II and III"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 20,
@@ -3512,7 +3791,8 @@
         "1 and 3 only",
         "2 and 3 only",
         "1, 2 and 3"
-      ]
+      ],
+      "image": null
     }
   ],
   "Practice Paper 1": [
@@ -3528,7 +3808,8 @@
         "$4\\sqrt{3}$",
         "$6\\sqrt{3}$",
         "$12\\sqrt{3}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 2,
@@ -3540,7 +3821,8 @@
         "$(x + 2)(x - 3)(3x + 2)$",
         "$(x + 2)(x + 3)(3x - 2)$",
         "$(x + 2)(x + 3)(3x + 2)$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 3,
@@ -3552,7 +3834,8 @@
         "$\\frac{35}{4}$",
         "$\\frac{35\\sqrt{5}}{2}$",
         "$\\frac{3\\sqrt{17}}{2}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 4,
@@ -3565,7 +3848,8 @@
         "1",
         "3",
         "39"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 5,
@@ -3577,7 +3861,8 @@
         "$\\frac{16}{3}$",
         "12",
         "16"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 6,
@@ -3589,7 +3874,8 @@
         "$19\\frac{1}{2}$%",
         "$9\\frac{3}{4}$%",
         "It is impossible to achieve this result."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 7,
@@ -3600,7 +3886,8 @@
         "$\\frac{1}{3}$",
         "$\\frac{11}{25}$",
         "$\\frac{3}{5}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 8,
@@ -3614,7 +3901,8 @@
         "240°",
         "300°",
         "330°"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 9,
@@ -3626,7 +3914,8 @@
         "$(x - 2)^2 + (y + 4)^2 = 80$",
         "$(x - 2)^2 + (y - 4)^2 = 20$",
         "$(x - 2)^2 + (y + 4)^2 = 20$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 10,
@@ -3639,7 +3928,8 @@
         "4",
         "5",
         "6"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 11,
@@ -3651,7 +3941,8 @@
         "$-\\frac{1}{2} + \\log_{10} \\frac{3}{2}$",
         "$\\frac{\\log_{10} 3}{\\log_{10} 4}$",
         "$\\frac{\\log_{10} 3}{\\log_{10} 2}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 12,
@@ -3663,7 +3954,8 @@
         "$\\frac{250\\sqrt{3}}{3}\\pi$",
         "$\\frac{500\\sqrt{3}}{9}\\pi$",
         "$\\frac{1000\\sqrt{3}}{9}\\pi$"
-      ]
+      ],
+      "image": "/images/pracp1q12.png"
     },
     {
       "id": 13,
@@ -3674,7 +3966,8 @@
         "3",
         "4",
         "5"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 14,
@@ -3686,7 +3979,8 @@
         "$\\frac{40}{3}$",
         "16",
         "32"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 15,
@@ -3697,7 +3991,8 @@
         "$-\\frac{25}{4}$",
         "$\\frac{7}{4}$",
         "$\\frac{47}{16}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 16,
@@ -3708,7 +4003,8 @@
         "$7 \\pm 3\\sqrt{3}$",
         "3, 9",
         "1, 13"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 17,
@@ -3720,7 +4016,8 @@
         "$\\frac{\\pi}{4} < x < \\frac{2\\pi}{3}, \\frac{3\\pi}{4} < x < \\pi$",
         "$\\frac{\\pi}{4} < x < \\frac{2\\pi}{3}$",
         "$\\frac{\\pi}{4} < x < \\frac{3\\pi}{4}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 18,
@@ -3732,7 +4029,8 @@
         "$x \\geq 1$",
         "$-2 \\leq x \\leq 1, x \\neq 0$",
         "$x \\leq -2, x \\geq 1$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 19,
@@ -3743,7 +4041,8 @@
         "$\\pm \\sqrt{34}$",
         "$\\pm 2\\sqrt{17}$",
         "There are no possible values of a."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 20,
@@ -3754,7 +4053,8 @@
         "$10\\sqrt{5}$",
         "$10\\sqrt{7}$",
         "$10\\sqrt{5 + 2\\sqrt{3}}$"
-      ]
+      ],
+      "image": "/images/pracp1q20.png"
     }
   ],
   "Practice Paper 2": [
@@ -3768,7 +4068,8 @@
         "$\\frac{103}{15}$",
         "$\\frac{163}{15}$",
         "$18$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 2,
@@ -3778,7 +4079,8 @@
         "$\\frac{9}{2}x^{\\frac{5}{4}} + \\frac{5}{2}x^{-\\frac{3}{4}}$",
         "$8x^{\\frac{9}{4}} +  \\frac{40}{3}x^{-\\frac{1}{4}}$",
         "$\\frac{8}{13}x^{\\frac{13}{4}} +8x^{\\frac{5}{4}} $"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 3,
@@ -3790,7 +4092,8 @@
         "$\\frac{5\\pi}{3}$",
         "$\\frac{7\\pi}{4}$",
         "$\\frac{11\\pi}{6}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 4,
@@ -3801,7 +4104,8 @@
         "Urn R",
         "Urn S",
         "Urn T"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 5,
@@ -3812,7 +4116,8 @@
         "4",
         "5",
         "6"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 6,
@@ -3826,7 +4131,8 @@
         "$\\left(\\frac{(10x)^{21} - 1}{10x - 1}\\right) x^{10}$",
         "$x^{10} + x^9 + x^8 + \\ldots + x + 1$",
         "$x^{10} + 10x^9 + (10 \\times 9)x^8 + \\ldots +(10 \\times 9 \\times \\ldots \\times 2)x + (10 \\times 9 \\times \\ldots \\times 2 \\times 1)$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 7,
@@ -3840,7 +4146,8 @@
         "(1). Then (4), so (6), so (8), so (7), and therefore (2), hence (*) as required.",
         "(1). Then (4), so (7), so (8), so (6), and therefore (2), hence (*) as required.",
         "(1). Then (4), so (7), so (9), so (5), and therefore (3), hence (*) as required."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 8,
@@ -3854,7 +4161,8 @@
         "1 and 3 only",
         "2 and 3 only",
         "1, 2 and 3"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 9,
@@ -3868,7 +4176,8 @@
         "F",
         "G",
         "H"
-      ]
+      ],
+      "image": "/images/pracp2q9.png"
     },
     {
       "id": 10,
@@ -3880,7 +4189,8 @@
         "$y^{-1} < x^{-1}$",
         "$x^{\\frac{3}{5}} < y^{\\frac{3}{5}}$",
         "$y^{\\frac{3}{5}} < x^{\\frac{3}{5}}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 11,
@@ -3894,7 +4204,8 @@
         "1 and 3 only",
         "2 and 3 only",
         "1, 2 and 3"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 12,
@@ -3906,7 +4217,8 @@
         "$a$ is negative, but the sign of $d$ cannot be deduced",
         "$d$ is negative, but the sign of $a$ cannot be deduced",
         "neither the sign of $a$ nor the sign of $d$ can be deduced"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 13,
@@ -3918,7 +4230,8 @@
         "Line 4",
         "Line 5",
         "Line 6"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 14,
@@ -3929,7 +4242,8 @@
         "$p = 1, q = 4, r = 3$ and $s = 2$",
         "$p = 2, q = 4, r = 3$ and $s = 1$",
         "$p = 4, q = 3, r = 2$ and $s = 1$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 15,
@@ -3940,7 +4254,8 @@
         "$q - 3 \\leq p^2 - 4 \\leq q$",
         "$q < p^2 - 1 < q + 3$",
         "$q - 2 < p^2 - 3 < q + 2$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 16,
@@ -3951,7 +4266,8 @@
         "4.8",
         "5.25",
         "6"
-      ]
+      ],
+      "image": "/images/pracp2q16.png"
     },
     {
       "id": 17,
@@ -3965,7 +4281,8 @@
         "1 and 3 only",
         "2 and 3 only",
         "1, 2 and 3"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 18,
@@ -3977,7 +4294,8 @@
         "$f(x) = x - x^3$",
         "$f(x) = x^2 + x^4$",
         "$f(x) = x^2 - x^4$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 19,
@@ -3990,7 +4308,8 @@
         "exactly 8",
         "either 8 or 9",
         "exactly 9"
-      ]
+      ],
+      "image": "/images/pracp2q19.png"
     },
     {
       "id": 20,
@@ -4004,7 +4323,8 @@
         "5",
         "6",
         "infinitely many"
-      ]
+      ],
+      "image": null
     }
   ],
   "Specimen Paper 1": [
@@ -4018,7 +4338,8 @@
         "$3.5$",
         "$4.5$",
         "$5$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 2,
@@ -4031,7 +4352,8 @@
         "$4$",
         "$5$",
         "$6$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 3,
@@ -4042,7 +4364,8 @@
         "$\\frac{1}{3}$",
         "$\\frac{19}{5}$",
         "$\\frac{41}{6}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 4,
@@ -4053,7 +4376,8 @@
         "$-1 < x < 2$",
         "$x < 1, x > 2$",
         "$-1 < x < 1, x > 2$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 5,
@@ -4065,7 +4389,8 @@
         "$x = 1 - 10^{-y}$",
         "$x = 10^{-y} - 1$",
         "$x = 10^{1-y}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 6,
@@ -4076,7 +4401,8 @@
         "$0$",
         "$6$",
         "$10$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 7,
@@ -4088,7 +4414,8 @@
         "$\\frac{(n-1)^3}{27(3n-1)^3}$",
         "$\\frac{3(n-1)}{3n-1}$",
         "$\\frac{n^3}{27(3n-1)^3}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 8,
@@ -4102,7 +4429,8 @@
         "$\\frac{\\log_{10} 2}{\\log_{10}(ab^2c^3)}$",
         "$\\frac{2}{\\log_{10}(ab^2c^3)}$",
         "$\\frac{2}{ab^2c^3}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 9,
@@ -4112,7 +4440,8 @@
         "$\\frac{113}{8}$",
         "$\\frac{117}{8}$",
         "$\\frac{119}{8}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 10,
@@ -4122,7 +4451,8 @@
         "$y = 2 + \\cos\\left(x - \\frac{\\pi}{4}\\right)$",
         "$y = 2 - \\cos\\left(x + \\frac{\\pi}{4}\\right)$",
         "$y = 2 - \\cos\\left(x - \\frac{\\pi}{4}\\right)$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 11,
@@ -4133,7 +4463,8 @@
         "$2\\log_{10} 2$",
         "$\\log_{10}(\\frac{15}{4})$",
         "$\\frac{\\log_{10} 15} {\\log_{10} 2}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 12,
@@ -4144,7 +4475,8 @@
         "$\\frac{2x}{x-4\\sqrt{3}}$",
         "$\\frac{2x}{x-2\\sqrt{3}}$",
         "$\\frac{2x}{x-\\sqrt{3}}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 13,
@@ -4155,7 +4487,8 @@
         "$2$",
         "$3$",
         "$4$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 14,
@@ -4166,7 +4499,8 @@
         "$y^2 = a + x^b$",
         "$y = ax^b$",
         "$y^x = a^b$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 15,
@@ -4177,7 +4511,8 @@
         "$\\frac{1}{2}$",
         "$\\frac{7}{12}$",
         "$2$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 16,
@@ -4191,7 +4526,8 @@
         "$c > 0$ and $d > 0$",
         "$d > 0$",
         "$c > 0$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 17,
@@ -4202,7 +4538,8 @@
         "$a > -2$",
         "$a \\neq -2$",
         "No values of $a$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 18,
@@ -4215,7 +4552,8 @@
         "$\\frac{5\\pi}{12}$",
         "$\\frac{\\pi}{2}$",
         "$\\frac{5\\pi}{6}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 19,
@@ -4225,7 +4563,8 @@
         "$2(3 - \\sqrt{5})$",
         "$2(1 + \\sqrt{5})$",
         "$2(3 + \\sqrt{5})$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 20,
@@ -4238,7 +4577,8 @@
         "$240$",
         "$310$",
         "$312$"
-      ]
+      ],
+      "image": null
     }
   ],
   "Specimen Paper 2": [
@@ -4253,7 +4593,8 @@
         "$\\sqrt{3}$",
         "$6\\sqrt{3}$",
         "$12\\sqrt{3}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 2,
@@ -4265,7 +4606,8 @@
         "$(x + 2)(x - 3)(3x + 2)$",
         "$(x + 2)(x + 3)(3x - 2)$",
         "$(x + 2)(x + 3)(3x + 2)$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 3,
@@ -4277,7 +4619,8 @@
         "$\\frac{15}{4}$",
         "$\\frac{15\\sqrt{5}}{4}$",
         "$\\frac{3\\sqrt{17}}{2}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 4,
@@ -4290,7 +4633,8 @@
         "1",
         "3",
         "39"
-      ]
+      ],
+      "image": "/images/specp2q4.png"
     },
     {
       "id": 5,
@@ -4302,7 +4646,8 @@
         "$\\frac{16}{3}$",
         "12",
         "16"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 6,
@@ -4314,7 +4659,8 @@
         "$\\frac{5650}{80.5} \\text{ cm}$",
         "$\\frac{5650}{75} \\text{ cm}$",
         "$\\frac{5650}{79.5} \\text{ cm}$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 7,
@@ -4324,7 +4670,8 @@
         "B",
         "C",
         "D"
-      ]
+      ],
+      "image": "/images/specp2q7.png"
     },
     {
       "id": 8,
@@ -4335,7 +4682,8 @@
         "Statement (*) is true for all values of $n$ which are multiples of 3, but not for any other values of $n$.",
         "Statement (*) is true for all values of $n$ which are multiples of 6, but not for any other values of $n$.",
         "Statement (*) is not true for any value of $n$."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 9,
@@ -4347,7 +4695,8 @@
         "Every day next week, Fred will do no maths problems.",
         "Some day next week, Fred will do no maths problems.",
         "On no day next week will Fred do no maths problems."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 10,
@@ -4359,7 +4708,8 @@
         "D",
         "E",
         "F"
-      ]
+      ],
+      "image": "/images/specp2q10.png"
     },
     {
       "id": 11,
@@ -4370,7 +4720,8 @@
         "$\\sin^{10}\\left(\\frac{\\pi}{2}\\right)$",
         "$\\log_2 10$",
         "$(\\sqrt{2} - 1)^2$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 12,
@@ -4384,7 +4735,8 @@
         "$p(x) = (x + 2)q(x) + 1$ for some polynomial $q(x)$.",
         "$p(x) = (x - 2)q(x) - 1$ for some polynomial $q(x)$.",
         "$p(x) = (x + 2)q(x) - 1$ for some polynomial $q(x)$."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 13,
@@ -4396,7 +4748,8 @@
         "18",
         "24",
         "120"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 14,
@@ -4406,7 +4759,8 @@
         "The graph has one local minimum and two local maxima.",
         "The graph has one local minimum and one local maximum.",
         "The graph has no local minima or local maxima."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 15,
@@ -4420,7 +4774,8 @@
         "1 and 3 only",
         "2 and 3 only",
         "1, 2 and 3"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 16,
@@ -4432,7 +4787,8 @@
         "5150",
         "$4\\left(1 - \\left(\\frac{1}{2}\\right)^{100}\\right)$",
         "$4\\left(\\left(\\frac{3}{2}\\right)^{100} - 1\\right)$"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 17,
@@ -4444,7 +4800,8 @@
         "for some (positive) factor $m$ of $n$ with $m > 1$, there is a number in $S$ which is not a factor of $m$.",
         "for some (positive) factor $m$ of $n$ with $m > 1$, there is no number in $S$ which is a factor of $m$.",
         "for some (positive) factor $m$ of $n$ with $m > 1$, every number in $S$ is a factor of $m$."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 18,
@@ -4456,7 +4813,8 @@
         "$6\\frac{1}{2}$",
         "8",
         "20"
-      ]
+      ],
+      "image": null
     },
     {
       "id": 19,
@@ -4469,7 +4827,8 @@
         "It has exactly one real root, which is negative.",
         "It has exactly one real root, whose sign differs depending on $a, b$, and $c$.",
         "The number of real roots can be one or three, but the number of roots differs depending on $a, b$, and $c$."
-      ]
+      ],
+      "image": null
     },
     {
       "id": 20,
@@ -4483,7 +4842,8 @@
         "none or 1 only",
         "1 or 2 only",
         "2 or 3 only"
-      ]
+      ],
+      "image": null
     }
   ]
 }

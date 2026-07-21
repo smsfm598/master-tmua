@@ -200,6 +200,16 @@ export default function Page({ params }) {
           </p>
         </div>
 
+        {currentQ.image && (
+          <div className="mb-8">
+            <img
+              src={currentQ.image}
+              alt={`Diagram for Question ${currentQ.originalQuestionNumber}`}
+              className="max-w-full h-auto rounded shadow-sm"
+            />
+          </div>
+        )}
+
         <div className="space-y-3 mb-8">
           {currentQ.options.map((option, index) => {
             const letter = String.fromCharCode(65 + index);
