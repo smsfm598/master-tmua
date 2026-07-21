@@ -370,10 +370,12 @@ export const checkUserEntitlements = async (userId) => {
     }
 
     const { data, error } = await supabase
-      .from('user_entitlements')
-      .select('has_full_access, purchase_date, stripe_session_id')
-      .eq('clerk_user_id', userId)
-      .single();
+  .from('user_entitlements')
+  .select('*')
+  .eq('clerk_user_id', userId);
+
+console.log("Supabase data:", data);
+console.log("Supabase error:", error);
 
     if (error) {
       // If no record found, user doesn't have access
