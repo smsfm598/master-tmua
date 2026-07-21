@@ -324,7 +324,7 @@ function MainComponent() {
     {
       id: 17,
       text: `Consider these simultaneous equations, where $c$ is a constant:
-      $y = 3 \\sin x + 2$$
+      $$y = 3 \\sin x + 2$$
       $$y = x + c$$
       Which of the following statements is/are true?
       $\\quad$1$\\quad$ For some value of $c$, there is exactly one solution with $0 \\le x \\le \\pi$ and there is at least one solution with $-\\pi < x < 0 $.
