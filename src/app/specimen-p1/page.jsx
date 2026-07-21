@@ -33,7 +33,7 @@ function MainComponent() {
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const [selectedAnswers, setSelectedAnswers] = React.useState({});
   const [flaggedQuestions, setFlaggedQuestions] = React.useState(new Set());
-  const [timeRemaining, setTimeRemaining] = React.useState(90 * 60); // 90 minutes in seconds
+  const [timeRemaining, setTimeRemaining] = React.useState(75 * 60); // 75 minutes in seconds
   const [instructionTime, setInstructionTime] = React.useState(60); // 60 seconds for instructions
   const [colorScheme, setColorScheme] = React.useState("default");
   const [showNavigator, setShowNavigator] = React.useState(false);
@@ -344,7 +344,7 @@ function MainComponent() {
         const examData = {
           paperName: 'Specimen Paper 1',
           userAnswers: selectedAnswers,
-          timeTaken: (90 * 60) - timeRemaining,
+          timeTaken: (75 * 60) - timeRemaining,
           examType: 'TMUA'
         };
         // Save to Supabase with automatic marking
