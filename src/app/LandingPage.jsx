@@ -181,19 +181,16 @@ export default function LandingPage() {
             </div>
             <ul className="flex-1 space-y-3 mb-6">
               <li className="flex items-center text-gray-300">
-                <FaCheck className="text-green-400 mr-3" /> Access to sample paper
+                <FaCheck className="text-green-400 mr-3" /> Access to sample papers
               </li>
               <li className="flex items-center text-gray-300">
                 <FaCheck className="text-green-400 mr-3" /> Personalised dashboard view
               </li>
               <li className="flex items-center text-gray-400">
-                <FaTimes className="text-red-400 mr-3" /> No in depth analytics
+                <FaTimes className="text-red-400 mr-3" /> Yearly papers locked
               </li>
               <li className="flex items-center text-gray-400">
-                <FaTimes className="text-red-400 mr-3" /> Single paper access
-              </li>
-              <li className="flex items-center text-gray-400">
-                <FaTimes className="text-red-400 mr-3" /> Less practice
+                <FaTimes className="text-red-400 mr-3" /> Limited practice
               </li>
             </ul>
             <Link href="/sign-up">
@@ -215,16 +212,19 @@ export default function LandingPage() {
                 <FaCheck className="text-green-400 mr-3" /> 1:1 identical replica of Pearson exam interface
               </li>
               <li className="flex items-center text-gray-300">
-                <FaCheck className="text-green-400 mr-3" /> In depth analytics for personal growth
+                <FaCheck className="text-green-400 mr-3" /> Instant automatic marking
               </li>
               <li className="flex items-center text-gray-300">
-                <FaCheck className="text-green-400 mr-3" /> Instant automatic marking
+                <FaCheck className="text-green-400 mr-3" /> Personalised mistake papers
               </li>
               <li className="flex items-center text-gray-300">
                 <FaCheck className="text-green-400 mr-3" /> Very high value for money, lowest price on the market
               </li>
               <li className="flex items-center text-gray-300">
                 <FaCheck className="text-green-400 mr-3" /> Track your progress over time
+              </li>
+               <li className="flex items-center text-gray-300">
+                <FaCheck className="text-green-400 mr-3" /> In depth analytics for personal growth
               </li>
             </ul>
               <button 

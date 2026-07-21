@@ -92,6 +92,9 @@ export default function UpgradeModal({ isOpen, onClose, paperName }) {
                 <FaCheck className="text-green-400 mr-3" /> Instant automatic marking
               </li>
               <li className="flex items-center text-gray-300">
+                <FaCheck className="text-green-400 mr-3" /> Personalised mistake papers
+              </li>
+              <li className="flex items-center text-gray-300">
                 <FaCheck className="text-green-400 mr-3" /> Detailed analytics and progress tracking
               </li>
               <li className="flex items-center text-gray-300">
@@ -121,7 +124,7 @@ export default function UpgradeModal({ isOpen, onClose, paperName }) {
         {/* Footer */}
         <div className="p-6 pt-0">
           <p className="text-center text-gray-400 text-sm">
-            Practice Papers 1 & 2 remain free forever
+            Practice and Specimen Papers 1 & 2 remain free forever
           </p>
         </div>
       </div>

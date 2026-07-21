@@ -302,7 +302,7 @@ export default function MarksPage() {
         <div className="mb-4 sm:mb-6">
           <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 sm:mb-2">Your Exam Marks</h1>
           <p className="text-gray-300 text-xs sm:text-sm md:text-base">
-            View your results and generated mistake papers.
+            View your results from all completed papers.
           </p>
         </div>
 
