@@ -1,0 +1,4489 @@
+{
+  "2017 Paper 1": [
+    {
+      "id": 1,
+      "text": "Given that\n\n$$\\frac{dy}{dx} = 3x^2 - \\frac{2-3x}{x^3}, \\quad x \\neq 0$$\n\nand y = 5 when x = 1, find y in terms of x.",
+      "options": [
+        "$$y = \\frac{1}{3}x^3 + x^{-2} - 3x^{-1} + 6 \\frac{2}{3}$$",
+        "$$y = x^3 + \\frac{1}{2}x^{-2} - 3x^{-1} + 6 \\frac{1}{2}$$",
+        "$$y = x^3 + x^{-2} - 3x^{-1} + 6$$",
+        "$$y = x^3 + x^{-2} - x^{-1} + 4$$",
+        "$$y = x^3 + 2x^{-2} - x^{-1} + 3$$",
+        "$$y = 3x^3 + x^{-2} - x^{-1} + 2$$"
+      ]
+    },
+    {
+      "id": 2,
+      "text": "The function f is given by\n\n$$f(x) = \\left(\\frac{2}{x} - \\frac{1}{2x^2}\\right)^2, \\quad x \\neq 0$$ What is the value of f''(1)?",
+      "options": [
+        "$-3$",
+        "$-1$",
+        "$5$",
+        "$17$",
+        "$29$",
+        "$80$"
+      ]
+    },
+    {
+      "id": 3,
+      "text": "A line l has equation $$y = 6 - 2x$$ A second line is perpendicular to l and passes through the point (-6, 0).\n\nFind the area of the region enclosed by the two lines and the x-axis.",
+      "options": [
+        "$16 \\frac{1}{5}$",
+        "$18$",
+        "$21 \\frac{3}{5}$",
+        "$27$",
+        "$40 \\frac{1}{2}$"
+      ]
+    },
+    {
+      "id": 4,
+      "text": "When $(3x^2 + 8x - 3)$ is multiplied by $(px - 1)$ and the resulting product is divided by $(x + 1)$, the remainder is 24.\n\nWhat is the value of p?",
+      "options": [
+        "$-4$",
+        "$2$",
+        "$4$",
+        "$\\frac{8}{7}$",
+        "$\\frac{11}{4}$"
+      ]
+    },
+    {
+      "id": 5,
+      "text": "S is the complete set of values of x which satisfy both the inequalities\n\n$$x^2 - 8x + 12 < 0 \\quad \\text{and} \\quad 2x + 1 > 9$$ The set S can also be represented as a single inequality.\n\nWhich one of the following single inequalities represents the set S?",
+      "options": [
+        "$(x^2 - 8x + 12)(2x + 1) < 0$",
+        "$(x^2 - 8x + 12)(2x + 1) > 0$",
+        "$x^2 - 10x + 24 < 0$",
+        "$x^2 - 10x + 24 > 0$",
+        "$x^2 - 6x + 8 < 0$",
+        "$x^2 - 6x + 8 > 0$",
+        "$x < 2$",
+        "$x > 6$"
+      ]
+    },
+    {
+      "id": 6,
+      "text": "A tangent to the circle $x^2 + y^2 = 144$ passes through the point (20, 0) and crosses the positive y-axis.\n\nWhat is the value of y at the point where the tangent meets the y-axis?",
+      "options": [
+        "$12$",
+        "$15$",
+        "$\\frac{49}{3}$",
+        "$20$",
+        "$\\frac{64}{3}$",
+        "$\\frac{80}{3}$"
+      ]
+    },
+    {
+      "id": 7,
+      "text": "The first three terms of an arithmetic progression are p, q and p² respectively, where p < 0.\n\nThe first three terms of a geometric progression are p, p² and q respectively.\n\nFind the sum of the first 10 terms of the arithmetic progression.",
+      "options": [
+        "$\\frac{23}{8}$",
+        "$\\frac{95}{8}$",
+        "$\\frac{115}{8}$",
+        "$\\frac{185}{8}$"
+      ]
+    },
+    {
+      "id": 8,
+      "text": "Find the complete set of values of x, with $0 \\le x \\le \\pi$, for which\n$$(1 - 2 \\sin x) \\cos x \\ge 0$$",
+      "options": [
+        "$$0 \\le x \\le \\frac{\\pi}{6}, \\frac{\\pi}{2} \\le x \\le \\frac{5\\pi}{6}$$",
+        "$$0 \\le x \\le \\frac{\\pi}{6}, \\frac{5\\pi}{6} \\le x \\le \\pi$$",
+        "$$\\frac{\\pi}{6} \\le x \\le \\frac{\\pi}{2}, \\frac{5\\pi}{6} \\le x \\le \\pi$$",
+        "$$\\frac{\\pi}{6} \\le x \\le \\frac{5\\pi}{6}$$"
+      ]
+    },
+    {
+      "id": 9,
+      "text": "A circle has equation $x^2 + y^2 - 18x - 22y + 178 = 0$\n\nA regular hexagon is drawn inside this circle so that the vertices of the hexagon touch the circle.\n\nWhat is the area of the hexagon?",
+      "options": [
+        "$6$",
+        "$6\\sqrt{3}$",
+        "$18$",
+        "$18\\sqrt{3}$",
+        "$36$",
+        "$36\\sqrt{3}$",
+        "$48$",
+        "$48\\sqrt{3}$"
+      ]
+    },
+    {
+      "id": 10,
+      "text": "A curve C has equation $y = f(x)$ where\n$$f(x) = p^3 - 6p^2x + 3px^2 - x^3$$\n\nand p is real.\n\nThe gradient of the normal to the curve C at the point where x = -1 is M.\n\nWhat is the greatest possible value of M as p varies?",
+      "options": [
+        "$-\\frac{3}{2}$",
+        "$-\\frac{2}{3}$",
+        "$-\\frac{1}{2}$",
+        "$\\frac{1}{4}$",
+        "$\\frac{2}{3}$",
+        "$\\frac{3}{2}$"
+      ]
+    },
+    {
+      "id": 11,
+      "text": "The sequence $x_n$ is defined by the rules\n\n$$x_1 = 7$$ $$x_{n+1} = \\frac{23x_n - 53}{5x_n + 1}$$ The first three terms in the sequence are 7, 3, 1.\n\nWhat is the value of $x_{100}$?",
+      "options": [
+        "$-5$",
+        "$0$",
+        "$1$",
+        "$3$",
+        "$7$"
+      ]
+    },
+    {
+      "id": 12,
+      "text": "The polynomial function f(x) is such that f(x) > 0 for all values of x.\n\nGiven $\\int_{2}^{4} f(x) \\, dx = A$, which one of the following statements must be correct?",
+      "options": [
+        "$\\int_{0}^{2} [f(x + 2) + 1] dx = A + 1$",
+        "$\\int_{0}^{2} [f(x + 2) + 1] dx = A + 2$",
+        "$\\int_{2}^{4} [f(x + 2) + 1] dx = A + 1$",
+        "$\\int_{2}^{4} [f(x + 2) + 1] dx = A + 2$",
+        "$\\int_{4}^{6} [f(x + 2) + 1] dx = A + 1$",
+        "$\\int_{4}^{6} [f(x + 2) + 1] dx = A + 2$"
+      ]
+    },
+    {
+      "id": 13,
+      "text": "In the expansion of $(a + bx)^5$ the coefficient of $x^4$ is 8 times the coefficient of $x^2$.\n\nGiven that a and b are non-zero positive integers, what is the smallest possible value of a + b?",
+      "options": [
+        "$3$",
+        "$4$",
+        "$5$",
+        "$9$",
+        "$13$",
+        "$17$"
+      ]
+    },
+    {
+      "id": 14,
+      "text": "The solution of the simultaneous equations\n\n$$2^x + 3 \\times 2^y = 3$$\n$$2^{2x} - 9 \\times 2^{2y} = 6$$\n\nis x = p, y = q.\n\nFind the value of p - q",
+      "options": [
+        "$\\frac{5}{12}$",
+        "$\\frac{7}{3}$",
+        "$\\log_2 \\frac{5}{12}$",
+        "$\\log_2 \\frac{7}{3}$",
+        "$\\log_2 9$",
+        "$\\log_2 15$"
+      ]
+    },
+    {
+      "id": 15,
+      "text": "It is given that $f(x) = -2x^2 + 10$\n\nConsider the following three curves:\n\n(1) y = f(x)  \n(2) y = f(x + 1)  \n(3) the curve y = f(x + 1) reflected in the line y = 6  \n\nThe trapezium rule is used to estimate the area under each of these three curves between x = 0 and x = 1.\n\nState whether the trapezium rule gives an overestimate or underestimate for each of these areas.",
+      "options": [
+        "(1) underestimate, (2) underestimate, (3) underestimate",
+        "(1) underestimate, (2) underestimate, (3) overestimate",
+        "(1) underestimate, (2) overestimate, (3) underestimate",
+        "(1) underestimate, (2) overestimate, (3) overestimate",
+        "(1) overestimate, (2) underestimate, (3) underestimate",
+        "(1) overestimate, (2) underestimate, (3) overestimate",
+        "(1) overestimate, (2) overestimate, (3) underestimate",
+        "(1) overestimate, (2) overestimate, (3) overestimate"
+      ]
+    },
+    {
+      "id": 16,
+      "text": "The functions f and g are given by $f(x) = 3x^2 + 12x + 4$ and $g(x) = x^3 + 6x^2 + 9x - 8$.\n\nWhat is the complete set of values of x for which one of the functions is increasing and the other decreasing?",
+      "options": [
+        "$x \\ge -1$",
+        "$x \\le -1$",
+        "$-3 \\le x \\le -2, x \\ge -1$",
+        "$x \\le -2, x \\ge -1$",
+        "$x \\le -3, -2 \\le x \\le -1$",
+        "$x \\le -3, x \\ge -2$",
+        "$-2 \\le x \\le -1$"
+      ]
+    },
+    {
+      "id": 17,
+      "text": "The two functions $F(n)$ and $G(n)$ are defined as follows for positive integers n:\n\n$$F(n) = \\frac{1}{n} \\int_0^n (n - x) dx$$\n$$G(n) = \\sum_{r=1}^n F(r)$$\n\nWhat is the smallest positive integer n such that $G(n) > 150?$",
+      "options": [
+        "$22$",
+        "$23$",
+        "$24$",
+        "$25$",
+        "$26$"
+      ]
+    },
+    {
+      "id": 18,
+      "text": "The graph of $y = \\log_{10}x$ is translated in the positive y-direction by 2 units.\n\nThis translation is equivalent to a stretch of factor k parallel to the x-axis.\n\nWhat is the value of k?",
+      "options": [
+        "$0.01$",
+        "$\\log_{10} 2$",
+        "$0.5$",
+        "$2$",
+        "$\\log_{2} 10$",
+        "$100$"
+      ]
+    },
+    {
+      "id": 19,
+      "text": "The set of solutions to the inequality $x^2 + bx + c < 0$ is the interval $p < x < q$\n\nwhere $b, c, p $ and $q$ are real constants with $c< 0 $ .\n\nIn terms of $p, q $ and $c$, what is the set of solutions to the inequality $x^2 + bcx + c^3 < 0$?",
+      "options": [
+        "$\\frac{p}{c} < x < \\frac{q}{c}$",
+        "$\\frac{q}{c} < x < \\frac{p}{c}$",
+        "$pc < x < qc$",
+        "$qc < x < pc$",
+        "$pc^2 < x < qc^2$",
+        "$qc^2 < x < pc^2$"
+      ]
+    },
+    {
+      "id": 20,
+      "text": "The lengths of the sides QR, RP and PQ in triangle PQR are $a$, $a + d$ and $a + 2d$ respectively, where $ a$ and $d$ are positive and such that $3d > 2a$.\n\nWhat is the full range, in degrees, of possible values for angle PRQ?",
+      "options": [
+        "$0 < \\text{angle PRQ} < 60$",
+        "$0 < \\text{angle PRQ} < 120$",
+        "$60 < \\text{angle PRQ} < 120$",
+        "$60 < \\text{angle PRQ} < 180$",
+        "$120 < \\text{angle PRQ} < 180$"
+      ]
+    }
+  ],
+  "2017 Paper 2": [
+    {
+      "id": 1,
+      "text": "Given that $y = \\frac{(1-3x)^2}{2x^{\\frac{3}{2}}}$, which one of the following is a correct expression for $\\frac{dy}{dx}$?",
+      "options": [
+        "$$\\frac{9}{4}x^{-\\frac{1}{2}} + \\frac{3}{2}x^{-\\frac{3}{2}} - \\frac{3}{4}x^{-\\frac{5}{2}}$$",
+        "$$\\frac{9}{4}x^{-\\frac{1}{2}} - \\frac{3}{2}x^{-\\frac{3}{2}} + \\frac{3}{4}x^{-\\frac{5}{2}}$$",
+        "$$\\frac{9}{4}x^{-\\frac{1}{2}} - \\frac{3}{2}x^{-\\frac{3}{2}} - \\frac{3}{4}x^{-\\frac{5}{2}}$$",
+        "$$-\\frac{9}{4}x^{-\\frac{1}{2}} + \\frac{3}{2}x^{-\\frac{3}{2}} + \\frac{3}{4}x^{-\\frac{5}{2}}$$",
+        "$$-\\frac{9}{4}x^{-\\frac{1}{2}} + \\frac{3}{2}x^{-\\frac{3}{2}} - \\frac{3}{4}x^{-\\frac{5}{2}}$$",
+        "$$-\\frac{9}{4}x^{-\\frac{1}{2}} - \\frac{3}{2}x^{-\\frac{3}{2}} - \\frac{3}{4}x^{-\\frac{5}{2}}$$"
+      ]
+    },
+    {
+      "id": 2,
+      "text": "$PQRS$ is a rectangle.\n\nThe coordinates of $P$ and $Q$ are $(0, 6)$ and $(1, 8)$ respectively.\n\nThe perpendicular to $PQ$ at $Q$ meets the $x$-axis at $R$.\n\nWhat is the area of $PQRS$?",
+      "options": [
+        "$\\frac{5}{2}$",
+        "$4\\sqrt{10}$",
+        "$20$",
+        "$8\\sqrt{10}$",
+        "$40$"
+      ]
+    },
+    {
+      "id": 3,
+      "text": "The first term of a geometric progression is $2\\sqrt{3}$ and the fourth term is $\\frac{9}{4}$.\n\nWhat is the sum to infinity of this geometric progression?",
+      "options": [
+        "$-2 (2 - \\sqrt{3})$",
+        "$4(2\\sqrt{3} - 3)$",
+        "$\\frac{16(8\\sqrt{3} + 9)}{37}$",
+        "$\\frac{4(2\\sqrt{3} - 3)}{7}$",
+        "$\\frac{4(2\\sqrt{3} + 3)}{7}$",
+        "$2(2 + \\sqrt{3})$",
+        "$4(2\\sqrt{3} + 3)$"
+      ]
+    },
+    {
+      "id": 4,
+      "text": "The following question appeared in an examination:\n\nGiven that $\\tan x = \\sqrt{3}$, find the possible values of $\\sin 2x$.\n\nA student gave the following answer:\n\n$\\tan x = \\sqrt{3}$ so $ x = 60°$ and $2x = 120°$.\n\nTherefore $\\sin 2x = \\frac{\\sqrt{3}}{2}$.\n\nWhich one of the following statements is correct?",
+      "options": [
+        "$\\frac{\\sqrt{3}}{2}$ is the only possible value, and this is fully supported by the reasoning given in the student's answer.",
+        "$\\frac{\\sqrt{3}}{2}$ is the only possible value, but the reasoning given should consider other possible values of $x$ for which $\\tan x = \\sqrt{3}$.",
+        "$\\frac{\\sqrt{3}}{2}$ is the only possible value, but the reasoning given should consider other possible values of $2x$ for which $\\sin 2x = \\frac{\\sqrt{3}}{2}$.",
+        "$\\frac{\\sqrt{3}}{2}$ is not the only possible value because the reasoning given should have considered other possible values of $x$ for which $\\tan x = \\sqrt{3}$.",
+        "$\\frac{\\sqrt{3}}{2}$ is not the only possible value because the reasoning given should have considered other possible values of $x$ for which $\\sin 2x = \\frac{\\sqrt{3}}{2}$."
+      ]
+    },
+    {
+      "id": 5,
+      "text": "Consider the following three statements:\n\n  1. $10p^2 + 1$ and $10p^2 - 1$ are both prime when p is an odd prime.\n  2. Every prime greater than 5 is of the form $6n + 1$ for some integer $n$.\n  3. No multiple of 7 greater than 7 is prime.\n\nThe result $91 = 7 \\times 13$ can be used to provide a counterexample to which of the above statements?",
+      "options": [
+        "none of them",
+        "1 only",
+        "2 only",
+        "3 only",
+        "1 and 2 only",
+        "1 and 3 only",
+        "2 and 3 only",
+        "1, 2 and 3"
+      ]
+    },
+    {
+      "id": 6,
+      "text": "A sequence $u_0, u_1, u_2, \\ldots$ is defined as follows:\n\n$$u_0 = 1$$\n$$u_n = \\int_0^1 4xu_{n-1} \\, dx \\text{ for } n \\geq 1$$\n\nWhat is the value of $u_{1000}$?",
+      "options": [
+        "$2^{1000}$",
+        "$4^{1000}$",
+        "$\\frac{4}{1000!}$",
+        "$\\frac{4}{1001!}$",
+        "$\\frac{2^{1000}}{1000!}$",
+        "$\\frac{4^{1000}}{1000!}$",
+        "$\\frac{2^{1000}}{1001!}$",
+        "$\\frac{4^{1000}}{1001!}$"
+      ]
+    },
+    {
+      "id": 7,
+      "text": "The graphs of two functions are shown here:\n\n   • $y = a^x$ is shown with a solid line, where $x$ is a positive real number\n   • $y = f(x)$ is shown with a dashed line\n\nWhich of the following statements (1, 2, 3, 4) could be true?\n\n  1 $\\quad$ $f(x) = b^x$ for some $b > a$\n  2 $\\quad$ $f(x) = b^x$ for some $b < a$\n  3 $\\quad$ $f(x) = a^{kx}$ for some $k > 1$\n  4 $\\quad$ $f(x) = a^{kx}$ for some $k < 1$",
+      "options": [
+        "1 only",
+        "2 only",
+        "3 only",
+        "4 only",
+        "1 and 3 only",
+        "1 and 4 only",
+        "2 and 3 only",
+        "2 and 4 only"
+      ]
+    },
+    {
+      "id": 8,
+      "text": "Which one of the following numbers is smallest in value?",
+      "options": [
+        "$\\log_2 7$",
+        "$(2^{-3} + 2^{-2})^{-1}$",
+        "$2^{\\frac{\\pi}{3}}$",
+        "$\\frac{1}{4{(\\sqrt{2}-1)}^3}$",
+        "$4\\sin^{2}\\left(\\frac{\\pi}{4}\\right)$"
+      ]
+    },
+    {
+      "id": 9,
+      "text": "Consider the following attempt to prove this true theorem:\n\n  Theorem: $a^3 + b^3 = c^3$ has no solutions with $a$, $b$ and $c$ positive integers.\n\n  Attempted proof:\n  Suppose that there are positive integers $a$, $b$ and $c$ such that $a^3 + b^3 = c^3$.\n\n  $ \\quad I \\quad $ \t\tWe have $a^3 = c^3 - b^3$.\n\n  $ \\quad II \\quad $\t\tHence $a^3 = (c - b)(c^2 + cb + b^2)$.\n\n  $ \\quad III \\quad $\t\tIt follows that $a = c - b$ and $a^2 = c^2 + cb + b^2$, since $a \\leqslant a^2$ and $c - b \\leqslant c^2 + cb + b^2$.\n\n  $ \\quad IV \\quad $\t\tEliminating $a$, we have $(c - b)^2 = c^2 + cb + b^2$.\n\n  $ \\quad V \\quad $\t\tMultiplying out, we have $c^2 - 2cb + b^2 = c^2 + cb + b^2$.\n\n  $ \\quad VI \\quad $\t\tHence $3cb = 0$ so one of $b$ and $c$ is zero.\n\n  But this is a contradiction to the original assumption that all of $a$, $b$ and $c$ are positive. It follows that the equation has no solutions.\n\nComment on this proof by choosing one of the following options:",
+      "options": [
+        "The proof is correct",
+        "The proof is incorrect and the first mistake occurs on line I.",
+        "The proof is incorrect and the first mistake occurs on line II.",
+        "The proof is incorrect and the first mistake occurs on line III.",
+        "The proof is incorrect and the first mistake occurs on line IV.",
+        "The proof is incorrect and the first mistake occurs on line V.",
+        "The proof is incorrect and the first mistake occurs on line VI."
+      ]
+    },
+    {
+      "id": 10,
+      "text": "$f(x)$ is a function defined for all real values of $x$.\n\nWhich one of the following is a sufficient condition for $\\int_1^3 f(x) \\, dx = 0$?",
+      "options": [
+        "$f(2) = 0$",
+        "$f(1) = f(3) = 0$",
+        "$f(-x) = -f(x)$ for all $x$",
+        "$f(x + 2) = -f(2 - x)$ for all $x$",
+        "$f(x - 2) = -f(2 - x)$ for all $x$"
+      ]
+    },
+    {
+      "id": 11,
+      "text": "The function $f(x)$ is increasing and $f(0) = 0$.\n\nThe positive constants $a$ and $b$ are such that $a < b$.\n\nThe area of the region enclosed by the curve $y = f(x)$, the $x$-axis and the lines $x = a$ and $x = b$ is denoted by $R$.\n\nThe function $g(x)$ is defined by $g(x) = f(x) + 2f(b)$.\n\nWhich of the following is an expression for the area enclosed by the curve $y = g(x)$, the $x$-axis and the lines $x = a$ and $x = b$?",
+      "options": [
+        "$R + (b - a)f(b)$",
+        "$R + 2(b - a)f(b)$",
+        "$R + 2f(b) - f(a)$",
+        "$R + 2f(b)$",
+        "$R + (f(b))^2$",
+        "$R + (f(b))^2 - (f(a))^2$",
+        "$R + 2(f(b) - f(a))f(b)$"
+      ]
+    },
+    {
+      "id": 12,
+      "text": "The diagram shows the graphs of $y = sin2x$ and $y = cos2x$ for $-\\frac{\\pi}{2} < x < \\frac{\\pi}{2}$\n      \n      Which one of the following is not true?",
+      "options": [
+        "$\\cos 2x < \\sin 2x < \\tan x$ for some real number $x$ with $-\\frac{\\pi}{2} < x < \\frac{\\pi}{2}$",
+        "$\\cos 2x < \\tan x < \\sin 2x$ for some real number $x$ with $-\\frac{\\pi}{2} < x < \\frac{\\pi}{2}$",
+        "$\\sin 2x < \\cos 2x < \\tan x$ for some real number $x$ with $-\\frac{\\pi}{2} < x < \\frac{\\pi}{2}$",
+        "$\\sin 2x < \\tan x < \\cos 2x$ for some real number $x$ with $-\\frac{\\pi}{2} < x < \\frac{\\pi}{2}$",
+        "$\\tan x < \\sin 2x < \\cos 2x$ for some real number $x$ with $-\\frac{\\pi}{2} < x < \\frac{\\pi}{2}$",
+        "$\\tan x < \\cos 2x < \\sin 2x$ for some real number $x$ with $-\\frac{\\pi}{2} < x < \\frac{\\pi}{2}$"
+      ]
+    },
+    {
+      "id": 13,
+      "text": "The positive real numbers $a \\times 10^{-3}$, $b \\times 10^{-2}$ and $c \\times 10^{-1}$ are each in standard form, and $$(a \\times 10^{-3}) + (b \\times 10^{-2}) = (c \\times 10^{-1})$$.\n\nWhich of the following statements (I, II, III, IV) must be true?\n\n  I \\quad $a > 9$\n  II \\quad $b > 9$  \n  III\\quad $a < c$\n  IV \\quad $b < c$",
+      "options": [
+        "I only",
+        "II only",
+        "I and II only",
+        "I and III only",
+        "I and IV only",
+        "II and III only",
+        "II and IV only",
+        "I, II, III and IV"
+      ]
+    },
+    {
+      "id": 14,
+      "text": "The diagram below shows the graph of $y = x^2 - 2bx + c$. The vertex of this graph is at the point $P$.\n\nWhich one of the following could be the graph of $y = x^2 - 2Bx + c$, where $B > b$?",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ]
+    },
+    {
+      "id": 15,
+      "text": "The function $f$ is defined on the positive integers as follows:\n\n$f(1) = 5$, and for $n \\geq 1$: $\\begin{cases} f(n + 1) = 3f(n) + 1 & \\text{if } f(n) \\text{ is odd} \\\\ f(n + 1) = \\frac{1}{2}f(n) & \\text{if } f(n) \\text{ is even} \\end{cases}$\n\nThe function $g$ is defined on the positive integers as follows:\n\n$g(1) = 3$, and for $n \\geq 1$: $\\begin{cases} g(n + 1) = g(n) + 5 & \\text{if } g(n) \\text{ is odd} \\\\ g(n + 1) = \\frac{1}{2}g(n) & \\text{if } g(n) \\text{ is even} \\end{cases}$\n\nWhat is the value of $f(1000) - g(1000)$?",
+      "options": [
+        "$-6$",
+        "$-5$",
+        "$1$",
+        "$2$",
+        "$4$",
+        "$8$"
+      ]
+    },
+    {
+      "id": 16,
+      "text": "Consider the following statement:\n\n  ($\\star$) If $f(x)$ is an integer for every integer $x$, then $f'(x)$ is an integer for every integer $x$.\n\nWhich one of the following is a counterexample to ($\\star$)?",
+      "options": [
+        "$f(x) = \\frac{x^3 + x + 1}{4}$",
+        "$f(x) = \\frac{x^4 + x^2 + x}{2}$",
+        "$f(x) = \\frac{x^4 + x^3 + x^2 + x}{2}$",
+        "$f(x) = \\frac{x^4 + 2x^3 + x^2}{4}$"
+      ]
+    },
+    {
+      "id": 17,
+      "text": "A set $S$ of whole numbers is called stapled if and only if for every whole number $a$ which is in $S$ there exists a prime factor of $a$ which divides at least one other number\nin $S$.\n\nLet $T$ be a set of whole numbers. Which of the following is true if and only if $T$ is not stapled?",
+      "options": [
+        "For every number $a$ which is in $T$, there is no prime factor of $a$ which divides every other number in $T$.",
+        "For every number $a$ which is in $T$, there is no prime factor of $a$ which divides at least one other number in $T$.",
+        "For every number $a$ which is in $T$, there is a prime factor of $a$ which does not divide any other number in $T$.",
+        "For every number $a$ which is in $T$, there is a prime factor of $a$ which does not divide at least one other number in $T$.",
+        "There exists a number $a$ which is in $T$ such that there is no prime factor of $a$ which divides every other number in $T$.",
+        "There exists a number $a$ which is in $T$ such that there is no prime factor of $a$ which divides at least one other number in $T$.",
+        "There exists a number $a$ which is in $T$ such that there is a prime factor of $a$ which does not divide any other number in $T$.",
+        "There exists a number $a$ which is in $T$ such that there is a prime factor of $a$ which does not divide at least one other number in $T$."
+      ]
+    },
+    {
+      "id": 18,
+      "text": "Consider the following problem:\n\n  Solve the inequality $\\left(\\frac{1}{4}\\right)^n < \\left(\\frac{1}{32}\\right)^{10}$, where $n$ is a positive integer.\n\nA student produces the following argument:\n\n$$\\left(\\frac{1}{4}\\right)^n < \\left(\\frac{1}{32}\\right)^{10} \\quad $$ \n\n$$\\log_{\\frac{1}{2}} \\left(\\frac{1}{4}\\right)^n < \\log_{\\frac{1}{2}} \\left(\\frac{1}{32}\\right)^{10} \\quad (I)$$\n\n$$n \\log_{\\frac{1}{2}} \\left(\\frac{1}{4}\\right) < 10 \\log_{\\frac{1}{2}} \\left(\\frac{1}{32}\\right) \\quad (II)$$\n\n$$n < \\frac{10 \\log_{\\frac{1}{2}} \\left(\\frac{1}{32}\\right)}{\\log_{\\frac{1}{2}} \\left(\\frac{1}{4}\\right)} \\quad (III)$$\n\n$$n < \\frac{10 \\times 5}{2} = 25 \\quad (IV)$$ \n\n$$1 \\leq n \\leq 24 \\quad (V)$$\n\nWhich step (if any) in the argument is invalid?",
+      "options": [
+        "There are no invalid steps; the argument is correct",
+        "Only step (I) is invalid; the rest are correct",
+        "Only step (II) is invalid; the rest are correct",
+        "Only step (III) is invalid; the rest are correct",
+        "Only step (IV) is invalid; the rest are correct",
+        "Only step (V) is invalid; the rest are correct"
+      ]
+    },
+    {
+      "id": 19,
+      "text": "Which one of the following is a sufficient condition for the equation $x^3 - 3x^2 + a = 0$, where $a$ is a constant, to have exactly one real root?",
+      "options": [
+        "$a > 0$",
+        "$a \\leq 0$",
+        "$a \\geq 4$",
+        "$a < 4$",
+        "$|a| > 4$",
+        "$|a| \\leq 4$",
+        "$a = \\frac{9}{4}$",
+        "$|a| = \\frac{3}{2}$"
+      ]
+    },
+    {
+      "id": 20,
+      "text": "I have forgotten my 5-character computer password, but I know that it consists of the letters a, b, c, d, e in some order. When I enter a potential password into the computer, it tells me exactly how many of the letters are in the correct position.\n\nWhen I enter abcde, it tells me that none of the letters are in the correct position. The same happens when I enter cdbea and eabdc.\n\nUsing the best strategy, how many further attempts must I make in order to guarantee that I can deduce the correct password?",
+      "options": [
+        "None: I can deduce it immediately",
+        "One",
+        "Two",
+        "Three",
+        "More than three"
+      ]
+    }
+  ],
+  "2018 Paper 1": [
+    {
+      "id": 1,
+      "text": "Find the value of\n\n$$\\int_{1}^{4} \\frac{3-2x}{x\\sqrt{x}} dx$$",
+      "options": [
+        "$-\\frac{13}{2}$",
+        "$-\\frac{85}{16}$",
+        "$-\\frac{13}{8}$",
+        "$-1$",
+        "$-\\frac{1}{4}$",
+        "$\\frac{7}{4}$",
+        "$7$"
+      ]
+    },
+    {
+      "id": 2,
+      "text": "An arithmetic progression has first term $a$ and common difference $d$.\n\nThe sum of the first 5 terms is equal to the sum of the first 8 terms.\n\nWhich one of the following expresses the relationship between $a$ and $d$?",
+      "options": [
+        "$a = -\\frac{38}{3}d$",
+        "$a = -7d$",
+        "$a = -6d$",
+        "$a = 6d$",
+        "$a = 7d$",
+        "$a = \\frac{38}{3}d$"
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Find the shortest distance between the two circles with equations:\n\n$$(x + 2)^2 + (y - 3)^2 = 18$$\n\n$$(x - 7)^2 + (y + 6)^2 = 2$$",
+      "options": [
+        "$0$",
+        "$4$",
+        "$16$",
+        "$2\\sqrt{2}$",
+        "$5\\sqrt{2}$"
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Consider the simultaneous equations\n\n$$3x^2 + 2xy = 4$$\n\n$$x + y = a$$\n\nwhere $a$ is a real constant.\n\nFind the complete set of values of $a$ for which the equations have two distinct real solutions for $x$.",
+      "options": [
+        "There are no values of $a$.",
+        "$-2 < a < 2$",
+        "$-1 < a < 1$",
+        "$a = 0$",
+        "$a < -1$ or $a > 1$",
+        "$a < -2$ or $a > 2$",
+        "All real values of $a$"
+      ]
+    },
+    {
+      "id": 5,
+      "text": "The function $f$ is defined by $f(x) = x^3 + ax^2 + bx + c$.\n\n$a$, $b$ and $c$ take the values 1, 2 and 3 with no two of them being equal and not necessarily in this order.\n\nThe remainder when $f(x)$ is divided by $(x + 2)$ is $R$.\n\nThe remainder when $f(x)$ is divided by $(x + 3)$ is $S$.\n\nWhat is the largest possible value of $R - S$?",
+      "options": [
+        "$-26$",
+        "$5$",
+        "$7$",
+        "$17$",
+        "$29$"
+      ]
+    },
+    {
+      "id": 6,
+      "text": "Find the number of solutions of the equation\n\n$$x \\sin 2x = \\cos 2x$$\n\nwith $0 \\leq x \\leq 2\\pi$.",
+      "options": [
+        "$0$",
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ]
+    },
+    {
+      "id": 7,
+      "text": "The non-zero constant $k$ is chosen so that the coefficients of $x^6$ in the expansions of $(1 + kx^2)^{7}$ and $(k + x)^{10}$ are equal.\n\nWhat is the value of $k$?",
+      "options": [
+        "$\\frac{1}{6}$",
+        "$6$",
+        "$\\frac{\\sqrt{6}}{6}$",
+        "$\\sqrt{6}$",
+        "$\\frac{\\sqrt{30}}{30}$",
+        "$\\sqrt{30}$"
+      ]
+    },
+    {
+      "id": 8,
+      "text": "The sum to infinity of a geometric progression is 6.\n\nThe sum to infinity of the squares of each term in the progression is 12.\n\nFind the sum to infinity of the cubes of each term in the progression.",
+      "options": [
+        "$8$",
+        "$18$",
+        "$24$",
+        "$\\frac{216}{7}$",
+        "$72$",
+        "$216$"
+      ]
+    },
+    {
+      "id": 9,
+      "text": "Find the complete set of values of the constant $c$ for which the cubic equation\n\n$$2x^3 - 3x^2 - 12x + c = 0$$\n\nhas three distinct real solutions.",
+      "options": [
+        "$-20 < c < 7$",
+        "$-7 < c < 20$",
+        "$c > 7$",
+        "$c > -7$",
+        "$c < 20$",
+        "$c < -20$"
+      ]
+    },
+    {
+      "id": 10,
+      "text": "$x$ and $y$ satisfy $|2 - x| \\leq 6$ and $|y + 2| \\leq 4$.\n\nWhat is the greatest possible value of $|xy|$?",
+      "options": [
+        "$16$",
+        "$24$",
+        "$32$",
+        "$40$",
+        "$48$",
+        "There is no greatest possible value."
+      ]
+    },
+    {
+      "id": 11,
+      "text": "The line $y = mx + 5$ where $m > 0$ is normal to the curve $y = 10 - x^2$ at the point $(p, q)$.\n\nWhat is the value of $p$?",
+      "options": [
+        "$\\frac{\\sqrt{2}}{6}$",
+        "$-\\frac{\\sqrt{2}}{6}$",
+        "$\\frac{3\\sqrt{2}}{2}$",
+        "$-\\frac{3\\sqrt{2}}{2}$",
+        "$\\sqrt{5}$",
+        "$-\\sqrt{5}$"
+      ]
+    },
+    {
+      "id": 12,
+      "text": "A curve has equation $y = f(x)$, where\n\n$$f(x) = x(x - p)(x - q)(r - x)$$\n\nwith $0 < p < q < r$.\n\nYou are given that:\n\n$$\\int_0^r f(x) dx = 0$$\n\n$$\\int_0^q f(x) dx = -2$$\n\n$$\\int_p^r f(x) dx = -3$$\n\nWhat is the total area enclosed by the curve and the $x$-axis for $0 \\leq x \\leq r$?",
+      "options": [
+        "$0$",
+        "$1$",
+        "$4$",
+        "$5$",
+        "$6$",
+        "$10$"
+      ]
+    },
+    {
+      "id": 13,
+      "text": "The function $f(x)$ has derivative $f'(x)$.\n\nThe diagram below shows the graph of $y = f'(x)$.\n\nWhich point corresponds to a local minimum of $f(x)$?",
+      "options": [
+        "$A$",
+        "$B$",
+        "$C$",
+        "$D$",
+        "$E$",
+        "$F$"
+      ]
+    },
+    {
+      "id": 14,
+      "text": "The line $y = mx + 4$ passes through the points $(3, \\log_2 p)$ and $(\\log_2 p, 4)$.\n\nWhat are the possible values of $p$?",
+      "options": [
+        "$p = 1$ and $p = 4$",
+        "$p = 1$ and $p = 16$",
+        "$p = \\frac{1}{4}$ and $p = 4$",
+        "$p = \\frac{1}{4}$ and $p = 64$",
+        "$p = \\frac{1}{64}$ and $p = 4$",
+        "$p = \\frac{1}{64}$ and $p = 16$"
+      ]
+    },
+    {
+      "id": 15,
+      "text": "Find the sum of the real solutions of the equation.\n\n$$3^x - (\\sqrt{3})^{x+4} + 20 = 0$$",
+      "options": [
+        "$1$",
+        "$4$",
+        "$9$",
+        "$\\log_3 20$",
+        "$2 \\log_3 20$",
+        "$4 \\log_3 20$"
+      ]
+    },
+    {
+      "id": 16,
+      "text": "The curve $C$ has equation $y = x^2 + bx + 2$, where $b \\geq 0$.\n\nFind the value of $b$ that minimises the distance between the origin and the stationary point of the curve $C$.",
+      "options": [
+        "$b = 0$",
+        "$b = 1$",
+        "$b = 2$",
+        "$b = \\frac{\\sqrt{6}}{2}$",
+        "$b = \\sqrt{2}$",
+        "$b = \\sqrt{6}$"
+      ]
+    },
+    {
+      "id": 17,
+      "text": "There are two sets of data: the mean of the first set is 15, and the mean of the second set is 20.\n\nOne of the pieces of data from the first set is exchanged with one of the pieces of data from the second set.\n\nAs a result, the mean of the first set of data increases from 15 to 16, and the mean of the second set of data decreases from 20 to 17.\n\nWhat is the mean of the set made by combining all the data?",
+      "options": [
+        "$16\\frac{1}{4}$",
+        "$16\\frac{1}{3}$",
+        "$16\\frac{1}{2}$",
+        "$16\\frac{2}{3}$",
+        "$16\\frac{3}{4}$"
+      ]
+    },
+    {
+      "id": 18,
+      "text": "What is the smallest positive value of $a$ for which the line $x = a$ is a line of symmetry of the graph of $y = \\sin (2x - \\frac{4\\pi}{3})$?",
+      "options": [
+        "$\\frac{\\pi}{12}$",
+        "$\\frac{5\\pi}{12}$",
+        "$\\frac{7\\pi}{12}$",
+        "$\\frac{11\\pi}{12}$",
+        "$\\frac{19\\pi}{12}$"
+      ]
+    },
+    {
+      "id": 19,
+      "text": "A triangle $ABC$ is to be drawn with $AB = 10$ cm, $BC = 7$ cm and the angle at $A$ equal to $\\theta$, where $\\theta$ is a certain specified angle.\n\nOf the two possible triangles that could be drawn, the larger triangle has three times the area of the smaller one.\n\nWhat is the value of $\\cos \\theta$?",
+      "options": [
+        "$\\frac{5}{7}$",
+        "$\\frac{151}{200}$",
+        "$\\frac{2\\sqrt{2}}{5}$",
+        "$\\frac{\\sqrt{17}}{5}$",
+        "$\\frac{\\sqrt{51}}{8}$",
+        "$\\frac{\\sqrt{34}}{8}$"
+      ]
+    },
+    {
+      "id": 20,
+      "text": "Find the value of\n\n$$\\sin^2 0° + \\sin^2 1° + \\sin^2 2° + \\sin^2 3° + \\cdots $$ $$+ \\sin^2 87° + \\sin^2 88° + \\sin^2 89° + \\sin^2 90°$$",
+      "options": [
+        "$0.5$",
+        "$1$",
+        "$1.5$",
+        "$45$",
+        "$45.5$",
+        "$46$"
+      ]
+    }
+  ],
+  "2018 Paper 2": [
+    {
+      "id": 1,
+      "text": "The function f is given, for $x > 0$, by\n\n$$f(x) = \\frac{x^3 - 4x}{2\\sqrt{x}}$$\n\nFind the value of f'(4).",
+      "options": [
+        "3",
+        "9",
+        "9.5",
+        "12",
+        "39.5",
+        "88"
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Find the value of the constant term in the expansion of\n\n$$\\left(x^6 - \\frac{1}{x^2}\\right)^{12}$$",
+      "options": [
+        "-495",
+        "-220",
+        "-66",
+        "66",
+        "220",
+        "495"
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Consider the following statement:\n\nA car journey consists of two parts. In the first part, the average speed is $u \\text{ km/h}$ In the second part, the average speed is $v \\text{ km/h}$ Hence the average speed for the whole journey is $\\frac{1}{2}(u + v) \\text{ km/h}$\n\n\nWhich of the following examples of car journeys provide(s) a counterexample to the statement?\n\n\nI $\\quad$ In the first part of the journey, the car travels at a constant speed of 50 km/h for 100 km. In the second part of the journey, the car travels at a constant speed of 40 km/h for 100 km.\n\nII $\\quad$  In the first part of the journey, the car travels at a constant speed of 50 km/h for one hour. In the second part of the journey, the car travels at a constant speed of 40 km/h for one hour.\n\nIII $\\quad$  In the first part of the journey, the car travels at a constant speed of 50 km/h for 80 km. In the second part of the journey, the car travels at a constant speed of 40 km/h for 100 km.",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 4,
+      "text": "The non-zero real number $c$ is such that the equation $\\cos x = c$ has two solutions for $0 < x < \\frac{3\\pi}{2}$.\n\nHow many solutions of the equation $\\cos^2 2x = c^2$ are there in the range $0 < x < \\frac{3\\pi}{2}$?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "id": 5,
+      "text": "The two diagonals of the quadrilateral $Q$ are perpendicular.\n\nConsider the following statements:\n\nI. One of the diagonals of $Q$ is a line of symmetry of $Q$.\nII. The midpoint of the sides of $Q$ are the vertices of a square.\n\nWhich of these statements is/are necessarily true for the quadrilateral $Q$?",
+      "options": [
+        "neither of them",
+        "I only",
+        "II only",
+        "I and II"
+      ]
+    },
+    {
+      "id": 6,
+      "text": "Which one of the following functions provides a counterexample to the statement:\n\nif $f'(x) > 0$ for all real $x$, then $f(x) > 0$ for all real $x$?",
+      "options": [
+        "$f(x) = x^2 + 1$",
+        "$f(x) = x^2 - 1$",
+        "$f(x) = x^3 + x + 1$",
+        "$f(x) = 1 - x$",
+        "$f(x) = 2^x$"
+      ]
+    },
+    {
+      "id": 7,
+      "text": "Sequence 1 is an arithmetic progression with first term 11 and common difference 3.\n\nSequence 2 is an arithmetic progression with first term 2 and common difference 5.\n\nSome numbers that appear in Sequence 1 also appear in Sequence 2. Let $N$ be the $20$th such number.\n\nWhat is the remainder when $N$ is divided by 7?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "id": 8,
+      "text": "The diagram shows an example of a mountain profile.\n\nThis consists of upstrokes which go upwards from left to right, and downstrokes which go downwards from left to right. The example shows has six upstrokes and six downstrokes.\n\nA mountain profile of order $n$ consists of $n$ upstrokes and $n$ downstrokes, with the condition that the profile begins and ends at sea level and never goes below sea level (although it might reach sea level at any point). So the example shown is a mountain profile of order 6.\nMountain profiles can be coded by using U to indicate an upstroke and D to indicate a downstroke. The example shown has the code UDUUUDUDDUDD. A sequence of U’s and D’s obtained from a mountain profile in this way is known as a valid code.\n\nWhich of the following statements is/are true?\n\nI. If a valid code is written in reverse order, the result is always a valid code.\nII. If each U in a valid code is replaced by D and each D by U, the result is always a valid code.\nIII. If U is added at the beginning of a valid code and D is added at the end of the code, the result is always a valid code.",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 9,
+      "text": "Consider the following attempt to solve the equation $4x\\sqrt{2x - 1} = 10x - 5$.\n\n$$4x\\sqrt{2x - 1} = 10x - 5 \\quad $$\n\n$$4x\\sqrt{2x - 1} = 5(2x - 1) \\quad (I)$$\n\n$$16x^2(2x - 1) = 25(2x - 1)^2 \\quad (II)$$\n\n$$16x^2 = 25(2x - 1) \\quad (III)$$\n\n$$16x^2 - 50x + 25 = 0 \\quad (IV)$$\n\n$$(8x - 5)(2x - 5) = 0 \\quad (V)$$\n\n$\\quad$ The solutions of the original equation are $x = \\frac{5}{8}$ and $x = \\frac{5}{2} \\quad (VI)$ .\n\nWhich one of the following is true?",
+      "options": [
+        "The solution is correct.",
+        "Only one of $x = \\frac{5}{8}$ and $x = \\frac{5}{2}$ is correct and the error arises as a result of step (II).",
+        "Only one of $x = \\frac{5}{8}$ and $x = \\frac{5}{2}$ is correct and the error arises as a result of step (III).",
+        "Only one of $x = \\frac{5}{8}$ and $x = \\frac{5}{2}$ is correct and the error arises as a result of step (IV).",
+        "There is another value of $x$ that satisfies the original equation and the error arises as a result of step (II).",
+        "There is another value of $x$ that satisfies the original equation and the error arises as a result of step (III).",
+        "There is another value of $x$ that satisfies the original equation and the error arises as a result of step (IV)."
+      ]
+    },
+    {
+      "id": 10,
+      "text": "The function $f(x)$ is defined for all real numbers.\n\nConsider the following three conditions, where $a$ is a real constant:\n\n$I\\quad f(a - x) = f(a + x)$ for all real $x$\n$II\\quad f(2a - x) = f(x)$ for all real $x$\n$III\\quad f(a - x) = f(x)$ for all real $x$\n\nWhich of these conditions is/are necessary and sufficient for the graph of $y = f(x)$ to have reflection symmetry about the line $x = a$?",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ]
+    },
+    {
+      "id": 11,
+      "text": "Consider the equation $2^x = mx + c$, where $a$ and $c$ are real constants.\n\nWhich of the following statements is/are necessarily true?\n\nI. The equation has a negative real solution only if $c > 1$.\nII. The equation has two distinct real solutions if $c > 1$.\nIII. The equation has two distinct positive real solutions if and only if $c \\leq 1$.",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 12,
+      "text": "Consider the following statement:\n\nFor any positive integer $N$ there is a positive integer $K$ such that $N(Km + 1) - 1$ is not prime for any positive integer $n$.\n\nWhich one of the following is the negation of this statement?",
+      "options": [
+        "For any positive integer $N$ there is a positive integer $K$ such that there is a positive integer $m$ for which $N(Km + 1) - 1$ is prime.",
+        "For any positive integer $N$ there is a positive integer $K$ such that there is a positive integer $m$ for which $N(Km + 1) - 1$ is not prime.",
+        "For any positive integer $N$ there is a positive integer $K$ such that for any positive integer $m$, $N(Km + 1) - 1$ is not prime.",
+        "For any positive integer $N$, any positive integer $K$ and any positive integer $m$, there is a positive integer $m$ for which $N(Km + 1) - 1$ is not prime.",
+        "There is a positive integer $N$ such that for any positive integer $K$ there is a positive integer $n$ for which $N(Km + 1) - 1$ is not prime.",
+        "There is a positive integer $N$ such that for any positive integer $K$ there is a positive integer $m$ for which $N(Km + 1) - 1$ is prime.",
+        "There is a positive integer $N$ such that for any positive integer $K$ and for any positive integer $m$, $N(Km + 1) - 1$ is prime.",
+        "There is a positive integer $N$ and a positive integer $K$ for which there is no positive integer $m$ for which $N(Km + 1) - 1$ is prime."
+      ]
+    },
+    {
+      "id": 13,
+      "text": "The following is an attempted proof of the conjecture:\n\nIf $\\tan \\theta > 0$, then $\\sin \\theta + \\cos \\theta > 1$.\n\nSuppose $\\tan \\theta > 0$, so in particular $\\cos \\theta \\neq 0$.\n\nSince $\\tan \\theta = \\frac{\\sin \\theta}{\\cos \\theta}$, then $\\sin \\theta \\cos \\theta = \\tan \\theta \\cos^2 \\theta > 0$. $\\quad$(I)\n\nIt follows that $1 + 2 \\sin \\theta \\cos \\theta > 1$. $\\quad$ (II)\n\nTherefore $\\sin^2 \\theta + 2 \\sin \\theta \\cos \\theta + \\cos^2 \\theta > 1$, $\\quad$ (III)\n\nwhich factorises to give $(\\sin \\theta + \\cos \\theta)^2 > 1$. $\\quad$ (IV)\n\nTherefore $\\sin \\theta + \\cos \\theta > 1$. $\\quad$ (V)\n\nWhich one of the following is the case?",
+      "options": [
+        "The proof is correct.",
+        "The proof is incorrect, and the first error occurs in line (I).",
+        "The proof is incorrect, and the first error occurs in line (II).",
+        "The proof is incorrect, and the first error occurs in line (III).",
+        "The proof is incorrect, and the first error occurs in line (IV).",
+        "The proof is incorrect, and the first error occurs in line (V)."
+      ]
+    },
+    {
+      "id": 14,
+      "text": "In the triangle $PQR$, $PR = 2$, $QR = p$ and $\\angle RPQ = 30°$.\n\nWhat is the set of all the values of $p$ for which this information uniquely determines the length of $PQ$?",
+      "options": [
+        "$p = 1$",
+        "$p = \\sqrt{3}$",
+        "$1 \\leq p < 2$",
+        "$\\sqrt{3} \\leq p < 2$",
+        "$p = 1$ or $p \\geq 2$",
+        "$p = \\sqrt{3}$ or $p \\geq 2$",
+        "$p < 2$",
+        "$p \\geq 2$"
+      ]
+    },
+    {
+      "id": 15,
+      "text": "It is given that $f(x) = x^3 + 3gx^2 + 2$ where $g$ is a real constant.\n\nThe equation $f(x) = 0$ has 3 distinct real roots.\n\nWhich of the following statements is/are necessarily true?\n\n        I $\\quad$ The equation $f(x) + 1 = 0$ has 3 distinct real roots.\n        II $\\quad$  The equation $f(x + 1) = 0$ has 3 distinct real roots.\n        III $\\quad$  The equation $f(-x) - 1 = 0$ has 3 distinct real roots.",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 16,
+      "text": "In this question, $x_1, x_2, x_3, \\ldots$ is an arithmetic progression, all of whose terms are integers.\n\nLet $n$ be a positive integer. If the median of the first $n$ terms of the sequence is an integer, which of the following three statements must be true?\n\nI $\\quad$  The median of the first $n + 2$ terms is an integer.\nII $\\quad$  The median of the first $2n$ terms is an integer.\nIII $\\quad$  The median of $x_2, x_4, x_6, \\ldots, x_{2n}$ is an integer.",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 17,
+      "text": "A positive integer is called a squaresum if and only if it can be written as the sum of the squares of two integers. For example, 61 and 9 are both squaresums since $61 = 5^2 + 6^2$ and $9 = 3^2 + 0^2$.\n\nA prime number is called awkward if and only if it has a remainder of 3 when divided by 4. For example, 23 is awkward since $23 = 5 \\times 4 + 3$.\n\nA (true) theorem due to Fermat states that:\n\nA positive integer is a squaresum if and only if each of its awkward prime factors occurs to an even power in its prime factorisation.\n\nIt follows that $5 \\times 23^2$ is a squaresum, since 23 occurs to the power 2, but $5 \\times 23^3$ is not, since 23 occurs to the power 3.\n\nWhich one of the following statements is not true?",
+      "options": [
+        "Every square number is a squaresum.",
+        "If $N$ and $M$ are squaresums, then so is $NM$.",
+        "If $NM$ is a squaresum, then $N$ and $M$ are squaresums.",
+        "If $N$ is not a squaresum, then $kN$ is a squaresum for some number $k$ which is a product of awkward primes."
+      ]
+    },
+    {
+      "id": 18,
+      "text": "$f(x)$ is a polynomial function defined for all real $x$.\n\nWhich of the following is a necessary condition for the inequality\n\n$$\\frac{f(a) + f(b)}{2} \\geq f\\left(\\frac{a + b}{2}\\right)$$\n\nto be true for all real numbers $a$ and $b$ with $a < b$?",
+      "options": [
+        "$f(x) \\geq 0$ for all real $x$",
+        "$f'(x) \\geq 0$ for all real $x$",
+        "$f''(x) \\geq 0$ for all real $x$",
+        "$f(x) \\leq 0$ for all real $x$",
+        "$f'(x) \\leq 0$ for all real $x$",
+        "$f''(x) \\leq 0$ for all real $x$"
+      ]
+    },
+    {
+      "id": 19,
+      "text": "Three real numbers $x$, $y$ and $z$ satisfy $x > y > z > 1$.\n\nWhich one of the following statements must be true?",
+      "options": [
+        "$\\frac{2^{z+1}}{2^x} > \\frac{2^x + 2^z}{2^y}$",
+        "$2 > \\frac{3^x + 3^z}{3^y}$",
+        "$\\frac {2 \\times 5^x}{5^z} < \\frac{5^x + 5^z}{5^y}$",
+        "$2 < \\frac{7^x + 7^z}{7^y}$"
+      ]
+    },
+    {
+      "id": 20,
+      "text": "It is given that the equation $\\sqrt{x + p} + \\sqrt{x} = p$ has at least one real solution for $x$, where $p$ is a real constant.\n\nWhat is the complete set of possible values for $p$?",
+      "options": [
+        "$p = 0$ or $p = 1$",
+        "$p = 0$ or $p \\geq 1$",
+        "$p \\geq -x$",
+        "$p \\geq \\sqrt{x}$",
+        "$p \\geq 0$",
+        "$p \\geq 1$"
+      ]
+    }
+  ],
+  "2019 Paper 1": [
+    {
+      "id": 1,
+      "text": "$f(x)$ is a quadratic function in $x$.\n\nThe graph of $y = f(x)$ passes through the point $(1, 1)$ and has a turning point at $(-1, 3)$.\n\nFind an expression for $f(x)$.",
+      "options": [
+        "$-x^2 - 2x + 2$",
+        "$-x^2 + 2x + 3$",
+        "$x^2 - 2x$",
+        "$x^2 + 2x - 4$",
+        "$2x^2 + 4x + 1$",
+        "$-2x^2 - 4x + 5$"
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Find the complete set of values of the real constant $k$ for which the expression\n\n$$x^2 + kx + 2x + 1 - 2k$$\n\nis positive for all real values of $x$.",
+      "options": [
+        "$-12 < k < 0$",
+        "$k < -12$ or $k > 0$",
+        "$-\\sqrt{6} - 3 < k < \\sqrt{6} - 3$",
+        "$k < -\\sqrt{6} - 3$ or $k > \\sqrt{6} - 3$",
+        "$-2 < k < \\frac{1}{2}$",
+        "$k < -2$ or $k > \\frac{1}{2}$",
+        "$0 < k < 4$",
+        "$k < 0$ or $k > 4$"
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Find the coefficient of $x$ in the expression:\n\n$$(1 + x)^{0} + (1 + x)^2 + (1 + x)^3 + \\ldots + (1 + x)^{79} + (1 + x)^{80}$$",
+      "options": [
+        "80",
+        "81",
+        "324",
+        "628",
+        "3240",
+        "3321",
+        "6480",
+        "6642"
+      ]
+    },
+    {
+      "id": 4,
+      "text": "The sequence $x_n$ is given by:\n\n$$x_1 = 10$$\n\n$$x_{n+1} = \\sqrt{x_n}\\quad \\text{  for  } n \\geq 1$$\n\nWhat is the value of $x_{100}$?\n\n[Note that $a^{b^{c}}$ means $a^{(b^c)}$]",
+      "options": [
+        "$10^{2^{99}}$",
+        "$10^{2^{100}}$",
+        "$10^{2^{-99}}$",
+        "$10^{2^{-100}}$",
+        "$10^{-2^{99}}$",
+        "$10^{-2^{100}}$",
+        "$10^{-2^{-99}}$",
+        "$10^{-2^{-100}}$"
+      ]
+    },
+    {
+      "id": 5,
+      "text": "$S$ is a geometric sequence.\n\nThe sum of the first 6 terms of $S$ is equal to 9 times the sum of the first 3 terms of $S$.\n\nThe $7^{th}$ term of $S$ is 360.\n\nFind the $1^{st}$ term of $S$.",
+      "options": [
+        "$\\frac{40}{27}$",
+        "$\\frac{40}{9}$",
+        "$\\frac{40}{3}$",
+        "$\\frac{45}{16}$",
+        "$\\frac{45}{8}$",
+        "$\\frac{45}{4}$"
+      ]
+    },
+    {
+      "id": 6,
+      "text": "The circles with equations\n\n$$(x + 4)^2 + (y + 1)^2 = 64 \\text { and }$$ \n\n$$(x - 8)^2 + (y - 4)^2 = r^2 \\quad  \\text{  where  }  r > 0$$\n\nhave exactly one point in common.\n\nFind the difference between the two possible values of $r$.",
+      "options": [
+        "4",
+        "10",
+        "16",
+        "26",
+        "50"
+      ]
+    },
+    {
+      "id": 7,
+      "text": "A curve has equation\n\n$$y = (2q - x^2)(2qx + 3)$$\n\nThe gradient of the curve at $x = -1$ is a function of $q$.\n\nFind the value of $q$ which minimises the gradient of the curve at $x = -1$.",
+      "options": [
+        "$-1$",
+        "$-\\frac{3}{4}$",
+        "$-\\frac{1}{2}$",
+        "$0$",
+        "$\\frac{1}{2}$",
+        "$\\frac{3}{4}$",
+        "$1$"
+      ]
+    },
+    {
+      "id": 8,
+      "text": "The function $f$ is such that $0 < f(x) < 1$ for $0 \\leq x \\leq 1$.\n\nThe trapezium rule with $n$ equal intervals is used to estimate $\\int_0^1 f(x) dx$ and produces an underestimate.\n\nUsing the same rule of equal intervals, for which one of the following does the trapezium rule produce an overestimate?",
+      "options": [
+        "$\\int_0^1 (f(x) + 1) dx$",
+        "$\\int_0^1 2f(x) dx$",
+        "$\\int_{-1}^0 f(x + 1) dx$",
+        "$\\int_{-1}^0 f(-x) dx$",
+        "$\\int_0^1 (1 - f(x)) dx$"
+      ]
+    },
+    {
+      "id": 9,
+      "text": "$p$ is a positive constant.\n\nFind the area enclosed between the curves $y = p\\sqrt{x}$ and $x = p\\sqrt{y}$",
+      "options": [
+        "$\\frac{2}{3}p^{\\frac{5}{2}} - \\frac{1}{2}p^2$",
+        "$\\frac{4}{3}p^{\\frac{5}{2}} - p^2$",
+        "$\\frac{p^4}{6}$",
+        "$\\frac{p^4}{3}$",
+        "$\\frac{2}{3}p^3 - \\frac{1}{2}p^4$",
+        "$\\frac{4}{3}p^3 - p^4$",
+        "$2p^4$"
+      ]
+    },
+    {
+      "id": 10,
+      "text": "Evaluate\n\n$$\\int_{-1}^3 |x|(1 - x) dx$$",
+      "options": [
+        "$\\frac{17}{3}$",
+        "$-\\frac{17}{3}$",
+        "$\\frac{16}{3}$",
+        "$-\\frac{16}{3}$",
+        "$\\frac{11}{3}$",
+        "$-\\frac{11}{3}$"
+      ]
+    },
+    {
+      "id": 11,
+      "text": "Find the sum of the real values of $x$ that satisfy the simultaneous equations:\n\n$$\\log_3(xy^2) = 1$$\n\n$$(\\log_3 x)(\\log_3 y) = -3$$",
+      "options": [
+        "$\\frac{1}{3}$",
+        "$1$",
+        "$3$",
+        "$3\\frac{1}{9}$",
+        "$9\\frac{1}{27}$",
+        "$9\\frac{1}{3}$",
+        "$27$",
+        "$27\\frac{1}{9}$"
+      ]
+    },
+    {
+      "id": 12,
+      "text": "It is given that\n\n$$\\frac{dV}{dt} = \\frac{24\\pi(t - 1)}{(1 + \\sqrt{t})}$$ \\text {for} $t \\geq 1$\n\nand $V = 7$ when $t = 1$.\n\nFind the value of $V$ when $t = 9$.",
+      "options": [
+        "$208\\pi + 7$",
+        "$216\\pi+ 7$",
+        "$224\\pi + 7$",
+        "$416\\pi + 7$",
+        "$608\\pi + 7$",
+        "$744\\pi + 7$"
+      ]
+    },
+    {
+      "id": 13,
+      "text": "Find the maximum value of\n\n$$4^{\\sin x} - 4 \\times 2^{2\\sin x} + \\frac{17}{4}$$\n\nfor real $x$.",
+      "options": [
+        "$\\frac{1}{4}$",
+        "$\\frac{5}{2}$",
+        "$\\frac{13}{2}$",
+        "$\\frac{21}{2}$",
+        "$\\frac{65}{4}$",
+        "There is no maximum value."
+      ]
+    },
+    {
+      "id": 14,
+      "text": "$x$ satisfies the simultaneous equations\n\n$$\\sin 2x + \\sqrt{3} \\cos 2x = -1$$\n\nand\n\n$$\\sqrt{3} \\sin 2x - \\cos 2x = \\sqrt{3}$$\n\nwhere $0° \\leq x \\leq 360°$.\n\nFind the sum of the possible values of $x$.",
+      "options": [
+        "$210°$",
+        "$330°$",
+        "$390°$",
+        "$660°$",
+        "$780°$",
+        "$930°$"
+      ]
+    },
+    {
+      "id": 15,
+      "text": "Find the real non-zero solution to the equation\n\n$$\\frac{2^{(9^x)}}{8^{(3^x)}} = \\frac{1}{4}$$",
+      "options": [
+        "$\\log_3 2$",
+        "$2 \\log_3 2$",
+        "$1$",
+        "$2$",
+        "$\\log_2 3$",
+        "$2 \\log_2 3$"
+      ]
+    },
+    {
+      "id": 16,
+      "text": "Given that\n\n$$2 \\int_0^1 f(x) dx + 5 \\int_1^2 f(x) dx = 14$$\n\nand\n\n$$\\int_0^1 f(x + 1) dx = 6$$\n\nfind the value of\n\n$$\\int_0^2 f(x) dx$$",
+      "options": [
+        "$-8$",
+        "$-4$",
+        "$-2$",
+        "$2$",
+        "$4$",
+        "$\\frac{29}{5}$",
+        "$\\frac{32}{5}$",
+        "$14$"
+      ]
+    },
+    {
+      "id": 17,
+      "text": "Find the fraction of the interval $0 \\leq \\theta \\leq \\pi$ for which the inequality\n\n$$(\\sin(2\\theta) - \\frac{1}{2})(\\sin \\theta - \\cos \\theta) \\geq 0$$\n\nis satisfied.",
+      "options": [
+        "$\\frac{1}{12}$",
+        "$\\frac{1}{6}$",
+        "$\\frac{1}{4}$",
+        "$\\frac{5}{12}$",
+        "$\\frac{7}{12}$",
+        "$\\frac{3}{4}$",
+        "$\\frac{5}{6}$",
+        "$\\frac{11}{12}$"
+      ]
+    },
+    {
+      "id": 18,
+      "text": "Find the shortest distance between the curve $y = x^2 + 4$ and the line $y = 2x - 2$",
+      "options": [
+        "$2$",
+        "$\\sqrt{5}$",
+        "$\\frac{6\\sqrt{5}}{5}$",
+        "$3$",
+        "$\\frac{5\\sqrt{5}}{3}$",
+        "$5$",
+        "$6$"
+      ]
+    },
+    {
+      "id": 19,
+      "text": "Find the value of\n\n$$\\sum_{r=0}^{90} \\sin(10 + 90k)°$$",
+      "options": [
+        "$0$",
+        "$\\sin 10°$",
+        "$\\sin 100°$",
+        "$\\sin 190°$",
+        "$\\sin 280°$",
+        "$1$"
+      ]
+    },
+    {
+      "id": 20,
+      "text": "What is the complete range of values of $k$ for which the curves with equations\n\n$$y = x^3 - 12x$$\n\nand\n\n$$y = k - (x - 2)^2$$\n\nintersect at three distinct points, of which exactly two have positive $x$-coordinates?",
+      "options": [
+        "$-4 < k < 0$",
+        "$-4 < k < 4$",
+        "$-4 < k < 16$",
+        "$-16 < k < 0$",
+        "$-16 < k < 4$",
+        "$-16 < k < 16$"
+      ]
+    }
+  ],
+  "2019 Paper 2": [
+    {
+      "id": 1,
+      "text": "Find the coefficient of the $x^4$ term in the expansion of\n\n$$x^2\\left(2x + \\frac{1}{x}\\right)^6$$",
+      "options": [
+        "15",
+        "30",
+        "60",
+        "120",
+        "240"
+      ]
+    },
+    {
+      "id": 2,
+      "text": "$(2x + 1)$ and $(x - 2)$ are factors of $2x^3 + px^2 + q$.\n\nWhat is the value of $2p + q$?",
+      "options": [
+        "-10",
+        "$-\\frac{38}{5}$",
+        "$-\\frac{22}{3}$",
+        "$\\frac{22}{3}$",
+        "$\\frac{38}{5}$",
+        "10"
+      ]
+    },
+    {
+      "id": 3,
+      "text": "$a$, $b$ and $c$ are real numbers.\n\nGiven that $ab = ac$, which of the following statements must be true?\n\n$ \\quad I \\quad a = 0$\n$ \\quad II \\quad b = 0 \\text{ or } c = 0$\n$ \\quad III \\quad b = c$",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Consider the following conjecture:\n\nIf $N$ is a positive integer that consists of the digit 1 followed by an odd number of 0 digits and then a final digit 1, then $N$ is a prime number.\n\nHere are three numbers:\n\n$ \\quad I \\quad N = 101$ (which is a prime number)\n$ \\quad II \\quad N = 1001$ (which equals $7 \\times 11 \\times 13$)\n$ \\quad III \\quad N = 10001$ (which equals $73 \\times 137$)\n\nWhich of these provide(s) a counterexample to the conjecture?",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 5,
+      "text": "Consider the following statement about the positive integers $a$, $b$ and $n$:\n\n(*): $ab$ is divisible by $n$\n\nThe condition 'either $a$ or $b$ is divisible by $n$' is:",
+      "options": [
+        "necessary but not sufficient for (*)",
+        "sufficient but not necessary for (*)",
+        "necessary and sufficient for (*)",
+        "not necessary and not sufficient for (*)"
+      ]
+    },
+    {
+      "id": 6,
+      "text": "A student attempts to solve the equation\n\n$$\\cos x + \\sin x \\tan x = 2 \\sin x - 1$$\n\n\n in the range $0 \\leq x \\leq 2\\pi$\n\nThe student's attempt is as follows:\n\n$\\cos x - \\sin x + \\sin x \\tan x - \\sin x = - 1$\n\nSo $\\quad \\cos x + \\sin x \\tan x = 2 \\sin x - 1 \\quad \\quad $(I)\n\nSo $\\quad (\\sin x - \\cos x)(\\tan x - 1) = -1 \\quad \\quad$ (II)\n\nSo $\\quad \\sin x - \\cos x = -1$ or $\\tan x - 1 = -1 \\quad \\quad $(III)\n\nSo $\\quad (\\sin x - \\cos x)^2 = 1$ or $\\tan x = 0 \\quad \\quad $(IV)\n\nSo $ \\quad 2\\sin x \\cos x = 0$ or $\\tan x = 0 \\quad \\quad $(V)\n\nSo $\\quad x = 0, \\frac{\\pi}{2}, \\pi, \\frac{3\\pi}{2}, 2\\pi \\quad \\quad $(VI)\n\nWhich of the following best describes this attempt?",
+      "options": [
+        "It is completely correct",
+        "It is incorrect, and the first error occurs on line (I)",
+        "It is incorrect, and the first error occurs on line (II)",
+        "It is incorrect, and the first error occurs on line (III)",
+        "It is incorrect, and the first error is that extra solutions were introduced on line (IV)",
+        "It is incorrect, and the first error is that extra solutions were introduced on line (V)",
+        "It is incorrect, and the first error is not eliminating the values where $\\tan x$ is undefined on line (VI)"
+      ]
+    },
+    {
+      "id": 7,
+      "text": "For which one of the following statements can the fact that $12^2 + 16^2 = 20^2$ be used to produce a counterexample?",
+      "options": [
+        "If $a$, $b$ and $c$ are positive integers which satisfy the equation $a^2 + b^2 = c^2$, and the three numbers have no common divisor, then two of them are odd and the other is even.",
+        "The equation $a^4 + b^2 = c^2$ has no solutions for which $a$, $b$ and $c$ are positive integers.",
+        "The equation $a^4 + b^4 = c^4$ has no solutions for which $a$, $b$ and $c$ are positive integers.",
+        "If $a$, $b$ and $c$ are positive integers which satisfy the equation $a^2 + b^2 = c^2$, then one is the arithmetic mean of the other two."
+      ]
+    },
+    {
+      "id": 8,
+      "text": "$a$, $b$ and $c$ are real numbers with $a < b < c < 0$\n\nWhich of the following statements must be true?\n\n$ \\quad I \\quad ac < ab < c^2$\n$ \\quad II \\quad b(c + a) > 0$\n$ \\quad III \\quad \\frac{c}{b} > \\frac{a}{b}$",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 9,
+      "text": "A large circular table has 40 chairs round it.\n\nWhat is the smallest number of people who can be sitting at the table already such that the next person to sit down must sit next to someone?",
+      "options": [
+        "9",
+        "10",
+        "13",
+        "14",
+        "19",
+        "20"
+      ]
+    },
+    {
+      "id": 10,
+      "text": "$PQRS$ is a quadrilateral, labelled anticlockwise.\n\nWhich one of the following is a necessary but not sufficient condition for $PQRS$ to be a parallelogram?",
+      "options": [
+        "$PQ = SR$ and $PS$ is parallel to $QR$",
+        "$PQ = SR$ and $PQ$ is parallel to $SR$",
+        "$PQ = QR = SR = PS$",
+        "$PR = QS$"
+      ]
+    },
+    {
+      "id": 11,
+      "text": "An arithmetic series has $n$ terms, all of which are integers.\n\nThe sum of the series is 20.\n\nWhich of the following statements must be true?\n\n$ \\quad I \\quad$ The first term of the series is even.\n$ \\quad II \\quad$ $n$ is even.\n$ \\quad III \\quad$ The common difference is even.",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 12,
+      "text": "Most students in a large college study Mathematics. A teacher chooses three different students at random, one after the other.\n\nConsider these three probabilities:\n\n$\\quad R = P$(At least one of the students chosen studies Mathematics)\n$\\quad S = P$(The second student chosen studies Mathematics)\n$\\quad T = P$(All three of the students chosen study Mathematics)\n\nWhich of the following is true?",
+      "options": [
+        "$R < S < T$",
+        "$R < T < S$",
+        "$S < R < T$",
+        "$S < T < R$",
+        "$T < R < S$",
+        "$T < S < R$"
+      ]
+    },
+    {
+      "id": 13,
+      "text": "A student approximates the integral $\\int_a^b \\sin^2 x \\, dx$ using the trapezium rule with 4 strips. The resulting approximation is an overestimate.\n\nWhich of the following is/are necessarily true?\n\n$ \\quad I \\quad$ If the student approximates $\\int_{-b}^{-a} \\sin^2 x \\, dx$ in the same way, the result will be an overestimate.\n$ \\quad II \\quad$ If the student approximates $\\int_a^b \\cos^2 x \\, dx$ in the same way, the result will be an underestimate.",
+      "options": [
+        "neither of them",
+        "I only",
+        "II only",
+        "I and II"
+      ]
+    },
+    {
+      "id": 14,
+      "text": "Consider the following statements about the polynomial $p(x)$, where $a < b$.\n\n$ \\quad I \\quad$ $p(a) \\leq p(b)$\n$ \\quad II \\quad$ $p'(a) \\leq p'(b)$\n$ \\quad III \\quad$ $p''(a) \\leq p''(b)$\n\nWhich of these statements is a necessary condition for $p(x)$ to be increasing for $a \\leq x \\leq b$?",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 15,
+      "text": "The numbers $a$, $b$ and $c$ are each greater than 1.\n\nThe following logarithms are all to the same base:\n\n$$\\log (ab^2c)) = 7$$\n$$\\log (a^2bc^2) = 11$$\n$$\\log (a^2b^2c^3) = 15$$\n\nWhat is the base?",
+      "options": [
+        "$a$",
+        "$b$",
+        "$c$",
+        "It is possible to determine the base, but the base is not $a$, $b$ or $c$",
+        "There is insufficient information given to determine the base"
+      ]
+    },
+    {
+      "id": 16,
+      "text": "The graph of the quadratic\n\n$$y = px^2 + qx + p$$\n\nwhere $p > 0$, intersects the $x$-axis at two distinct points.\n\nIn which of the following graphs does the shaded region show the complete set of possible values that $p$ and $q$ could take?",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ]
+    },
+    {
+      "id": 17,
+      "text": "A multiple-choice test question offered the following four options relating to a certain statement:\n\nA The statement is true if and only if $x > 1$\nB The statement is true if $x > 1$\nC The statement is true if and only if $x > 2$\nD The statement is true if $x > 2$\n\nGiven that exactly one of these options was correct, which one was it?",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    {
+      "id": 18,
+      "text": "Consider the following inequality:\n\n$\\quad (*):\\quad  a|x| + 1 \\leq |x - 2|$\n\nwhere $a$ is a real constant.\n\nWhich one of the following describes the complete set of values of $a$ such that (*) is true for all real $x$?",
+      "options": [
+        "$a \\leq \\frac{3}{2}$",
+        "$a \\leq 1$",
+        "$a \\leq \\frac{1}{2}$",
+        "$a \\leq 0$",
+        "$a \\leq -\\frac{1}{2}$",
+        "$a \\leq -1$",
+        "$a \\leq -\\frac{3}{2}$",
+        "There are no such values of $a$."
+      ]
+    },
+    {
+      "id": 19,
+      "text": "Find the value of the expression\n\n$$\\sqrt{8 - 4\\sqrt{2} + 1} + \\sqrt{9 - 12\\sqrt{2} + 8}$$",
+      "options": [
+        "$\\sqrt{26 - 16\\sqrt{2}}$",
+        "$4\\sqrt{2} - 4$",
+        "$-2$",
+        "$4 - 4\\sqrt{2}$",
+        "$2$",
+        "$\\sqrt{26} - 4\\sqrt{2}$",
+        "$1$"
+      ]
+    },
+    {
+      "id": 20,
+      "text": "When the graph of the function $y = f(x)$, defined on the real numbers, is reflected in the $y$-axis and then translated by 2 units in the negative $x$-direction, the result is the graph of the function $y = g(x)$.\n\nWhen the graph of the same function $y = f(x)$ is translated by 2 units in the negative $x$-direction and then reflected in the $y$-axis, the result is the graph of the function $y = h(x)$.\n\nWhich one of the following conditions on $y = f(x)$ is necessary and sufficient for the functions $g(x)$ and $h(x)$ to be identical?",
+      "options": [
+        "$f(x) = f(x + 2)$ for all $x$",
+        "$f(x) = f(x + 4)$ for all $x$",
+        "$f(x) = f(x + 8)$ for all $x$",
+        "$f(x) = f(-x)$ for all $x$",
+        "$f(x) = f(2 - x)$ for all $x$",
+        "$f(x) = f(4 - x)$ for all $x$",
+        "$f(x) = f(8 - x)$ for all $x$"
+      ]
+    }
+  ],
+  "2020 Paper 1": [
+    {
+      "id": 1,
+      "text": "Which of the following is an expression for the first derivative with respect to $x$ of\n\n$$\\frac{x^3 - 5x^2}{2x\\sqrt{x}}$$",
+      "options": [
+        "$-\\frac{\\sqrt{x}}{2}$",
+        "$\\frac{\\sqrt{x}}{4}$",
+        "$\\frac{3x - 5}{4\\sqrt{x}}$",
+        "$\\frac{3\\sqrt{x} - 5}{4\\sqrt{x}}$",
+        "$\\frac{3\\sqrt{x} - 10}{3\\sqrt{x}}$",
+        "$\\frac{3x^2 - 10x}{3\\sqrt{x}}$"
+      ]
+    },
+    {
+      "id": 2,
+      "text": "$(2x + 1)$ and $(x - 2)$ are factors of $2x^3 + px^2 + q$\n\nWhat is the value of $2p + q$?",
+      "options": [
+        "$-10$",
+        "$-\\frac{38}{5}$",
+        "$-\\frac{22}{3}$",
+        "$\\frac{22}{3}$",
+        "$\\frac{38}{5}$",
+        "$10$"
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Find the complete set of values of $x$ for which\n\n$$(x + 4)(x + 3)(1 - x) > 0 \\quad \\text { and } \\quad (x + 2)(x - 2) < 0$$",
+      "options": [
+        "$1 < x < 2$",
+        "$-2 < x < 1$",
+        "$-2 < x < 2$",
+        "$x < -2$ or $x > 1$",
+        "$x < -4$ or $x > 2$",
+        "$x < -4$ or $-3 < x < 1$",
+        "$-4 < x < -2$ or $x > 1$"
+      ]
+    },
+    {
+      "id": 4,
+      "text": "The $1^{st}$, $2^{nd}$ and $3^{rd}$ terms of a geometric progression are also the $1^{st}$, $4^{th}$ and $6^{th}$ terms, respectively, of an arithmetic progression.\n\nThe sum to infinity of the geometric progression is 12.\n\nFind the $1^{st}$ term of the geometric progression.",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$"
+      ]
+    },
+    {
+      "id": 5,
+      "text": "The curve $S$ has equation\n\n$$y = px^2 + 6x - q$$\n\nwhere $p$ and $q$ are constants.\n\n$S$ has a line of symmetry at $x = -\\frac{1}{4}$ and touches the $x$-axis at exactly one point.\n\nWhat is the value of $p + 8q$?",
+      "options": [
+        "$6$",
+        "$18$",
+        "$21$",
+        "$25$",
+        "$38$"
+      ]
+    },
+    {
+      "id": 6,
+      "text": "Find the maximum value of the function\n\n$$f(x) = \\frac{1}{5^{2x} - 4(5^x) + 7}$$",
+      "options": [
+        "$\\frac{1}{7}$",
+        "$\\frac{1}{4}$",
+        "$\\frac{1}{3}$",
+        "$3$",
+        "$4$",
+        "$7$"
+      ]
+    },
+    {
+      "id": 7,
+      "text": "Given that\n\n$$2^{3x} = 8^{(y+3)}$$\n\nand\n\n$$4^{(x+1)} = \\frac{16^{(y+1)}}{8^{(y+3)}}$$\n\nwhat is the value of $x + y$?",
+      "options": [
+        "$-23$",
+        "$-22$",
+        "$-15$",
+        "$-14$",
+        "$-11$",
+        "$-10$"
+      ]
+    },
+    {
+      "id": 8,
+      "text": "The function $f$ is defined for all real $x$ as\n\n$$f(x) = (p - x)(x + 2)$$\n\nFind the complete set of values of $p$ for which the maximum value of $f(x)$ is less than 4.",
+      "options": [
+        "$-2 - 4\\sqrt{2} < p < -2 + 4\\sqrt{2}$",
+        "$-2 - 2\\sqrt{2} < p < -2 + 2\\sqrt{2}$",
+        "$-2\\sqrt{5} < p < 2\\sqrt{5}$",
+        "$-6 < p < 2$",
+        "$-4 < p < 0$",
+        "$-2 < p < 2$"
+      ]
+    },
+    {
+      "id": 9,
+      "text": "The quadratic expression $x^2 - 14x + 9$ factorises as $(x - \\alpha)(x - \\beta)$, where $\\alpha$ and $\\beta$ are positive real numbers.\n\nWhich quadratic expression can be factorised as $(x - \\sqrt{\\alpha})(x - \\sqrt{\\beta})$?",
+      "options": [
+        "$x^2 - \\sqrt{10}x + 3$",
+        "$x^2 - \\sqrt{14}x + 3$",
+        "$x^2 - \\sqrt{20}x + 3$",
+        "$x^2 - 178x + 81$",
+        "$x^2 - 176x + 81$",
+        "$x^2 + 196x + 81$"
+      ]
+    },
+    {
+      "id": 10,
+      "text": "The following sequence of transformations is applied to the curve $y = 4x^2$\n\n1. Translation by $\\begin{pmatrix} 3 \\\\ -5 \\end{pmatrix}$\n\n2. Reflection in the $x$-axis\n\n3. Stretch parallel to the $x$-axis with scale factor 2\n\nWhat is the equation of the resulting curve?",
+      "options": [
+        "$y = -x^2 + 12x - 31$",
+        "$y = -x^2 + 12x - 41$",
+        "$y = x^2 + 12x + 31$",
+        "$y = x^2 + 12x + 41$",
+        "$y = -16x^2 + 48x - 31$",
+        "$y = -16x^2 + 48x - 41$",
+        "$y = 16x^2 - 48x + 31$",
+        "$y = 16x^2 - 48x + 41$"
+      ]
+    },
+    {
+      "id": 11,
+      "text": "The quadratic function shown passes through $(2, 0)$ and $(q, 0)$, where $q > 2$.\n\nWhat is the value of $q$ such that the area of region $R$ equals the area of region $S$?",
+      "options": [
+        "$\\sqrt{6}$",
+        "$3$",
+        "$\\frac{18}{5}$",
+        "$4$",
+        "$6$",
+        "$\\frac{33}{5}$"
+      ]
+    },
+    {
+      "id": 12,
+      "text": "How many real solutions are there to the equation\n\n$$3 \\cos x = \\sqrt{x}$$\n\nwhere $x$ is in radians?",
+      "options": [
+        "$0$",
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$",
+        "infinitely many"
+      ]
+    },
+    {
+      "id": 13,
+      "text": "Find the coefficient of $x^2 y^4$ in the expansion of $(1 + x + y^2)^{7}$",
+      "options": [
+        "$6$",
+        "$10$",
+        "$21$",
+        "$35$",
+        "$105$",
+        "$210$"
+      ]
+    },
+    {
+      "id": 14,
+      "text": "The area enclosed between the line $y = mx$ and the curve $y = x^3$ is 6.\n\nWhat is the value of $m$?",
+      "options": [
+        "$2$",
+        "$4$",
+        "$\\sqrt{3}$",
+        "$\\sqrt{6}$",
+        "$2\\sqrt{3}$",
+        "$2\\sqrt{6}$"
+      ]
+    },
+    {
+      "id": 15,
+      "text": "Find the positive difference between the two real values of $x$ for which\n\n$$(\\log_2 x)^4 + 12 \\left( \\log_2 (\\frac{1}{x}) \\right)^2 - 2^6 = 0$$",
+      "options": [
+        "$4$",
+        "$16$",
+        "$\\frac{15}{4}$",
+        "$\\frac{17}{4}$",
+        "$\\frac{255}{16}$",
+        "$\\frac{257}{16}$"
+      ]
+    },
+    {
+      "id": 16,
+      "text": "The circle $C_1$ has equation $(x + 2)^2 + (y - 1)^2 = 3$\n\nThe circle $C_2$ has equation $(x - 4)^2 + (y - 1)^2 = 3$\n\nThe straight line $l$ is a tangent to both $C_1$ and $C_2$ and has positive gradient.\n\nThe acute angle between $l$ and the $x$-axis is $\\theta$\n\nFind the value of $\\tan \\theta$",
+      "options": [
+        "$\\frac{1}{2}$",
+        "$2$",
+        "$\\frac{\\sqrt{2}}{2}$",
+        "$\\sqrt{2}$",
+        "$\\frac{\\sqrt{6}}{2}$",
+        "$\\frac{\\sqrt{6}}{3}$",
+        "$\\frac{\\sqrt{3}}{3}$",
+        "$\\sqrt{3}$"
+      ]
+    },
+    {
+      "id": 17,
+      "text": "Find the complete set of values of $m$ in terms of $c$ such that the graphs of $y = mx + c$ and $y = \\sqrt{x}$ have two points of intersection.",
+      "options": [
+        "$0 < m < \\frac{1}{4c}$",
+        "$0 < m < 4c^2$",
+        "$m > \\frac{1}{4c}$",
+        "$m < \\frac{1}{4c}$",
+        "$m > 4c^2$",
+        "$m < 4c^2$"
+      ]
+    },
+    {
+      "id": 18,
+      "text": "Find the number of solutions and the sum of the solutions of the equation\n\n$$1 - 2 \\cos^2 x = |\\cos x|$$\n\nwhere $0 \\leq x \\leq 180°$",
+      "options": [
+        "Number of solutions = 2    Sum of solutions = 180°",
+        "Number of solutions = 2    Sum of solutions = 240°",
+        "Number of solutions = 3    Sum of solutions = 180°",
+        "Number of solutions = 3    Sum of solutions = 360°",
+        "Number of solutions = 4    Sum of solutions = 240°",
+        "Number of solutions = 4    Sum of solutions = 360°"
+      ]
+    },
+    {
+      "id": 19,
+      "text": "Find the lowest positive integer for which $x^2 - 52x - 52$ is positive.",
+      "options": [
+        "$26$",
+        "$27$",
+        "$51$",
+        "$52$",
+        "$53$",
+        "$54$"
+      ]
+    },
+    {
+      "id": 20,
+      "text": "For how many values of $a$ is the equation\n\n$$(x - a)(x^2 - x + a) = 0$$\n\nsatisfied by exactly two distinct values of $x$?",
+      "options": [
+        "$0$",
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$",
+        "more than 4"
+      ]
+    }
+  ],
+  "2020 Paper 2": [
+    {
+      "id": 1,
+      "text": "Find the complete set of values of $k$ for which the line $y = x - 2$ crosses or touches the curve $y = x^2 + kx + 2$",
+      "options": [
+        "$-1 \\leq k \\leq 3$",
+        "$-3 \\leq k \\leq 5$",
+        "$-4 \\leq k \\leq 4$",
+        "$k \\leq -1$ or $k \\geq 3$",
+        "$k \\leq -3$ or $k \\geq 5$",
+        "$k \\leq -4$ or $k \\geq 4$"
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Given that $\\tan \\theta = 2$ and $180° < \\theta < 360°$, find the value of $\\cos \\theta$",
+      "options": [
+        "$\\sqrt{3}$",
+        "$-\\sqrt{3}$",
+        "$\\frac{\\sqrt{3}}{2}$",
+        "$-\\frac{\\sqrt{3}}{2}$",
+        "$\\frac{\\sqrt{5}}{5}$",
+        "$-\\frac{\\sqrt{5}}{5}$",
+        "$\\frac{2\\sqrt{5}}{5}$",
+        "$-\\frac{2\\sqrt{5}}{5}$"
+      ]
+    },
+    {
+      "id": 3,
+      "text": "A student makes the following claim:\n\n$$\\text{For all integers } n\\text{, the expression } 4\\left(\\frac{9n+1}{2} - \\frac{3n-1}{2}\\right) \\text{ is divisible by 3.}$$\n\nHere is the student's argument:\n\n$$4\\left(\\frac{9n+1}{2} - \\frac{3n-1}{2}\\right) = 2\\left(2\\left(\\frac{9n+1}{2} - \\frac{3n-1}{2}\\right)\\right) \\quad \\text{  (I)}$$\n\n$$= 2(9n + 1 - 3n - 1) \\quad \\text{  (II)}$$\n\n$$= 2(6n) \\quad \\text{  (III)}$$\n\n$$= 12n \\quad \\text{  (IV)}$$\n\n$$= 3(4n)\\quad  \\text{  (V)}$$\n\n$$\\text{which is always a multiple of 3.} \\quad \\text{  (VI)}$$\n\n$$\\text{So the expression } 4\\left(\\frac{9n+1}{2} - \\frac{3n-1}{2}\\right) \\text{ is always divisible by 3.}$$",
+      "options": [
+        "The argument is correct.",
+        "The argument is incorrect. There is an error in step (I).",
+        "The argument is incorrect. There is an error in step (II).",
+        "The argument is incorrect. There is an error in step (III).",
+        "The argument is incorrect. There is an error in step (IV).",
+        "The argument is incorrect. There is an error in step (V).",
+        "The argument is incorrect. There is an error in step (VI)."
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Consider the following statement:\n\nEvery positive integer $N$ that is greater than 6 can be written as the sum of two non-prime integers that are greater than 1.\n\nWhich of the following is/are counterexample(s) to this statement?\n\nI. $N = 5$\nII. $N = 7$\nIII. $N = 9$",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 5,
+      "text": "Which one of the following shows the graph of\n\n$y = \\frac{2^x}{1+2^x}$\n\n(Dotted lines indicate asymptotes.)",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    {
+      "id": 6,
+      "text": "The function $f(x)$ is defined for all real values of $x$.\n\nWhich of the following conditions on $f(x)$ is/are necessary to ensure that\n\n$$\\int_{-5}^{0} f(x) dx =\\int_{0}^{5} f(x) dx$$\n\nCondition I: $f(x) = f(-x)$ for $-5 \\leq x \\leq 5$\nCondition II: $f(x) = c$ for $-5 \\leq x \\leq 5$, where $c$ is a constant\nCondition III: $f(x) = -f(-x)$ for $-5 \\leq x \\leq 5$",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 7,
+      "text": "Consider the following conditions on a parallelogram $PQRS$, labelled anticlockwise:\n\nI. length of $PQ =$ length of $QR$\nII. The diagonal $PR$ intersects the diagonal $QS$ at right angles\nIII. $\\angle PQR = \\angle QRS$\n\nWhich of these conditions is/are individually sufficient for the parallelogram $PQRS$ to be a square?",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ]
+    },
+    {
+      "id": 8,
+      "text": "A student is asked to prove whether the following statement (*) is true or false:\n\n(*) For all real numbers $a$ and $b$, $|a + b| < |a| + |b|$\n\nThe student's proof is as follows:\n\nStatement (*) is false. A counterexample is $a = 3, b = 4$, as $|3 + 4| = 7$ and $|3| + |4| = 7$, but $7 < 7$ is false.\n\nWhich of the following best describes the student's proof?",
+      "options": [
+        "The statement (*) is true, and the student's proof is not correct.",
+        "The statement (*) is false, but the student's proof is not correct: the counterexample is not valid.",
+        "The statement (*) is false, but the student's proof is not correct: the student needs to give all the values of $a$ and $b$ where $|a + b| < |a| + |b|$ is false.",
+        "The statement (*) is false, but the student's proof is not correct: the student should have instead stated that for all real numbers $a$ and $b$, $|a + b| \\leq |a| + |b|$.",
+        "The statement (*) is false, and the student's proof is fully correct."
+      ]
+    },
+    {
+      "id": 9,
+      "text": "A student wishes to evaluate the function $f(x) = x \\sin x$, where $x$ is in radians, but has a calculator that only works in degrees.\n\nWhat could the student type into their calculator to correctly evaluate $f(4)$?",
+      "options": [
+        "$(\\pi \\times 4 \\div 180) \\times \\sin(4)$",
+        "$(\\pi \\times 4 \\div 180)) \\times \\sin(\\pi \\times 4 \\div 180)$",
+        "$4 \\times \\sin(\\pi \\times 4 \\div 180)$",
+        "$(180 \\times 4 \\div \\pi) \\times \\sin(4)$",
+        "$(180 \\times 4 \\div \\pi) \\times \\sin(180 \\times 4 \\div \\pi)$",
+        "$4 \\times \\sin(180 \\times 4 \\div \\pi)$"
+      ]
+    },
+    {
+      "id": 10,
+      "text": "The real numbers $a, b$ and $c$ satisfy both\n\n$$0 < a + b < c + d$$\n\nand\n\n$$0 < a + c < b + d$$\n\nWhich of the following inequalities must be true?\n\n$\\quad I \\quad a < d$\n$\\quad II \\quad b < c$\n$\\quad III \\quad a + b + c + d > 0$",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 11,
+      "text": "A spiral line is drawn as shown.\n\nThis spiral pattern continues indefinitely.\n\nWhich one of the following points is not on the spiral line?",
+      "options": [
+        "$(99, 100)$",
+        "$(99, -100)$",
+        "$(-99, 100)$",
+        "$(-99, -100)$",
+        "$(100, 99)$",
+        "$(100, -99)$",
+        "$(-100, 99)$",
+        "$(-100, -99)$"
+      ]
+    },
+    {
+      "id": 12,
+      "text": "Which one of $A - F$ correctly completes the following statement?\n\nGiven that $a < b$ and $f(x) > 0$ for all $x$ with $a < x < b$, the trapezium rule produces an overestimate for $ \\int_{a}^{b} f(x) dx$",
+      "options": [
+        "... if $f'(x) > 0$ and $f''(x) < 0$ for all $x$ with $a < x < b$",
+        "... only if $f'(x) > 0$ and $f''(x) < 0$ for all $x$ with $a < x < b$",
+        "... if and only if $f'(x) > 0$ and $f''(x) < 0$ for all $x$ with $a < x < b$",
+        "... if $f'(x) < 0$ and $f''(x) > 0$ for all $x$ with $a < x < b$",
+        "... only if $f'(x) < 0$ and $f''(x) > 0$ for all $x$ with $a < x < b$",
+        "... if and only if $f'(x) < 0$ and $f''(x) > 0$ for all $x$ with $a < x < b$"
+      ]
+    },
+    {
+      "id": 13,
+      "text": "$f(x)$ is a function for which\n\n$$\\int_{0}^{3} [f(x)]^2 dx + \\int_{0}^{3} f(x) dx = \\int_{0}^{1} f(x) dx$$\n\nWhich of the following claims about $f(x)$ is/are necessarily true?\n\n$\\quad I \\quad f(x) \\leq 0$ for some $x$ with $1 \\leq x \\leq 3$\n$\\quad II \\quad \\int_{0}^{3} f(x) dx \\leq \\int_{0}^{1} f(x) dx$",
+      "options": [
+        "neither of them",
+        "I only",
+        "II only",
+        "I and II"
+      ]
+    },
+    {
+      "id": 14,
+      "text": "An arithmetic sequence $T$ has first term $a$ and common difference $d$, where $a$ and $d$ are non-zero integers.\n\nProperty P is:\n\nFor some positive integer $m$, the sum of the first $m$ terms of the sequence is equal to the sum of the first $2m$ terms of the sequence.\n\nFor example, when $a = 11$ and $d = -2$, the sequence $T$ has property P, because:\n\n$\\quad \\quad 11 + 9 + 7 + 5 = 11 + 9 + 7 + 5 + 3 + 1 + (-1) + (-3)$\n\ni.e. the sum of the first 4 terms equals the sum of the first 8 terms.\n\nWhich of the following statements is/are true?\n\n$\\quad I \\quad$ For $T$ to have property P, it is sufficient that $ad < 0$.\n$\\quad II \\quad$ For $T$ to have property P, it is necessary that $d$ is even.",
+      "options": [
+        "neither of them",
+        "I only",
+        "II only",
+        "I and II"
+      ]
+    },
+    {
+      "id": 15,
+      "text": "Which one of the following is a necessary and sufficient condition for\n\n$$\\sum_{k=1}^{n} \\sin\\left(\\frac{k\\pi}{3}\\right) = \\frac{\\sqrt{3}}{2}$$\n\nto be true?",
+      "options": [
+        "$n = 1$",
+        "$n$ is a multiple of 3",
+        "$n$ is a multiple of 6",
+        "$n$ is 1 more than a multiple of 3",
+        "$n$ is 1 more than a multiple of 6",
+        "$n$ is 1 more than a multiple of 6 or $n$ is 2 more than a multiple of 6"
+      ]
+    },
+    {
+      "id": 16,
+      "text": "The Fundamental Theorem of Calculus (FTC) tells us that for any polynomial $f$:\n\n$$\\frac{d}{dx}\\left(\\int_0^x f(t) dt\\right) = f(x)$$\n\nA student calculates $\\frac{d}{dx}\\left(\\int_x^{2x} t^2 dt\\right)$ as follows:\n\n(I)$ \\quad \\int_x^{2x} t^2 dt = \\int_0^{2x} t^2 dt - \\int_0^x t^2 dt$\n\n(II) $ \\quad$ By FTC,$ \\frac{d}{dx}\\left(\\int_0^x t^2 dt\\right) = x^2$\n\n(III)$  \\quad$ By FTC,$ \\frac{d}{dx}\\left(\\int_0^{2x} t^2 dt\\right) = (2x)^2 = 4x^2$\n\n(IV)$ \\quad$ So$ \\frac{d}{dx}\\left(\\int_x^{2x} t^2 dt\\right) = 4x^2 - x^2$\n\n(V)$ \\quad$ giving$ \\frac{d}{dx}\\left(\\int_x^{2x} t^2 dt\\right) = 3x^2$\n\nWhich of the following best describes the student's calculation?",
+      "options": [
+        "The calculation is completely correct.",
+        "The calculation is incorrect, and the first error occurs on line (I).",
+        "The calculation is incorrect, and the first error occurs on line (II).",
+        "The calculation is incorrect, and the first error occurs on line (III).",
+        "The calculation is incorrect, and the first error occurs on line (IV).",
+        "The calculation is incorrect, and the first error occurs on line (V)."
+      ]
+    },
+    {
+      "id": 17,
+      "text": "A set of six distinct integers is split into two sets of three.\n\nThe first set of three integers has a mean of 10 and a median of 8.\n\nThe second set of three integers has a mean of 12 and a median of 9.\n\nWhat is the smallest possible range of the set of all six integers?",
+      "options": [
+        "8",
+        "10",
+        "11",
+        "12",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "id": 18,
+      "text": "In this question, $f(x) = ax^3 + bx^2 + cx + d$ and $g(x) = px^3 + qx^2 + rx + s$ are cubic polynomials.\n\nIf $f(x) - g(x) > 0$ for every real $x$, which of the following is/are necessarily true?\n\n$\\quad I \\quad$ $a > p$\n$\\quad II\\quad$ If $b = q$, then $c = r$\n$\\quad III \\quad$ $d > s$",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 19,
+      "text": "Nine people are sitting in the squares of a 3 by 3 grid, one in each square, as shown.\n\nTwo people are called neighbours if they are sitting in squares that share a side.\n\n(People in diagonally adjacent squares, which only share a point in common, are not called neighbours.)\n\nEach of the nine people in the grid is either a truth-teller who always tells the truth, or a liar who always lies.\n\nEvery person in the grid says \"My neighbours are all liars\".\n\nGiven only this information, what are the smallest number and the largest number of people who could be telling the truth?",
+      "options": [
+        "smallest: 1, largest: 4",
+        "smallest: 2, largest: 4",
+        "smallest: 2, largest: 5",
+        "smallest: 3, largest: 4",
+        "smallest: 3, largest: 5",
+        "smallest: 4, largest: 4",
+        "smallest: 4, largest: 5",
+        "smallest: 5, largest: 5"
+      ]
+    },
+    {
+      "id": 20,
+      "text": "$x$ is a real number and $f$ is a function.\n\nGiven that exactly one of the following statements is true, which one is it? ",
+      "options": [
+        "$x \\geq 0$ only if $f(x) < 0$",
+        "$x < 0$ if $f(x) \\geq 0$",
+        "$x \\geq $ only if $f(x) \\geq 0$",
+        "$f(x) < 0$ if $x < 0$",
+        "$f(x) \\geq 0$ only if $x ≥ 0$",
+        "$f(x) ≥ 0$ if and only if $x < 0$"
+      ]
+    }
+  ],
+  "2021 Paper 1": [
+    {
+      "id": 1,
+      "text": "Two circles have the same radius.\n\nThe centre of one circle is $(-2, 1)$.\n\nThe centre of the other circle is $(3, -2)$.\n\nThe circles intersect at two distinct points.\n\nWhat is the equation of the straight line through the two points at which the circles intersect?",
+      "options": [
+        "$3x - 5y = 4$",
+        "$3x + 5y = -1$",
+        "$5x - 3y = -4$",
+        "$5x - 3y = -1$",
+        "$5x - 3y = 1$",
+        "$5x - 3y = 4$",
+        "$5x + 3y = 1$"
+      ]
+    },
+    {
+      "id": 2,
+      "text": "The curve $y = x^3 - 6x + 3$ has turning points at $x = \\alpha$ and $x = \\beta$ where $\\beta$ > $\\alpha$.\n\nFind\n$$\\int_\\alpha^\\beta x^3 - 6x + 3 , dx$$",
+      "options": [
+        "$-8\\sqrt{2}$",
+        "$-10$",
+        "$-10 + 6\\sqrt{2}$",
+        "$0$",
+        "$12 - 8\\sqrt{2}$",
+        "$6\\sqrt{2}$",
+        "$12$"
+      ]
+    },
+    {
+      "id": 3,
+      "text": "An arithmetic progression and a convergent geometric progression each have first term $\\frac{1}{2}$.\n\nThe sum of the second terms of the two progressions is $\\frac{1}{2}$.\n\nThe sum of the third terms of the two progressions is $\\frac{1}{8}$.\n\nWhat is the sum to infinity of the geometric progression?",
+      "options": [
+        "$-2$",
+        "$-1$",
+        "$-\\frac{1}{2}$",
+        "$-\\frac{1}{3}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{1}{2}$",
+        "$1$",
+        "$2$"
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Find the minimum value of the function\n\n$$2^{2x} - 2^{x+3} + 4$$",
+      "options": [
+        "$-16$",
+        "$-12$",
+        "$-8$",
+        "$0$",
+        "$4$",
+        "$20$"
+      ]
+    },
+    {
+      "id": 5,
+      "text": "The function $f$ is such that\n\n$$f(mn) = \\begin{cases} f(m)f(n) & \\text{if } mn \\text{ is a multiple of } 3 \\\\ mn & \\text{if } mn \\text{ is not a multiple of } 3 \\end{cases}$$\n\nfor all positive integers $m$ and $n$.\n\nGiven that $f(9) + f(16) - f(24) = 0$, what is the value of $f(3)$?",
+      "options": [
+        "$\\frac{8}{3}$",
+        "$2\\sqrt{2}$",
+        "$3$",
+        "$\\frac{16}{5}$",
+        "$3\\sqrt{2}$",
+        "$4$"
+      ]
+    },
+    {
+      "id": 6,
+      "text": "The function $f$ is given by\n\n$$f(x) = \\frac{\\cos x + 3}{7 + 5\\cos x - \\sin^2 x}$$\n\nFind the positive difference between the maximum and the minimum values of $f(x)$.",
+      "options": [
+        "$0$",
+        "$\\frac{1}{3}$",
+        "$\\frac{1}{2}$",
+        "$\\frac{2}{3}$",
+        "$1$",
+        "$2$"
+      ]
+    },
+    {
+      "id": 7,
+      "text": "The function $f$ is such that $f(0) = 0$ and $xf(x) > 0$ for all non-zero values of $x$.\n\nIt is given that\n\n$$\\int_{-2}^2 f(x) \\, dx = 4$$\n\nand\n\n$$\\int_{-2}^2 |f(x)| \\, dx = 8$$\n\nEvaluate\n\n$$\\int_{-2}^0 f(|x|) \\, dx$$",
+      "options": [
+        "$-8$",
+        "$-6$",
+        "$-4$",
+        "$-2$",
+        "$2$",
+        "$4$",
+        "$6$",
+        "$8$"
+      ]
+    },
+    {
+      "id": 8,
+      "text": "The line $y = 2x + 3$ meets the curve $y = x^2 + bx + c$ at exactly one point.\n\nThe line $y = 4x - 2$ also meets the curve $y = x^2 + bx + c$ at exactly one point.\n\nWhat is the value of $b - c$?",
+      "options": [
+        "$-9$",
+        "$-5.5$",
+        "$-1$",
+        "$5$",
+        "$6$",
+        "$14$"
+      ]
+    },
+    {
+      "id": 9,
+      "text": "Find the area enclosed by the graph of\n\n$$|x| + |y| = 1$$",
+      "options": [
+        "$\\frac{1}{2}$",
+        "$1$",
+        "$2$",
+        "$4$",
+        "$\\frac{1}{2}\\sqrt{2}$",
+        "$\\sqrt{2}$",
+        "$2\\sqrt{2}$"
+      ]
+    },
+    {
+      "id": 10,
+      "text": "Use the trapezium rule with 3 strips to estimate:\n\n$$\\int_{\\frac{1}{2}}^2 2 \\log_{10} x \\, dx$$",
+      "options": [
+        "$\\log_{10} \\frac{\\sqrt{6}}{2}$",
+        "$\\log_{10} \\frac{3}{2}$",
+        "$\\log_{10} \\frac{9}{4}$",
+        "$\\log_{10} 3$",
+        "$\\log_{10} \\frac{81}{16}$",
+        "$\\log_{10} \\frac{\\sqrt{23}}{2}$"
+      ]
+    },
+    {
+      "id": 11,
+      "text": "The function $f$ is given by\n\n$$f(x) = x^\\frac{1}{7}(x^2 - x + 1)$$\n\nFind the function of the interval $0 < x < 1$ for which $f(x)$ is decreasing.",
+      "options": [
+        "$\\frac{2}{15}$",
+        "$\\frac{1}{5}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{1}{2}$",
+        "$\\frac{2}{3}$",
+        "$\\frac{4}{5}$",
+        "$\\frac{13}{15}$"
+      ]
+    },
+    {
+      "id": 12,
+      "text": "The minimum value of the function $x^4 - p^2 x^2$ is $-9$.\n\n$p$ is a real number.\n\nFind the minimum value of the function $x^2 - px + 6$.",
+      "options": [
+        "$-3$",
+        "$6 - \\frac{3\\sqrt{2}}{2}$",
+        "$\\frac{3}{2}$",
+        "$3$",
+        "$\\frac{9}{2}$",
+        "$6 + \\frac{3\\sqrt{2}}{2}$"
+      ]
+    },
+    {
+      "id": 13,
+      "text": "The function $f$ is such that, for every integer $n$\n\n$$\\int_n^{n+1} f(x) \\, dx = n + 1$$\n\nEvaluate\n\n$$\\sum_{r=1}^{8} (\\int_0^{r} f(x) \\, dx)$$",
+      "options": [
+        "$36$",
+        "$84$",
+        "$120$",
+        "$165$",
+        "$204$",
+        "$288$"
+      ]
+    },
+    {
+      "id": 14,
+      "text": "This question uses radians.\n\nFind the number of distinct values of $x$ that satisfy the equation\n\n$$(x + 1)(3 - x) = 2[1 - \\cos(\\pi x)]$$",
+      "options": [
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$"
+      ]
+    },
+    {
+      "id": 15,
+      "text": "The diagram shows the graph of $y = f(x)$.\n\nThe graph consists of alternating straight-line segments of gradient $1$ and $-1$ and continues in this way for all values of $x$.\n\nThe function is defined as\n\n$$g(x) = \\sum_{r=1}^{10} f(2^{r-1} x)$$\n\nFind the value of\n\n$$\\int_0^1 g(x) \\, dx$$",
+      "options": [
+        "$\\frac{1023}{1024}$",
+        "$\\frac{1023}{512}$",
+        "$5$",
+        "$10$",
+        "$\\frac{55}{2}$",
+        "$55$"
+      ]
+    },
+    {
+      "id": 16,
+      "text": "Consider the equation of\n\n$$(a + bx)^n$$\n\nThe third term, in ascending powers of $x$, is $105x^2$\nThe fourth term, in ascending powers of $x$, is $210x^3$\nThe fourth term, in descending powers of $x$, is $210x^3$\n\nFind the value of ($(\\frac{a}{b}))^2$.",
+      "options": [
+        "$\\frac{1}{4}$",
+        "$\\frac{4}{9}$",
+        "$\\frac{25}{36}$",
+        "$\\frac{5}{6}$",
+        "$1$"
+      ]
+    },
+    {
+      "id": 17,
+      "text": "Which of the following sketches shows the graph of\n\n$$\\sin(x^2 + y^2) = \\frac{1}{2}$$\n\nwhere $x^2 + y^2 \\leq 8\\pi$?",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ]
+    },
+    {
+      "id": 18,
+      "text": "The curve with equation\n\n$$x = y^2 - 6y + 11$$\n\nis rotated $90°$ clockwise about the point $P$ to give the curve $C$.\n\n$P$ has $x$-coordinate $-2$ and $y$-coordinate $3$.\n\nWhat is the equation of $C$?",
+      "options": [
+        "$y = -x^2 - 4x - 3$",
+        "$y = -x^2 - 4x - 5$",
+        "$y = -x^2 - 6x - 7$",
+        "$y = -x^2 - 6x - 11$",
+        "$y = x^2 - 4x + 5$",
+        "$y = x^2 + 4x + 3$",
+        "$y = x^2 - 6x + 11$",
+        "$y = x^2 + 6x + 7$"
+      ]
+    },
+    {
+      "id": 19,
+      "text": "The equation\n\n$$\\sin^2(4^{\\text{\\cos \\theta}} \\times 60°) = \\frac{3}{4}$$\n\nhas exactly three solutions in the range $0° \\leq \\theta \\leq x°$\n\nWhat is the range of all possible values of $x$?",
+      "options": [
+        "$90 \\leq x < 120$",
+        "$90 \\leq x < 270$",
+        "$120 \\leq x < 240$",
+        "$270 \\leq x < 300$",
+        "$300 \\leq x < 360$",
+        "$450 \\leq x < 630$"
+      ]
+    },
+    {
+      "id": 20,
+      "text": "Find the length of the curve with equation\n\n$$2 \\log_{10}(x - y) = \\log_{10}(2 - 2x) + \\log_{10}(y + 5)$$",
+      "options": [
+        "$5$",
+        "$10$",
+        "$15$",
+        "$3\\pi$",
+        "$9\\pi$",
+        "$12\\pi$"
+      ]
+    }
+  ],
+  "2021 Paper 2": [
+    {
+      "id": 1,
+      "text": "Find the value of\n\n$$\\int_1^4 \\left(3\\sqrt{x} + \\frac{4}{x^2}\\right) dx$$",
+      "options": [
+        "$-0.75$",
+        "$7.125$",
+        "$11$",
+        "$17$",
+        "$18$",
+        "$21.875$",
+        "$34.5$"
+      ]
+    },
+    {
+      "id": 2,
+      "text": "$A(0,2)$ and $C(4,0)$ are opposite vertices of the square $ABCD$.\n\nWhat is the equation of the straight line through $B$ and $D$?",
+      "options": [
+        "$y = -2x + 5$",
+        "$y = -\\frac{1}{2}x - 3$",
+        "$y = -\\frac{1}{2}x + 2$",
+        "$y = x$",
+        "$y = 2x - 3$",
+        "$y = 2x + 2$"
+      ]
+    },
+    {
+      "id": 3,
+      "text": "A student is chosen at random from a class. Each student is equally likely to be chosen.\n\nWhich of the following conditions is/are necessary for the probability that the student wears glasses to equal $\\frac{4}{15}$?\n\n$\\quad I \\quad$ Exactly 11 students in the class do not wear glasses. \n$\\quad II \\quad$ The number of students in the class is divisible by 3.\n$\\quad III \\quad$ The class contains 30 students, and 8 of them wear glasses.",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Consider the following claim about positive integers $a$, $b$ and $c$:\n\n$$\\text{If $a$ is a factor of $bc$, then $a$ is a factor of $b$ or $a$ is a factor of $c$.}$$\n\nWhich of the following provide(s) a counterexample to this claim?\n\n$\\quad I \\quad$ $a = 5, b = 10, c = 20$\n$\\quad II \\quad$ $a = 8, b = 4, c = 4$\n$\\quad III \\quad$ $a = 6, b = 7, c = 12$",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 5,
+      "text": "On which line is the first error in the following argument?",
+      "options": [
+        "$\\sin^2 x + \\cos^2 x = 1$ for all values of $x$.",
+        "Therefore $\\cos x = \\sqrt{1 - \\sin^2 x}$ for all values of $x$.",
+        "Hence $1 + \\cos x = 1 + \\sqrt{1 - \\sin^2 x}$ for all values of $x$.",
+        "Thus $(1 + \\cos x)^2 = \\left(1 + \\sqrt{1 - \\sin^2 x}\\right)^2$ for all values of $x$.",
+        "Substituting $x = \\pi$ gives $0 = 4$."
+      ]
+    },
+    {
+      "id": 6,
+      "text": "Consider the following two statements about the polynomial $f(x)$:\n\n$\\quad P: \\quad$ $f(x) = 0$ for exactly three real values of $x$\n$\\quad Q: \\quad$ $f'(x) = 0$ for exactly two real values of $x$\n\nWhich one of the following is correct?",
+      "options": [
+        "$P$ is necessary but not sufficient for $Q$",
+        "$P$ is sufficient but not necessary for $Q$",
+        "$P$ is necessary and sufficient for $Q$",
+        "$P$ is not necessary and not sufficient for $Q$"
+      ]
+    },
+    {
+      "id": 7,
+      "text": "A circle has equation $(x - 9)^2 + (y + 2)^2 = 4$\n\nA square has vertices at $(1, 0)$, $(1, 2)$, $(-1, 2)$ and $(-1, 0)$.\n\nA straight line bisects both the area of the circle and the area of the square.\n\nWhat is the $x$-coordinate of the point where this straight line meets the $x$-axis?",
+      "options": [
+        "$2$",
+        "$3$",
+        "$4$",
+        "$4.5$",
+        "$5$",
+        "$6$",
+        "The straight line is not uniquely determined by the information given, so there is more than one possible point of intersection.",
+        "There is no straight line that bisects both the area of the circle and the area of the square."
+      ]
+    },
+    {
+      "id": 8,
+      "text": "Consider the following statement about the polynomial $p(x)$, where $a$ and $b$ are real numbers with $a < b$:\n\n$\\quad (*) \\quad$ There exists a number $c$ with $a < c < b$ such that $p'(c) = 0$.\n\nWhich one of the following is true?",
+      "options": [
+        "The condition $p(a) = p(b)$ is necessary and sufficient for (*)",
+        "The condition $p(a) = p(b)$ is necessary but not sufficient for (*)",
+        "The condition $p(a) = p(b)$ is sufficient but not necessary for (*)",
+        "The condition $p(a) = p(b)$ is not necessary and not sufficient for (*)"
+      ]
+    },
+    {
+      "id": 9,
+      "text": "Consider the following statements about a polynomial $f(x)$:\n\n$\\quad I \\quad$ $f(x) = px^3 + qx^2 + rx + s$, where $p \\neq 0$\n$\\quad II \\quad$ There is a real number $t$ for which $f'(t) = 0$\n$\\quad III \\quad$ There are two numbers $u$ and $v$ for which $f(u) f(v) < 0$\n\nWhich of these statements is/are sufficient for the equation $f(x) = 0$ to have a real solution?",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ]
+    },
+    {
+      "id": 10,
+      "text": "The first seven terms of a sequence of positive integers are:\n\n$$u_1 = 15$$\n$$u_2 = 21$$\n$$u_3 = 30$$\n$$u_4 = 37$$\n$$u_5 = 44$$\n$$u_6 = 51$$\n$$u_7 = 59$$\n\nConsider the following statement about this sequence:\n\n$$ \\text{$\\quad (\\star) \\quad$ If $n$ is a prime number, then $u_n$ is a multiple of 3 or $u_n$ is a multiple of 5.} $$\n\nWhat is the smallest value of $n$ that provides a counterexample to (*)?",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$"
+      ]
+    },
+    {
+      "id": 11,
+      "text": "A student attempts to solve the following problem, where $a$ and $b$ are non-zero real numbers:\n\nShow that if $a^2 - 4b^3 \\geq 0$ then there exist real numbers $x$ and $y$ such that $a = xy(x+y)$ and $b = xy$.\n\nConsider the following attempt:\n\n$\\quad(x- y)^2 \\geq 0 \\quad$ (I)\n\n$\\quad$ so $x^2 + y^2 - 2xy \\geq 0 \\quad$ (II)\n\n$\\quad$ so $(x + y)^2 - 4xy \\geq 0 \\quad$ (III)\n\n$\\quad$ so $x^2y^2(x + y)^2 - 4x^3y^3 \\geq 0 \\quad$ (IV)\n\n$\\quad$ so $a^2 - 4b^3 \\geq 0 \\quad$ (V)\n\n\nWhich of the following best describes this attempt?",
+      "options": [
+        "It is completely correct",
+        "It is incorrect, but it would be correct if written in the reverse order",
+        "It is incorrect, but the student has correctly proved the converse",
+        "It is incorrect because there is an error in line (II)",
+        "It is incorrect because there is an error in line (III)",
+        "It is incorrect because there is an error in line (IV)"
+      ]
+    },
+    {
+      "id": 12,
+      "text": "Which of the following statements about polynomials $f$ and $g$ is/are true?\n\n$\\quad I \\quad$ If $f(x) \\geq g(x)$ for all $x \\geq 0$, then $\\int_0^x f'(t) dt \\geq \\int_0^x g'(t) dt$ for all $x \\geq 0$\n$\\quad II \\quad$ If $f(x) \\geq g(x)$ for all $x \\geq 0$, then $f'(x) \\geq g'(x)$ for all $x \\geq 0$\n$\\quad III \\quad$ If $f'(x) \\geq g'(x)$ for all $x \\geq 0$, then $f(x) \\geq g(x)$ for all $x \\geq 0$",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 13,
+      "text": "A region $R$ in the $(x, y)$-plane is defined by the simultaneous inequalities\n\n$$y - x < 3$$\n\n$$y - x^2 < 1$$\n\nWhich of the following statements is/are true for every point in $R$?\n\n$\\quad I \\quad$ $-1 < x < 2$\n$\\quad II \\quad$ $(y - x)(y - x^2) < 3$\n$\\quad III \\quad$ $y < 5$",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 14,
+      "text": "Consider the following simultaneous equations, where $p$ is a real number:\n\n$$p2^x + \\log_2 y = 2$$\n\n$$2^x + \\log_2 y = 1$$\n\nWhat is the complete range of $p$ for which these simultaneous equations have a real solution $(x, y)$?",
+      "options": [
+        "$p < 1$",
+        "$p \\neq 1$",
+        "$p > 1$",
+        "$p < 1$ or $p > 2$",
+        "$p \\neq 1$ and $p < 2$",
+        "$p > 1$ and $p < 2$",
+        "$p > 2$",
+        "All real values of $p$"
+      ]
+    },
+    {
+      "id": 15,
+      "text": "A circle has equation\n\n$$x^2 + ax + y^2 + by + c = 0$$\n\nwhere $a$, $b$ and $c$ are non-zero real constants.\n\nWhich one of the following is a necessary and sufficient condition for the circle to be tangent to the $y$-axis?",
+      "options": [
+        "$a^2 = 4c$",
+        "$b^2 = 4c$",
+        "$\\frac{a}{2} = \\sqrt{\\frac{a^2 + b^2}{4} - c}$",
+        "$\\frac{b}{2} = \\sqrt{\\frac{a^2 + b^2}{4} - c}$",
+        "$-\\frac{a}{2} = \\sqrt{\\frac{a^2 + b^2}{4} - c}$",
+        "$-\\frac{b}{2} = \\sqrt{\\frac{a^2 + b^2}{4} - c}$"
+      ]
+    },
+    {
+      "id": 16,
+      "text": "$p$ and $q$ are real numbers, and the equation\n\n$$x |x| = px + q$$\n\nhas exactly $k$ distinct real solutions for $x$.\n\nWhich one of the following is the complete list of possible values for $k$?",
+      "options": [
+        "$0, 1, 2$",
+        "$0, 1, 2, 3$",
+        "$0, 1, 2, 3, 4$",
+        "$0, 2, 4$",
+        "$1, 2, 3$",
+        "$1, 2, 3, 4$"
+      ]
+    },
+    {
+      "id": 17,
+      "text": "Consider the following functions defined for $x > 1$:\n\n$$f(x) = \\log_2(\\log_2 \\sqrt{x})$$\n\n$$g(x) = \\log_2(\\sqrt{\\log_2 x})$$\n\nWhich one of the following is true for all values of $x > 1$?",
+      "options": [
+        "$0 \\leq f(x) \\leq g(x)$ or $g(x) \\leq f(x) \\leq 0$",
+        "$0 \\leq g(x) \\leq f(x)$ or $f(x) \\leq g(x) \\leq 0$",
+        "$\\frac{1}{2} \\leq f(x) \\leq g(x)$ or $g(x) \\leq f(x) \\leq \\frac{1}{2}$",
+        "$\\frac{1}{2} \\leq g(x) \\leq f(x)$ or $f(x) \\leq g(x) \\leq \\frac{1}{2}$",
+        "$1 \\leq f(x) \\leq g(x)$ or $g(x) \\leq f(x) \\leq 1$",
+        "$1 \\leq g(x) \\leq f(x)$ or $f(x) \\leq g(x) \\leq 1$"
+      ]
+    },
+    {
+      "id": 18,
+      "text": "A student chooses two distinct real numbers $x$ and $y$ with $0 < x < y < 1$.\n\nThe student then attempts to draw a triangle $ABC$ with:\n\n$$AB = 1$$\n$$\\sin A = x$$\n$$\\sin B = y$$\n\nWhich of the following statements is/are correct?\n\n$\\quad I \\quad$ For some choice of $x$ and $y$, there is exactly one triangle the student could draw.\n$\\quad II \\quad$ For some choice of $x$ and $y$, there are exactly two different triangles the student could draw.\n$\\quad III \\quad$ For some choice of $x$ and $y$, there are exactly three different triangles the student could draw.\n\n(Note that congruent triangles are considered to be the same.)",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 19,
+      "text": "The angle $\\theta$ can take any of the values $1°, 2°, 3°, \\ldots, 359°, 360°$.\n\nFor how many of these values of $\\theta$ is it true that\n\n$$\\sin \\theta \\sqrt{1 + \\sin \\theta} \\sqrt{1 - \\sin \\theta} + \\cos \\theta \\sqrt{1 + \\cos \\theta} \\sqrt{1 - \\cos \\theta} = 0$$",
+      "options": [
+        "$0$",
+        "$1$",
+        "$2$",
+        "$4$",
+        "$93$",
+        "$182$",
+        "$271$",
+        "$360$"
+      ]
+    },
+    {
+      "id": 20,
+      "text": "A sequence of functions $f_1, f_2, f_3, \\ldots$ is defined by\n\n$$f_1(x) = |x|$$\n\n$$f_{n+1}(x) = |f_n(x) + x|\\quad \\text{ for } n \\geq 1$$\n\nFind the value of\n\n$$\\int_{-1}^1 f_{99}(x) dx$$",
+      "options": [
+        "$0$",
+        "$0.5$",
+        "$1$",
+        "$49.5$",
+        "$50$",
+        "$99$",
+        "$99.5$",
+        "$100$"
+      ]
+    }
+  ],
+  "2022 Paper 1": [
+    {
+      "id": 1,
+      "text": "How many real solutions are there to the equation\n\n$$2\\cos^4 \\theta - 5\\cos^2 \\theta + 3 = 0$$\n\nin the interval $0 \\leq \\theta \\leq 2\\pi$?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Find the complete set of values of $p$ for which the equation\n\n$$x^2 - 2px + y^2 - 6y - p^2 + 8p + 9 = 0$$\n\ndescribes a circle in the $xy$-plane.",
+      "options": [
+        "$p < -\\frac{9}{4}$",
+        "$0 < p < 4$",
+        "$-1 < p < 9$",
+        "$p < 0$ or $p > 4$",
+        "$p < -1$ or $p > 9$",
+        "all real values of $p$"
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Given the following statements about a function $f$:\n\n$\\quad $• $\\quad $ $f''(x) = a$ for all $x$\n$\\quad $• $\\quad $ $f(0) = 1, f(1) = 2$\n$\\quad $• $\\quad $ $\\int_0^1 f(x) dx = 1$\n\nfind the value of $a$.",
+      "options": [
+        "$-6$",
+        "$-3$",
+        "$-2$",
+        "$2$",
+        "$3$",
+        "$6$"
+      ]
+    },
+    {
+      "id": 4,
+      "text": "These sectors of circles are similar.\n\nThe arc length of the smaller sector is 6.\n\nThe difference between the areas of the sectors is 21.\n\nFind the positive difference between the perimeters of the sectors.",
+      "options": [
+        "4.5",
+        "7",
+        "8",
+        "9",
+        "10.5",
+        "14",
+        "15"
+      ]
+    },
+    {
+      "id": 5,
+      "text": "The terms $x_n$ of a sequence follow the rule\n\n$$x_{n+1} = \\frac{x_n + p}{x_n + q}$$\n\nwhere $p$ and $q$ are real numbers.\n\nGiven that $x_1 = 3, x_2 = 5$, and $x_3 = 7$, find the value of $x_4$.",
+      "options": [
+        "$-5$",
+        "$5$",
+        "$\\frac{51}{7}$",
+        "$\\frac{15}{2}$",
+        "$\\frac{23}{3}$",
+        "$9$",
+        "$11$",
+        "$13$"
+      ]
+    },
+    {
+      "id": 6,
+      "text": "Given that\n\n$$\\int_{\\log_2 5}^{\\log_2 20} x dx = \\log_2 M$$\n\nwhat is the value of $M$?",
+      "options": [
+        "4",
+        "15",
+        "16",
+        "20",
+        "25",
+        "100",
+        "10000"
+      ]
+    },
+    {
+      "id": 7,
+      "text": "Find the finite area enclosed between the line $y = 0$ and the curve $y = x^2 - 4|x| - 12$.",
+      "options": [
+        "$\\frac{128}{3}$",
+        "$\\frac{176}{3}$",
+        "$\\frac{256}{3}$",
+        "$108$",
+        "$144$",
+        "$288$"
+      ]
+    },
+    {
+      "id": 8,
+      "text": "A geometric sequence has first term $a$ and common ratio $r$, where $a$ and $r$ are positive integers and $r$ is greater than 1.\n\nThe sum of the first $n$ terms of this sequence is denoted by $S_n$.\n\nIt is given that the terms of the sequence satisfy\n\n$$S_{30} - S_{20} = kS_{10}$$\n\nfor some positive integer $k$.\n\nWhat is the smallest possible value of $k$?",
+      "options": [
+        "$2^{10}$",
+        "$2^{20}$",
+        "$2^{30}$",
+        "$\\frac{2^{10}}{2^{10} - 1}$",
+        "$2^{10}(2^{10} - 1)$"
+      ]
+    },
+    {
+      "id": 9,
+      "text": "This question is about pairs of functions $f$ and $g$ that satisfy\n\n$$f(x) - g(x) = 2\\sin x$$\n\n$$f(x)g(x) = \\cos^2 x$$\n\nfor all real numbers $x$.\n\nAcross all solutions for $f(x)$, what is the minimum value that $f(x)$ attains for any $x$?",
+      "options": [
+        "$1 - \\sqrt{2}$",
+        "$-1 - \\sqrt{2}$",
+        "$0$",
+        "$-1$",
+        "$-2$",
+        "$-3$",
+        "$-4$"
+      ]
+    },
+    {
+      "id": 10,
+      "text": "A sequence of translations is applied to the graph of $y = x^3$.\n\nWhich of the following graphs could be the result of this sequence of translations?\n\n$\\quad I\\quad   y = x^3 - 3x^2 + 9x - 27$\n$\\quad II \\quad y = x^3 - 9x^2 + 27x - 3$\n$ \\quad III \\quad y = 27x^3 - 9x^2 + x - 3$",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 11,
+      "text": "Evaluate\n\n$$\\sum_{n=1}^{100} \\log_{10}\\left(3^{1-n}\\right)$$",
+      "options": [
+        "$-4950 \\log_{10} 3$",
+        "$4950 \\log_{10} 3$",
+        "$-5050 \\log_{10} 3$",
+        "$5050 \\log_{10} 3$",
+        "$1 - 4950 \\log_{10} 3$",
+        "$1 + 4950 \\log_{10} 3$",
+        "$1 - 5050 \\log_{10} 3$",
+        "$1 + 5050 \\log_{10} 3$"
+      ]
+    },
+    {
+      "id": 12,
+      "text": "A family of quadratic curves is given by\n\n$$y_k = 2\\left(x - \\frac{k}{2}\\right)^2 + \\frac{k^2}{2} + 4k + 3$$\n\nwhere $k$ is any real number and $y_k$ is a function of $x$.\n\nAll these curves are sketched, and the point with the lowest $y$-coordinate among all the curves $y_k$ is $(a, b)$.\n\nFind the value of $a + b$.",
+      "options": [
+        "$-1$",
+        "$-3$",
+        "$-5$",
+        "$-7$",
+        "$-9$"
+      ]
+    },
+    {
+      "id": 13,
+      "text": "Given that\n\n$$\\left(a^3 + \\frac{2}{b^3}\\right)\\left(\\frac{2}{a^3} - b^3\\right) = \\sqrt{2}$$\n\nwhere $a$ and $b$ are real numbers, what is the least value of $ab$?",
+      "options": [
+        "$-\\sqrt{2}$",
+        "$\\sqrt{2}$",
+        "$-2\\sqrt{2}$",
+        "$2\\sqrt{2}$",
+        "$-\\frac{\\sqrt{2}}{2}$",
+        "$\\frac{\\sqrt{2}}{2}$",
+        "$-2^{\\frac{1}{6}}$",
+        "$2^{\\frac{1}{6}}$"
+      ]
+    },
+    {
+      "id": 14,
+      "text": "A circle has centre $O$ and radius 6.\n\n$P$, $Q$ and $R$ are points on the circumference with angle $POQ \\geq \\frac{\\pi}{2}$.\n\nThe area of the triangle $POQ$ is $9\\sqrt{3}$.\n\nWhat is the greatest possible area of triangle $PRQ$?",
+      "options": [
+        "$18 + 9\\sqrt{3}$",
+        "$18\\sqrt{3}$",
+        "$27 + 9\\sqrt{3}$",
+        "$27\\sqrt{3}$",
+        "$36 + 9\\sqrt{3}$",
+        "$36\\sqrt{3}$"
+      ]
+    },
+    {
+      "id": 15,
+      "text": "A rectangle is drawn in the region enclosed by the curves $p$ and $q$, where\n\n$$p(x) = 8 - 2x^2$$\n\n$$q(x) = x^2 - 2$$\n\nsuch that the sides of the rectangle are parallel to the $x$- and $y$-axes.\n\nWhat is the maximum possible area of the rectangle?",
+      "options": [
+        "$\\frac{26}{9}$",
+        "$\\frac{52}{9}$",
+        "$\\frac{4\\sqrt{6}}{3}$",
+        "$\\frac{8\\sqrt{6}}{3}$",
+        "$4\\sqrt{2}$",
+        "$8\\sqrt{2}$",
+        "$\\frac{20\\sqrt{10}}{9}$",
+        "$\\frac{40\\sqrt{10}}{9}$"
+      ]
+    },
+    {
+      "id": 16,
+      "text": "The solutions to $7x^4 - 6x^2 + 1 = 0$ are $\\pm \\cos \\theta$ and $\\pm \\cos \\beta$.\n\nWhich one of the following equations has solutions $\\pm \\sin \\theta$ and $\\pm \\sin \\beta$?",
+      "options": [
+        "$7x^4 - 8x^2 - 5 = 0$",
+        "$7x^4 - 8x^2 + 2 = 0$",
+        "$7x^4 - 6x^2 - 2 = 0$",
+        "$7x^4 - 6x^2 + 1 = 0$",
+        "$7x^4 + 6x^2 - 1 = 0$",
+        "$7x^4 + 6x^2 + 5 = 0$"
+      ]
+    },
+    {
+      "id": 17,
+      "text": "Find the complete set of values of $x$ for which there are two non-congruent triangles with the side lengths and angle as shown in the diagram.",
+      "options": [
+        "$1 < x < 3$",
+        "$1 < x < 4$",
+        "$1 < x < 5$",
+        "$3 < x < 4$",
+        "$3 < x < 5$",
+        "$4 < x < 5$"
+      ]
+    },
+    {
+      "id": 18,
+      "text": "It is given that\n\n$$f(x) = x^2(x - 1)^2(x - 2)$$\n\n$$g(x) = -p(x - q)^2(x - r)^2$$\n\nwhere $p$, $q$ and $r$ are positive and $q < r$.\n\nFind the set of values of $q$ and $r$ that guarantees the greatest number of distinct real solutions of the equation $f(x) = g(x)$ for all $p$.",
+      "options": [
+        "$q < 1$ and $r < 1$",
+        "$q < 1$ and $1 < r < 2$",
+        "$q < 1$ and $r > 2$",
+        "$1 < q < 2$ and $1 < r < 2$",
+        "$1 < q < 2$ and $r > 2$",
+        "$q > 2$ and $r > 2$"
+      ]
+    },
+    {
+      "id": 19,
+      "text": "Circle $C_1$ is defined as $x^2 + y^2 = 25$.\n\nA second circle $C_2$ has radius 4 and centre $(a, b)$ where\n\n$$-2 \\leq a \\leq 2 \\text{ and } -3 \\leq b \\leq 3$$\n\nIf the centre of $C_2$ is equally likely to be located anywhere within the given range, what is the probability that $C_2$ intersects $C_1$?",
+      "options": [
+        "$\\frac{1}{25}$",
+        "$\\frac{9}{25}$",
+        "$\\frac{16}{25}$",
+        "$\\frac{6 - \\pi}{6}$",
+        "$\\frac{16 - \\pi}{24}$",
+        "$\\frac{24 - \\pi}{24}$"
+      ]
+    },
+    {
+      "id": 20,
+      "text": "$n$ is the number of points of intersection of the graphs\n\n$$y = |x^2 - a^2|$ and $y = a^2|x - 1|$$\n\nwhere $a$ is a real number.\n\nWhat is the smallest value of $n$ that is not possible?",
+      "options": [
+        "$n = 1$",
+        "$n = 2$",
+        "$n = 3$",
+        "$n = 4$",
+        "$n = 5$"
+      ]
+    }
+  ],
+  "2022 Paper 2": [
+    {
+      "id": 1,
+      "text": "Determine the number of stationary points on the curve with equation\n\n$$y = 3x^4 + 4x^3 + 6x^2 - 5$$",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Find the coefficient of the $x^5$ term in the expansion of\n\n$$(1 + x)^5 \\times \\sum_{i=0}^{5} x^i$$",
+      "options": [
+        "1",
+        "5",
+        "16",
+        "25",
+        "32"
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Consider the following statement about the positive integer $n$:\n\n$$ \\text{If $n$ is prime, then $n^2 + 2$ is not prime}$$\n\nWhich of the following is a counterexample to this statement?\n      \n        $\\quad I \\quad n = 2$\n        $\\quad II \\quad n = 3$\n        $\\quad III \\quad n = 4$",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 4,
+      "text": "The point $P$ has coordinates $(p, q)$, and the equation of a circle is\n\n$$x^2 + 2fx + y^2 + 2gy + h = 0$$\n\nwhere $f$, $g$, $h$ and $q$ are all real constants.\n\nLet $L$ be the distance between the centre of the circle and the point $P$.\n\nWhich one of the following is sufficient on its own to be able to calculate $L$?",
+      "options": [
+        "the values of $f, g$ and $h$",
+        "the values of $f, g, p$ and $q$",
+        "the values of $f, h, p$ and $q$",
+        "the values of $g, h, p$ and $q$",
+        "none of the options A-D is sufficient on its own"
+      ]
+    },
+    {
+      "id": 5,
+      "text": "A straight line $L$ passes through $(1, 2)$.\n\nLet $P$ be the statement\n\n$$ \\text{If the $y$-intercept of $L$ is negative, then the $x$-intercept of $L$ is positive.}$$\n\nWhich of the following statements must be true?\n\n        $\\quad I \\quad $P$$\n        $\\quad II \\quad$ the converse of P$$\n        $\\quad III \\quad$ the contrapositive of P $$ ",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 6,
+      "text": "A list consists of 6 integers.\n\nConsider the following statements:\n\n$ \\quad$ P: $\\quad$ $n$ is odd.\n$ \\quad$ Q: $\\quad$ The median of the list is one of the numbers in the list.\n\nWhich one of the following is true?",
+      "options": [
+        "P is necessary and sufficient for Q.",
+        "P is necessary but not sufficient for Q.",
+        "P is sufficient but not necessary for Q.",
+        "P is not necessary and not sufficient for Q."
+      ]
+    },
+    {
+      "id": 7,
+      "text": "Consider the following claim:\n\n$\\quad$ The difference between two consecutive positive cube numbers is always prime.\n\nHere is an attempted proof of this claim:\n\n$ \\quad I \\quad$ $(x + 1)^3 = x^3 + 3x^2 + 3x + 1$\n$ \\quad II \\quad$ Taking $x$ to be a positive integer, the difference between two consecutive cube numbers can be expressed as $(x + 1)^3 - x^3 = 3x^2 + 3x + 1$\n$ \\quad III \\quad$ It is impossible to factorise $3x^2 + 3x + 1$ into two linear factors with integer coefficients because its discriminant is negative.\n$ \\quad IV \\quad$ Therefore for every positive integer value of $x$ the integer $3x^2 + 3x + 1$ cannot be factorised.\n$ \\quad V \\quad$ Hence, the difference between two consecutive cube numbers will always be prime.\n\nWhich of the following best describes this proof?",
+      "options": [
+        "The proof is completely correct, and the claim is true.",
+        "The proof is completely correct, but there are counterexamples to the claim.",
+        "The proof is wrong, and the first error occurs on line I.",
+        "The proof is wrong, and the first error occurs on line II.",
+        "The proof is wrong, and the first error occurs on line III.",
+        "The proof is wrong, and the first error occurs on line IV.",
+        "The proof is wrong, and the first error occurs on line V."
+      ]
+    },
+    {
+      "id": 8,
+      "text": "A selection, $S$, of $n$ terms is taken from the arithmetic sequence $1, 4, 7, 10, \\ldots, 70$.\n\nConsider the following statement:\n\n$$ \\quad \\text{ (*)  There are two distinct terms in $S$ whose sum is 74.}$$\n\nWhat is the smallest value of $n$ for which (*) is necessarily true?",
+      "options": [
+        "12",
+        "13",
+        "14",
+        "21",
+        "22",
+        "23"
+      ]
+    },
+    {
+      "id": 9,
+      "text": "Consider the following statement:\n\n$$ \\quad \\text{ (*)  For all real numbers $x$, if $x < k$ then $x^2 < k$.}$$\n\nWhat is the complete set of values of $k$ for which (*) is true?",
+      "options": [
+        "no real numbers",
+        "$k > 0$",
+        "$k < 1$",
+        "$k \\leq 1$",
+        "$0 < k < 1$",
+        "$0 \\leq k \\leq 1$",
+        "all real numbers"
+      ]
+    },
+    {
+      "id": 10,
+      "text": "Which of the following statements is/are true?\n\n$ \\quad I \\quad$ For all real numbers $x$ and for all positive integers $n$, $x < n$\n$ \\quad II \\quad$ For all real numbers $x$, there exists a positive integer $n$ such that $x < n$\n$ \\quad III \\quad$ There exists a real number $x$ such that for all positive integers $n$, $x < n$",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 11,
+      "text": "The diagram shows a kite $PQRS$ whose diagonals meet at $O$.\n\n$\\quad OP = x$\n$\\quad OQ = y$\n$\\quad OR = x$\n$\\quad OS = z$\n\nWhich of the following is necessary and sufficient for angle $SPQ$ to be a right angle?",
+      "options": [
+        "$x = y = z$",
+        "$2x = y + z$",
+        "$x^2 = yz$",
+        "$y = z$",
+        "$y^2 = x^2 + z^2$"
+      ]
+    },
+    {
+      "id": 12,
+      "text": "Place the following integrals in order of size, starting with the smallest.\n\n$$P = \\int_0^{1} 2^{\\sqrt{x}} \\, dx$$\n\n$$Q = \\int_0^{1} 2^x \\, dx$$\n\n$$R = \\int_0^{1} (\\sqrt{2})^x \\, dx$$",
+      "options": [
+        "$P < Q < R$",
+        "$P < R < Q$",
+        "$Q < P < R$",
+        "$Q < R < P$",
+        "$R < P < Q$",
+        "$R < Q < P$"
+      ]
+    },
+    {
+      "id": 13,
+      "text": "Consider the statement (*) about a real number $x$:\n\n$$\\quad (*) \\text{ There exists a real number }y\\text{ such that} x - xy + y \\text{ is negative.}$$\n\nFor how many real values of $x$ is (*) true?",
+      "options": [
+        "no values of $x$",
+        "exactly one value of $x$",
+        "exactly two values of $x$",
+        "all except exactly two values of $x$",
+        "all except exactly one value of $x$",
+        "all values of $x$"
+      ]
+    },
+    {
+      "id": 14,
+      "text": "Consider the two inequalities:\n\n$$|x + 5| < |x + 11|$$\n\n$$|x + 11| < |x + 1|$$\n\nWhich one of the following is correct?",
+      "options": [
+        "There is no real number for which both inequalities are true.",
+        "There is exactly one real number for which both inequalities are true.",
+        "The real numbers for which both inequalities are true form an interval of length 1.",
+        "The real numbers for which both inequalities are true form an interval of length 2.",
+        "The real numbers for which both inequalities are true form an interval of length 3.",
+        "The real numbers for which both inequalities are true form an interval of length 4.",
+        "The real numbers for which both inequalities are true form an interval of length 5."
+      ]
+    },
+    {
+      "id": 15,
+      "text": "The real numbers $x$, $y$ and $z$ are all greater than 1, and satisfy the equations\n\n$$\\log_x y = z\\text{ and } \\log_y z = x$$\n\nWhich of the following equations for $\\log_z x$ must be true?",
+      "options": [
+        "$\\log_z x = y$",
+        "$\\log_z x = \\frac{1}{y}$",
+        "$\\log_z x = xy$",
+        "$\\log_z x = \\frac{1}{xy}$",
+        "$\\log_z x = xz$",
+        "$\\log_z x = \\frac{1}{xz}$",
+        "$\\log_z x = yz$",
+        "$\\log_z x = \\frac{1}{yz}$"
+      ]
+    },
+    {
+      "id": 16,
+      "text": "In this question, $a_1, \\ldots, a_{100}$ and $b_1, \\ldots, b_{100}$ and $c_1, \\ldots, c_{100}$ are three sequences of integers such that\n\n$$a_n \\leq b_n + c_n$$\n\nfor each $n$.\n\nWhich of the following statements must be true?\n\n$\\quad I \\quad$ (minimum of $a_1, \\ldots, a_{100}$) $\\leq$ (minimum of $b_1, \\ldots, b_{100}$) + (minimum of $c_1, \\ldots, c_{100}$)\n$\\quad II \\quad$ (minimum of $a_1, \\ldots, a_{100}$) $\\leq$ (minimum of $b_1, \\ldots, b_{100}$) + (minimum of $c_1, \\ldots, c_{100}$)\n$\\quad III \\quad$ (maximum of $a_1, \\ldots, a_{100}$) $\\leq$ (maximum of $b_1, \\ldots, b_{100}$) + (maximum of $c_1, \\ldots, c_{100}$)",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 17,
+      "text": "A student answered the following question:\n\n$$\\quad a\\text{ and }b\\text{ are non-zero real numbers.}$$\n\n$$\\quad Prove that the equation }x^3 + ax^2 + b = 0$ has three distinct real roots if $27b\\left(b + \\frac{4a^3}{27}\\right)< 0$\\quad$$\n\nHere is the student's solution:\n\n$\\quad I \\quad$ We differentiate $y = x^3 + ax^2 + b$ to get $\\frac{dy}{dx} = 3x^2 + 2ax = x(3x + 2a)$\n\n$\\quad$ Solving $\\frac{dy}{dx} = 0$ shows that the stationary points are at $(0, b)$ and $\\left(-\\frac{2a}{3}, b + \\frac{4a^3}{27}\\right)$.\n\n$\\quad II \\quad$ If $27b\\left(b + \\frac{4a^3}{27}\\right) < 0$, then $b$ and $b + \\frac{4a^3}{27}$ must have opposite signs, and so one of the stationary points is above the $x$-axis and one is below.\n\n$\\quad III \\quad$ If the cubic has three distinct real roots, then one of the stationary points is above the $x$-axis and one is below.\n\n$\\quad IV \\quad$ Hence if $27b\\left(b + \\frac{4a^3}{27}\\right) < 0$, then the equation has three distinct real roots.\n\nWhich one of the following options best describes the student's solution?",
+      "options": [
+        "It is a completely correct solution.",
+        "The student has instead proved the converse of the statement in the question.",
+        "The solution is wrong, because the student should have stated step II after step III.",
+        "The solution is wrong, because the student should have shown the converse of the result in step II.",
+        "The solution is wrong, because the student should have shown the converse of the result in step III."
+      ]
+    },
+    {
+      "id": 18,
+      "text": "P, Q, R and S show the graphs of\n\n$$y = (\\cos x)^{\\cos x}$, $y = (\\sin x)^{\\sin x}$, $y = (\\cos x)^{\\sin x}$ \\text{ and } $y = (\\sin x)^{\\cos x}$$\n\nfor $0 < x < \\frac{\\pi}{2}$ in some order.\n\nWhich row in the following table correctly identifies the graphs?",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ]
+    },
+    {
+      "id": 19,
+      "text": "A polygon has $n$ vertices, where $n \\geq 3$. It has the following properties:\n\n$ \\quad$ $\\quad$ • Every vertex of the polygon lies on the circumference of a circle $C$.\n$ \\quad$ $\\quad$ • The centre of the circle $C$ is inside the polygon.\n$ \\quad$ $\\quad$ • The radii from the centre of the circle $C$ to the vertices of the polygon cuts the polygon into $n$ triangles of equal area.\n\nFor which values of $n$ are these properties sufficient to deduce that the polygon is regular?",
+      "options": [
+        "no values of $n$",
+        "$n = 3$ only",
+        "$n = 3$ and $n = 4$ only",
+        "$n = 3$ and $n ≥ 5$ only",
+        "all values of $n$"
+      ]
+    },
+    {
+      "id": 20,
+      "text": "The functions $f$, $g$, $t$ are defined on the real numbers by\n\n$$f_1(x) = \\cos x$$\n$$f_2(x) = \\sin(\\cos x)$$\n$$f_3(x) = \\cos(\\sin(\\cos x))$$\n$$f_4(x) = \\sin(\\cos(\\sin(\\cos x)))$$\n$$f_5(x) = \\cos(\\sin(\\cos(\\sin(\\cos x))))$$\n\nwhere all numbers are taken to be in radians.\n\nThese functions have maximum values $m_1, m_2, m_3, m_4$ and $m_5$ respectively.\n\nWhich one of the following statements is true?",
+      "options": [
+        "$m_1, m_2, m_3, m_4$ and $m_5$ are all equal to 1",
+        "$0 < m_5 < m_4 < m_3 < m_2 < m_1 = 1$",
+        "$m_1 = m_3 = m_5 = 1$ and $0 < m_2 = m_4 < 1$",
+        "$m_1 = m_3 = m_5 = 1$ and $0 < m_4 < m_2 < 1$",
+        "$m_1 = m_3 = 1$ and $0 < m_2 = m_4 < 1$ and $0 < m_5 < 1$",
+        "$m_1 = m_3 = 1$ and $0 < m_4 < m_2 < 1$ and $0 < m_5 < 1$"
+      ]
+    }
+  ],
+  "2023 Paper 1": [
+    {
+      "id": 1,
+      "text": "Given that\n\n$$\\int_0^1 (ax + b) dx = 1$$\n\nand\n\n$$\\int_0^1 x(ax + b) dx = 1$$\n\nfind the value of $a + b$.",
+      "options": [
+        "$-1$",
+        "$0$",
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$"
+      ]
+    },
+    {
+      "id": 2,
+      "text": "The graphs of $y = x^2 + 5x + 6$ and $y = mx - 3$, where $m$ is a constant, are plotted on the same set of axes.\n\nGiven that the graphs do not meet, what is the complete range of possible values of $m$?",
+      "options": [
+        "$-1 < m < 11$",
+        "$m < -1, m > 11$",
+        "$-\\sqrt{11} < m < \\sqrt{11}$",
+        "$m < -\\sqrt{11}, m > \\sqrt{11}$",
+        "$-11 < m < 1$",
+        "$m < -11, m > 1$"
+      ]
+    },
+    {
+      "id": 3,
+      "text": "For any integer $n \\geq 0$,\n\n$$\\int_n^{n+1} f(x) dx = n + 1$$\n\nEvaluate\n\n$$\\int_0^3 f(x) dx + \\int_1^3 f(x) dx + \\int_2^3 f(x) dx + \\int_4^3 f(x) dx + \\int_5^3 f(x) dx$$",
+      "options": [
+        "$-2$",
+        "$0$",
+        "$1$",
+        "$4$",
+        "$18$",
+        "$27$"
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Evaluate\n\n$$\\sum_{n=0}^{\\infty} \\frac{\\sin\\left(n\\pi + \\frac{\\pi}{3}\\right)}{2^n}$$",
+      "options": [
+        "$0$",
+        "$\\frac{1}{3}$",
+        "$\\frac{\\sqrt{3}}{3}$",
+        "$\\sqrt{3}$",
+        "$3$"
+      ]
+    },
+    {
+      "id": 5,
+      "text": "The following shape has two lines of reflectional symmetry.\n\n\n$MNOP$ is a square of perimeter $40$ cm.\n\nThe vertices of rectangle $RSTU$ lie on the edge of square $MNOP$.\n\n$MR$ has length $x$ cm.\n\nWhat is the largest possible value of $x$ such that $RSTU$ has area $20$ cm²?",
+      "options": [
+        "$\\sqrt{2}$",
+        "$\\sqrt{10}$",
+        "$2\\sqrt{15}$",
+        "$10\\sqrt{2}$",
+        "$5 + \\sqrt{5}$",
+        "$5 + \\sqrt{15}$"
+      ]
+    },
+    {
+      "id": 6,
+      "text": "In the simplified expansion of $(2 + 3x)^{12}$, how many of the terms have a coefficient that is divisible by $12$?",
+      "options": [
+        "$0$",
+        "$2$",
+        "$5$",
+        "$10$",
+        "$11$",
+        "$12$",
+        "$13$"
+      ]
+    },
+    {
+      "id": 7,
+      "text": "$P(x)$ and $Q(x)$ are defined as follows:\n\n$$P(x) = 2^x + 4$$\n\n$$Q(x) = 2^{(2x-2)} - 2^{(x+2)} + 16$$\n\nFind the largest value of $x$ such that $P(x)$ and $Q(x)$ are in the ratio $4 : 1$, respectively.",
+      "options": [
+        "$5$",
+        "$12$",
+        "$32$",
+        "$\\log_2 3$",
+        "$\\log_2 5$",
+        "$\\log_2 12$",
+        "$\\log_2 20$"
+      ]
+    },
+    {
+      "id": 8,
+      "text": "A triangle $XYZ$ is called fun if it has the following properties:\n\n$\\quad \\quad $ angle $YXZ = 30°$\n\n$\\quad \\quad $ $XY = \\sqrt{3} a$\n\n$\\quad \\quad $ $YZ = a$\n\nwhere $a$ is a constant.\n\nFor a given value of $a$, there are two distinct fun triangles $S$ and $T$, where the area of $S$ is greater than the area of $T$.\n\nFind the ratio\n\n$$ \\text{ area of S : area of T} $$",
+      "options": [
+        "$1 : 1$",
+        "$2 : 1$",
+        "$2 : \\sqrt{3}$",
+        "$\\sqrt{3} : 1$",
+        "$3 : 1$"
+      ]
+    },
+    {
+      "id": 9,
+      "text": "How many solutions are there to\n\n$$(1 + 3 \\cos 3\\theta)^2 = 4$$\n\nIn the interval $0° \\leq \\theta \\leq 180°$?",
+      "options": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$"
+      ]
+    },
+    {
+      "id": 10,
+      "text": "The trapezium rule with 4 strips is used to estimate the integral:\n\n$$\\int_{-2}^{2} \\sqrt{4 - x^2} dx$$\n\nWhat is the positive difference between this estimate and the exact value of the integral?",
+      "options": [
+        "$2(\\pi - 2 - 2\\sqrt{3})$",
+        "$2(\\pi - 1 - \\sqrt{3})$",
+        "$2(2\\pi - 1 - \\sqrt{3})$",
+        "$4(\\pi - 1 - \\sqrt{3})$",
+        "$2\\pi - 3\\sqrt{3}$",
+        "$4\\pi - 6\\sqrt{3}$"
+      ]
+    },
+    {
+      "id": 11,
+      "text": "It is given that $f(x) = x^2 - 6x$.\n\nThe curves $y = f(kx)$ and $y = f(x - c)$ have the same minimum point, where $k > 0$ and $c > 0$.\n\nWhich of the following is a correct expression for $k$ in terms of $c$?",
+      "options": [
+        "$k = \\frac{3 - c}{3}$",
+        "$k = \\frac{3}{c + 3}$",
+        "$k = \\frac{c - 6}{6}$",
+        "$k = \\frac{6}{6 - c}$",
+        "$k = \\frac{c + 9}{9}$",
+        "$k = \\frac{9}{c - 9}$"
+      ]
+    },
+    {
+      "id": 12,
+      "text": "How many solutions are there to the equation\n\n$$\\frac{2^{\\tan^2 x}}{4^{\\sin^2 x}} = 1$$\n\nin the range $0 \\leq x \\leq 2\\pi$?",
+      "options": [
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$",
+        "$8$"
+      ]
+    },
+    {
+      "id": 13,
+      "text": "Point $P$ lies on the circle with equation $(x - 2)^2 + (y - 1)^2 = 16$.\n\nPoint $Q$ lies on the circle with equation $(x - 4)^2 + (y + 5)^2 = 16$.\n\nWhat is the maximum possible length of $PQ$?",
+      "options": [
+        "$10$",
+        "$14$",
+        "$16$",
+        "$2\\sqrt{34}$",
+        "$10\\sqrt{2}$",
+        "$8 + 2\\sqrt{10}$",
+        "$16 + 2\\sqrt{6}$"
+      ]
+    },
+    {
+      "id": 14,
+      "text": "The function\n\n$$f(x) = \\frac{2}{3} x^3 + 2mx^2 + n,\\quad  m > 0$$\n\nhas three distinct real roots.\n\nWhat is the complete range of possible values of $n$, in terms of $m$?",
+      "options": [
+        "$-\\frac{8}{3} m^3 < n < 0$",
+        "$-\\frac{4}{3} m^3 < n < 0$",
+        "$0 < n < \\frac{3}{2} m^2$",
+        "$0 < n < \\frac{40}{3} m^3$",
+        "$n < -\\frac{8}{3} m^3$",
+        "$n < \\frac{3}{2} m^2$",
+        "$n > -\\frac{4}{3} m^3$",
+        "$n > \\frac{40}{3} m^3$"
+      ]
+    },
+    {
+      "id": 15,
+      "text": "The difference between the maximum and minimum values of the function $f(x) = a^{\\cos x}$, where $a > 0$ and $x$ is real, is $3$.\n\nFind the sum of the possible values of $a$.",
+      "options": [
+        "$0$",
+        "$\\frac{3}{2}$",
+        "$\\frac{5}{2}$",
+        "$3$",
+        "$\\sqrt{10}$",
+        "$\\sqrt{13}$"
+      ]
+    },
+    {
+      "id": 16,
+      "text": "A right-angled triangle has vertices at $(2, 3)$, $(9, -1)$ and $(5, k)$.\n\nFind the sum of all the possible values of $k$.",
+      "options": [
+        "$-8$",
+        "$-6$",
+        "$0.25$",
+        "$2$",
+        "$2.25$",
+        "$8.25$",
+        "$10.25$"
+      ]
+    },
+    {
+      "id": 17,
+      "text": "A circle $C_n$ is defined by\n\n$$x^2 + y^2 = 2n(x + y)$$\n\nwhere $n$ is a positive integer.\n\n$C_1$ and $C_2$ are drawn and the area between them is shaded.\n\nNext, $C_3$ and $C_4$ are drawn and the area between them is shaded.\n\nThis is shown in the diagram.\n\nThis process continues until 100 circles have been drawn.\n\nWhat is the total shaded area?",
+      "options": [
+        "$100\\pi$",
+        "$500\\pi$",
+        "$2500\\pi$",
+        "$5050\\pi$",
+        "$10100\\pi$",
+        "$40400\\pi$"
+      ]
+    },
+    {
+      "id": 18,
+      "text": "You are given that\n\n$$S = 4 + \\frac{8k}{7} + \\frac{16k^2}{49} + \\frac{32k^3}{343} + \\ldots + 4\\left(\\frac{2k}{7}\\right)^n + \\ldots$$\n\nThe value for $k$ is chosen as an integer in the range $-5 \\leq k \\leq 5$.\n\nAll possible values for $k$ are equally likely to be chosen.\n\nWhat is the probability that the value of $S$ is a finite number greater than $3$?",
+      "options": [
+        "$\\frac{1}{11}$",
+        "$\\frac{1}{10}$",
+        "$\\frac{3}{11}$",
+        "$\\frac{3}{10}$",
+        "$\\frac{5}{11}$",
+        "$\\frac{1}{2}$",
+        "$\\frac{7}{11}$",
+        "$\\frac{7}{10}$"
+      ]
+    },
+    {
+      "id": 19,
+      "text": "The solution to the differential equation\n\n$$\\frac{dy}{dx} = |- 6x| \\text{ for all } x$$\n\nis $y = f(x) + c$, where $c$ is a constant.\n\nWhich one of the following is a correct expression for $f(x)$?",
+      "options": [
+        "$-\\frac{6x}{|x|}$",
+        "$\\frac{6x}{|x|}$",
+        "$-3x|x|$",
+        "$3x|x|$",
+        "$-3x^2$",
+        "$3x^2$",
+        "$-x^3$",
+        "$x^3$"
+      ]
+    },
+    {
+      "id": 20,
+      "text": "This diagram shows the graph of $y = f(x)$.\n\nThe function $f$ attains its maximum value of $2$ at $x = 1$ and its minimum value of $-2$ at $x = -1$.\n\nFind the difference between the maximum and minimum values of $(f(x))^2 - f(x)$",
+      "options": [
+        "$2$",
+        "$\\frac{9}{4}$",
+        "$4$",
+        "$\\frac{17}{4}$",
+        "$6$",
+        "$\\frac{25}{4}$",
+        "$8$",
+        "$\\frac{33}{4}$"
+      ]
+    }
+  ],
+  "2023 Paper 2": [
+    {
+      "id": 1,
+      "text": "Given that\n\n$$\\frac{1}{\\sqrt{x}-6} - \\frac{1}{\\sqrt{x}+6} = \\frac{3}{11}$$\n\nwhat is the value of $x$?",
+      "options": [
+        "$2\\sqrt{15}$",
+        "$4\\sqrt{5}$",
+        "$5\\sqrt{2}$",
+        "$\\sqrt{58}$",
+        "$50$",
+        "$58$",
+        "$60$",
+        "$80$"
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Evaluate\n\n$$\\int_9^{16} \\left(\\frac{1}{\\sqrt{x}} + \\sqrt{x}\\right)^2 dx - \\int_9^{16} \\left(\\frac{1}{\\sqrt{x}} - \\sqrt{x}\\right)^2 dx$$",
+      "options": [
+        "$0$",
+        "$2$",
+        "$4$",
+        "$7$",
+        "$14$",
+        "$28$",
+        "$75$",
+        "$175$"
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Consider the claim:\n\nFor all positive real numbers $x$ and $y$,\n\n$$\\sqrt{x^y} = x^{\\sqrt{y}}$$\n\nWhich of the following is/are a counterexample to the claim?\n\n$\\quad I \\quad$ $x = 1, y = 16$\n$\\quad II \\quad$ $x = 2, y = 8$\n$\\quad III \\quad$ $x = 3, y = 4$",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 4,
+      "text": "A student attempts to answer the following question.\n\n$$\\text{What is the largest number of consecutive odd integers that are all prime?}$$\n\nThe student's attempt is as follows:\n\n$\\quad I \\quad$ There are two consecutive odd integers that are prime (for example: 17, 19).\n\n$\\quad II \\quad$ Any three consecutive odd integers can be written in the form $n - 2, n, n + 2$ for some $n$.\n\n$\\quad III \\quad$ If $n$ is one more than a multiple of 3, then $n + 2$ is a multiple of 3.\n\n$\\quad IV \\quad$ If $n$ is two more than a multiple of 3, then $n - 2$ is a multiple of 3.  \n\n$\\quad V \\quad$ The only other possibility is that $n$ is a multiple of 3.\n\n$\\quad VI \\quad$ In each case, one of the integers is a multiple of 3, so not prime.\n\n$\\quad VII \\quad$ Therefore the largest number of consecutive odd integers that are all prime is two.\n\nWhich of the following best describes this attempt?",
+      "options": [
+        "It is completely correct.",
+        "It is incorrect, and the first error is on line I.",
+        "It is incorrect, and the first error is on line II.",
+        "It is incorrect, and the first error is on line III.",
+        "It is incorrect, and the first error is on line IV.",
+        "It is incorrect, and the first error is on line V.",
+        "It is incorrect, and the first error is on line VI.",
+        "It is incorrect, and the first error is on line VII."
+      ]
+    },
+    {
+      "id": 5,
+      "text": "Consider the two statements\n\n$\\quad$R:$\\quad$ $k$ is an integer multiple of $\\pi$.\n$\\quad$S:$\\quad$ $\\int_0^k \\sin 2x  dx = 0$\n\nWhich of the following statements is true?",
+      "options": [
+        "R is necessary and sufficient for S.",
+        "R is necessary but not sufficient for S.",
+        "R is sufficient but not necessary for S.",
+        "R is not necessary and not sufficient for S."
+      ]
+    },
+    {
+      "id": 6,
+      "text": "Consider the following equation where $a$ is a real number and $a > 1$:\n\n$$(*) \\quad a^x = x$$\n\nWhich of the following equations must have the same number of real solutions as $(*)$?\n\n$\\quad I \\quad \\log_a x = x$\n$\\quad II \\quad a^{2x} = x^2$\n$\\quad III \\quad a^{2x} = 2x$",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 7,
+      "text": "The graph of the line $ax + by + c = 0$ is drawn, where $a$, $b$ and $c$ are real non-zero constants.\n\nWhich one of the following is a necessary but not sufficient condition for the line to have a positive gradient and a positive $y$-intercept?",
+      "options": [
+        "$\\frac{c}{b} > 0$ and $\\frac{a}{b} < 0$",
+        "$\\frac{c}{b} < 0$ and $\\frac{a}{b} > 0$",
+        "$a > b > c$",
+        "$a < b < c$",
+        "$a$ and $c$ have opposite signs",
+        "$a$ and $c$ have the same sign"
+      ]
+    },
+    {
+      "id": 8,
+      "text": "A student draws a triangle that is acute-angled or obtuse-angled but not right-angled.\n\nThe student counts the number of straight lines that divide the triangle into two triangles, at least one of which is right-angled.\n\nWhich of the following statements is/are true?\n\n$\\quad I \\quad$ The student can draw a triangle for which there is exactly 1 such straight line.\n$\\quad II \\quad$ The student can draw a triangle for which there are exactly 2 such straight lines.\n$\\quad III \\quad$ The student can draw a triangle for which there are exactly 3 such straight lines.",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 9,
+      "text": "Consider the following statement about a pentagon $P$:\n\n$(*)$ If at least one of the interior angles in $P$ is $108°$, then all the interior angles in $P$ form an arithmetic sequence.\n\nWhich of the following is/are true?\n$\\quad I \\quad$ The statement (*)\n$\\quad II \\quad$ The contrapositive of (*)\n$\\quad III \\quad$ The converse of (*)",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 10,
+      "text": "Here is an attempt to solve the inequality $x^4 - 2x^2 - 3 > 0$ by completing the square:\n\n$$x^4 - 2x^2 - 3 > 0$$\n\n$\\quad I \\quad$ if and only if $x^4 - 2x^2 + 1 < 4$\n$\\quad II \\quad$ if and only if $(x^2 - 1)^2 < 4$\n$\\quad III \\quad$ if and only if $-2 < x^2 - 1 < 2$\n$\\quad IV \\quad$ if and only if $x^2 -1 < 0$\n$\\quad V \\quad$ if and only if $x^2 < 3$\n$\\quad VI \\quad$ if and only if $-\\sqrt{3} < x < \\sqrt{3}$\n\nWhich of the following statements is true?",
+      "options": [
+        "The argument is completely correct.",
+        "The first error occurs in line I.",
+        "The first error occurs in line II.",
+        "The first error occurs in line III.",
+        "The first error occurs in line IV.",
+        "The first error occurs in line V.",
+        "The first error occurs in line VI."
+      ]
+    },
+    {
+      "id": 11,
+      "text": "In this question, $k$ is a positive integer.\n\nConsider the following theorem:\n\n$$\\text{If $2^k + 1$ is a prime, then $k$ is a power of $2$. $(*)$} $$\n\nWhich of the following statements, taken individually, is/are equivalent to $(*)$?\n\n$\\quad I \\quad$ If $k$ is a power of $2$, then $2^k + 1$ is prime.\n$\\quad II \\quad$ $2^k + 1$ is not prime only if $k$ is not a power of $2$.\n$\\quad III \\quad$ A sufficient condition for $k$ to be a power of $2$ is that $2^k + 1$ is prime.",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ]
+    },
+    {
+      "id": 12,
+      "text": "In this question, $p$ is a real constant.\n\nThe equation $\\sin x \\cos^2 x = p^2 \\sin x$ has $n$ distinct solutions in the range $0 \\leq x \\leq 2\\pi$.\n$\\quad I \\quad$ $n = 3$ is sufficient for $ p > 1$\n$\\quad II \\quad$ $n = 7$ only if  $ -1<p<1$\nWhich of the following statements is/are true?",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "I and II only"
+      ]
+    },
+    {
+      "id": 13,
+      "text": "Let $x$ be a real number.\n\nWhich one of the following statements is a sufficient condition for exactly three of the other four statements?",
+      "options": [
+        "$x \\geq 0$",
+        "$x = 1$",
+        "$x = 0$ or $x = 1$",
+        "$x \\geq 0$ or $x \\leq 1$",
+        "$x \\geq 0$ and $x \\leq 1$"
+      ]
+    },
+    {
+      "id": 14,
+      "text": "Three lines are given by the equations:\n\n$$ax + by + c = 0$$\n$$bx + cy + a = 0$$\n$$cx + ay + b = 0$$\n\nwhere $a$, $b$ and $c$ are non-zero real numbers.\n\nWhich one of the following is correct?",
+      "options": [
+        "If two of the lines are parallel, then all three lines are parallel.",
+        "If two of the lines are parallel, then the third is perpendicular to the other two.",
+        "If two of the lines are parallel, then the third is parallel to $y = x$.",
+        "If two of the lines are parallel, then the third is perpendicular to $y = x$.",
+        "If two of the lines are perpendicular, then all three meet at a point.",
+        "If two of the lines are perpendicular, then the third is parallel to $y = x$.",
+        "If two of the lines are perpendicular, then the third is perpendicular to $y = x$."
+      ]
+    },
+    {
+      "id": 15,
+      "text": "The base 10 number 0.03841 has the value\n\n$$0 \\times 10^{-1} + 3 \\times 10^{-2} + 8 \\times 10^{-3} + 4 \\times 10^{-4} + 1 \\times 10^{-5} = 0.03841$$\n\nSimilarly, the base 2 number 0.01101 has the value\n\n$$0 \\times 2^{-1} + 1 \\times 2^{-2} + 1 \\times 2^{-3} + 0 \\times 2^{-4} + 1 \\times 2^{-5} = \\frac{13}{32}$$\n\nWhat is the value of the recurring base 2 number $0.\\overline{0}01\\overline{1} = 0.001100110011...$?",
+      "options": [
+        "$\\frac{1}{3}$",
+        "$\\frac{1}{5}$",
+        "$\\frac{1}{15}$",
+        "$\\frac{2}{15}$",
+        "$\\frac{4}{15}$",
+        "$\\frac{3}{16}$",
+        "$\\frac{5}{16}$",
+        "$\\frac{6}{31}$"
+      ]
+    },
+    {
+      "id": 16,
+      "text": "A sequence is defined by:\n\n$$u_1 = a$$\n$$u_2 = b$$\n$$u_{n+1} = u_n + u_{n-1} \\text{ for } n \\geq 1$$\n\nwhere $a$ and $b$ are positive integers. The highest common factor of $a$ and $b$ is $7$.\n\nWhich of the following statements must be true?\n\n$\\quad I \\quad$ $u_{2023}$ is a multiple of 7\n\n$\\quad II \\quad$ If $u_1$ is not a factor of $u_2$, then $u_1$ is not a factor of $u_n$ for any $n > 1$\n\n$\\quad III \\quad$ The highest common factor of $u_1$ and $u_5$ is 7",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 17,
+      "text": "The ceiling of $x$, written $\\lceil x \\rceil$, is defined to be the value of $x$ rounded up to the nearest integer.\n\nFor example: $\\lceil \\pi \\rceil = 4$, $\\lceil 2.1 \\rceil = 3$, $\\lceil 8 \\rceil = 8$\n\nWhat is the value of the following integral?\n\n$$\\int_0^{99} 2^{\\lceil x \\rceil} dx$$",
+      "options": [
+        "$2^{99}$",
+        "$2^{99} - 1$",
+        "$2^{99} - 2$",
+        "$2^{100}$",
+        "$2^{100} - 1$",
+        "$2^{100} - 2$"
+      ]
+    },
+    {
+      "id": 18,
+      "text": "The equation $x^4 + bx^2 + c = 0$ has four distinct real roots if and only if which of the following conditions is satisfied?",
+      "options": [
+        "$b^2 > 4c$",
+        "$b^2 < 4c$",
+        "$c > 0$ and $b > 2\\sqrt{c}$",
+        "$c > 0$ and $b < -2\\sqrt{c}$",
+        "$c < 0$ and $b < 0$",
+        "$c < 0$ and $b > 0$"
+      ]
+    },
+    {
+      "id": 19,
+      "text": "In this question, $f(x)$ is a non-constant polynomial, and $g(x) = x f'(x)$.\n\n$f(x) = 0$ for exactly $M$ values of $x$.\n\n$g(x) = 0$ for exactly $N$ values of $x$.\n\nWhich of the following statements is/are true?\n\n$\\quad I \\quad$ It is possible that $M < N$\n\n$\\quad II \\quad$ It is possible that $M = N$\n\n$\\quad III \\quad$ It is possible that $M > N$",
+      "options": [
+        "none of them",
+        "I only",
+        "II only",
+        "III only",
+        "I and II only",
+        "I and III only",
+        "II and III only",
+        "I, II and III"
+      ]
+    },
+    {
+      "id": 20,
+      "text": "Let $f$ be a polynomial with real coefficients.\n\nThe integral $I_{p,q}$ where $p < q$ is defined by\n\n$$I_{p,q} = \\int_p^q (f(x))^2 - (f(|x|))^2 dx$$\n\nWhich of the following statements must be true?\n\n$\\quad$ 1 $\\quad$ $I_{p,q} = 0$ only if $0 < p$\n\n$\\quad$ 2 $\\quad$ $f'(x) < 0$ for all $x$ only if $I_{p,q} < 0$ for all $p < q < 0$\n\n$\\quad$ 3 $\\quad$ $I_{p,q} > 0$ only if $p < 0$",
+      "options": [
+        "none of them",
+        "1 only",
+        "2 only",
+        "3 only",
+        "1 and 2 only",
+        "1 and 3 only",
+        "2 and 3 only",
+        "1, 2 and 3"
+      ]
+    }
+  ],
+  "Practice Paper 1": [
+    {
+      "id": 1,
+      "text": "It is given that the expansion of $(ax + b)^3$ is $8x^3 - px^2 + 18x - 3\\sqrt{3}$ where a, b and p are real constants. \n      \n      What is the value of p?",
+      "options": [
+        "$-12\\sqrt{3}$",
+        "$-6\\sqrt{3}$",
+        "$-4\\sqrt{3}$",
+        "$-\\sqrt{3}$",
+        "$\\sqrt{3}$",
+        "$4\\sqrt{3}$",
+        "$6\\sqrt{3}$",
+        "$12\\sqrt{3}$"
+      ]
+    },
+    {
+      "id": 2,
+      "text": "The expression $3x^3 + 13x^2 + 8x + a$, where a is a constant, has $(x + 2)$ as a factor.\n      \n      Which one of the following is a complete factorisation of the expression?",
+      "options": [
+        "$(x + 2)(x - 1)(3x - 2)$",
+        "$(x + 2)(x + 1)(3x - 2)$",
+        "$(x + 2)(x + 1)(3x + 2)$",
+        "$(x + 2)(x - 3)(3x + 2)$",
+        "$(x + 2)(x + 3)(3x - 2)$",
+        "$(x + 2)(x + 3)(3x + 2)$"
+      ]
+    },
+    {
+      "id": 3,
+      "text": "A line is drawn normal to the curve $y = \\frac{2}{x^2}$ at the point on the curve where $x = 1$.\n      \n      This line cuts the x-axis at P and the y-axis at Q.\n      \n      The length of PQ is",
+      "options": [
+        "$\\frac{3\\sqrt{5}}{2}$",
+        "$\\frac{3\\sqrt{17}}{4}$",
+        "$\\frac{7\\sqrt{17}}{4}$",
+        "$\\frac{35}{4}$",
+        "$\\frac{35\\sqrt{5}}{2}$",
+        "$\\frac{3\\sqrt{17}}{2}$"
+      ]
+    },
+    {
+      "id": 4,
+      "text": "The sequence $a_n$ is defined by the rule:\n      $$a_n = (-1)^n - (-1)^{n+1} + (-1)^{n+2}\\text{ for }n \\geq 1$$\n      Find the value of\n      $$\\sum_{n=1}^{39} a_n$$",
+      "options": [
+        "-39",
+        "-3",
+        "-1",
+        "0",
+        "1",
+        "3",
+        "39"
+      ]
+    },
+    {
+      "id": 5,
+      "text": "What is the total area enclosed between the curve $y = x^2 - 1$, the x-axis and the lines $x = -2$ and $x = 2$?",
+      "options": [
+        "$\\frac{4}{3}$",
+        "$\\frac{8}{3}$",
+        "4",
+        "$\\frac{16}{3}$",
+        "12",
+        "16"
+      ]
+    },
+    {
+      "id": 6,
+      "text": "P, Q, and R are each mixtures of red and white paint.\n      \n      The percentage by volume of red paint in P is 30%.\n      \n      The percentage by volume of red paint in Q is 20%.\n      \n      The mixtures P, Q, and R are combined in the proportion 12 : 5 : 3 respectively.\n      \n      If the resulting mixture contains 25% by volume of red paint, what percentage by volume of mixture R is red paint?",
+      "options": [
+        "25%",
+        "23%",
+        "$13\\frac{1}{3}$%",
+        "$19\\frac{1}{2}$%",
+        "$9\\frac{3}{4}$%",
+        "It is impossible to achieve this result."
+      ]
+    },
+    {
+      "id": 7,
+      "text": "60% of a sports club's members are women and the remainder are men.\n      \n      This sports club offers the opportunity to play tennis or cricket. Every member plays exactly one of the two sports.\n      \n      $\\frac{2}{5}$ of the male members of the club play cricket.\n      \n      $\\frac{2}{3}$ of the cricketing members of the club are women.\n      \n      What is the probability that a member of the club, chosen at random, is a woman who plays tennis?",
+      "options": [
+        "$\\frac{1}{5}$",
+        "$\\frac{7}{25}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{11}{25}$",
+        "$\\frac{3}{5}$"
+      ]
+    },
+    {
+      "id": 8,
+      "text": "Find the maximum angle x in the range $0° \\leq x \\leq 360°$ which satisfies the equation\n      \n      $$\\cos^2(2x) + \\sqrt{3}\\sin(2x) - \\frac{7}{4} = 0$$",
+      "options": [
+        "30°",
+        "60°",
+        "120°",
+        "150°",
+        "210°",
+        "240°",
+        "300°",
+        "330°"
+      ]
+    },
+    {
+      "id": 9,
+      "text": "The line segment joining the points (3, 3) and (7, 5) is a diameter of a circle.\n      \n      This circle is translated by 3 units in the negative x-direction, then reflected in the x-axis,  and then enlarged by a scale factor of 4 about the centre of the resulting circle.\n      \n      The equation of the final circle is",
+      "options": [
+        "$(x - 2)^2 + (y - 4)^2 = 320$",
+        "$(x - 2)^2 + (y + 4)^2 = 320$",
+        "$(x - 2)^2 + (y - 4)^2 = 80$",
+        "$(x - 2)^2 + (y + 4)^2 = 80$",
+        "$(x - 2)^2 + (y - 4)^2 = 20$",
+        "$(x - 2)^2 + (y + 4)^2 = 20$"
+      ]
+    },
+    {
+      "id": 10,
+      "text": "How many solutions does the equation $x \\tan x = 1$ have in the interval $-2\\pi \\leq x \\leq 2\\pi$ ?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "id": 11,
+      "text": "The real roots of the equation $4^{2x} + 12 = 2^{2x+3}$ are p and q, where $p > q$.\n      \n      The value of $p - q$ can be expressed as",
+      "options": [
+        "$\\frac{3}{4}$",
+        "1",
+        "4",
+        "$-\\frac{1}{2} + \\log_{10} \\frac{3}{2}$",
+        "$\\frac{\\log_{10} 3}{\\log_{10} 4}$",
+        "$\\frac{\\log_{10} 3}{\\log_{10} 2}$"
+      ]
+    },
+    {
+      "id": 12,
+      "text": "A right circular cylinder is contained within a sphere of radius 5 cm in such a way that the whole of the circumferences of both ends of the cylinder are in contact with the sphere.\n      \n      The diagram shows a planar cross section through the centre of the sphere and cylinder.\n      \n      Find, in cubic centimetres, the maximum possible volume of the cylinder.",
+      "options": [
+        "$250\\pi$",
+        "$500\\pi$",
+        "$1000\\pi$",
+        "$\\frac{250\\sqrt{3}}{3}\\pi$",
+        "$\\frac{500\\sqrt{3}}{9}\\pi$",
+        "$\\frac{1000\\sqrt{3}}{9}\\pi$"
+      ]
+    },
+    {
+      "id": 13,
+      "text": "How many real roots does the equation $3x^5 - 10x^3 - 120x + 30 = 0$ have?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "id": 14,
+      "text": "The terms of an infinite series S are formed by adding together the corresponding terms in two infinite geometric series, T and U.\n      \n      The first term of T and the first term of U are each 4.\n      \n      In order, the first three terms of the combined series S are 8, 3, and $\\frac{5}{4}$.\n      \n      What is the sum to infinity of S?",
+      "options": [
+        "$\\frac{32}{5}$",
+        "$\\frac{20}{3}$",
+        "$\\frac{64}{5}$",
+        "$\\frac{40}{3}$",
+        "16",
+        "32"
+      ]
+    },
+    {
+      "id": 15,
+      "text": "The least possible value of the gradient of the curve $y = (2x + a)(x - 2a)^2$ at the point where $x = 1$, as a varies, is",
+      "options": [
+        "$-\\frac{49}{4}$",
+        "-8",
+        "$-\\frac{25}{4}$",
+        "$\\frac{7}{4}$",
+        "$\\frac{47}{16}$"
+      ]
+    },
+    {
+      "id": 16,
+      "text": "Given the simultaneous equations\n      \n      $$\\log_{10} 2 + \\log_{10}(y - 1) = 2 \\log_{10} x$$ \n      $$\\log_{10}(y + 3 - 3x) = 0$$\n      the values of y are",
+      "options": [
+        "$\\frac{5}{2} \\pm \\frac{3\\sqrt{5}}{2}$",
+        "$3 \\pm \\sqrt{3}$",
+        "$7 \\pm 3\\sqrt{3}$",
+        "3, 9",
+        "1, 13"
+      ]
+    },
+    {
+      "id": 17,
+      "text": "It is given that\n      $$y = (1 + 2 \\cos x) \\cos 2x \\quad \\text{ for } 0 < x < \\pi$$\n      The complete set of values of x for which y is negative is",
+      "options": [
+        "$0 < x < \\frac{\\pi}{4}, \\frac{2\\pi}{3} < x < \\frac{3\\pi}{4}$",
+        "$0 < x < \\frac{\\pi}{4}, \\frac{3\\pi}{4} < x < \\pi$",
+        "$0 < x < \\frac{2\\pi}{3}, \\frac{3\\pi}{4} < x < \\pi$",
+        "$\\frac{\\pi}{4} < x < \\frac{2\\pi}{3}, \\frac{3\\pi}{4} < x < \\pi$",
+        "$\\frac{\\pi}{4} < x < \\frac{2\\pi}{3}$",
+        "$\\frac{\\pi}{4} < x < \\frac{3\\pi}{4}$"
+      ]
+    },
+    {
+      "id": 18,
+      "text": "The function $\\frac{1-x}{\\sqrt[3]{x^2}}$ is defined for all $x \\neq 0$.\n      \n      The complete set of values of x for which the function is decreasing is",
+      "options": [
+        "$x \\leq -2, x > 0$",
+        "$-2 \\leq x < 0$",
+        "$x \\leq 1, x \\neq 0$",
+        "$x \\geq 1$",
+        "$-2 \\leq x \\leq 1, x \\neq 0$",
+        "$x \\leq -2, x \\geq 1$"
+      ]
+    },
+    {
+      "id": 19,
+      "text": "The coefficient of $x^3$ in the expansion of $(1 + 2x + 3x^2)^6$ is equal to twice the coefficient of $x^4$ in the expansion of $(1 - ax^2)^{5}$.\n\nFind all possible values of the constant a.",
+      "options": [
+        "$\\pm 2\\sqrt{2}$",
+        "$\\pm \\sqrt{17}$",
+        "$\\pm \\sqrt{34}$",
+        "$\\pm 2\\sqrt{17}$",
+        "There are no possible values of a."
+      ]
+    },
+    {
+      "id": 20,
+      "text": "The diagram shows a square-based pyramid with base PQRS and vertex O. All the edges of the pyramid are of length 20 metres.\n      \n      Find the shortest distance, in metres, along the outer surface of the pyramid from P to the midpoint of QR.",
+      "options": [
+        "$10\\sqrt{5 - 2\\sqrt{3}}$",
+        "$10\\sqrt{3}$",
+        "$10\\sqrt{5}$",
+        "$10\\sqrt{7}$",
+        "$10\\sqrt{5 + 2\\sqrt{3}}$"
+      ]
+    }
+  ],
+  "Practice Paper 2": [
+    {
+      "id": 1,
+      "text": "Find the value of $\\int_1^2 (x^2 - \\frac{4}{x^2})^2 dx$",
+      "options": [
+        "$\\frac{43}{15}$",
+        "$3$",
+        "$\\frac{97}{15}$",
+        "$\\frac{103}{15}$",
+        "$\\frac{163}{15}$",
+        "$18$"
+      ]
+    },
+    {
+      "id": 2,
+      "text": "$$f(x) = \\frac{(x^2 + 5)(2x)}{\\sqrt[4]{x^3}}, \\quad x > 0$$\n\n      Which one of the following is equal to $f'(x)$?",
+      "options": [
+        "$8x^{\\frac{9}{4}} + \\frac{40}{3}x^{\\frac{1}{4}}$",
+        "$\\frac{9}{2}x^{\\frac{5}{4}} + \\frac{5}{2}x^{-\\frac{3}{4}}$",
+        "$8x^{\\frac{9}{4}} +  \\frac{40}{3}x^{-\\frac{1}{4}}$",
+        "$\\frac{8}{13}x^{\\frac{13}{4}} +8x^{\\frac{5}{4}} $"
+      ]
+    },
+    {
+      "id": 3,
+      "text": "What is the value in radians, of the largest angle $x$ in the range $0 \\le x \\le 2\\pi$ that satisfies the equation $8 \\sin^2 x + 4 \\cos^2 x = 7$?",
+      "options": [
+        "$\\frac{2\\pi}{3}$",
+        "$\\frac{5\\pi}{6}$",
+        "$\\frac{4\\pi}{3}$",
+        "$\\frac{5\\pi}{3}$",
+        "$\\frac{7\\pi}{4}$",
+        "$\\frac{11\\pi}{6}$"
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Five sealed urns, labelled P, Q, R, S, and T, each contain the same (non-zero) number of balls. The following statements are attached to the urns.\n      \n      Urn P: $\\quad$ This urn contains one or four balls.\n      Urn Q: $\\quad$This urn contains two or four balls.\n      Urn R:$\\quad$ This urn contains more than two balls and fewer than five balls.\n      Urn S:$\\quad$ This urn contains one or two balls.\n      Urn T: $\\quad$This urn contains fewer than three balls.\n      \n      Exactly one of the urns has a true statement attached to it.\n      Which urn is it?",
+      "options": [
+        "Urn P",
+        "Urn Q",
+        "Urn R",
+        "Urn S",
+        "Urn T"
+      ]
+    },
+    {
+      "id": 5,
+      "text": "Consider the statement:\n      $\\quad$ (*) A whole number $n$ is prime if $n$ is 1 less than or 5 less than a multiple of 6.\n      \n      How many counterexamples (*) are there in the range $0 < n < 50$?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "id": 6,
+      "text": "The sequence of functions $f_1(x), f_2(x), f_3(x), \\ldots$ is defined as follows:\n      $$f_1(x) = x^{10}$$\n      $$f_{n+1}(x) = xf_n'(x) \\quad \\text{ for } n \\ge 1$$\n      where $f_n'(x) = \\frac{df_n(x)}{dx}$\n\nFind the value of $$\\sum_{n=1}^{20} f_n(x)$$",
+      "options": [
+        "$\\frac{x^{10}(x^{20} - 1)}{x - 1}$",
+        "$\\frac{x^{10}(x^{21} - 1)}{x - 1}$",
+        "$\\left(\\frac{10^{20} - 1}{9}\\right) x^{10}$",
+        "$\\left(\\frac{10^{21} - 1}{9}\\right) x^{10}$",
+        "$\\left(\\frac{(10x)^{20} - 1}{10x - 1}\\right) x^{10}$",
+        "$\\left(\\frac{(10x)^{21} - 1}{10x - 1}\\right) x^{10}$",
+        "$x^{10} + x^9 + x^8 + \\ldots + x + 1$",
+        "$x^{10} + 10x^9 + (10 \\times 9)x^8 + \\ldots +(10 \\times 9 \\times \\ldots \\times 2)x + (10 \\times 9 \\times \\ldots \\times 2 \\times 1)$"
+      ]
+    },
+    {
+      "id": 7,
+      "text": "The four real numbers $a, b, c$ and $d$ are all greater than 1.\n      Suppose that they satisfy the equation $\\log_a d = (\\log_a b)^2$.\n      Use some of the lines given to construct a proof that, in this case, it follows that\n      $$(*) \\log_b d = (\\log_a b)(\\log_a c)$$\n      (1) Let $x = \\log_a b$ and $y = \\log_a c$\n\n\n      (2) $d = (c^x)^2$\n      (3) $d = c^{(x^2)}$\n      (4) $d = b^{xy}$\n\n      \n      (5) $d = (a^y)^{(x^2)}$\n      (6) $d = ((a^y)^x)^2$\n      (7) $d = (a^{x})^{xy}$\n\n\n      (8) $d = a^{(y^{2x})}$\n      (9) $d = a^{(x^2y)}$",
+      "options": [
+        "(1). Then (2), so (6), so (8), so (7), and therefore (4), hence (*) as required.",
+        "(1). Then (2), so (7), so (8), so (6), and therefore (4), hence (*) as required.",
+        "(1). Then (3), so (5), so (9), so (7), and therefore (4), hence (*) as required.",
+        "(1). Then (3), so (7), so (9), so (5), and therefore (4), hence (*) as required.",
+        "(1). Then (4), so (5), so (9), so (7), and therefore (3), hence (*) as required.",
+        "(1). Then (4), so (6), so (8), so (7), and therefore (2), hence (*) as required.",
+        "(1). Then (4), so (7), so (8), so (6), and therefore (2), hence (*) as required.",
+        "(1). Then (4), so (7), so (9), so (5), and therefore (3), hence (*) as required."
+      ]
+    },
+    {
+      "id": 8,
+      "text": "A region is defined by the inequalities $x + y > 6$ and $x - y > -4$\n      Consider the three statements:\n      $\\quad$ 1$\\quad$ $x > 1$\n      $\\quad$ 2 $\\quad$ $y > 5$\n      $\\quad$ 3$\\quad$ $(x + y)(x - y) > -24$\n      \n      Which of the above statements is/are true for every point in the region?",
+      "options": [
+        "none",
+        "1 only",
+        "2 only",
+        "3 only",
+        "1 and 2 only",
+        "1 and 3 only",
+        "2 and 3 only",
+        "1, 2 and 3"
+      ]
+    },
+    {
+      "id": 9,
+      "text": "Triangles $ABC$ and $XYZ$ have the same area.\n      Which of these extra conditions, taken independently, would imply that they are congruent?\n      $\\quad$(1)$\\quad$ $AB = XY$ and $BC = YZ$\n      $\\quad$(2)$\\quad$ $AB = XY$ and $\\angle ABC = \\angle XYZ$\n      $\\quad$(3)$\\quad$ $\\angle ABC = \\angle XYZ$ and $\\angle BCA = \\angle YZX$",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ]
+    },
+    {
+      "id": 10,
+      "text": "In this question $x$ and $y$ are non-zero real numbers.\n      Which one of the following is sufficient to conclude that $x < y$?",
+      "options": [
+        "$x^4 < y^4$",
+        "$y^4 < x^4$",
+        "$x^{-1} < y^{-1}$",
+        "$y^{-1} < x^{-1}$",
+        "$x^{\\frac{3}{5}} < y^{\\frac{3}{5}}$",
+        "$y^{\\frac{3}{5}} < x^{\\frac{3}{5}}$"
+      ]
+    },
+    {
+      "id": 11,
+      "text": "$f(x)$ is a polynomial with real coefficients.\n      The polynomial $f(x) = 0$ has exactly two real roots, $x = -p$ and $x = p$ where $p > 0$.\n      Consider the following three statements:\n\n      $\\quad$ 1  $\\quad$ $f'(x) = 0$ for exactly one value of $x$ between $-p$ and $p$ \n      $\\quad$2 $\\quad$The area between the curve $y = f(x)$ and the x-axis and the lines $x = -p$ and $x = p$ is given by $2 \\int_0^p f(x)| dx$\n      $\\quad$3$\\quad$ The graph of $y = -f(-x)$ intersects the x-axis at the points $x = -p$ and $x = p$ only\n\n      \n      Which of the above statements must be true?",
+      "options": [
+        "none",
+        "1 only",
+        "2 only",
+        "3 only",
+        "1 and 2 only",
+        "1 and 3 only",
+        "2 and 3 only",
+        "1, 2 and 3"
+      ]
+    },
+    {
+      "id": 12,
+      "text": "The first term of an arithmetic sequence is $a$ and the common difference is $d$.\n      Suppose that the first $n$ terms is denoted by $S_n$.\n      If $S_8 > 3S_6$, what can be deduced about the sign of $a$ and the sign of $d$?",
+      "options": [
+        "both $a$ and $d$ are negative",
+        "$a$ is positive, $d$ is negative",
+        "$a$ is negative, $d$ is positive",
+        "$a$ is negative, but the sign of $d$ cannot be deduced",
+        "$d$ is negative, but the sign of $a$ cannot be deduced",
+        "neither the sign of $a$ nor the sign of $d$ can be deduced"
+      ]
+    },
+    {
+      "id": 13,
+      "text": "In this question, $a, b$ and $c$ are positive integers.\n      The following is an attempted proof of the false statement:\n      $\\quad$If $a$ divides $b$, then $a$ divides $b$ or $a$ divides $c$.\n      [$a$ divides $bc$ means '$a$ is a factor of $bc$']\n      Which one of the following gives the error in the proof?\n      \\quad$1. The statement is equivalent to 'if $a$ does not divide $b$ and $a$ does not divide $c$ then $a$ does not divide $bc$'.\n      $\\quad$2. Suppose $a$ does not divide $b$ and $a$ does not divide $c$. Then the remainder when dividing $b$ by $a$ is $r$ where $0 < r < a$, and the remainder when dividing $c$ by $a$ is $s$ where $0 < s < a$.\n      $\\quad$3. So $b = ax + r$ and $c = ay + s$ for some integers $x$ and $y$.\n      $\\quad$4. Thus $bc = a(axy + xs + yr) + rs$. \n      $\\quad$5. So the remainder when dividing $bc$ by $a$ is $rs$\n      $\\quad$6. Since $r > 0$ and $s > 0 $ it follows that $rs > 0$.\n      $\\quad$7. Hence $a$ does not divide $bc$.",
+      "options": [
+        "Line 1",
+        "Line 2",
+        "Line 3",
+        "Line 4",
+        "Line 5",
+        "Line 6"
+      ]
+    },
+    {
+      "id": 14,
+      "text": "$f(x) = ax^4 + bx^3 + cx^2 + dx + e$ where $a, b, c, d$ and $e$ are real numbers.\n      Suppose $f(x) = 1$ has $p$ distinct real solutions, $f(x) = 2$ has $q$ distinct real solutions, $f(x) = 3$ has $r$ distinct real solutions, and $f(x) = 4$ has $s$ distinct real solutions.\n      Which one of the following is not possible?",
+      "options": [
+        "$p = 1, q = 2, r = 4$ and $s = 3$",
+        "$p = 1, q = 3, r = 2$ and $s = 4$",
+        "$p = 1, q = 4, r = 3$ and $s = 2$",
+        "$p = 2, q = 4, r = 3$ and $s = 1$",
+        "$p = 4, q = 3, r = 2$ and $s = 1$"
+      ]
+    },
+    {
+      "id": 15,
+      "text": "Consider the quadratic $f(x) = x^2 - 2px + q$ and the statement:\n      $\\quad$(*) $f(x) = 0$ has two real roots whose difference is greater than 2 and less than 4.\n      Which one of the following statements is true if and only if (*) is true?",
+      "options": [
+        "$q < p^2 < q + 4$",
+        "$\\sqrt{q + 1} < p < \\sqrt{q + 4}$",
+        "$q - 3 \\leq p^2 - 4 \\leq q$",
+        "$q < p^2 - 1 < q + 3$",
+        "$q - 2 < p^2 - 3 < q + 2$"
+      ]
+    },
+    {
+      "id": 16,
+      "text": "In the figure, $PQRS$ is a trapezium with $PQ$ parallel to $SR$.\n      The diagonals of the trapezium meet at $X$.\n      $U$ lies on $SP$ and $T$ lies on $RQ$ such that $UT$ is a line segment through $X$ parallel to $PQ$.\n      The length of $PQ$ is 12 cm and the length of $SR$ is 3 cm.\n      What, in centimetres, is the length of $UT$?",
+      "options": [
+        "4.2",
+        "4.5",
+        "4.8",
+        "5.25",
+        "6"
+      ]
+    },
+    {
+      "id": 17,
+      "text": "Consider these simultaneous equations, where $c$ is a constant:\n      $y = 3 \\sin x + 2$$\n      $$y = x + c$$\n      Which of the following statements is/are true?\n      $\\quad$1$\\quad$ For some value of $c$, there is exactly one solution with $0 \\le x \\le \\pi$ and there is at least one solution with $-\\pi < x < 0 $.\n      $\\quad$2$\\quad$ For some value of $c$, there is exactly one solution with $0 \\le x \\le \\pi$ and there are no solutions with $ -\\pi < x < 0$.\n      $\\quad$3$\\quad$ For some value of $c$, there is exactly one solution with $0 < x \\le \\pi$ and there are no solutions with $x > \\pi$.",
+      "options": [
+        "none",
+        "1 only",
+        "2 only",
+        "3 only",
+        "1 and 2 only",
+        "1 and 3 only",
+        "2 and 3 only",
+        "1, 2 and 3"
+      ]
+    },
+    {
+      "id": 18,
+      "text": "Consider this statement about a function $f(x)$:\n      \\quad$(*) If $(f(x))^2 \\le 1$ for all $-1 \\le x \\le 1$ then $\\int_{-1}^{1} (f(x))^2 dx \\le \\int_{-1}^{1} f(x) dx$\n      Which one of the following functions provides a counterexample to (*)?",
+      "options": [
+        "$f(x) = x + \\frac{1}{2}$",
+        "$f(x) = x - \\frac{1}{2}$",
+        "$f(x) = x + x^3$",
+        "$f(x) = x - x^3$",
+        "$f(x) = x^2 + x^4$",
+        "$f(x) = x^2 - x^4$"
+      ]
+    },
+    {
+      "id": 19,
+      "text": "Some identical unit cubes are used to construct a three-dimensional object by gluing them together face to face.\n      Sketches of this object are made by looking at it from the right-hand side, from the front and from above. These sketches are called the side elevation, the front elevation, and the plan view respectively.\n      How many cubes were used to construct the object?",
+      "options": [
+        "exactly 6",
+        "either 6 or 7",
+        "exactly 7",
+        "either 7 or 8",
+        "exactly 8",
+        "either 8 or 9",
+        "exactly 9"
+      ]
+    },
+    {
+      "id": 20,
+      "text": "Each interior angle of a regular polygon with $n$ sides is $\\frac{3}{4}$ of each interior angle of a second regular polygon with $m$ sides.\n      How many pairs of positive integers $n$ and $m$ are there for which this statement is true?",
+      "options": [
+        "none",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "infinitely many"
+      ]
+    }
+  ],
+  "Specimen Paper 1": [
+    {
+      "id": 1,
+      "text": "The sum of the two values of $x$ that satisfy the simultaneous equations $x - 3y + 1 = 0$ and $3x^2 - 7xy = 5$ is",
+      "options": [
+        "$-8.5$",
+        "$-7.5$",
+        "$-1.5$",
+        "$3.5$",
+        "$4.5$",
+        "$5$"
+      ]
+    },
+    {
+      "id": 2,
+      "text": "The number of solutions in the interval $0 \\leq \\theta \\leq 4\\pi$ of the equation \n $\\sin^2\\theta + 3 \\cos \\theta = 3$ is",
+      "options": [
+        "$0$",
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$"
+      ]
+    },
+    {
+      "id": 3,
+      "text": "The perpendicular bisector of the line segment joining the points $(2, -6)$ and $(5, 4)$ cuts the $x$-axis at the point with $x$-coordinate",
+      "options": [
+        "$\\frac{1}{20}$",
+        "$\\frac{1}{6}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{19}{5}$",
+        "$\\frac{41}{6}$"
+      ]
+    },
+    {
+      "id": 4,
+      "text": "The complete set of values of $x$ for which $(x^2 - 1)(x - 2) > 0$ is",
+      "options": [
+        "$x < -1, 1 < x < 2$",
+        "$x < -1, x > 2$",
+        "$-1 < x < 2$",
+        "$x < 1, x > 2$",
+        "$-1 < x < 1, x > 2$"
+      ]
+    },
+    {
+      "id": 5,
+      "text": "Given that $y = -\\log_{10}(1 - x)$ for $x < 1$, find $x$ in terms of $y$.",
+      "options": [
+        "$x = -\\frac{1}{\\log_{10}(1-y)}$",
+        "$x = 1 + \\log_{10} y$",
+        "$x = 1 - \\log_{10} y$",
+        "$x = 1 - 10^{-y}$",
+        "$x = 10^{-y} - 1$",
+        "$x = 10^{1-y}$"
+      ]
+    },
+    {
+      "id": 6,
+      "text": "It is given that $x + 2$ is a factor of $x^3 + 4cx^2 + x(c + 1)^2 - 6$. \n\nThe sum of the possible values of $c$ is",
+      "options": [
+        "$-10$",
+        "$-6$",
+        "$0$",
+        "$6$",
+        "$10$"
+      ]
+    },
+    {
+      "id": 7,
+      "text": "A bag contains $n$ red balls, $n$ yellow balls, and $n$ blue balls.\n One ball is selected at random and not replaced.\n A second ball is then selected at random and not replaced.\n Each ball is equally likely to be chosen. \nThe probability that the two balls are not the same colour is",
+      "options": [
+        "$\\frac{n-1}{3n-1}$",
+        "$\\frac{2n-2}{3n-1}$",
+        "$\\frac{2n}{3n-1}$",
+        "$\\frac{(n-1)^3}{27(3n-1)^3}$",
+        "$\\frac{3(n-1)}{3n-1}$",
+        "$\\frac{n^3}{27(3n-1)^3}$"
+      ]
+    },
+    {
+      "id": 8,
+      "text": "Given that $a^x b^{2x} c^{3x} = 2$, where $a$, $b$, and $c$ are positive real numbers, then $x =$",
+      "options": [
+        "$\\log_{10}\\left(\\frac{2}{a+2b+3c}\\right)$",
+        "$\\frac{\\log_{10} 2}{\\log_{10}(a+2b+3c)}$",
+        "$\\frac{2}{\\log_{10}(a+2b+3c)}$",
+        "$\\frac{2}{a+2b+3c}$",
+        "$\\log_{10}\\left(\\frac{2}{ab^2c^3}\\right)$",
+        "$\\frac{\\log_{10} 2}{\\log_{10}(ab^2c^3)}$",
+        "$\\frac{2}{\\log_{10}(ab^2c^3)}$",
+        "$\\frac{2}{ab^2c^3}$"
+      ]
+    },
+    {
+      "id": 9,
+      "text": "The roots of the equation $2x^2 - 11x + c = 0$ differ by $2$. The value of $c$ is",
+      "options": [
+        "$\\frac{105}{8}$",
+        "$\\frac{113}{8}$",
+        "$\\frac{117}{8}$",
+        "$\\frac{119}{8}$"
+      ]
+    },
+    {
+      "id": 10,
+      "text": "The curve $y = \\cos x$ is reflected in the line $y = 1$ and the resulting curve is then translated by $\\frac{\\pi}{4}$ units in the positive $x$-direction. The equation of this new curve is",
+      "options": [
+        "$y = 2 + \\cos\\left(x + \\frac{\\pi}{4}\\right)$",
+        "$y = 2 + \\cos\\left(x - \\frac{\\pi}{4}\\right)$",
+        "$y = 2 - \\cos\\left(x + \\frac{\\pi}{4}\\right)$",
+        "$y = 2 - \\cos\\left(x - \\frac{\\pi}{4}\\right)$"
+      ]
+    },
+    {
+      "id": 11,
+      "text": "The number of real solutions of the equation $2^{2x} -8 \\times 2^x + 15 = 0$ is",
+      "options": [
+        "$3$",
+        "$8$",
+        "$2\\log_{10} 2$",
+        "$\\log_{10}(\\frac{15}{4})$",
+        "$\\frac{\\log_{10} 15} {\\log_{10} 2}$"
+      ]
+    },
+    {
+      "id": 12,
+      "text": "The cross-section of a triangular prism is an equilateral triangle with side $2x$ cm.\nThe length of the prism is $d$ cm.\n\nLet the total surface area of the prism be $T$ cm². Given that the volume of the prism is $T$ cm³, which one of the following is an expression for $d$ in terms of $x$?",
+      "options": [
+        "$\\frac{x}{2x-3}$",
+        "$\\frac{3x}{3x-2\\sqrt{3}}$",
+        "$\\frac{2x}{x-4\\sqrt{3}}$",
+        "$\\frac{2x}{x-2\\sqrt{3}}$",
+        "$\\frac{2x}{x-\\sqrt{3}}$"
+      ]
+    },
+    {
+      "id": 13,
+      "text": "How many real roots does the equation $x^4 - 4x^3 + 4x^2 - 10 = 0$ have?",
+      "options": [
+        "$0$",
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ]
+    },
+    {
+      "id": 14,
+      "text": "$a$, $b$, $x$, and $y$ are real and positive.\n\n$a$ and $b$ are constants.\n\n$x$ and $y$ are related.\n\nA graph of $\\log y$ against $\\log x$ is drawn.\n\nFor which one of the following relationships will this graph be a straight line?",
+      "options": [
+        "$y^b = a^x$",
+        "$y = ab^x$",
+        "$y^2 = a + x^b$",
+        "$y = ax^b$",
+        "$y^x = a^b$"
+      ]
+    },
+    {
+      "id": 15,
+      "text": "The smallest possible value of $\\int_0^1 (x - a)^2 dx$ as $a$ varies is",
+      "options": [
+        "$\\frac{1}{12}$",
+        "$\\frac{1}{3}$",
+        "$\\frac{1}{2}$",
+        "$\\frac{7}{12}$",
+        "$2$"
+      ]
+    },
+    {
+      "id": 16,
+      "text": "Given that $c$ and $d$ are non-zero integers, the expression $\\frac{10^{c-2d} \\times 20^{2c+d}}{8^c \\times 125^{c+d}}$ is an integer if",
+      "options": [
+        "$c < 0$",
+        "$d < 0$",
+        "$c < 0$ and $d < 0$",
+        "$c < 0$ and $d > 0$",
+        "$c > 0$ and $d < 0$",
+        "$c > 0$ and $d > 0$",
+        "$d > 0$",
+        "$c > 0$"
+      ]
+    },
+    {
+      "id": 17,
+      "text": "For what values of the non-zero real number $a$ does the quadratic equation \n$ax^2 + (a - 2)x = 2$ have real distinct roots?",
+      "options": [
+        "All values of $a$",
+        "$a = -2$",
+        "$a > -2$",
+        "$a \\neq -2$",
+        "No values of $a$"
+      ]
+    },
+    {
+      "id": 18,
+      "text": "The angle $x$ is measured in radians and is such that $0 \\leq x \\leq \\pi$.\n\nThe total length of any intervals for which $-1 \\leq \\tan x \\leq 1$ and $\\sin 2x \\geq 0.5$ is",
+      "options": [
+        "$\\frac{\\pi}{12}$",
+        "$\\frac{\\pi}{6}$",
+        "$\\frac{\\pi}{4}$",
+        "$\\frac{\\pi}{3}$",
+        "$\\frac{5\\pi}{12}$",
+        "$\\frac{\\pi}{2}$",
+        "$\\frac{5\\pi}{6}$"
+      ]
+    },
+    {
+      "id": 19,
+      "text": "A geometric series has first term $4$ and common ratio $r$, where $0 < r < 1$.\n\nThe first, second, and fourth terms of this geometric series form three successive terms of an arithmetic series.\n\nThe sum to infinity of the geometric series is",
+      "options": [
+        "$\\frac{1}{2}(\\sqrt{5} - 1)$",
+        "$2(3 - \\sqrt{5})$",
+        "$2(1 + \\sqrt{5})$",
+        "$2(3 + \\sqrt{5})$"
+      ]
+    },
+    {
+      "id": 20,
+      "text": "The coefficient of $x^2$ in the expansion of $(4 - x^2)[(1 + 2x + 3x^2)^6 - (1 + 4x^3)^5]$ is",
+      "options": [
+        "$28$",
+        "$72$",
+        "$78$",
+        "$192$",
+        "$240$",
+        "$310$",
+        "$312$"
+      ]
+    }
+  ],
+  "Specimen Paper 2": [
+    {
+      "id": 1,
+      "text": "It is given that the expansion of $(ax + b)^3$ is $8x^3 - px^2 + 18x - \\frac{27}{8}$ where a, b and p are\nreal constants.\n\nWhat is the value of p?",
+      "options": [
+        "$-12\\sqrt{3}$",
+        "$-6\\sqrt{3}$",
+        "$-\\sqrt{3}$",
+        "$-\\sqrt{3}$",
+        "$\\sqrt{3}$",
+        "$6\\sqrt{3}$",
+        "$12\\sqrt{3}$"
+      ]
+    },
+    {
+      "id": 2,
+      "text": "The expression $3x^2 + 13x^2 + 8x + a$, where a is a constant, has $(x + 2)$ as a factor.\n\nWhich one of the following is a complete factorisation of the expression?",
+      "options": [
+        "$(x + 2)(x - 1)(3x - 2)$",
+        "$(x + 2)(x + 1)(3x - 2)$",
+        "$(x + 2)(x + 1)(3x + 2)$",
+        "$(x + 2)(x - 3)(3x + 2)$",
+        "$(x + 2)(x + 3)(3x - 2)$",
+        "$(x + 2)(x + 3)(3x + 2)$"
+      ]
+    },
+    {
+      "id": 3,
+      "text": "A line is drawn normal to the curve $y = \\frac{x^2}{4}$ at the point on the curve where $x = 1$.\n\nThis line cuts the x-axis at P and the y-axis at Q.\n\nThe length of PQ is",
+      "options": [
+        "$3\\sqrt{5}$",
+        "$\\frac{3\\sqrt{17}}{4}$",
+        "$\\frac{7\\sqrt{17}}{4}$",
+        "$\\frac{15}{4}$",
+        "$\\frac{15\\sqrt{5}}{4}$",
+        "$\\frac{3\\sqrt{17}}{2}$"
+      ]
+    },
+    {
+      "id": 4,
+      "text": "The sequence $a_n$ is defined by the rule:\n\n$a_n = (-1)^n \\times (-1)^{n+1} \\times (-1)^{n+2}$ for $n \\geq 1$.\n\nFind the value of\n\n$\\sum_{n=1}^{39} a_n$",
+      "options": [
+        "-39",
+        "-3",
+        "-1",
+        "0",
+        "1",
+        "3",
+        "39"
+      ]
+    },
+    {
+      "id": 5,
+      "text": "What is the total area enclosed between the curve $y = x^2 - 1$, the x-axis and\nthe lines $x = -2$ and $x = 2$?",
+      "options": [
+        "$\\frac{4}{3}$",
+        "$\\frac{14}{3}$",
+        "4",
+        "$\\frac{16}{3}$",
+        "12",
+        "16"
+      ]
+    },
+    {
+      "id": 6,
+      "text": "The area of a rectangle is measured to be $5600 \\text{ cm}^2$ correct to 2 significant figures.\n\nThe width of the rectangle is measured to be $80 \\text{ cm}$ correct to the nearest centimetre.\n\nWhich one of the following expressions gives the greatest possible height of the rectangle?",
+      "options": [
+        "$70.5 \\text{ cm}$",
+        "$75 \\text{ cm}$",
+        "$\\frac{5650}{85} \\text{ cm}$",
+        "$\\frac{5650}{80.5} \\text{ cm}$",
+        "$\\frac{5650}{75} \\text{ cm}$",
+        "$\\frac{5650}{79.5} \\text{ cm}$"
+      ]
+    },
+    {
+      "id": 7,
+      "text": "Which one of the following is a sketch of the graph\n\n$$(x + y)(x^2 - xy + y^2) = 1\\text{?}$$",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    {
+      "id": 8,
+      "text": "Consider the statement about the positive integer $n$:\n\nStatement (*): The sum of the four consecutive integers, the smallest of which is $n$, is a multiple of 4.\n\nWhich one of the following is true?",
+      "options": [
+        "Statement (*) is true for all values of $n$.",
+        "Statement (*) is true for all values of $n$ which are odd, but not for any values of $n$.",
+        "Statement (*) is true for all values of $n$ which are multiples of 3, but not for any other values of $n$.",
+        "Statement (*) is true for all values of $n$ which are multiples of 6, but not for any other values of $n$.",
+        "Statement (*) is not true for any value of $n$."
+      ]
+    },
+    {
+      "id": 9,
+      "text": "Consider the statement about Fred:\n\n$\\quad$(*) Every day next week, Fred will do at least one maths problem.\n\nIf statement (*) is not true, which of the following is certainly true?",
+      "options": [
+        "Every day next week, Fred will do more than one maths problem.",
+        "Some day next week, Fred will do more than one maths problem.",
+        "On no day next week will Fred do more than one maths problems.",
+        "Every day next week, Fred will do no maths problems.",
+        "Some day next week, Fred will do no maths problems.",
+        "On no day next week will Fred do no maths problems."
+      ]
+    },
+    {
+      "id": 10,
+      "text": "Which one of the following is a sketch of the graph of $y = \\log_x 2$ for $x > 1$?",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    {
+      "id": 11,
+      "text": "Which one of the following numbers is largest in value?\n\n(All angles are given in radians.)",
+      "options": [
+        "$\\tan\\left(\\frac{3\\pi}{4}\\right)$",
+        "$\\log_{10} 100$",
+        "$\\sin^{10}\\left(\\frac{\\pi}{2}\\right)$",
+        "$\\log_2 10$",
+        "$(\\sqrt{2} - 1)^2$"
+      ]
+    },
+    {
+      "id": 12,
+      "text": "A polynomial $p(x)$ has the property that $p(1) = 2$.\n\nWhich one of the following can be deduced from this?",
+      "options": [
+        "$p(x) = (x - 1)q(x) + 2$ for some polynomial $q(x)$.",
+        "$p(x) = (x + 1)q(x) + 2$ for some polynomial $q(x)$.",
+        "$p(x) = (x - 1)q(x) - 2$ for some polynomial $q(x)$.",
+        "$p(x) = (x + 1)q(x) - 2$ for some polynomial $q(x)$.",
+        "$p(x) = (x - 2)q(x) + 1$ for some polynomial $q(x)$.",
+        "$p(x) = (x + 2)q(x) + 1$ for some polynomial $q(x)$.",
+        "$p(x) = (x - 2)q(x) - 1$ for some polynomial $q(x)$.",
+        "$p(x) = (x + 2)q(x) - 1$ for some polynomial $q(x)$."
+      ]
+    },
+    {
+      "id": 13,
+      "text": "Five runners competed in a race: Fred, George, Hermione, Lavender, and Ron.\n\n$\\quad$Fred beat George.\n$\\quad$Hermione beat Lavender.\n$\\quad$Lavender beat George.\n$\\quad$Ron beat George.\n\nAssuming there were no ties, how many possible finishing orders could there have been, given only this information?",
+      "options": [
+        "1",
+        "6",
+        "12",
+        "18",
+        "24",
+        "120"
+      ]
+    },
+    {
+      "id": 14,
+      "text": "The graph of the polynomial function\n\n$$y = ax^5 + bx^4 + cx^3 + dx^2 + ex + f$$\n\nis sketched, where $a, b, c, d, e$ and $f$ are real constants with $a \\neq 0$.\n\nWhich one of the following is not possible?",
+      "options": [
+        "The graph has two local minima and two local maxima.",
+        "The graph has one local minimum and two local maxima.",
+        "The graph has one local minimum and one local maximum.",
+        "The graph has no local minima or local maxima."
+      ]
+    },
+    {
+      "id": 15,
+      "text": "For any real numbers $a, b$, and $c$ where $a \\geq b$, consider these three statements:\n\n$\\quad$ 1$\\quad$ $-b \\geq -a$\n$\\quad$2$\\quad$ $a^2 + b^2 \\geq 2ab$\n$\\quad$3$\\quad$ $ac \\geq bc$\n\nWhich of the statements 1, 2, and 3 must be true?",
+      "options": [
+        "none",
+        "1 only",
+        "2 only",
+        "3 only",
+        "1 and 2 only",
+        "1 and 3 only",
+        "2 and 3 only",
+        "1, 2 and 3"
+      ]
+    },
+    {
+      "id": 16,
+      "text": "The sequence $a_n$ is given by the rule:\n\n$$a_1 = 2$$\n\n$$a_{n+1} = a_n + (-1)^n \\text{ for } n \\geq 1$$\n\nWhat is\n\n$$\\sum_{n=1}^{100} a_n$$",
+      "options": [
+        "150",
+        "250",
+        "-4750",
+        "5150",
+        "$4\\left(1 - \\left(\\frac{1}{2}\\right)^{100}\\right)$",
+        "$4\\left(\\left(\\frac{3}{2}\\right)^{100} - 1\\right)$"
+      ]
+    },
+    {
+      "id": 17,
+      "text": "Let $S$ be a set of positive integers, for example $S$ could consist of $3, 4$ and $8$.\n\nA positive integer $n$ is called an $S$-number if and only if for every factor $m$ of  $n$ with $m > 1$, the number $m$ is a multiple of some number in $S$.\n\n So in the above example, $9$ is an $S$-number; this is because the factors of $9$ greater than $1$ are $3$ and $9$, and each of these is a multiple of $3$.\n\nPositive integer $n$ is therefore not an $S$-number if and only if",
+      "options": [
+        "for every (positive) factor $m$ of $n$ with $m > 1$, there is a number in $S$ which is not a factor of $m$.",
+        "for every (positive) factor $m$ of $n$ with $m > 1$, there is no number in $S$ which is a factor of $m$.",
+        "for every (positive) factor $m$ of $n$ with $m > 1$, every number in $S$ is a factor of $m$.",
+        "for some (positive) factor $m$ of $n$ with $m > 1$, there is a number in $S$ which is not a factor of $m$.",
+        "for some (positive) factor $m$ of $n$ with $m > 1$, there is no number in $S$ which is a factor of $m$.",
+        "for some (positive) factor $m$ of $n$ with $m > 1$, every number in $S$ is a factor of $m$."
+      ]
+    },
+    {
+      "id": 18,
+      "text": "A group of five numbers are such that:\n\n$\\quad$• their mean is 0\n$\\quad$• their range is 20\n\nWhat is the largest possible median of the five numbers?",
+      "options": [
+        "0",
+        "4",
+        "$4\\frac{1}{2}$",
+        "$6\\frac{1}{2}$",
+        "8",
+        "20"
+      ]
+    },
+    {
+      "id": 19,
+      "text": "The positive real numbers $a, b$, and $c$ are such that the equation\n\n$$x^3 + ax^2 = bx + c$$\n\nhas three real roots, one positive and two negative.\n\nWhich one of the following correctly describes the real roots of the equation\n\n$$x^3 + c = ax^2 + bx\\text{?}$$",
+      "options": [
+        "It has three real roots, one positive and two negative.",
+        "It has three real roots, two positive and one negative.",
+        "It has three real roots, but their signs differ depending on $a, b$, and $c$.",
+        "It has exactly one real root, which is positive.",
+        "It has exactly one real root, which is negative.",
+        "It has exactly one real root, whose sign differs depending on $a, b$, and $c$.",
+        "The number of real roots can be one or three, but the number of roots differs depending on $a, b$, and $c$."
+      ]
+    },
+    {
+      "id": 20,
+      "text": "Five logicians each make a statement, as follows:\n\n$\\quad$Mr P: Of these five statements, an odd number are true.\n$\\quad$Ms Q: Both statements made by women are true.\n$\\quad$Mr R: My first name is Robert and Mr P's statement is true.\n$\\quad$Ms S: Exactly one statement made by a man is true.\n$\\quad$Mr T: Neither statement made by a woman is true.\n\nHow many of the five statements can be simultaneously true?",
+      "options": [
+        "none",
+        "1 only",
+        "2 only",
+        "3 only",
+        "4 only",
+        "none or 1 only",
+        "1 or 2 only",
+        "2 or 3 only"
+      ]
+    }
+  ]
+}
