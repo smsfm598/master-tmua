@@ -264,7 +264,7 @@ function MainComponent() {
       $\\quad$If $a$ divides $b$, then $a$ divides $b$ or $a$ divides $c$.
       [$a$ divides $bc$ means '$a$ is a factor of $bc$']
       Which one of the following gives the error in the proof?
-      \\quad$1. The statement is equivalent to 'if $a$ does not divide $b$ and $a$ does not divide $c$ then $a$ does not divide $bc$'.
+      $\\quad$1. The statement is equivalent to 'if $a$ does not divide $b$ and $a$ does not divide $c$ then $a$ does not divide $bc$'.
       $\\quad$2. Suppose $a$ does not divide $b$ and $a$ does not divide $c$. Then the remainder when dividing $b$ by $a$ is $r$ where $0 < r < a$, and the remainder when dividing $c$ by $a$ is $s$ where $0 < s < a$.
       $\\quad$3. So $b = ax + r$ and $c = ay + s$ for some integers $x$ and $y$.
       $\\quad$4. Thus $bc = a(axy + xs + yr) + rs$. 
