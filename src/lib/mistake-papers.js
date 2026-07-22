@@ -23,6 +23,18 @@ function parseWrongAnswers(rawWrongAnswers) {
   return [];
 }
 
+function isEligibleMistakePaperScore(score, totalQuestions) {
+  if (score <= 0) {
+    return false;
+  }
+
+  if (totalQuestions > 0 && score >= totalQuestions) {
+    return false;
+  }
+
+  return true;
+}
+
 export function getPaperQuestions(paperName) {
   const rawQuestions = questionBank[paperName];
   if (!rawQuestions) {
@@ -44,7 +56,7 @@ export function buildMistakePaperFromExam(examResult) {
   const totalQuestions = Number(examResult?.total_questions ?? 0);
   const wrongAnswers = parseWrongAnswers(examResult?.wrong_answers);
 
-  if (totalQuestions > 0 && score <= 0) {
+  if (!isEligibleMistakePaperScore(score, totalQuestions)) {
     return null;
   }
 
@@ -92,7 +104,7 @@ export function buildMistakePaperCardFromExam(examResult) {
   const totalQuestions = Number(examResult?.total_questions ?? 0);
   const wrongAnswers = parseWrongAnswers(examResult?.wrong_answers);
 
-  if (totalQuestions > 0 && score <= 0) {
+  if (!isEligibleMistakePaperScore(score, totalQuestions)) {
     return null;
   }
 

@@ -6,6 +6,124 @@ import { checkUserEntitlements, getAllExamResults } from "../../lib/supabase";
 import Sidebar from "../../components/Sidebar";
 import UpgradeModal from "../../components/UpgradeModal";
 
+const TMUA_SCORE_BY_PERCENT = {
+  0: 0.0,
+  1: 1.0,
+  2: 1.0,
+  3: 1.0,
+  4: 1.0,
+  5: 1.0,
+  6: 1.0,
+  7: 1.0,
+  8: 1.0,
+  9: 1.0,
+  10: 1.0,
+  11: 1.0,
+  12: 1.0,
+  13: 1.0,
+  14: 1.1,
+  15: 1.1,
+  16: 1.2,
+  17: 1.2,
+  18: 1.3,
+  19: 1.5,
+  20: 1.7,
+  21: 1.9,
+  22: 2.0,
+  23: 2.2,
+  24: 2.3,
+  25: 2.5,
+  26: 2.6,
+  27: 2.7,
+  28: 2.9,
+  29: 3.0,
+  30: 3.2,
+  31: 3.3,
+  32: 3.4,
+  33: 3.6,
+  34: 3.7,
+  35: 3.8,
+  36: 3.9,
+  37: 4.1,
+  38: 4.2,
+  39: 4.3,
+  40: 4.4,
+  41: 4.5,
+  42: 4.7,
+  43: 4.8,
+  44: 4.9,
+  45: 5.0,
+  46: 5.1,
+  47: 5.2,
+  48: 5.4,
+  49: 5.5,
+  50: 5.6,
+  51: 5.7,
+  52: 5.8,
+  53: 5.9,
+  54: 6.0,
+  55: 6.1,
+  56: 6.2,
+  57: 6.3,
+  58: 6.4,
+  59: 6.5,
+  60: 6.6,
+  61: 6.6,
+  62: 6.7,
+  63: 6.8,
+  64: 6.8,
+  65: 6.9,
+  66: 7.0,
+  67: 7.0,
+  68: 7.1,
+  69: 7.2,
+  70: 7.2,
+  71: 7.3,
+  72: 7.4,
+  73: 7.4,
+  74: 7.5,
+  75: 7.6,
+  76: 7.7,
+  77: 7.8,
+  78: 7.9,
+  79: 7.9,
+  80: 8.0,
+  81: 8.0,
+  82: 8.1,
+  83: 8.1,
+  84: 8.2,
+  85: 8.2,
+  86: 8.3,
+  87: 8.3,
+  88: 8.4,
+  89: 8.5,
+  90: 8.5,
+  91: 8.6,
+  92: 8.7,
+  93: 8.8,
+  94: 8.9,
+  95: 9.0,
+  96: 9.0,
+  97: 9.0,
+  98: 9.0,
+  99: 9.0,
+  100: 9.0,
+};
+
+function formatMappedTmuaScore(percentage) {
+  const normalizedPercent = Math.max(0, Math.min(100, Math.round(percentage || 0)));
+  const tmuaScore = TMUA_SCORE_BY_PERCENT[normalizedPercent] ?? 0.0;
+  return tmuaScore.toFixed(1);
+}
+
+function formatMarksMetric(percentage, examType) {
+  if (examType === "Mistake") {
+    return `${percentage}%`;
+  }
+
+  return formatMappedTmuaScore(percentage);
+}
+
 function formatShortDate(value) {
   return new Date(value).toLocaleDateString("en-GB", {
     day: "2-digit",
@@ -174,6 +292,7 @@ export default function MarksPage() {
                 : (result.total_questions > 0 && !isNaN(result.score) && !isNaN(result.total_questions))
                   ? Math.round((result.score / result.total_questions) * 100)
                   : 0;
+              const displayMetric = formatMarksMetric(percentage, result.exam_type);
 
               const isExpanded = expandedResults.has(index);
 
@@ -196,7 +315,7 @@ export default function MarksPage() {
                       percentage >= 40 ? "bg-orange-400" :
                       "bg-red-500"
                     }`}>
-                      {percentage}%
+                      {displayMetric}
                     </span>
                   </div>
                   <div className="flex justify-between items-center mb-2">
@@ -227,7 +346,7 @@ export default function MarksPage() {
                   <th className="py-3 px-2 md:px-4 text-left text-sm md:text-base font-medium">Test Date</th>
                   <th className="py-3 px-2 md:px-4 text-left text-sm md:text-base font-medium">Paper</th>
                   <th className="py-3 px-2 md:px-4 text-left text-sm md:text-base font-medium">Score</th>
-                  <th className="py-3 px-2 md:px-4 text-left text-sm md:text-base font-medium">Percentage</th>
+                  <th className="py-3 px-2 md:px-4 text-left text-sm md:text-base font-medium">TMUA / %</th>
                   <th className="py-3 px-2 md:px-4 text-left text-sm md:text-base font-medium">Wrong Answers</th>
                 </tr>
               </thead>
@@ -236,6 +355,7 @@ export default function MarksPage() {
                   const percentage = typeof result.percentage === "number"
                     ? result.percentage
                     : Math.round((result.score / result.total_questions) * 100);
+                  const displayMetric = formatMarksMetric(percentage, result.exam_type);
 
                   const isExpanded = expandedResults.has(index);
 
@@ -262,7 +382,7 @@ export default function MarksPage() {
                             percentage >= 40 ? "bg-orange-400" :
                             "bg-red-500"
                           }`}>
-                            {percentage}%
+                            {displayMetric}
                           </span>
                         </td>
                         <td className="py-3 px-2 md:px-4 text-xs md:text-sm">
