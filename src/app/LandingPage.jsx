@@ -95,8 +95,8 @@ export default function LandingPage() {
           Master the exam interface<br />before test day.
         </h1>
         <p className="text-xl mb-10 text-gray-300 max-w-3xl">
-          Train in a real exam environment that looks and feels exactly like the
-          Pearson VUE system, with smart analytics to track progress and boost performance
+          Train in a real exam environment that looks exactly like the
+          Pearson VUE system, with smart analytics to track performance in our perfect progress-tracking environment
         </p>
         <div className="flex flex-wrap gap-6 justify-center mb-16">
            <Link href="/specimen-p1" className="inline-block">
@@ -112,6 +112,9 @@ export default function LandingPage() {
             Join Today
           </button>
         </div>
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+          Explore your personalised dashboard
+        </h2>
         <div className="w-full max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(142,68,173,0.5)] border border-[#5c4d7d]">
           <video
             src="/dashboard-demo.mp4"

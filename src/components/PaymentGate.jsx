@@ -9,17 +9,11 @@ export default function PaymentGate({ children, paperName }) {
   const router = useRouter();
   const { user, isLoaded } = useUser();
   const [accessStatus, setAccessStatus] = useState(null);
-  const [loading, setLoading] = useState(true);
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
 
   useEffect(() => {
   const checkAccess = async () => {
     if (!isLoaded) return;
-
-    if (!user) {
-      router.push('/login');
-      return;
-    }
 
     // Free papers are always accessible
     if (isPaperFree(paperName)) {
@@ -27,7 +21,11 @@ export default function PaymentGate({ children, paperName }) {
         hasAccess: true,
         reason: 'free_paper'
       });
-      setLoading(false);
+      return;
+    }
+
+    if (!user) {
+      router.push('/login');
       return;
     }
 
@@ -42,7 +40,6 @@ export default function PaymentGate({ children, paperName }) {
     };
 
     setAccessStatus(access);
-    setLoading(false);
 
     if (!access.hasAccess) {
       setShowUpgradeModal(true);
