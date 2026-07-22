@@ -261,7 +261,8 @@ function AverageScoreCard() {
 
   return (
     <div className="bg-[#1a0030] p-6 rounded-xl border border-[#5c4d7d] shadow-lg h-48">
-      <h3 className="text-lg font-semibold text-white mb-2">Average Score</h3>
+      <h3 className="text-lg font-semibold text-white">Average Score</h3>
+      <p className="text-gray-400 text-sm mb-2">Score conversion based on average from 2017-2023</p>
       <div className="text-4xl font-bold text-white mb-4">{formatTmuaScoreFromPercent(scoreData.average)}</div>
       <div className="space-y-1">
         <div className="flex justify-between text-sm">
