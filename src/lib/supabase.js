@@ -13,6 +13,29 @@ export const supabase = createClient(
   supabaseUrl || '',
   supabaseKey || ''
 )
+export const createUserProfile = async (userId, email) => {
+  try {
+    const { data, error } = await supabase
+      .from('user_profiles')
+      .upsert(
+        [
+          {
+            clerk_user_id: userId,
+            email,
+          },
+        ],
+        { onConflict: 'clerk_user_id' }
+      )
+      .select()
+      .single();
+
+    if (error) throw error;
+    return data;
+  } catch (error) {
+    console.error('Error creating user profile:', error);
+    return null;
+  }
+};
 // Marking schemes for each paper
 const MARKING_SCHEMES = {
   'Specimen Paper 1': 'DDBEDDCFADEDCDAEDBDG', 

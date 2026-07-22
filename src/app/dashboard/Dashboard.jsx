@@ -163,14 +163,14 @@ function ReadyToTestCard({ onReady }) {
   };
   
   return (
-    <div className="bg-[#1a0030] p-4 sm:p-6 rounded-xl border border-[#5c4d7d] shadow-lg h-full flex flex-col justify-between min-h-[180px]">
-      <div>
+    <div className="bg-[#1a0030] p-4 sm:p-6 rounded-xl border border-[#5c4d7d] shadow-lg h-full min-h-[180px] flex flex-col justify-center">
+      <div className="mb-4 sm:mb-5">
         <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">Ready To Test?</h3>
-        <p className="text-gray-400 text-sm mb-4">Start your practice exam now</p>
+        <p className="text-gray-400 text-sm">Start your practice exam now</p>
       </div>
       <button 
         onClick={handleReadyClick}
-        className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors text-sm sm:text-base"
+        className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors text-sm sm:text-base mt-auto"
       >
         Ready
       </button>
@@ -261,8 +261,8 @@ function AverageScoreCard() {
 
   return (
     <div className="bg-[#1a0030] p-4 sm:p-6 rounded-xl border border-[#5c4d7d] shadow-lg h-full min-h-[180px] flex flex-col">
-      <h3 className="text-lg font-semibold text-white">Average Score</h3>
-      <p className="text-gray-400 text-sm mb-2 leading-tight">Score conversion based on average from 2017-2023</p>
+      <h3 className="text-xl font-semibold text-white">Average Score</h3>
+      <p className="text-gray-400 text-xs mb-2 leading-tight">Score conversion based on average from 2017-2023</p>
       <div className="text-4xl font-bold text-white mb-3">{formatTmuaScoreFromPercent(scoreData.average)}</div>
       <div className="space-y-1">
         <div className="flex justify-between text-sm">
@@ -322,7 +322,7 @@ function ProgressCircle() {
   const strokeDashoffset = circumference - (progress / 100) * circumference;
   
   return (
-    <div className="bg-[#1a0030] p-6 rounded-xl border border-[#5c4d7d] shadow-lg h-48 flex flex-col items-center justify-center">
+    <div className="bg-[#1a0030] p-4 sm:p-6 rounded-xl border border-[#5c4d7d] shadow-lg h-full min-h-[180px] flex flex-col items-center justify-center">
       <div className="relative w-24 h-24 mb-4">
         <svg className="w-24 h-24 transform -rotate-90" viewBox="0 0 100 100">
           <circle
