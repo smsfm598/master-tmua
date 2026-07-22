@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import { useUser } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import Sidebar from "../../components/Sidebar";
+import UpgradeModal from "../../components/UpgradeModal";
+import { checkUserEntitlements } from "../../lib/supabase";
 
 function formatShortDate(value) {
   return new Date(value).toLocaleDateString("en-GB", {
@@ -16,6 +18,8 @@ export default function MistakesPage() {
   const [mistakePapers, setMistakePapers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [collapsed, setCollapsed] = useState(false);
+  const [userEntitlements, setUserEntitlements] = useState(null);
+  const [upgradeModal, setUpgradeModal] = useState({ isOpen: false, paperName: "" });
   const { user, isLoaded } = useUser();
   const router = useRouter();
 
@@ -42,10 +46,15 @@ export default function MistakesPage() {
 
     const loadMistakePapers = async () => {
       try {
-        const response = await fetch("/api/mistake-papers", {
-          method: "GET",
-          cache: "no-store",
-        });
+        const [entitlements, response] = await Promise.all([
+          checkUserEntitlements(),
+          fetch("/api/mistake-papers", {
+            method: "GET",
+            cache: "no-store",
+          }),
+        ]);
+
+        setUserEntitlements(entitlements);
 
         const payload = await response.json().catch(() => ({}));
 
@@ -94,11 +103,24 @@ export default function MistakesPage() {
           ? 'ml-12 sm:ml-14 md:ml-16' 
           : 'ml-48 sm:ml-56 md:ml-64 lg:ml-72'
       } p-3 sm:p-4 md:p-6 lg:p-10`}>
-        <div className="mb-4 sm:mb-6">
-          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 sm:mb-2">Your Mistake Papers</h1>
-          <p className="text-gray-300 text-xs sm:text-sm md:text-base">
-            Review and practice the questions you got wrong in previous exams.
-          </p>
+        <div className="mb-4 sm:mb-6 flex justify-between items-start gap-4">
+          <div>
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 sm:mb-2">Your Mistake Papers</h1>
+            <p className="text-gray-300 text-xs sm:text-sm md:text-base">
+              Review and practice the questions you got wrong in previous exams.
+            </p>
+          </div>
+
+          {userEntitlements && !userEntitlements?.hasFullAccess ? (
+            <button
+              onClick={() =>
+                setUpgradeModal({ isOpen: true, paperName: "All Premium Papers" })
+              }
+              className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg font-semibold text-sm sm:text-base bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-500 text-[#1a0030] shadow-[0_0_15px_rgba(251,191,36,0.4)] hover:from-yellow-300 hover:via-amber-200 hover:to-yellow-400 hover:shadow-[0_0_20px_rgba(251,191,36,0.6)] transition-all duration-300"
+            >
+              Go Premium
+            </button>
+          ) : null}
         </div>
 
         <div className="bg-[#1a0030] rounded-xl border border-[#5c4d7d] shadow-lg p-4 sm:p-6">
@@ -145,6 +167,12 @@ export default function MistakesPage() {
           )}
         </div>
       </main>
+
+      <UpgradeModal
+        isOpen={upgradeModal.isOpen}
+        onClose={() => setUpgradeModal({ isOpen: false, paperName: "" })}
+        paperName={upgradeModal.paperName}
+      />
     </div>
   );
 }

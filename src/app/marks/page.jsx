@@ -2,8 +2,9 @@
 import React, { useState, useEffect } from "react";
 import { useUser } from "@clerk/nextjs";
 import { useRouter, useSearchParams } from "next/navigation";
-import { getAllExamResults } from "../../lib/supabase";
+import { checkUserEntitlements, getAllExamResults } from "../../lib/supabase";
 import Sidebar from "../../components/Sidebar";
+import UpgradeModal from "../../components/UpgradeModal";
 
 function formatShortDate(value) {
   return new Date(value).toLocaleDateString("en-GB", {
@@ -26,6 +27,8 @@ export default function MarksPage() {
   const [loading, setLoading] = useState(true);
   const [collapsed, setCollapsed] = useState(false);
   const [expandedResults, setExpandedResults] = useState(new Set());
+  const [userEntitlements, setUserEntitlements] = useState(null);
+  const [upgradeModal, setUpgradeModal] = useState({ isOpen: false, paperName: "" });
   const { user, isLoaded } = useUser();
   const router = useRouter();
 
@@ -52,7 +55,12 @@ export default function MarksPage() {
 
     const loadPageData = async () => {
       try {
-        const results = await getAllExamResults(user.id);
+        const [results, entitlements] = await Promise.all([
+          getAllExamResults(user.id),
+          checkUserEntitlements(),
+        ]);
+
+        setUserEntitlements(entitlements);
         
         let processedResults = Array.isArray(results) ? results : [];
 
@@ -299,15 +307,34 @@ export default function MarksPage() {
           ? 'ml-12 sm:ml-14 md:ml-16' 
           : 'ml-48 sm:ml-56 md:ml-64 lg:ml-72'
       } p-3 sm:p-4 md:p-6 lg:p-10`}>
-        <div className="mb-4 sm:mb-6">
-          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 sm:mb-2">Your Exam Marks</h1>
-          <p className="text-gray-300 text-xs sm:text-sm md:text-base">
-            View your results from all completed papers.
-          </p>
+        <div className="mb-4 sm:mb-6 flex justify-between items-start gap-4">
+          <div>
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 sm:mb-2">Your Exam Marks</h1>
+            <p className="text-gray-300 text-xs sm:text-sm md:text-base">
+              View your results from all completed papers.
+            </p>
+          </div>
+
+          {userEntitlements && !userEntitlements?.hasFullAccess ? (
+            <button
+              onClick={() =>
+                setUpgradeModal({ isOpen: true, paperName: "All Premium Papers" })
+              }
+              className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg font-semibold text-sm sm:text-base bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-500 text-[#1a0030] shadow-[0_0_15px_rgba(251,191,36,0.4)] hover:from-yellow-300 hover:via-amber-200 hover:to-yellow-400 hover:shadow-[0_0_20px_rgba(251,191,36,0.6)] transition-all duration-300"
+            >
+              Go Premium
+            </button>
+          ) : null}
         </div>
 
         {renderExamResults()}
       </main>
+
+      <UpgradeModal
+        isOpen={upgradeModal.isOpen}
+        onClose={() => setUpgradeModal({ isOpen: false, paperName: "" })}
+        paperName={upgradeModal.paperName}
+      />
     </div>
   );
 }
