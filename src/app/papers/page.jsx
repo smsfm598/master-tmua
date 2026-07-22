@@ -34,7 +34,7 @@ export default function PapersPage() {
       if (user) {
         console.log("Clerk user:", user.id);
 
-        const entitlements = await checkUserEntitlements(user.id);
+        const entitlements = await checkUserEntitlements();
 
         console.log("Entitlements:", entitlements);
 
@@ -148,7 +148,7 @@ export default function PapersPage() {
                 Choose any paper to practice
               </p>
             </div>
-              {!userEntitlements?.hasFullAccess && (
+              {userEntitlements && !userEntitlements?.hasFullAccess ? (
                 <button
                   onClick={() =>
                     setUpgradeModal({ isOpen: true, paperName: "All Premium Papers" })
@@ -157,7 +157,14 @@ export default function PapersPage() {
                 >
                   Go Premium
                 </button>
-              )}
+              ) : userEntitlements?.hasFullAccess ? (
+                <button
+                  onClick={() => {}}
+                  className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg font-semibold text-sm sm:text-base bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-500 text-[#1a0030] shadow-[0_0_15px_rgba(251,191,36,0.4)] hover:from-yellow-300 hover:via-amber-200 hover:to-yellow-400 hover:shadow-[0_0_20px_rgba(251,191,36,0.6)] transition-all duration-300"
+                >
+                  Premium
+                </button>
+              ) : null}
           </div>
         </div>
         

@@ -357,7 +357,7 @@ export const getPaperAccess = async (userId, paperName) => {
   }
 
   // Check if user has paid access
-  const entitlements = await checkUserEntitlements(userId);
+  const entitlements = await checkUserEntitlements();
   
   if (entitlements.error) {
     return { hasAccess: false, reason: 'error', error: entitlements.error };
