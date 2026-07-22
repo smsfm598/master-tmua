@@ -77,47 +77,7 @@ export const calculateScore = (userAnswers, paperName) => {
   }
 }
 
-// User analytics functions
-export const createUserProfile = async (userId, email) => {
-  try {
-    const { data, error } = await supabase
-      .from('user_profiles')
-      .insert([
-        {
-          clerk_user_id: userId,
-          email: email,
-          created_at: new Date().toISOString(),
-          total_exams: 0,
-          average_score: 0,
-          best_score: 0
-        }
-      ])
-      .select()
-    
-    if (error) throw error
-    return data
-  } catch (error) {
-    console.error('Error creating user profile:', error)
-    return null
-  }
-}
-
-export const getUserProfile = async (userId) => {
-  try {
-    const { data, error } = await supabase
-      .from('user_profiles')
-      .select('*')
-      .eq('clerk_user_id', userId)
-      .single()
-    
-    if (error) throw error
-    return data
-  } catch (error) {
-    console.error('Error fetching user profile:', error)
-    return null
-  }
-}
-
+ 
 export const updateUserStats = async (userId, examScore, isNewExam = true, paperName = null) => {
   try {
     // Get current user profile
@@ -363,36 +323,23 @@ export const getUserExamResults = async (userId) => {
 }
 
 // Check if user has paid access
-export const checkUserEntitlements = async (userId) => {
+export const checkUserEntitlements = async () => {
   try {
-    if (!userId) {
-      return { hasFullAccess: false, error: 'No user ID provided' };
+    const response = await fetch("/api/user-entitlements");
+
+    if (!response.ok) {
+      return {
+        hasFullAccess: false,
+        error: "Failed to fetch entitlements",
+      };
     }
 
-    const { data, error } = await supabase
-      .from('user_entitlements')
-      .select('has_full_access, purchase_date, stripe_session_id')
-      .eq('clerk_user_id', userId)
-      .single();
-
-    if (error) {
-      // If no record found, user doesn't have access
-      if (error.code === 'PGRST116') {
-        return { hasFullAccess: false, error: null };
-      }
-      console.error('Error checking user entitlements:', error);
-      return { hasFullAccess: false, error: error.message };
-    }
-
-    return {
-      hasFullAccess: data?.has_full_access || false,
-      purchaseDate: data?.purchase_date,
-      stripeSessionId: data?.stripe_session_id,
-      error: null
-    };
+    return await response.json();
   } catch (error) {
-    console.error('Error in checkUserEntitlements:', error);
-    return { hasFullAccess: false, error: error.message };
+    return {
+      hasFullAccess: false,
+      error: error.message,
+    };
   }
 };
 
