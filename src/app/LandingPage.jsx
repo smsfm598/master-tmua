@@ -112,8 +112,20 @@ export default function LandingPage() {
             Join Today
           </button>
         </div>
-        <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(142,68,173,0.5)] border border-[#5c4d7d]">
-          <img src="/dashboard-sample.png" alt="TMUA Dashboard" className="w-full h-auto" />
+        <div className="w-full max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(142,68,173,0.5)] border border-[#5c4d7d]">
+          <video
+            src="/dashboard-demo.mp4"
+            poster="/dashboard-video-poster.png"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-label="TMUA dashboard demo video"
+            className="w-full h-auto"
+          >
+            Your browser does not support the video tag.
+          </video>
         </div>
       </section>
 {/* Exam Interface Section Replacement */}
