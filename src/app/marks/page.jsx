@@ -346,7 +346,7 @@ export default function MarksPage() {
                   <th className="py-3 px-2 md:px-4 text-left text-sm md:text-base font-medium">Test Date</th>
                   <th className="py-3 px-2 md:px-4 text-left text-sm md:text-base font-medium">Paper</th>
                   <th className="py-3 px-2 md:px-4 text-left text-sm md:text-base font-medium">Score</th>
-                  <th className="py-3 px-2 md:px-4 text-left text-sm md:text-base font-medium">TMUA / %</th>
+                  <th className="py-3 px-2 md:px-4 text-left text-sm md:text-base font-medium">Grade</th>
                   <th className="py-3 px-2 md:px-4 text-left text-sm md:text-base font-medium">Wrong Answers</th>
                 </tr>
               </thead>

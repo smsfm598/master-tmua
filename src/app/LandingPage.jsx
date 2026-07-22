@@ -253,7 +253,7 @@ export default function LandingPage() {
             <div>
               <h3 className="text-xl font-semibold mb-4">About Our Platform</h3>
               <p className="text-gray-400">
-                We provide the most authentic TMUA practice experience with an interface that exactly matches the Pearson VUE system used in the real exam.
+                We provide the most authentic TMUA practice experience with an interface that exactly matches the Pearson VUE system used in the real exam, along with an aesthetic, personalised dashboard with every analytic you would need.
               </p>
             </div>
 

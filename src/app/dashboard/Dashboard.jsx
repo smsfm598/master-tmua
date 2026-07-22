@@ -117,6 +117,12 @@ function formatTmuaScoreFromPercent(percent) {
   return tmuaScore.toFixed(1);
 }
 
+function getTmuaBarWidth(percent) {
+  const normalizedPercent = Math.max(0, Math.min(100, Math.round(percent || 0)));
+  const tmuaScore = TMUA_SCORE_BY_PERCENT[normalizedPercent] ?? 0.0;
+  return `${(tmuaScore / 9) * 100}%`;
+}
+
 // Header Component
 function Header({ onPremiumClick, showPremiumButton, isPremium }) {
   const { user } = useUser();
@@ -166,7 +172,7 @@ function ReadyToTestCard({ onReady }) {
     <div className="bg-[#1a0030] p-4 sm:p-6 rounded-xl border border-[#5c4d7d] shadow-lg h-full min-h-[180px] flex flex-col justify-center">
       <div className="mb-4 sm:mb-5">
         <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">Ready To Test?</h3>
-        <p className="text-gray-400 text-sm">Start your practice exam now</p>
+        <p className="text-gray-400 text-sm">Start a new practice exam now</p>
       </div>
       <button 
         onClick={handleReadyClick}
@@ -270,14 +276,14 @@ function AverageScoreCard() {
           <span className="text-white">{formatTmuaScoreFromPercent(scoreData.highest)}</span>
         </div>
         <div className="w-full bg-gray-700 rounded-full h-1">
-          <div className="bg-green-500 h-1 rounded-full" style={{width: `${scoreData.highest}%`}}></div>
+          <div className="bg-green-500 h-1 rounded-full" style={{width: getTmuaBarWidth(scoreData.highest)}}></div>
         </div>
         <div className="flex justify-between text-sm">
           <span className="text-gray-400">Lowest Score</span>
           <span className="text-white">{formatTmuaScoreFromPercent(scoreData.lowest)}</span>
         </div>
         <div className="w-full bg-gray-700 rounded-full h-1">
-          <div className="bg-orange-500 h-1 rounded-full" style={{width: `${scoreData.lowest}%`}}></div>
+          <div className="bg-orange-500 h-1 rounded-full" style={{width: getTmuaBarWidth(scoreData.lowest)}}></div>
         </div>
       </div>
     </div>
