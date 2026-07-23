@@ -131,6 +131,33 @@ export default function LandingPage() {
             Your browser does not support the video tag.
           </video>
         </div>
+        <div className="w-full max-w-6xl mx-auto mt-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">
+            Our Identical Exam Interface
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+            <div className="bg-[#1a0030]/60 rounded-2xl border border-[#5c4d7d] shadow-[0_0_24px_rgba(92,77,125,0.25)] overflow-hidden">
+              <h3 className="text-xl font-bold text-white text-center py-4">
+                Pearson
+              </h3>
+              <img
+                src="/pearson.png"
+                alt="Pearson exam interface"
+                className="w-full h-auto"
+              />
+            </div>
+            <div className="bg-[#1a0030]/60 rounded-2xl border border-[#5c4d7d] shadow-[0_0_24px_rgba(92,77,125,0.25)] overflow-hidden">
+              <h3 className="text-xl font-bold text-white text-center py-4">
+                MasterTMUA
+              </h3>
+              <img
+                src="/exam.png"
+                alt="MasterTMUA exam interface"
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
       </section>
 {/* Exam Interface Section Replacement */}
 <section className="container mx-auto px-4 py-20">
@@ -240,7 +267,7 @@ export default function LandingPage() {
                 <FaCheck className="text-green-400 mr-3" /> Track your progress over time
               </li>
                <li className="flex items-center text-gray-300">
-                <FaCheck className="text-green-400 mr-3" /> In depth analytics for personal growth
+                <FaCheck className="text-green-400 mr-3" /> In depth analytics 
               </li>
             </ul>
               <button 
