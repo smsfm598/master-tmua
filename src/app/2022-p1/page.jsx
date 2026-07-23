@@ -220,7 +220,7 @@ Across all solutions for $f(x)$, what is the minimum value that $f(x)$ attains f
     },
     {
       id: 10,
-      text: `A sequence of translations is applied to the graph of $y = x^3$.
+      text: `A sequence of translations is applied to the graph of $y = x^3$.\n
 
 Which of the following graphs could be the result of this sequence of translations?
 
@@ -228,14 +228,14 @@ $\\quad I\\quad   y = x^3 - 3x^2 + 9x - 27$
 $\\quad II \\quad y = x^3 - 9x^2 + 27x - 3$
 $ \\quad III \\quad y = 27x^3 - 9x^2 + x - 3$`,
       options: [
-        "none of them",
-        "I only",
-        "II only",
-        "III only",
-        "I and II only",
-        "I and III only",
-        "II and III only",
-        "I, II and III"
+        "none of them \n",
+        "I only\n",
+        "II only\n",
+        "III only\n",
+        "I and II only\n",
+        "I and III only\n",
+        "II and III only\n",
+        "I, II and III\n" 
       ],
     },
     {
