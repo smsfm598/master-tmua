@@ -686,7 +686,7 @@ $$\\int_{-1}^1 f_{99}(x) dx$$`,
         {/* Header */}
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold pl-2 font-mono text-white">
+            <h1 className="text-xl font-semibold pl-2 text-white">
               Test of Mathematics for University Admission
             </h1>
           </div>
@@ -806,7 +806,7 @@ $$\\int_{-1}^1 f_{99}(x) dx$$`,
         {/* Header */}
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold pl-2 font-mono text-white">
+            <h1 className="text-xl font-semibold pl-2 text-white">
               Test of Mathematics for University Admission
             </h1>
             <div className="flex items-center space-x-4 pr-4">
@@ -1000,7 +1000,7 @@ $$\\int_{-1}^1 f_{99}(x) dx$$`,
       <div className={`${getHeaderTheme()} p-2`}>
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <h1 className="text-xl font-semibold pl-2 font-mono text-white">
+            <h1 className="text-xl font-semibold pl-2 text-white">
               Test of Mathematics for University Admission
             </h1>
           </div>
