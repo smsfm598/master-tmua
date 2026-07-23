@@ -69,8 +69,8 @@ export default function LandingPage() {
           <Image
             src="/logo.png"
             alt="Master TMUA Logo"
-            width={50}
-            height={50}
+            width={45}
+            height={45}
             priority
           />
           <span className="text-xl font-bold">MasterTMUA</span>
@@ -95,7 +95,7 @@ export default function LandingPage() {
           Master the exam interface<br />before test day.
         </h1>
         <p className="text-xl mb-10 text-gray-300 max-w-3xl">
-          Train in a real exam environment that looks exactly like the
+          Train in a real exam environment identical to the
           Pearson VUE system, with smart analytics to track performance in our perfect progress-tracking environment
         </p>
         <div className="flex flex-wrap gap-6 justify-center mb-16">
@@ -105,12 +105,13 @@ export default function LandingPage() {
               Try Demo
             </button>
           </Link>
-          <button
-            onClick={() => scrollToSection(pricingRef)}
-            className="px-8 py-4 bg-transparent border-2 border-[#5c4d7d] rounded-full font-semibold hover:bg-[#5c4d7d]/20 transition-all duration-300 shadow-[0_0_15px_rgba(92,77,125,0.3)] hover:shadow-[0_0_20px_rgba(92,77,125,0.5)]"
-          >
-            Join Today
-          </button>
+          <Link href="/sign-up" className="inline-block">
+            <button
+              className="px-8 py-4 bg-transparent border-2 border-[#5c4d7d] rounded-full font-semibold hover:bg-[#5c4d7d]/20 transition-all duration-300 shadow-[0_0_15px_rgba(92,77,125,0.3)] hover:shadow-[0_0_20px_rgba(92,77,125,0.5)]"
+            >
+              Join Today
+            </button>
+          </Link>
         </div>
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
           Explore your personalised dashboard
@@ -161,7 +162,7 @@ export default function LandingPage() {
       <FaRegClock className="text-purple-400 text-5xl" />
       <h3 className="text-2xl font-bold">Train in Real Time</h3>
       <p className="text-gray-300">
-        Experience real exam timing with built-in countdowns and navigation tools.
+        Experience real exam timing with built-in countdowns, automatic marking and navigation tools.
       </p>
     </motion.div>
 
@@ -277,7 +278,7 @@ export default function LandingPage() {
               <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
               <nav className="flex flex-col space-y-2">
                 <Link href="/" className="text-gray-400 hover:text-white transition-colors">Home</Link>
-                <Link href="/practice-p1" className="text-gray-400 hover:text-white transition-colors">Demo</Link>
+                <Link href="/specimen-p1" className="text-gray-400 hover:text-white transition-colors">Demo</Link>
                 <button onClick={() => scrollToSection(pricingRef)} className="text-gray-400 hover:text-white transition-colors text-left">Pricing</button>
                 <Link href="mailto:mastertmua@outlook.com" className="text-gray-400 hover:text-white transition-colors">Contact</Link>
               </nav>
