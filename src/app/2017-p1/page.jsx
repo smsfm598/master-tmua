@@ -545,7 +545,7 @@ const questions = questionsRaw.map(q => ({
               src="https://ucarecdn.com/97d806a1-696c-4c3d-a7b0-5aeffecb590c/-/format/auto/"
               alt="UAT UK Logo"
               className="h-32 w-auto"
-              style={{ backgroundColor: "transparent" }}
+              style={{ backgroundColor: "transparent" }} 
             />
           </div>
 
