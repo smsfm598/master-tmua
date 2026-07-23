@@ -684,7 +684,7 @@ Given that exactly one of the following statements is true, which one is it? `,
         {/* Header */}
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold pl-2 text-white">
+            <h1 className="text-2xl font-semibold pl-2 text-white">
               Test of Mathematics for University Admission
             </h1>
           </div>
@@ -804,7 +804,7 @@ Given that exactly one of the following statements is true, which one is it? `,
         {/* Header */}
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold pl-2 text-white">
+            <h1 className="text-2xl font-semibold pl-2 text-white">
               Test of Mathematics for University Admission
             </h1>
             <div className="flex items-center space-x-4 pr-4">
@@ -998,7 +998,7 @@ Given that exactly one of the following statements is true, which one is it? `,
       <div className={`${getHeaderTheme()} p-2`}>
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <h1 className="text-xl font-semibold pl-2 text-white">
+            <h1 className="text-2xl font-semibold pl-2 text-white">
               Test of Mathematics for University Admission
             </h1>
           </div>

@@ -131,11 +131,11 @@ export default function LandingPage() {
             Your browser does not support the video tag.
           </video>
         </div>
-        <div className="w-full max-w-6xl mx-auto mt-12">
+        <div className="w-full max-w-7xl mx-auto mt-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">
             Our Identical Exam Interface
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             <div className="bg-[#1a0030]/60 rounded-2xl border border-[#5c4d7d] shadow-[0_0_24px_rgba(92,77,125,0.25)] overflow-hidden">
               <h3 className="text-xl font-bold text-white text-center py-4">
                 Pearson
@@ -143,7 +143,7 @@ export default function LandingPage() {
               <img
                 src="/pearson.png"
                 alt="Pearson exam interface"
-                className="w-full h-auto"
+                className="w-full h-auto object-cover"
               />
             </div>
             <div className="bg-[#1a0030]/60 rounded-2xl border border-[#5c4d7d] shadow-[0_0_24px_rgba(92,77,125,0.25)] overflow-hidden">
@@ -153,7 +153,7 @@ export default function LandingPage() {
               <img
                 src="/exam.png"
                 alt="MasterTMUA exam interface"
-                className="w-full h-auto"
+                className="w-full h-auto object-cover"
               />
             </div>
           </div>
