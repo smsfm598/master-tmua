@@ -146,7 +146,7 @@ export default function LandingPage() {
                 className="w-full h-auto object-cover"
               />
             </div>
-            <div className="bg-[#1a0029]/60 rounded-2xl border border-[#5c4d7d] shadow-[0_0_24px_rgba(92,77,125,0.25)] overflow-hidden">
+            <div className="bg-[#1a0030]/60 rounded-2xl border border-[#5c4d7d] shadow-[0_0_24px_rgba(92,77,125,0.25)] overflow-hidden">
               <h3 className="text-xl font-bold text-white text-center py-4">
                 MasterTMUA
               </h3>
