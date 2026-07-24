@@ -400,7 +400,7 @@ If the centre of $C_2$ is equally likely to be located anywhere within the given
       id: 20,
       text: `$n$ is the number of points of intersection of the graphs
 
-$$y = |x^2 - a^2|$ and $y = a^2|x - 1|$$
+$$y = |x^2 - a^2| \\text{ and } y = a^2|x - 1|$$
 
 where $a$ is a real number.
 

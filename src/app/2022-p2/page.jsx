@@ -361,9 +361,9 @@ $\\quad III \\quad$ (maximum of $a_1, \\ldots, a_{100}$) $\\leq$ (maximum of $b_
       id: 17,
       text: `A student answered the following question:
 
-$$\\quad a\\text{ and }b\\text{ are non-zero real numbers.}$$
+$\\quad a\\text{ and }b\\text{ are non-zero real numbers.}$
 
-$$\\quad Prove that the equation }x^3 + ax^2 + b = 0$ has three distinct real roots if $27b\\left(b + \\frac{4a^3}{27}\\right)< 0$\\quad$$
+$\\quad$  Prove that the equation $x^3 + ax^2 + b = 0$ has three distinct real roots if $27b\\left(b + \\frac{4a^3}{27}\\right)< 0$
 
 Here is the student's solution:
 
@@ -390,7 +390,7 @@ Which one of the following options best describes the student's solution?`,
       id: 18,
       text: `P, Q, R and S show the graphs of
 
-$$y = (\\cos x)^{\\cos x}$, $y = (\\sin x)^{\\sin x}$, $y = (\\cos x)^{\\sin x}$ \\text{ and } $y = (\\sin x)^{\\cos x}$$
+$$y = (\\cos x)^{\\cos x},y = (\\sin x)^{\\sin x}, y = (\\cos x)^{\\sin x} \\text{ and } y = (\\sin x)^{\\cos x}$$
 
 for $0 < x < \\frac{\\pi}{2}$ in some order.
 
