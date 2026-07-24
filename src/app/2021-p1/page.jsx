@@ -382,7 +382,7 @@ What is the equation of $C$?`,
   id: 19,
   text: `The equation
 
- $$ \\sin^2 (4^{\\cos \\theta} \\times 60°) = \\frac{3}{4}$$
+ $$ \\sin^2 {4^{\\cos \\theta} \\times 60°} = \\frac{3}{4} $$
 
 has exactly three solutions in the range $0° \\leq \\theta \\leq x°$
 
