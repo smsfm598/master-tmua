@@ -649,7 +649,7 @@ $$2 \\log_{10}(x - y) = \\log_{10}(2 - 2x) + \\log_{10}(y + 5)$$`,
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
             <h1 className="text-xl font-semibold pl-2">
-              Test of Mathematics for University Admission
+              Master TMUA
             </h1>
           </div>
         </div>
@@ -769,7 +769,7 @@ $$2 \\log_{10}(x - y) = \\log_{10}(2 - 2x) + \\log_{10}(y + 5)$$`,
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
             <h1 className="text-xl font-semibold pl-2">
-              Test of Mathematics for University Admission
+              Master TMUA
             </h1>
             <div className="flex items-center space-x-4 pr-4">
               <div className="text-yellow-300 text-lg font-mono">
@@ -963,7 +963,7 @@ $$2 \\log_{10}(x - y) = \\log_{10}(2 - 2x) + \\log_{10}(y + 5)$$`,
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <h1 className="text-base font-normal pl-2 font-mono text-white">
-              Test of Mathematics for University Admission
+              Master TMUA
             </h1>
           </div>
           <div className="flex flex-col items-end space-y-1 pr-4">

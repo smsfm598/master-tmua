@@ -532,7 +532,7 @@ const questions = questionsRaw.map(q => ({
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
             <h1 className="text-2xl font-semibold pl-2 text-white">
-              Test of Mathematics for University Admission
+              Master TMUA
             </h1>
           </div>
         </div>
@@ -652,7 +652,7 @@ const questions = questionsRaw.map(q => ({
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
             <h1 className="text-2xl font-semibold pl-2 text-white">
-              Test of Mathematics for University Admission
+              Master TMUA
             </h1>
             <div className="flex items-center space-x-4 pr-4">
               <div className="text-white text-base font-mono">
@@ -846,7 +846,7 @@ const questions = questionsRaw.map(q => ({
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <h1 className="text-2xl font-semibold pl-2 text-white">
-              Test of Mathematics for University Admission
+              Master TMUA
             </h1>
           </div>
           <div className="flex flex-col items-end space-y-1 pr-4">
