@@ -120,9 +120,9 @@ Every positive integer $N$ that is greater than 6 can be written as the sum of t
 
 Which of the following is/are counterexample(s) to this statement?
 
-I. $N = 5$
-II. $N = 7$
-III. $N = 9$`,
+$\\quad I \\quad$ $N = 5$
+$\\quad II \\quad$ $N = 7$
+$\\quad III \\quad$ $N = 9$`,
       options: [
         "none of them",
         "I only",
@@ -176,9 +176,9 @@ Condition III: $f(x) = -f(-x)$ for $-5 \\leq x \\leq 5$`,
       id: 7,
       text: `Consider the following conditions on a parallelogram $PQRS$, labelled anticlockwise:
 
-I. length of $PQ =$ length of $QR$
-II. The diagonal $PR$ intersects the diagonal $QS$ at right angles
-III. $\\angle PQR = \\angle QRS$
+$\\quad I \\quad$ length of $PQ =$ length of $QR$
+$\\quad II \\quad$ The diagonal $PR$ intersects the diagonal $QS$ at right angles
+$\\quad III \\quad$ $\\angle PQR = \\angle QRS$
 
 Which of these conditions is/are individually sufficient for the parallelogram $PQRS$ to be a square?`,
       options: [
@@ -196,11 +196,11 @@ Which of these conditions is/are individually sufficient for the parallelogram $
       id: 8,
       text: `A student is asked to prove whether the following statement (*) is true or false:
 
-(*) For all real numbers $a$ and $b$, $|a + b| < |a| + |b|$
+$\\quad$ (*) $\\quad$ For all real numbers $a$ and $b$, $|a + b| < |a| + |b|$
 
 The student's proof is as follows:
 
-Statement (*) is false. A counterexample is $a = 3, b = 4$, as $|3 + 4| = 7$ and $|3| + |4| = 7$, but $7 < 7$ is false.
+$\\quad$ Statement (*) is false. A counterexample is $a = 3, b = 4$, as $|3 + 4| = 7$ and $|3| + |4| = 7$, but $7 < 7$ is false.
 
 Which of the following best describes the student's proof?`,
       options: [

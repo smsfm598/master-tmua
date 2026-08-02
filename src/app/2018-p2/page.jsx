@@ -98,11 +98,11 @@ A car journey consists of two parts. In the first part, the average speed is $u 
 Which of the following examples of car journeys provide(s) a counterexample to the statement?
 
 
-I $\\quad$ In the first part of the journey, the car travels at a constant speed of 50 km/h for 100 km. In the second part of the journey, the car travels at a constant speed of 40 km/h for 100 km.
+$\\quad I \\quad$ In the first part of the journey, the car travels at a constant speed of 50 km/h for 100 km. In the second part of the journey, the car travels at a constant speed of 40 km/h for 100 km.
 
-II $\\quad$  In the first part of the journey, the car travels at a constant speed of 50 km/h for one hour. In the second part of the journey, the car travels at a constant speed of 40 km/h for one hour.
+$\\quad II \\quad$  In the first part of the journey, the car travels at a constant speed of 50 km/h for one hour. In the second part of the journey, the car travels at a constant speed of 40 km/h for one hour.
 
-III $\\quad$  In the first part of the journey, the car travels at a constant speed of 50 km/h for 80 km. In the second part of the journey, the car travels at a constant speed of 40 km/h for 100 km.`,
+$\\quad III \\quad$  In the first part of the journey, the car travels at a constant speed of 50 km/h for 80 km. In the second part of the journey, the car travels at a constant speed of 40 km/h for 100 km.`,
       options: [
         "none of them",
         "I only",
@@ -134,8 +134,8 @@ How many solutions of the equation $\\cos^2 2x = c^2$ are there in the range $0 
 
 Consider the following statements:
 
-I. One of the diagonals of $Q$ is a line of symmetry of $Q$.
-II. The midpoint of the sides of $Q$ are the vertices of a square.
+$\\quad I \\quad$ One of the diagonals of $Q$ is a line of symmetry of $Q$.
+$\\quad II \\quad$ The midpoint of the sides of $Q$ are the vertices of a square.
 
 Which of these statements is/are necessarily true for the quadrilateral $Q$?`,
       options: [
@@ -188,9 +188,9 @@ Mountain profiles can be coded by using U to indicate an upstroke and D to indic
 
 Which of the following statements is/are true?
 
-I. If a valid code is written in reverse order, the result is always a valid code.
-II. If each U in a valid code is replaced by D and each D by U, the result is always a valid code.
-III. If U is added at the beginning of a valid code and D is added at the end of the code, the result is always a valid code.`,
+$\\quad I \\quad$ If a valid code is written in reverse order, the result is always a valid code.
+$\\quad II \\quad$ If each U in a valid code is replaced by D and each D by U, the result is always a valid code.
+$\\quad III \\quad$ If U is added at the beginning of a valid code and D is added at the end of the code, the result is always a valid code.`,
       options: [
         "none of them",
         "I only",
@@ -237,9 +237,9 @@ Which one of the following is true?`,
 
 Consider the following three conditions, where $a$ is a real constant:
 
-$I\\quad f(a - x) = f(a + x)$ for all real $x$
-$II\\quad f(2a - x) = f(x)$ for all real $x$
-$III\\quad f(a - x) = f(x)$ for all real $x$
+$\\quad I\\quad f(a - x) = f(a + x)$ for all real $x$
+$\\quad II \\quad f(2a - x) = f(x)$ for all real $x$
+$\\quad III \\quad f(a - x) = f(x)$ for all real $x$
 
 Which of these conditions is/are necessary and sufficient for the graph of $y = f(x)$ to have reflection symmetry about the line $x = a$?`,
       options: [
@@ -259,9 +259,9 @@ Which of these conditions is/are necessary and sufficient for the graph of $y = 
 
 Which of the following statements is/are necessarily true?
 
-I. The equation has a negative real solution only if $c > 1$.
-II. The equation has two distinct real solutions if $c > 1$.
-III. The equation has two distinct positive real solutions if and only if $c \\leq 1$.`,
+$\\quad I \\quad$ The equation has a negative real solution only if $c > 1$.
+$\\quad II \\quad$ The equation has two distinct real solutions if $c > 1$.
+$\\quad III \\quad$ The equation has two distinct positive real solutions if and only if $c \\leq 1$.`,
       options: [
         "none of them",
         "I only",
@@ -343,9 +343,9 @@ The equation $f(x) = 0$ has 3 distinct real roots.
 
 Which of the following statements is/are necessarily true?
 
-        I $\\quad$ The equation $f(x) + 1 = 0$ has 3 distinct real roots.
-        II $\\quad$  The equation $f(x + 1) = 0$ has 3 distinct real roots.
-        III $\\quad$  The equation $f(-x) - 1 = 0$ has 3 distinct real roots.`,
+        $\\quad I \\quad$ The equation $f(x) + 1 = 0$ has 3 distinct real roots.
+        $\\quad II \\quad$ The equation $f(x + 1) = 0$ has 3 distinct real roots.
+        $\\quad III \\quad$ The equation $f(-x) - 1 = 0$ has 3 distinct real roots.`,
         options: [
         "none of them",
         "I only",
@@ -363,9 +363,9 @@ Which of the following statements is/are necessarily true?
 
 Let $n$ be a positive integer. If the median of the first $n$ terms of the sequence is an integer, which of the following three statements must be true?
 
-I $\\quad$  The median of the first $n + 2$ terms is an integer.
-II $\\quad$  The median of the first $2n$ terms is an integer.
-III $\\quad$  The median of $x_2, x_4, x_6, \\ldots, x_{2n}$ is an integer.`,
+$\\quad I \\quad$ The median of the first $n + 2$ terms is an integer.
+$\\quad II \\quad$ The median of the first $2n$ terms is an integer.
+$\\quad III \\quad$ The median of $x_2, x_4, x_6, \\ldots, x_{2n}$ is an integer.`,
       options: [
         "none of them",
         "I only",

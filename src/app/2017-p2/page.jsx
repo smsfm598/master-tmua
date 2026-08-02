@@ -130,9 +130,9 @@ Which one of the following statements is correct?`,
       id: 5,
       text: `Consider the following three statements:
 
-  1. $10p^2 + 1$ and $10p^2 - 1$ are both prime when p is an odd prime.
-  2. Every prime greater than 5 is of the form $6n + 1$ for some integer $n$.
-  3. No multiple of 7 greater than 7 is prime.
+  $\\quad$ 1 $\\quad$ $10p^2 + 1$ and $10p^2 - 1$ are both prime when p is an odd prime.
+  $\\quad$ 2 $\\quad$ Every prime greater than 5 is of the form $6n + 1$ for some integer $n$.
+  $\\quad$ 3 $\\quad$ No multiple of 7 greater than 7 is prime.
 
 The result $91 = 7 \\times 13$ can be used to provide a counterexample to which of the above statements?`,
       options: [
@@ -289,10 +289,10 @@ Which of the following is an expression for the area enclosed by the curve $y = 
 
 Which of the following statements (I, II, III, IV) must be true?
 
-  I \\quad $a > 9$
-  II \\quad $b > 9$  
-  III\\quad $a < c$
-  IV \\quad $b < c$`,
+  $\\quad$ I $\\quad$ $a > 9$
+  $\\quad$ II $\\quad$ $b > 9$  
+  $\\quad$ III $\\quad$ $a < c$
+  $\\quad$ IV $\\quad$ $b < c$`,
       options: [
         "I only",
         "II only",
