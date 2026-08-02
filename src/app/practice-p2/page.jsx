@@ -344,7 +344,7 @@ function MainComponent() {
     {
       id: 18,
       text: `Consider this statement about a function $f(x)$:
-      \\quad$(*) If $(f(x))^2 \\le 1$ for all $-1 \\le x \\le 1$ then $\\int_{-1}^{1} (f(x))^2 dx \\le \\int_{-1}^{1} f(x) dx$
+      $\\quad$(*) If $(f(x))^2 \\le 1$ for all $-1 \\le x \\le 1$ then $\\int_{-1}^{1} (f(x))^2 dx \\le \\int_{-1}^{1} f(x) dx$
       Which one of the following functions provides a counterexample to (*)?`,
       options: [
         "$f(x) = x + \\frac{1}{2}$",
