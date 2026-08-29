@@ -48,8 +48,8 @@ export async function POST(request) {
         },
       ],
       mode: 'payment',
-      success_url: `https://mastertmua.online/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `https://mastertmua.online/`,
+      success_url: `https://mastertmua.com/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `https://mastertmua.com/`,
       metadata: {
         userId: userId,
       },
