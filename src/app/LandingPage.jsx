@@ -247,8 +247,8 @@ export default function LandingPage() {
           <div className="bg-[#1a0030] rounded-2xl shadow-lg border-2 border-purple-500 p-8 flex flex-col shadow-[0_0_25px_rgba(142,68,173,0.7)] hover:shadow-[0_0_35px_rgba(142,68,173,1)] transition-all duration-300">
             <div className="text-center mb-6">
               <h3 className="text-3xl font-bold">Master TMUA Premium</h3>
-              <span className="text-gray-400 line-through text-xl">£24.99</span>
-              <span className="text-3xl font-bold ml-3 text-purple-400">£14.99</span>
+              <span className="text-gray-400 line-through text-xl">£29.99</span>
+              <span className="text-3xl font-bold ml-3 text-purple-400">£19.99</span>
             </div>
             <ul className="flex-1 space-y-3 mb-6">
               <li className="flex items-center text-gray-300">
