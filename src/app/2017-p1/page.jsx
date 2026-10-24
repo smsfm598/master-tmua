@@ -6,6 +6,7 @@ import { useUser } from '@clerk/nextjs'
 import { saveExamResult, calculateScore } from '../../lib/supabase'
 import { InlineMath, BlockMath } from "react-katex";
 import "katex/dist/katex.min.css";
+import PaymentGate from "../../components/PaymentGate";
 
 // ✅ Define this once
 function renderWithLatex(str = "") {
@@ -65,7 +66,7 @@ function MainComponent() {
 
 
 
-  // TMUA questions
+   // TMUA questions
   const questionsRaw = [
     
   {
@@ -76,7 +77,7 @@ $$\\frac{dy}{dx} = 3x^2 - \\frac{2-3x}{x^3}, \\quad x \\neq 0$$
 
 and y = 5 when x = 1, find y in terms of x.`,
     options: [
-      "$$y = \\frac{1}{3}x^3 + x^2 - 3x^{-1} + 6 \\frac{2}{3}$$",
+      "$$y = \\frac{1}{3}x^3 + x^{-2} - 3x^{-1} + 6 \\frac{2}{3}$$",
       "$$y = x^3 + \\frac{1}{2}x^{-2} - 3x^{-1} + 6 \\frac{1}{2}$$",
       "$$y = x^3 + x^{-2} - 3x^{-1} + 6$$",
       "$$y = x^3 + x^{-2} - x^{-1} + 4$$",
@@ -88,29 +89,25 @@ and y = 5 when x = 1, find y in terms of x.`,
     id: 2,
     text: `The function f is given by
 
-$$f(x) = \\left(\\frac{2}{x} - \\frac{1}{2x^2}\\right)^2, \\quad x \\neq 0$$
-
-What is the value of f'(1)?`,
+$$f(x) = \\left(\\frac{2}{x} - \\frac{1}{2x^2}\\right)^2, \\quad x \\neq 0$$ What is the value of f''(1)?`,
     options: ["$-3$", "$-1$", "$5$", "$17$", "$29$", "$80$"],
   },
   {
     id: 3,
-    text: `A line l has equation $$y = 6 - 2x$$
-
-A second line is perpendicular to l and passes through the point (-6, 0).
+    text: `A line l has equation $$y = 6 - 2x$$ A second line is perpendicular to l and passes through the point (-6, 0).
 
 Find the area of the region enclosed by the two lines and the x-axis.`,
     options: [
       "$16 \\frac{1}{5}$",
       "$18$",
-      "$21 \\frac{1}{2}$",
+      "$21 \\frac{3}{5}$",
       "$27$",
       "$40 \\frac{1}{2}$"
     ],
   },
   {
     id: 4,
-    text: `When $$(3x^2 + 8x - 3)$$ is multiplied by $$(px - 1)$$ and the resulting product is divided by $$(x + 1)$$, the remainder is 24.
+    text: `When $(3x^2 + 8x - 3)$ is multiplied by $(px - 1)$ and the resulting product is divided by $(x + 1)$, the remainder is 24.
 
 What is the value of p?`,
     options: ["$-4$", "$2$", "$4$", "$\\frac{8}{7}$", "$\\frac{11}{4}$"],
@@ -119,9 +116,7 @@ What is the value of p?`,
     id: 5,
     text: `S is the complete set of values of x which satisfy both the inequalities
 
-$$x^2 - 8x + 12 < 0 \\quad \\text{and} \\quad 2x + 1 > 9$$
-
-The set S can also be represented as a single inequality.
+$$x^2 - 8x + 12 < 0 \\quad \\text{and} \\quad 2x + 1 > 9$$ The set S can also be represented as a single inequality.
 
 Which one of the following single inequalities represents the set S?`,
     options: [
@@ -137,7 +132,7 @@ Which one of the following single inequalities represents the set S?`,
   },
   {
     id: 6,
-    text: `A tangent to the circle $$x^2 + y^2 = 144$$ passes through the point (20, 0) and crosses the positive y-axis.
+    text: `A tangent to the circle $x^2 + y^2 = 144$ passes through the point (20, 0) and crosses the positive y-axis.
 
 What is the value of y at the point where the tangent meets the y-axis?`,
     options: ["$12$", "$15$", "$\\frac{49}{3}$", "$20$", "$\\frac{64}{3}$", "$\\frac{80}{3}$"],
@@ -149,12 +144,11 @@ What is the value of y at the point where the tangent meets the y-axis?`,
 The first three terms of a geometric progression are p, p² and q respectively.
 
 Find the sum of the first 10 terms of the arithmetic progression.`,
-    options: ["$\\frac{23}{8}$", "$\\frac{95}{8}$", "$\\frac{115}{18}$", "$\\frac{185}{8}$"],
+    options: ["$\\frac{23}{8}$", "$\\frac{95}{8}$", "$\\frac{115}{8}$", "$\\frac{185}{8}$"],
   },
   {
     id: 8,
-    text: `Find the complete set of values of x, with $$0 \\le x \\le \\pi$$, for which
-
+    text: `Find the complete set of values of x, with $0 \\le x \\le \\pi$, for which
 $$(1 - 2 \\sin x) \\cos x \\ge 0$$`,
     options: [
       "$$0 \\le x \\le \\frac{\\pi}{6}, \\frac{\\pi}{2} \\le x \\le \\frac{5\\pi}{6}$$",
@@ -165,7 +159,7 @@ $$(1 - 2 \\sin x) \\cos x \\ge 0$$`,
   },
   {
     id: 9,
-    text: `A circle has equation $$x^2 + y^2 - 18x - 22y + 178 = 0$$
+    text: `A circle has equation $x^2 + y^2 - 18x - 22y + 178 = 0$
 
 A regular hexagon is drawn inside this circle so that the vertices of the hexagon touch the circle.
 
@@ -174,8 +168,7 @@ What is the area of the hexagon?`,
   },
   {
     id: 10,
-    text: `A curve C has equation $$y = f(x)$$ where
-
+    text: `A curve C has equation $y = f(x)$ where
 $$f(x) = p^3 - 6p^2x + 3px^2 - x^3$$
 
 and p is real.
@@ -194,22 +187,18 @@ What is the greatest possible value of M as p varies?`,
   },
   {
     id: 11,
-    text: `The sequence $$x_n$$ is defined by the rules
+    text: `The sequence $x_n$ is defined by the rules
 
-$$x_1 = 7$$
+$$x_1 = 7$$ $$x_{n+1} = \\frac{23x_n - 53}{5x_n + 1}$$ The first three terms in the sequence are 7, 3, 1.
 
-$$x_{n+1} = \\frac{23x_n - 53}{5x_n + 1}$$
-
-The first three terms in the sequence are 7, 3, 1.
-
-What is the value of $$x_{100}$$?`,
+What is the value of $x_{100}$?`,
     options: ["$-5$", "$0$", "$1$", "$3$", "$7$"],
   },
   {
     id: 12,
     text: `The polynomial function f(x) is such that f(x) > 0 for all values of x.
 
-Given $$\\int_{2}^{4} f(x) \\, dx = A$$, which one of the following statements must be correct?`,
+Given $\\int_{2}^{4} f(x) \\, dx = A$, which one of the following statements must be correct?`,
     options: [
       "$\\int_{0}^{2} [f(x + 2) + 1] dx = A + 1$",
       "$\\int_{0}^{2} [f(x + 2) + 1] dx = A + 2$",
@@ -221,7 +210,7 @@ Given $$\\int_{2}^{4} f(x) \\, dx = A$$, which one of the following statements m
   },
   {
     id: 13,
-    text: `In the expansion of $$(a + bx)^5$$ the coefficient of $$x^4$$ is 8 times the coefficient of $$x^2$$.
+    text: `In the expansion of $(a + bx)^5$ the coefficient of $x^4$ is 8 times the coefficient of $x^2$.
 
 Given that a and b are non-zero positive integers, what is the smallest possible value of a + b?`,
     options: ["$3$", "$4$", "$5$", "$9$", "$13$", "$17$"],
@@ -230,8 +219,8 @@ Given that a and b are non-zero positive integers, what is the smallest possible
     id: 14,
     text: `The solution of the simultaneous equations
 
-$$2^x + 3 \\cdot 2^y = 3$$
-$$2^{2x} - 9 \\cdot 2^{2y} = 6$$
+$$2^x + 3 \\times 2^y = 3$$
+$$2^{2x} - 9 \\times 2^{2y} = 6$$
 
 is x = p, y = q.
 
@@ -240,7 +229,7 @@ Find the value of p - q`,
   },
   {
     id: 15,
-    text: `It is given that $$f(x) = -2x^2 + 10$$
+    text: `It is given that $f(x) = -2x^2 + 10$
 
 Consider the following three curves:
 
@@ -264,24 +253,24 @@ State whether the trapezium rule gives an overestimate or underestimate for each
   },
   {
     id: 16,
-    text: `The functions f and g are given by $$f(x) = 3x^2 + 12x + 4$$ and $$g(x) = x^3 + 6x^2 + 9x - 8$$.
+    text: `The functions f and g are given by $f(x) = 3x^2 + 12x + 4$ and $g(x) = x^3 + 6x^2 + 9x - 8$.
 
 What is the complete set of values of x for which one of the functions is increasing and the other decreasing?`,
     options: ["$x \\ge -1$", "$x \\le -1$", "$-3 \\le x \\le -2, x \\ge -1$", "$x \\le -2, x \\ge -1$", "$x \\le -3, -2 \\le x \\le -1$", "$x \\le -3, x \\ge -2$", "$-2 \\le x \\le -1$"],
   },
   {
     id: 17,
-    text: `The two functions F(n) and G(n) are defined as follows for positive integers n:
+    text: `The two functions $F(n)$ and $G(n)$ are defined as follows for positive integers n:
 
 $$F(n) = \\frac{1}{n} \\int_0^n (n - x) dx$$
 $$G(n) = \\sum_{r=1}^n F(r)$$
 
-What is the smallest positive integer n such that G(n) > 150?`,
+What is the smallest positive integer n such that $G(n) > 150?$`,
     options: ["$22$", "$23$", "$24$", "$25$", "$26$"],
   },
   {
     id: 18,
-    text: `The graph of $$y = \\log_{10}x$$ is translated in the positive y-direction by 2 units.
+    text: `The graph of $y = \\log_{10}x$ is translated in the positive y-direction by 2 units.
 
 This translation is equivalent to a stretch of factor k parallel to the x-axis.
 
@@ -290,11 +279,11 @@ What is the value of k?`,
   },
   {
     id: 19,
-    text: `The set of solutions to the inequality $$x^2 + bx + c < 0$$ is the interval $$p < x < q$$
+    text: `The set of solutions to the inequality $x^2 + bx + c < 0$ is the interval $p < x < q$
 
-where b, c, p and q are real constants with c < 0.
+where $b, c, p $ and $q$ are real constants with $c< 0 $ .
 
-In terms of p, q and c, what is the set of solutions to the inequality $$x^2 + bcx + c^2 < 0$$?`,
+In terms of $p, q $ and $c$, what is the set of solutions to the inequality $x^2 + bcx + c^3 < 0$?`,
     options: [
       "$\\frac{p}{c} < x < \\frac{q}{c}$",
       "$\\frac{q}{c} < x < \\frac{p}{c}$",
@@ -306,7 +295,7 @@ In terms of p, q and c, what is the set of solutions to the inequality $$x^2 + b
   },
   {
     id: 20,
-    text: `The lengths of the sides QR, RP and PQ in triangle PQR are a, a + d and a + 2d respectively, where a and d are positive and such that 3d > 2a.
+    text: `The lengths of the sides QR, RP and PQ in triangle PQR are $a$, $a + d$ and $a + 2d$ respectively, where $ a$ and $d$ are positive and such that $3d > 2a$.
 
 What is the full range, in degrees, of possible values for angle PRQ?`,
     options: [
@@ -542,8 +531,8 @@ const questions = questionsRaw.map(q => ({
         {/* Header */}
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+              Master TMUA
             </h1>
           </div>
         </div>
@@ -556,7 +545,7 @@ const questions = questionsRaw.map(q => ({
               src="https://ucarecdn.com/97d806a1-696c-4c3d-a7b0-5aeffecb590c/-/format/auto/"
               alt="UAT UK Logo"
               className="h-32 w-auto"
-              style={{ backgroundColor: "transparent" }}
+              style={{ backgroundColor: "transparent" }} 
             />
           </div>
 
@@ -662,11 +651,11 @@ const questions = questionsRaw.map(q => ({
         {/* Header */}
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+              Master TMUA
             </h1>
             <div className="flex items-center space-x-4 pr-4">
-              <div className="text-yellow-300 text-lg font-mono">
+              <div className="text-white text-base font-mono">
                 <i className="fas fa-clock mr-2"></i>
                 Time Remaining: {formatInstructionTime(instructionTime)}
               </div>
@@ -856,12 +845,12 @@ const questions = questionsRaw.map(q => ({
       <div className={`${getHeaderTheme()} p-2`}>
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <h1 className="text-base font-normal pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+              Master TMUA
             </h1>
           </div>
           <div className="flex flex-col items-end space-y-1 pr-4">
-            <div className="text-yellow-300 text-lg font-mono">
+            <div className="text-white text-base font-mono">
               <i className="fas fa-clock mr-2"></i>
               Time Remaining: {formatTime(timeRemaining)}
             </div>
@@ -1152,5 +1141,5 @@ const questions = questionsRaw.map(q => ({
 
 
 export default function Page() {
-  return <MainComponent />;
+  return <PaymentGate paperName="2017 Paper 1"><MainComponent /></PaymentGate>;
 }

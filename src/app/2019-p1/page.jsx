@@ -83,7 +83,7 @@ is positive for all real values of $x$.`,
         "$-12 < k < 0$",
         "$k < -12$ or $k > 0$",
         "$-\\sqrt{6} - 3 < k < \\sqrt{6} - 3$",
-        "$k < -\\sqrt{6} - 4$ or $k > \\sqrt{6} - 3$",
+        "$k < -\\sqrt{6} - 3$ or $k > \\sqrt{6} - 3$",
         "$-2 < k < \\frac{1}{2}$",
         "$k < -2$ or $k > \\frac{1}{2}$",
         "$0 < k < 4$",
@@ -150,9 +150,9 @@ Find the $1^{st}$ term of $S$.`,
       id: 6,
       text: `The circles with equations
 
-$$(x + 4)^2 + (y + 1)^2 = 64$$ and
+$$(x + 4)^2 + (y + 1)^2 = 64 \\text { and }$$ 
 
-$$(x - 8)^2 + (y - 4)^2 = r^2 \\text{  where  } r > 0$$
+$$(x - 8)^2 + (y - 4)^2 = r^2 \\quad  \\text{  where  }  r > 0$$
 
 have exactly one point in common.
 
@@ -250,7 +250,7 @@ $$(\\log_3 x)(\\log_3 y) = -3$$`,
       id: 12,
       text: `It is given that
 
-$$\\frac{dV}{dt} = \\frac{24\\pi(t - 1)}{(1 + \\sqrt{t})}$$ for $t \\geq 1$
+$$\\frac{dV}{dt} = \\frac{24\\pi(t - 1)}{(1 + \\sqrt{t})}$$ \\text {for} $t \\geq 1$
 
 and $V = 7$ when $t = 1$.
 
@@ -268,7 +268,7 @@ Find the value of $V$ when $t = 9$.`,
       id: 13,
       text: `Find the maximum value of
 
-$$4^{\\sin x} - 4 \\cdot 2^{2\\sin x} + \\frac{17}{4}$$
+$$4^{\\sin x} - 4 \\times 2^{2\\sin x} + \\frac{17}{4}$$
 
 for real $x$.`,
       options: [
@@ -425,6 +425,9 @@ intersect at three distinct points, of which exactly two have positive $x$-coord
         setTimeRemaining((prev) => prev - 1);
       }, 1000);
       return () => clearInterval(timer);
+    } else if (currentView === "exam" && timeRemaining === 0) {
+      // Auto-end exam when time runs out
+      confirmEndExam();
     }
   }, [currentView, timeRemaining]);
 
@@ -637,8 +640,8 @@ intersect at three distinct points, of which exactly two have positive $x$-coord
         {/* Header */}
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+              Master TMUA
             </h1>
           </div>
         </div>
@@ -757,11 +760,11 @@ intersect at three distinct points, of which exactly two have positive $x$-coord
         {/* Header */}
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+              Master TMUA
             </h1>
             <div className="flex items-center space-x-4 pr-4">
-              <div className="text-yellow-300 text-lg font-mono">
+              <div className="text-white text-base font-mono">
                 <i className="fas fa-clock mr-2"></i>
                 Time Remaining: {formatInstructionTime(instructionTime)}
               </div>
@@ -951,12 +954,12 @@ intersect at three distinct points, of which exactly two have positive $x$-coord
       <div className={`${getHeaderTheme()} p-2`}>
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <h1 className="text-base font-normal pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+              Master TMUA
             </h1>
           </div>
           <div className="flex flex-col items-end space-y-1 pr-4">
-            <div className="text-yellow-300 text-lg font-mono">
+            <div className="text-white text-base font-mono">
               <i className="fas fa-clock mr-2"></i>
               Time Remaining: {formatTime(timeRemaining)}
             </div>
@@ -1007,30 +1010,6 @@ intersect at three distinct points, of which exactly two have positive $x$-coord
                     onClick={() => applyColorScheme("default")}
                   >
                     Color Scheme
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("light-yellow")}
-                  >
-                    Black on Light Yellow
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("salmon")}
-                  >
-                    Black on Salmon
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("high-contrast")}
-                  >
-                    Black on White
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("yellow")}
-                  >
-                    Black on Yellow
                   </button>
                 </div>
               )}
@@ -1243,6 +1222,7 @@ intersect at three distinct points, of which exactly two have positive $x$-coord
                 className="h-6 w-auto"
               />
             </button>
+            {currentQuestion < questions.length - 1 && (
             <button
               className="text-sm text-white hover:text-gray-200 bg-transparent border-none"
               onClick={handleNext}
@@ -1254,6 +1234,7 @@ intersect at three distinct points, of which exactly two have positive $x$-coord
                 className="h-6 w-auto"
               />
             </button>
+            )}
           </div>
         </div>
       </div>

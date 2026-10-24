@@ -65,7 +65,16 @@ export default function LandingPage() {
     <div className="min-h-screen bg-gradient-to-br from-[#150025] to-[#280040] text-white">
       {/* Navigation */}
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="text-xl font-bold">Master TMUA</div>
+       <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/logo.png"
+            alt="Master TMUA Logo"
+            width={45}
+            height={45}
+            priority
+          />
+          <span className="text-xl font-bold">MasterTMUA</span>
+        </Link>
         <div className="flex gap-4">
           <Link href="/login">
             <button className="px-4 py-2 rounded-full border border-[#5c4d7d] hover:bg-[#5c4d7d]/20 transition-all duration-300">
@@ -86,8 +95,8 @@ export default function LandingPage() {
           Master the exam interface<br />before test day.
         </h1>
         <p className="text-xl mb-10 text-gray-300 max-w-3xl">
-          Train in a real exam environment that looks and feels exactly like the
-          Pearson VUE system, with smart analytics to track progress and boost performance
+          Train in a real exam environment identical to the
+          Pearson VUE system, with smart analytics to track performance in our perfect progress-tracking environment
         </p>
         <div className="flex flex-wrap gap-6 justify-center mb-16">
            <Link href="/specimen-p1" className="inline-block">
@@ -96,15 +105,58 @@ export default function LandingPage() {
               Try Demo
             </button>
           </Link>
-          <button
-            onClick={() => scrollToSection(pricingRef)}
-            className="px-8 py-4 bg-transparent border-2 border-[#5c4d7d] rounded-full font-semibold hover:bg-[#5c4d7d]/20 transition-all duration-300 shadow-[0_0_15px_rgba(92,77,125,0.3)] hover:shadow-[0_0_20px_rgba(92,77,125,0.5)]"
-          >
-            Join Today
-          </button>
+          <Link href="/sign-up" className="inline-block">
+            <button
+              className="px-8 py-4 bg-transparent border-2 border-[#5c4d7d] rounded-full font-semibold hover:bg-[#5c4d7d]/20 transition-all duration-300 shadow-[0_0_15px_rgba(92,77,125,0.3)] hover:shadow-[0_0_20px_rgba(92,77,125,0.5)]"
+            >
+              Join Today
+            </button>
+          </Link>
         </div>
-        <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(142,68,173,0.5)] border border-[#5c4d7d]">
-          <img src="/dashboard-sample.png" alt="TMUA Dashboard" className="w-full h-auto" />
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+          Explore your personalised dashboard
+        </h2>
+        <div className="w-full max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(142,68,173,0.5)] border border-[#5c4d7d]">
+          <video
+            src="/dashboard-demo.mp4"
+            poster="/dashboard-video-poster.png"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-label="TMUA dashboard demo video"
+            className="w-full h-auto"
+          >
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div className="w-full max-w-7xl mx-auto mt-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">
+            Our Identical Exam Interface
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <div className="bg-[#1a0030]/60 rounded-2xl border border-[#5c4d7d] shadow-[0_0_24px_rgba(92,77,125,0.25)] overflow-hidden">
+              <h3 className="text-xl font-bold text-white text-center py-4">
+                Pearson
+              </h3>
+              <img
+                src="/pearson.png"
+                alt="Pearson exam interface"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="bg-[#1a0030]/60 rounded-2xl border border-[#5c4d7d] shadow-[0_0_24px_rgba(92,77,125,0.25)] overflow-hidden">
+              <h3 className="text-xl font-bold text-white text-center py-4">
+                MasterTMUA
+              </h3>
+              <img
+                src="/exam.png"
+                alt="MasterTMUA exam interface"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 {/* Exam Interface Section Replacement */}
@@ -137,7 +189,7 @@ export default function LandingPage() {
       <FaRegClock className="text-purple-400 text-5xl" />
       <h3 className="text-2xl font-bold">Train in Real Time</h3>
       <p className="text-gray-300">
-        Experience real exam timing with built-in countdowns and navigation tools.
+        Experience real exam timing with built-in countdowns, automatic marking and navigation tools.
       </p>
     </motion.div>
 
@@ -172,19 +224,16 @@ export default function LandingPage() {
             </div>
             <ul className="flex-1 space-y-3 mb-6">
               <li className="flex items-center text-gray-300">
-                <FaCheck className="text-green-400 mr-3" /> Access to sample paper
+                <FaCheck className="text-green-400 mr-3" /> Access to sample papers
               </li>
               <li className="flex items-center text-gray-300">
                 <FaCheck className="text-green-400 mr-3" /> Personalised dashboard view
               </li>
               <li className="flex items-center text-gray-400">
-                <FaTimes className="text-red-400 mr-3" /> No in depth analytics
+                <FaTimes className="text-red-400 mr-3" /> Yearly papers locked
               </li>
               <li className="flex items-center text-gray-400">
-                <FaTimes className="text-red-400 mr-3" /> Single paper access
-              </li>
-              <li className="flex items-center text-gray-400">
-                <FaTimes className="text-red-400 mr-3" /> Less practice
+                <FaTimes className="text-red-400 mr-3" /> Limited practice
               </li>
             </ul>
             <Link href="/sign-up">
@@ -198,24 +247,27 @@ export default function LandingPage() {
           <div className="bg-[#1a0030] rounded-2xl shadow-lg border-2 border-purple-500 p-8 flex flex-col shadow-[0_0_25px_rgba(142,68,173,0.7)] hover:shadow-[0_0_35px_rgba(142,68,173,1)] transition-all duration-300">
             <div className="text-center mb-6">
               <h3 className="text-3xl font-bold">Master TMUA Premium</h3>
-              <span className="text-gray-400 line-through text-xl">£24.99</span>
-              <span className="text-3xl font-bold ml-3 text-purple-400">£9.99</span>
+              <span className="text-gray-400 line-through text-xl">£29.99</span>
+              <span className="text-3xl font-bold ml-3 text-purple-400">£19.99</span>
             </div>
             <ul className="flex-1 space-y-3 mb-6">
               <li className="flex items-center text-gray-300">
-                <FaCheck className="text-green-400 mr-3" /> 1:1 replica of Pearson exam interface
+                <FaCheck className="text-green-400 mr-3" /> 1:1 identical replica of Pearson exam interface
               </li>
               <li className="flex items-center text-gray-300">
-                <FaCheck className="text-green-400 mr-3" /> In depth analytics for personal growth
+                <FaCheck className="text-green-400 mr-3" /> Instant automatic marking
               </li>
               <li className="flex items-center text-gray-300">
-                <FaCheck className="text-green-400 mr-3" /> All your papers in one place
+                <FaCheck className="text-green-400 mr-3" /> Personalised mistake papers
               </li>
               <li className="flex items-center text-gray-300">
                 <FaCheck className="text-green-400 mr-3" /> Very high value for money, lowest price on the market
               </li>
               <li className="flex items-center text-gray-300">
-                <FaCheck className="text-green-400 mr-3" /> Review your progress over time
+                <FaCheck className="text-green-400 mr-3" /> Track your progress over time
+              </li>
+               <li className="flex items-center text-gray-300">
+                <FaCheck className="text-green-400 mr-3" /> In depth analytics 
               </li>
             </ul>
               <button 
@@ -244,7 +296,7 @@ export default function LandingPage() {
             <div>
               <h3 className="text-xl font-semibold mb-4">About Our Platform</h3>
               <p className="text-gray-400">
-                We provide the most authentic TMUA practice experience with an interface that exactly matches the Pearson VUE system used in the real exam.
+                We provide the most authentic TMUA practice experience with an interface that exactly matches the Pearson VUE system used in the real exam, along with an aesthetic, personalised dashboard with every analytic you would need.
               </p>
             </div>
 
@@ -253,7 +305,7 @@ export default function LandingPage() {
               <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
               <nav className="flex flex-col space-y-2">
                 <Link href="/" className="text-gray-400 hover:text-white transition-colors">Home</Link>
-                <Link href="/practice-p1" className="text-gray-400 hover:text-white transition-colors">Demo</Link>
+                <Link href="/specimen-p1" className="text-gray-400 hover:text-white transition-colors">Demo</Link>
                 <button onClick={() => scrollToSection(pricingRef)} className="text-gray-400 hover:text-white transition-colors text-left">Pricing</button>
                 <Link href="mailto:mastertmua@outlook.com" className="text-gray-400 hover:text-white transition-colors">Contact</Link>
               </nav>
@@ -263,7 +315,7 @@ export default function LandingPage() {
             <div className="flex flex-col items-end">
               <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
               <a href="mailto:mastertmua@outlook.com" className="text-gray-400 hover:text-white transition-colors">
-                acetmua@outlook.com
+                mastertmua@outlook.com
               </a>
             </div>
           </div>

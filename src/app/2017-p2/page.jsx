@@ -6,6 +6,7 @@ import { useUser } from '@clerk/nextjs'
 import { saveExamResult, calculateScore } from '../../lib/supabase'
 import { InlineMath, BlockMath } from "react-katex";
 import "katex/dist/katex.min.css";
+import PaymentGate from "../../components/PaymentGate";
 
 // ✅ Define this once
 function renderWithLatex(str = "") {
@@ -66,7 +67,7 @@ function MainComponent() {
       options: [
         "$$\\frac{9}{4}x^{-\\frac{1}{2}} + \\frac{3}{2}x^{-\\frac{3}{2}} - \\frac{3}{4}x^{-\\frac{5}{2}}$$",
         "$$\\frac{9}{4}x^{-\\frac{1}{2}} - \\frac{3}{2}x^{-\\frac{3}{2}} + \\frac{3}{4}x^{-\\frac{5}{2}}$$",
-        "$$-\\frac{9}{4}x^{-\\frac{1}{2}} - \\frac{3}{2}x^{-\\frac{3}{2}} - \\frac{3}{4}x^{-\\frac{5}{2}}$$",
+        "$$\\frac{9}{4}x^{-\\frac{1}{2}} - \\frac{3}{2}x^{-\\frac{3}{2}} - \\frac{3}{4}x^{-\\frac{5}{2}}$$",
         "$$-\\frac{9}{4}x^{-\\frac{1}{2}} + \\frac{3}{2}x^{-\\frac{3}{2}} + \\frac{3}{4}x^{-\\frac{5}{2}}$$",
         "$$-\\frac{9}{4}x^{-\\frac{1}{2}} + \\frac{3}{2}x^{-\\frac{3}{2}} - \\frac{3}{4}x^{-\\frac{5}{2}}$$",
         "$$-\\frac{9}{4}x^{-\\frac{1}{2}} - \\frac{3}{2}x^{-\\frac{3}{2}} - \\frac{3}{4}x^{-\\frac{5}{2}}$$"
@@ -99,7 +100,7 @@ What is the sum to infinity of this geometric progression?`,
         "$4(2\\sqrt{3} - 3)$",
         "$\\frac{16(8\\sqrt{3} + 9)}{37}$",
         "$\\frac{4(2\\sqrt{3} - 3)}{7}$",
-        "$\\frac{4(2\\sqrt{3} + 3)}{3}$",
+        "$\\frac{4(2\\sqrt{3} + 3)}{7}$",
         "$2(2 + \\sqrt{3})$",
         "$4(2\\sqrt{3} + 3)$"
       ],
@@ -112,7 +113,7 @@ Given that $\\tan x = \\sqrt{3}$, find the possible values of $\\sin 2x$.
 
 A student gave the following answer:
 
-$\\tan x = \\sqrt{3} \\Rightarrow x = 60°$ and $2x = 120°$.
+$\\tan x = \\sqrt{3}$ so $ x = 60°$ and $2x = 120°$.
 
 Therefore $\\sin 2x = \\frac{\\sqrt{3}}{2}$.
 
@@ -129,9 +130,9 @@ Which one of the following statements is correct?`,
       id: 5,
       text: `Consider the following three statements:
 
-1. $10p^2 + 1$ and $10p^2 - 1$ are both prime when p is an odd prime.
-2. Every prime greater than 5 is of the form $6n + 1$ for some integer $n$.
-3. No multiple of 7 greater than 7 is prime.
+  $\\quad$ 1 $\\quad$ $10p^2 + 1$ and $10p^2 - 1$ are both prime when p is an odd prime.
+  $\\quad$ 2 $\\quad$ Every prime greater than 5 is of the form $6n + 1$ for some integer $n$.
+  $\\quad$ 3 $\\quad$ No multiple of 7 greater than 7 is prime.
 
 The result $91 = 7 \\times 13$ can be used to provide a counterexample to which of the above statements?`,
       options: [
@@ -168,15 +169,15 @@ What is the value of $u_{1000}$?`,
       id: 7,
       text: `The graphs of two functions are shown here:
 
-• $y = a^x$ is shown with a solid line, where $x$ is a positive real number
-• $y = f(x)$ is shown with a dashed line
+   • $y = a^x$ is shown with a solid line, where $x$ is a positive real number
+   • $y = f(x)$ is shown with a dashed line
 
 Which of the following statements (1, 2, 3, 4) could be true?
 
-1. $f(x) = b^x$ for some $k > a$
-2. $f(x) = b^x$ for some $k < a$
-3. $f(x) = a^{kx}$ for some $k > 1$
-4. $f(x) = a^{kx}$ for some $k < 1$`,
+  1 $\\quad$ $f(x) = b^x$ for some $b > a$
+  2 $\\quad$ $f(x) = b^x$ for some $b < a$
+  3 $\\quad$ $f(x) = a^{kx}$ for some $k > 1$
+  4 $\\quad$ $f(x) = a^{kx}$ for some $k < 1$`,
       options: [
         "1 only",
         "2 only",
@@ -204,24 +205,24 @@ Which of the following statements (1, 2, 3, 4) could be true?
       id: 9,
       text: `Consider the following attempt to prove this true theorem:
 
-Theorem: $a^3 + b^3 = c^3$ has no solutions with $a$, $b$ and $c$ positive integers.
+  Theorem: $a^3 + b^3 = c^3$ has no solutions with $a$, $b$ and $c$ positive integers.
 
-Attempted proof:
-Suppose that there are positive integers $a$, $b$ and $c$ such that $a^3 + b^3 = c^3$.
+  Attempted proof:
+  Suppose that there are positive integers $a$, $b$ and $c$ such that $a^3 + b^3 = c^3$.
 
-$ \\quad I \\quad $ \t\tWe have $a^3 = c^3 - b^3$.
+  $ \\quad I \\quad $ \t\tWe have $a^3 = c^3 - b^3$.
 
-$ \\quad II \\quad $\t\tHence $a^3 = (c - b)(c^2 + cb + b^2)$.
+  $ \\quad II \\quad $\t\tHence $a^3 = (c - b)(c^2 + cb + b^2)$.
 
-$ \\quad III \\quad $\t\tIt follows that $a = c - b$ and $a^2 = c^2 + cb + b^2$, since $a \\leqslant a^2$ and $c - b \\leqslant c^2 + cb + b^2$.
+  $ \\quad III \\quad $\t\tIt follows that $a = c - b$ and $a^2 = c^2 + cb + b^2$, since $a \\leqslant a^2$ and $c - b \\leqslant c^2 + cb + b^2$.
 
-$ \\quad IV \\quad $\t\tEliminating $a$, we have $(c - b)^2 = c^2 + cb + b^2$.
+  $ \\quad IV \\quad $\t\tEliminating $a$, we have $(c - b)^2 = c^2 + cb + b^2$.
 
-$ \\quad V \\quad $\t\tMultiplying out, we have $c^2 - 2cb + b^2 = c^2 + cb + b^2$.
+  $ \\quad V \\quad $\t\tMultiplying out, we have $c^2 - 2cb + b^2 = c^2 + cb + b^2$.
 
-$ \\quad VI \\quad $\t\tHence $3cb = 0$ so one of $b$ and $c$ is zero.
+  $ \\quad VI \\quad $\t\tHence $3cb = 0$ so one of $b$ and $c$ is zero.
 
-But this is a contradiction to the original assumption that all of $a$, $b$ and $c$ are positive. It follows that the equation has no solutions.
+  But this is a contradiction to the original assumption that all of $a$, $b$ and $c$ are positive. It follows that the equation has no solutions.
 
 Comment on this proof by choosing one of the following options:`,
       options: [
@@ -270,7 +271,9 @@ Which of the following is an expression for the area enclosed by the curve $y = 
     },
     {
       id: 12,
-      text: `Which one of the following is **not** true?`,
+      text: `The diagram shows the graphs of $y = sin2x$ and $y = cos2x$ for $-\\frac{\\pi}{2} < x < \\frac{\\pi}{2}$
+      
+      Which one of the following is not true?`,
       options: [
         "$\\cos 2x < \\sin 2x < \\tan x$ for some real number $x$ with $-\\frac{\\pi}{2} < x < \\frac{\\pi}{2}$",
         "$\\cos 2x < \\tan x < \\sin 2x$ for some real number $x$ with $-\\frac{\\pi}{2} < x < \\frac{\\pi}{2}$",
@@ -282,16 +285,14 @@ Which of the following is an expression for the area enclosed by the curve $y = 
     },
     {
       id: 13,
-      text: `The positive real numbers $a \\times 10^{-3}$, $b \\times 10^{-2}$ and $c \\times 10^{-1}$ are each in standard form, and
-
-$(a \\times 10^{-3}) + (b \\times 10^{-2}) = (c \\times 10^{-1})$.
+      text: `The positive real numbers $a \\times 10^{-3}$, $b \\times 10^{-2}$ and $c \\times 10^{-1}$ are each in standard form, and $$(a \\times 10^{-3}) + (b \\times 10^{-2}) = (c \\times 10^{-1})$$.
 
 Which of the following statements (I, II, III, IV) must be true?
 
-I. $a > 9$
-II. $b > 9$  
-III. $a < c$
-IV. $b < c$`,
+  $\\quad$ I $\\quad$ $a > 9$
+  $\\quad$ II $\\quad$ $b > 9$  
+  $\\quad$ III $\\quad$ $a < c$
+  $\\quad$ IV $\\quad$ $b < c$`,
       options: [
         "I only",
         "II only",
@@ -343,7 +344,7 @@ What is the value of $f(1000) - g(1000)$?`,
       id: 16,
       text: `Consider the following statement:
 
-($\\star$) If $f(x)$ is an integer for every integer $x$, then $f'(x)$ is an integer for every integer $x$.
+  ($\\star$) If $f(x)$ is an integer for every integer $x$, then $f'(x)$ is an integer for every integer $x$.
 
 Which one of the following is a counterexample to ($\\star$)?`,
       options: [
@@ -355,7 +356,8 @@ Which one of the following is a counterexample to ($\\star$)?`,
     },
     {
       id: 17,
-      text: `A set $S$ of whole numbers is called stapled if and only if for every whole number $a$ which is in $S$ there exists a prime factor of $a$ which does not have any other number in $S$.
+      text: `A set $S$ of whole numbers is called stapled if and only if for every whole number $a$ which is in $S$ there exists a prime factor of $a$ which divides at least one other number
+in $S$.
 
 Let $T$ be a set of whole numbers. Which of the following is true if and only if $T$ is not stapled?`,
       options: [
@@ -374,7 +376,7 @@ Let $T$ be a set of whole numbers. Which of the following is true if and only if
       id: 18,
       text: `Consider the following problem:
 
-Solve the inequality $\\left(\\frac{1}{4}\\right)^n < \\left(\\frac{1}{32}\\right)^{10}$, where $n$ is a positive integer.
+  Solve the inequality $\\left(\\frac{1}{4}\\right)^n < \\left(\\frac{1}{32}\\right)^{10}$, where $n$ is a positive integer.
 
 A student produces the following argument:
 
@@ -402,7 +404,7 @@ Which step (if any) in the argument is invalid?`,
     },
     {
       id: 19,
-      text: `Which one of the following is a sufficient condition for the equation $x^2 - 3x^2 + a = 0$, where $a$ is a constant, to have exactly one real root?`,
+      text: `Which one of the following is a sufficient condition for the equation $x^3 - 3x^2 + a = 0$, where $a$ is a constant, to have exactly one real root?`,
       options: [
         "$a > 0$",
         "$a \\leq 0$",
@@ -451,6 +453,9 @@ Using the best strategy, how many further attempts must I make in order to guara
         setTimeRemaining((prev) => prev - 1);
       }, 1000);
       return () => clearInterval(timer);
+    } else if (currentView === "exam" && timeRemaining === 0) {
+      // Auto-end exam when time runs out
+      confirmEndExam();
     }
   }, [currentView, timeRemaining]);
 
@@ -663,8 +668,8 @@ Using the best strategy, how many further attempts must I make in order to guara
         {/* Header */}
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+              Master TMUA
             </h1>
           </div>
         </div>
@@ -783,11 +788,11 @@ Using the best strategy, how many further attempts must I make in order to guara
         {/* Header */}
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+             Master TMUA
             </h1>
             <div className="flex items-center space-x-4 pr-4">
-              <div className="text-yellow-300 text-lg font-mono">
+              <div className="text-white text-base font-mono">
                 <i className="fas fa-clock mr-2"></i>
                 Time Remaining: {formatInstructionTime(instructionTime)}
               </div>
@@ -977,12 +982,12 @@ Using the best strategy, how many further attempts must I make in order to guara
       <div className={`${getHeaderTheme()} p-2`}>
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <h1 className="text-base font-normal pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+              Master TMUA
             </h1>
           </div>
           <div className="flex flex-col items-end space-y-1 pr-4">
-            <div className="text-yellow-300 text-lg font-mono">
+            <div className="text-white text-base font-mono">
               <i className="fas fa-clock mr-2"></i>
               Time Remaining: {formatTime(timeRemaining)}
             </div>
@@ -1033,30 +1038,6 @@ Using the best strategy, how many further attempts must I make in order to guara
                     onClick={() => applyColorScheme("default")}
                   >
                     Color Scheme
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("light-yellow")}
-                  >
-                    Black on Light Yellow
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("salmon")}
-                  >
-                    Black on Salmon
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("high-contrast")}
-                  >
-                    Black on White
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("yellow")}
-                  >
-                    Black on Yellow
                   </button>
                 </div>
               )}
@@ -1269,6 +1250,7 @@ Using the best strategy, how many further attempts must I make in order to guara
                 className="h-6 w-auto"
               />
             </button>
+            {currentQuestion < questions.length - 1 && (
             <button
               className="text-sm text-white hover:text-gray-200 bg-transparent border-none"
               onClick={handleNext}
@@ -1280,6 +1262,7 @@ Using the best strategy, how many further attempts must I make in order to guara
                 className="h-6 w-auto"
               />
             </button>
+            )}
           </div>
         </div>
       </div>
@@ -1288,5 +1271,5 @@ Using the best strategy, how many further attempts must I make in order to guara
 }
 
 export default function Page() {
-  return <MainComponent />;
+  return <PaymentGate paperName="2017 Paper 2"><MainComponent /></PaymentGate>;
 }

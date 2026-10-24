@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Master TMUA',
-  description: 'The best practice for the Test of Mathematics for University Admission. How to get a 9.0 on the TMUA, How to get full marks on the TMUA, TMUA preparation site, TMUA prep, TMUA Exam simulator, Best TMUA website, TMUA Resources, How to prepare for the TMUA, TMUA Guidance, Test for University Admissions, Maths Admissions Test, MAT, TMUA, ',
+  description: 'The most authentic TMUA Preparation website, with an identical exam interface to Pearson VUE. Solve official questions and enjoy customised mistake-paper generation, automatic marking, score prediction and more. For the Test of Mathematics for University Admission, and how to get a 9.0 and full marks in the TMUA, the best preparation site.',
 };
 
 export default function RootLayout({ children }) {

@@ -6,6 +6,7 @@ import { useUser } from '@clerk/nextjs'
 import { saveExamResult, calculateScore } from '../../lib/supabase'
 import { InlineMath, BlockMath } from "react-katex";
 import "katex/dist/katex.min.css";
+import PaymentGate from "../../components/PaymentGate";
 
 // ✅ Define this once
 function renderWithLatex(str = "") {
@@ -98,7 +99,7 @@ $$\\int_n^{n+1} f(x) dx = n + 1$$
 
 Evaluate
 
-$\\int_0^3 f(x) dx + \\int_1^3 f(x) dx + \\int_2^3 f(x) dx + \\int_4^3 f(x) dx + \\int_5^3 f(x) dx$`,
+$$\\int_0^3 f(x) dx + \\int_1^3 f(x) dx + \\int_2^3 f(x) dx + \\int_4^3 f(x) dx + \\int_5^3 f(x) dx$$`,
       options: [
         "$-2$",
         "$0$",
@@ -112,7 +113,7 @@ $\\int_0^3 f(x) dx + \\int_1^3 f(x) dx + \\int_2^3 f(x) dx + \\int_4^3 f(x) dx +
       id: 4,
       text: `Evaluate
 
-$$\\sum_{n=0}^{\\infty} \\frac{\\sin\\left(n\\pi + \\frac{\\pi}{3}\\right)}{2^\\pi}$$`,
+$$\\sum_{n=0}^{\\infty} \\frac{\\sin\\left(n\\pi + \\frac{\\pi}{3}\\right)}{2^n}$$`,
       options: [
         "$0$",
         "$\\frac{1}{3}$",
@@ -176,7 +177,7 @@ Find the largest value of $x$ such that $P(x)$ and $Q(x)$ are in the ratio $4 : 
     },
     {
       id: 8,
-      text: `A triangle $XYZ$ is called $fun$ if it has the following properties:
+      text: `A triangle $XYZ$ is called fun if it has the following properties:
 
 $\\quad \\quad $ angle $YXZ = 30°$
 
@@ -439,6 +440,9 @@ Find the difference between the maximum and minimum values of $(f(x))^2 - f(x)$`
         setTimeRemaining((prev) => prev - 1);
       }, 1000);
       return () => clearInterval(timer);
+    } else if (currentView === "exam" && timeRemaining === 0) {
+      // Auto-end exam when time runs out
+      confirmEndExam();
     }
   }, [currentView, timeRemaining]);
 
@@ -651,8 +655,8 @@ Find the difference between the maximum and minimum values of $(f(x))^2 - f(x)$`
         {/* Header */}
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+              Master TMUA
             </h1>
           </div>
         </div>
@@ -771,11 +775,11 @@ Find the difference between the maximum and minimum values of $(f(x))^2 - f(x)$`
         {/* Header */}
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+              Master TMUA
             </h1>
             <div className="flex items-center space-x-4 pr-4">
-              <div className="text-yellow-300 text-lg font-mono">
+              <div className="text-white text-base font-mono">
                 <i className="fas fa-clock mr-2"></i>
                 Time Remaining: {formatInstructionTime(instructionTime)}
               </div>
@@ -965,12 +969,12 @@ Find the difference between the maximum and minimum values of $(f(x))^2 - f(x)$`
       <div className={`${getHeaderTheme()} p-2`}>
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <h1 className="text-base font-normal pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+              Master TMUA
             </h1>
           </div>
           <div className="flex flex-col items-end space-y-1 pr-4">
-            <div className="text-yellow-300 text-lg font-mono">
+            <div className="text-white text-base font-mono">
               <i className="fas fa-clock mr-2"></i>
               Time Remaining: {formatTime(timeRemaining)}
             </div>
@@ -1021,30 +1025,6 @@ Find the difference between the maximum and minimum values of $(f(x))^2 - f(x)$`
                     onClick={() => applyColorScheme("default")}
                   >
                     Color Scheme
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("light-yellow")}
-                  >
-                    Black on Light Yellow
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("salmon")}
-                  >
-                    Black on Salmon
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("high-contrast")}
-                  >
-                    Black on White
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("yellow")}
-                  >
-                    Black on Yellow
                   </button>
                 </div>
               )}
@@ -1257,6 +1237,7 @@ Find the difference between the maximum and minimum values of $(f(x))^2 - f(x)$`
                 className="h-6 w-auto"
               />
             </button>
+            {currentQuestion < questions.length - 1 && (
             <button
               className="text-sm text-white hover:text-gray-200 bg-transparent border-none"
               onClick={handleNext}
@@ -1268,6 +1249,7 @@ Find the difference between the maximum and minimum values of $(f(x))^2 - f(x)$`
                 className="h-6 w-auto"
               />
             </button>
+            )}
           </div>
         </div>
       </div>
@@ -1281,5 +1263,5 @@ const handleReturnToDashboard = () => {
 };
 
 export default function Page() {
-  return <MainComponent />;
+  return <PaymentGate paperName="2023 Paper 1"><MainComponent /></PaymentGate>;
 }

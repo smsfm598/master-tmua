@@ -6,6 +6,7 @@ import { useUser } from '@clerk/nextjs'
 import { saveExamResult, calculateScore } from '../../lib/supabase'
 import { InlineMath, BlockMath } from "react-katex";
 import "katex/dist/katex.min.css";
+import PaymentGate from "../../components/PaymentGate";
 
 // ✅ Define this once
 function renderWithLatex(str = "") {
@@ -33,7 +34,7 @@ function MainComponent() {
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const [selectedAnswers, setSelectedAnswers] = React.useState({});
   const [flaggedQuestions, setFlaggedQuestions] = React.useState(new Set());
-  const [timeRemaining, setTimeRemaining] = React.useState(90 * 60); // 90 minutes in seconds
+  const [timeRemaining, setTimeRemaining] = React.useState(75 * 60); // 90 minutes in seconds
   const [instructionTime, setInstructionTime] = React.useState(60); // 60 seconds for instructions
   const [colorScheme, setColorScheme] = React.useState("default");
   const [showNavigator, setShowNavigator] = React.useState(false);
@@ -56,7 +57,7 @@ function MainComponent() {
   const questionsRaw = [
     {
       id: 1,
-      text: "Find the value of $\\int_1^2 (x^2 - \\frac{4}{x^2})^2 dx$",
+      text: `Find the value of $\\int_1^2 (x^2 - \\frac{4}{x^2})^2 dx$`,
       options: [
         "$\\frac{43}{15}$",
         "$3$",
@@ -68,17 +69,19 @@ function MainComponent() {
     },
     {
       id: 2,
-      text: "$$f(x) = \\frac{(x^2 + 5)(2x)}{\\sqrt[4]{x^3}}, \\quad x > 0$$\n\nWhich one of the following is equal to $f'(x)$?",
+      text: `$$f(x) = \\frac{(x^2 + 5)(2x)}{\\sqrt[4]{x^3}}, \\quad x > 0$$
+
+      Which one of the following is equal to $f'(x)$?`,
       options: [
-        "$8x^{\\frac{4}{9}} + \\frac{40}{3}x^{\\frac{1}{4}}$",
+        "$8x^{\\frac{9}{4}} + \\frac{40}{3}x^{\\frac{1}{4}}$",
         "$\\frac{9}{2}x^{\\frac{5}{4}} + \\frac{5}{2}x^{-\\frac{3}{4}}$",
-        "$8x^{\\frac{4}{9}} +  \\frac{40}{3}x^{-\\frac{1}{4}}$",
+        "$8x^{\\frac{9}{4}} +  \\frac{40}{3}x^{-\\frac{1}{4}}$",
         "$\\frac{8}{13}x^{\\frac{13}{4}} +8x^{\\frac{5}{4}} $"
       ],
     },
     {
       id: 3,
-      text: "What is the value in radians, of the largest angle $x$ in the range $0 \\le x \\le 2\\pi$ that satisfies the equation $8 \\sin^2 x + 4 \\cos^2 x = 7$?",
+      text: `What is the value in radians, of the largest angle $x$ in the range $0 \\le x \\le 2\\pi$ that satisfies the equation $8 \\sin^2 x + 4 \\cos^2 x = 7$?`,
       options: [
         "$\\frac{2\\pi}{3}$",
         "$\\frac{5\\pi}{6}$",
@@ -90,7 +93,16 @@ function MainComponent() {
     },
     {
       id: 4,
-      text: "Five sealed urns, labelled P, Q, R, S, and T, each contain the same (non-zero) number of balls. The following statements are attached to the urns.\n\nUrn P: $\\quad$ This urn contains one or four balls.\nUrn Q: $\\quad$This urn contains two or four balls.\nUrn R:$\\quad$ This urn contains more than two balls and fewer than five balls.\nUrn S:$\\quad$ This urn contains one or two balls.\nUrn T: $\\quad$This urn contains fewer than three balls.\n\nExactly one of the urns has a true statement attached to it.\n\nWhich urn is it?",
+      text: `Five sealed urns, labelled P, Q, R, S, and T, each contain the same (non-zero) number of balls. The following statements are attached to the urns.
+      
+      Urn P: $\\quad$ This urn contains one or four balls.
+      Urn Q: $\\quad$This urn contains two or four balls.
+      Urn R:$\\quad$ This urn contains more than two balls and fewer than five balls.
+      Urn S:$\\quad$ This urn contains one or two balls.
+      Urn T: $\\quad$This urn contains fewer than three balls.
+      
+      Exactly one of the urns has a true statement attached to it.
+      Which urn is it?`,
       options: [
         "Urn P",
         "Urn Q",
@@ -101,7 +113,10 @@ function MainComponent() {
     },
     {
       id: 5,
-      text: "Consider the statement:\n\n(*) A whole number $n$ is prime if $n$ is 1 less than or 5 less than a multiple of 6.\n\nHow many counterexamples (*) are there in the range $0 < n < 50$?",
+      text: `Consider the statement:
+      $\\quad$ (*) A whole number $n$ is prime if $n$ is 1 less than or 5 less than a multiple of 6.
+      
+      How many counterexamples (*) are there in the range $0 < n < 50$?`,
       options: [
         "2",
         "3",
@@ -112,7 +127,10 @@ function MainComponent() {
     },
     {
       id: 6,
-      text: "The sequence of functions $f_1(x), f_2(x), f_3(x), \\ldots$ is defined as follows:\n\n$$f_1(x) = x^{10}$$\n\n$$f_{n+1}(x) = xf_n'(x) \\quad \\text{ for } n \\ge 1$$\n\nwhere $f_n'(x) = \\frac{df_n(x)}{dx}$\n\nFind the value of $$\\sum_{n=1}^{20} f_n(x)$$",
+      text: `The sequence of functions $f_1(x), f_2(x), f_3(x), \\ldots$ is defined as follows:
+      $$f_1(x) = x^{10}$$
+      $$f_{n+1}(x) = xf_n'(x) \\quad \\text{ for } n \\ge 1$$
+      where $f_n'(x) = \\frac{df_n(x)}{dx}$\n\nFind the value of $$\\sum_{n=1}^{20} f_n(x)$$`,
       options: [
         "$\\frac{x^{10}(x^{20} - 1)}{x - 1}$",
         "$\\frac{x^{10}(x^{21} - 1)}{x - 1}$",
@@ -126,7 +144,22 @@ function MainComponent() {
     },
     {
       id: 7,
-      text: "The four real numbers $a, b, c$ and $d$ are all greater than 1.\n\nSuppose that they satisfy the equation $\\log_a d = (\\log_a b)^2$.\n\nUse some of the lines given to construct a proof that, in this case, it follows that\n\n$$(*) \\log_b d = (\\log_a b)(\\log_a c)$$\n\n(1) Let $x = \\log_a b$ and $y = \\log_a c$\n\n(2) $d = (c^x)^2$\n(3) $d = c^{(x^2)}$\n(4) $d = b^{xy}$\n\n(5) $d = (a^y)^{(x^2)}$\n(6) $d = ((a^y)^x)^2$\n(7) $d = (a^{x})^{xy}$\n\n(8) $d = a^{(y^{2x})}$\n(9) $d = a^{(x^2y)}$",
+      text: `The four real numbers $a, b, c$ and $d$ are all greater than 1.
+      Suppose that they satisfy the equation $\\log_a d = (\\log_a b)^2$.
+      Use some of the lines given to construct a proof that, in this case, it follows that
+      $$(*) \\log_b d = (\\log_a b)(\\log_a c)$$
+      (1) Let $x = \\log_a b$ and $y = \\log_a c$\n
+
+      (2) $d = (c^x)^2$
+      (3) $d = c^{(x^2)}$
+      (4) $d = b^{xy}$\n
+      
+      (5) $d = (a^y)^{(x^2)}$
+      (6) $d = ((a^y)^x)^2$
+      (7) $d = (a^{x})^{xy}$\n
+
+      (8) $d = a^{(y^{2x})}$
+      (9) $d = a^{(x^2y)}$`,
       options: [
         "(1). Then (2), so (6), so (8), so (7), and therefore (4), hence (*) as required.",
         "(1). Then (2), so (7), so (8), so (6), and therefore (4), hence (*) as required.",
@@ -140,7 +173,13 @@ function MainComponent() {
     },
     {
       id: 8,
-      text: "A region is defined by the inequalities $x + y > 6$ and $x - y > -4$\n\nConsider the three statements:\n\n$\\quad$ 1$\\quad$ $x > 1$\n $\\quad$ 2 $\\quad$ $y > 5$\n $\\quad$ 3$\\quad$ $(x + y)(x - y) > -24$\n\nWhich of the above statements is/are true for every point in the region?",
+      text: `A region is defined by the inequalities $x + y > 6$ and $x - y > -4$
+      Consider the three statements:
+      $\\quad$ 1$\\quad$ $x > 1$
+      $\\quad$ 2 $\\quad$ $y > 5$
+      $\\quad$ 3$\\quad$ $(x + y)(x - y) > -24$
+      
+      Which of the above statements is/are true for every point in the region?`,
       options: [
         "none",
         "1 only",
@@ -154,7 +193,11 @@ function MainComponent() {
     },
     {
       id: 9,
-      text: "Triangles $ABC$ and $XYZ$ have the same area.\n\nWhich of these extra conditions, taken independently, would imply that they are congruent?\n\n$\\quad$(1)$\\quad$ $AB = XY$ and $BC = YZ$\n$\\quad$(2)$\\quad$ $AB = XY$ and $\\angle ABC = \\angle XYZ$\n$\\quad$(3)$\\quad$ $\\angle ABC = \\angle XYZ$ and $\\angle BCA = \\angle YZX$",
+      text: `Triangles $ABC$ and $XYZ$ have the same area.
+      Which of these extra conditions, taken independently, would imply that they are congruent?
+      $\\quad$(1)$\\quad$ $AB = XY$ and $BC = YZ$
+      $\\quad$(2)$\\quad$ $AB = XY$ and $\\angle ABC = \\angle XYZ$
+      $\\quad$(3)$\\quad$ $\\angle ABC = \\angle XYZ$ and $\\angle BCA = \\angle YZX$`,
       options: [
         "A",
         "B",
@@ -168,7 +211,8 @@ function MainComponent() {
     },
     {
       id: 10,
-      text: "In this question $x$ and $y$ are non-zero real numbers.\n\nWhich one of the following is sufficient to conclude that $x < y$?",
+      text: `In this question $x$ and $y$ are non-zero real numbers.
+      Which one of the following is sufficient to conclude that $x < y$?`,
       options: [
         "$x^4 < y^4$",
         "$y^4 < x^4$",
@@ -180,7 +224,14 @@ function MainComponent() {
     },
     {
       id: 11,
-      text: "$f(x)$ is a polynomial with real coefficients.\n\nThe polynomial $f(x) = 0$ has exactly two real roots, $x = -p$ and $x = p$ where $p > 0$.\n\nConsider the following three statements:\n\n $\\quad$ 1  $\\quad$ $f'(x) = 0$ for exactly one value of $x$ between $-p$ and $p$ \n\n$\\quad$2 $\\quad$The area between the curve $y = f(x)$ and the x-axis and the lines $x = -p$ and $x = p$ is given by $2 \\int_0^p |f(x)| dx$\n\n$\\quad$3$\\quad$ The graph of $y = -f(-x)$ intersects the x-axis at the points $x = -p$ and $x = p$ only\n\nWhich of the above statements must be true?",
+      text: `$f(x)$ is a polynomial with real coefficients.
+      The polynomial $f(x) = 0$ has exactly two real roots, $x = -p$ and $x = p$ where $p > 0$.
+      Consider the following three statements:\n
+      $\\quad$ 1  $\\quad$ $f'(x) = 0$ for exactly one value of $x$ between $-p$ and $p$ 
+      $\\quad$2 $\\quad$The area between the curve $y = f(x)$ and the x-axis and the lines $x = -p$ and $x = p$ is given by $2 \\int_0^p f(x)| dx$
+      $\\quad$3$\\quad$ The graph of $y = -f(-x)$ intersects the x-axis at the points $x = -p$ and $x = p$ only\n
+      
+      Which of the above statements must be true?`,
       options: [
         "none",
         "1 only",
@@ -194,7 +245,9 @@ function MainComponent() {
     },
     {
       id: 12,
-      text: "The first term of an arithmetic sequence is $a$ and the common difference is $d$.\n\nSuppose that the first $n$ terms is denoted by $S_n$.\n\nIf $S_8 > 3S_6$, what can be deduced about the sign of $a$ and the sign of $d$?",
+      text: `The first term of an arithmetic sequence is $a$ and the common difference is $d$.
+      Suppose that the first $n$ terms is denoted by $S_n$.
+      If $S_8 > 3S_6$, what can be deduced about the sign of $a$ and the sign of $d$?`,
       options: [
         "both $a$ and $d$ are negative",
         "$a$ is positive, $d$ is negative",
@@ -206,7 +259,18 @@ function MainComponent() {
     },
     {
       id: 13,
-      text: "In this question, $a, b$ and $c$ are positive integers.\n\n The following is an attempted proof of the false statement:\n\n$\\quad$If $a$ divides $b$, then $a$ divides $b$ or $a$ divides $c$.\n\n [$a$ divides $bc$ means '$a$ is a factor of $bc$']\n\nWhich one of the following gives the error in the proof?\n\n$\\quad$1. The statement is equivalent to 'if $a$ does not divide $b$ and $a$ does not divide $c$ then $a$ does not divide $bc$'.\n$\\quad$2. Suppose $a$ does not divide $b$ and $a$ does not divide $c$. Then the remainder when dividing $b$ by $a$ is $r$ where $0 < r < a$, and the remainder when dividing $c$ by $a$ is $s$ where $0 < s < a$.\n$\\quad$3. So $b = ax + r$ and $c = ay + s$ for some integers $x$ and $y$.\n$\\quad$4. Thus $bc = a(axy + xs + yr) + rs$ .\n$\\quad$5. So the remainder when dividing $bc$ by $a$ is $rs$\n$\\quad$6. Since $r > 0$ and $s > 0 $ it follows that $rs > 0$.\n$\\quad$7. Hence $a$ does not divide $bc$.",
+      text: `In this question, $a, b$ and $c$ are positive integers.
+      The following is an attempted proof of the false statement:
+      $\\quad$If $a$ divides $b$, then $a$ divides $b$ or $a$ divides $c$.
+      [$a$ divides $bc$ means '$a$ is a factor of $bc$']
+      Which one of the following gives the error in the proof?
+      $\\quad$1. The statement is equivalent to 'if $a$ does not divide $b$ and $a$ does not divide $c$ then $a$ does not divide $bc$'.
+      $\\quad$2. Suppose $a$ does not divide $b$ and $a$ does not divide $c$. Then the remainder when dividing $b$ by $a$ is $r$ where $0 < r < a$, and the remainder when dividing $c$ by $a$ is $s$ where $0 < s < a$.
+      $\\quad$3. So $b = ax + r$ and $c = ay + s$ for some integers $x$ and $y$.
+      $\\quad$4. Thus $bc = a(axy + xs + yr) + rs$. 
+      $\\quad$5. So the remainder when dividing $bc$ by $a$ is $rs$
+      $\\quad$6. Since $r > 0$ and $s > 0 $ it follows that $rs > 0$.
+      $\\quad$7. Hence $a$ does not divide $bc$.`,
       options: [
         "Line 1",
         "Line 2",
@@ -218,7 +282,9 @@ function MainComponent() {
     },
     {
       id: 14,
-      text: "$f(x) = ax^4 + bx^3 + cx^2 + dx + e$ where $a, b, c, d$ and $e$ are real numbers.\n\nSuppose $f(x) = 1$ has $p$ distinct real solutions, $f(x) = 3$ has $r$ distinct real solutions, and $f(x) = 4$ has $s$ distinct real solutions.\n\nWhich one of the following is not possible?",
+      text: `$f(x) = ax^4 + bx^3 + cx^2 + dx + e$ where $a, b, c, d$ and $e$ are real numbers.
+      Suppose $f(x) = 1$ has $p$ distinct real solutions, $f(x) = 2$ has $q$ distinct real solutions, $f(x) = 3$ has $r$ distinct real solutions, and $f(x) = 4$ has $s$ distinct real solutions.
+      Which one of the following is not possible?`,
       options: [
         "$p = 1, q = 2, r = 4$ and $s = 3$",
         "$p = 1, q = 3, r = 2$ and $s = 4$",
@@ -229,18 +295,24 @@ function MainComponent() {
     },
     {
       id: 15,
-      text: "Consider the quadratic $f(x) = x^2 - 2ax + a$ and the statement:\n\n$\\quad$(*) $f(x) = 0$ has two real roots whose difference is greater than 2 and less than 4.\n\nWhich one of the following statements is true if and only if (*) is true?",
+      text: `Consider the quadratic $f(x) = x^2 - 2px + q$ and the statement:
+      $\\quad$(*) $f(x) = 0$ has two real roots whose difference is greater than 2 and less than 4.
+      Which one of the following statements is true if and only if (*) is true?`,
       options: [
         "$q < p^2 < q + 4$",
         "$\\sqrt{q + 1} < p < \\sqrt{q + 4}$",
-        "$q - 3 < p^2 - 4< q$",
+        "$q - 3 \\leq p^2 - 4 \\leq q$",
         "$q < p^2 - 1 < q + 3$",
         "$q - 2 < p^2 - 3 < q + 2$"
       ],
     },
     {
       id: 16,
-      text: "In the figure, $PQRS$ is a trapezium with $PQ$ parallel to $SR$.\n\nThe diagonals of the trapezium meet at $X$.\n\n$U$ lies on $SP$ and $T$ lies on $RQ$ such that $UT$ is a line segment through $X$ parallel to $PQ$.\n\nThe length of $PQ$ is 12 cm and the length of $SR$ is 3 cm.\n\nWhat, in centimetres, is the length of $UT$?",
+      text: `In the figure, $PQRS$ is a trapezium with $PQ$ parallel to $SR$.
+      The diagonals of the trapezium meet at $X$.
+      $U$ lies on $SP$ and $T$ lies on $RQ$ such that $UT$ is a line segment through $X$ parallel to $PQ$.
+      The length of $PQ$ is 12 cm and the length of $SR$ is 3 cm.
+      What, in centimetres, is the length of $UT$?`,
       options: [
         "4.2",
         "4.5",
@@ -251,7 +323,13 @@ function MainComponent() {
     },
     {
       id: 17,
-      text: "Consider these simultaneous equations, where $c$ is a constant:\n\n$$y = 3 \\sin x + 2$$\n\n$$y = x + c$$\n\nWhich of the following statements is/are true?\n\n $\\quad$1$\\quad$ For some value of $c$, there is exactly one solution with $0 \\le x \\le \\pi$ and there is at least one solution with $-\\pi < x < 0 $.\n\n $\\quad$2$\\quad$ For some value of $c$, there is exactly one solution with $0 \\le x \\le \\pi$ and there are no solutions with $ -\\pi < x < 0$.\n\n$\\quad$3$\\quad$ For some value of $c$, there is exactly one solution with $0 < x \\le \\pi$ and there are no solutions with $x > \\pi$.",
+      text: `Consider these simultaneous equations, where $c$ is a constant:
+      $$y = 3 \\sin x + 2$$
+      $$y = x + c$$
+      Which of the following statements is/are true?
+      $\\quad$1$\\quad$ For some value of $c$, there is exactly one solution with $0 \\le x \\le \\pi$ and there is at least one solution with $-\\pi < x < 0 $.
+      $\\quad$2$\\quad$ For some value of $c$, there is exactly one solution with $0 \\le x \\le \\pi$ and there are no solutions with $ -\\pi < x < 0$.
+      $\\quad$3$\\quad$ For some value of $c$, there is exactly one solution with $0 < x \\le \\pi$ and there are no solutions with $x > \\pi$.`,
       options: [
         "none",
         "1 only",
@@ -265,7 +343,9 @@ function MainComponent() {
     },
     {
       id: 18,
-      text: "Consider this statement about a function $f(x)$:\n\n$\\quad$(*) If $f(x) \\le 1$ for all $-1 \\le x \\le 1$ then $\\int_{-1}^{1} (f(x))^2 dx \\le \\int_{-1}^{1} f(x) dx$\n\nWhich one of the following functions provides a counterexample to (*)?",
+      text: `Consider this statement about a function $f(x)$:
+      $\\quad$(*) If $(f(x))^2 \\le 1$ for all $-1 \\le x \\le 1$ then $\\int_{-1}^{1} (f(x))^2 dx \\le \\int_{-1}^{1} f(x) dx$
+      Which one of the following functions provides a counterexample to (*)?`,
       options: [
         "$f(x) = x + \\frac{1}{2}$",
         "$f(x) = x - \\frac{1}{2}$",
@@ -277,7 +357,9 @@ function MainComponent() {
     },
     {
       id: 19,
-      text: "Some identical unit cubes are used to construct a three-dimensional object by gluing them together face to face.\n\nSketches of this object are made by looking at it from the right-hand side, from the front and from above. These sketches are called the side elevation, the front elevation, and the plan view respectively.\n\nHow many cubes were used to construct the object?",
+      text: `Some identical unit cubes are used to construct a three-dimensional object by gluing them together face to face.
+      Sketches of this object are made by looking at it from the right-hand side, from the front and from above. These sketches are called the side elevation, the front elevation, and the plan view respectively.
+      How many cubes were used to construct the object?`,
       options: [
         "exactly 6",
         "either 6 or 7",
@@ -290,7 +372,8 @@ function MainComponent() {
     },
     {
       id: 20,
-      text: "Each interior angle of a regular polygon with $n$ sides is $\\frac{3}{4}$ of each interior angle of a second regular polygon with $m$ sides.\n\nHow many pairs of positive integers $n$ and $m$ are there for which this statement is true?",
+      text: `Each interior angle of a regular polygon with $n$ sides is $\\frac{3}{4}$ of each interior angle of a second regular polygon with $m$ sides.
+      How many pairs of positive integers $n$ and $m$ are there for which this statement is true?`,
       options: [
         "none",
         "1",
@@ -325,6 +408,9 @@ function MainComponent() {
         setTimeRemaining((prev) => prev - 1);
       }, 1000);
       return () => clearInterval(timer);
+    } else if (currentView === "exam" && timeRemaining === 0) {
+      // Auto-end exam when time runs out
+      confirmEndExam();
     }
   }, [currentView, timeRemaining]);
 
@@ -411,7 +497,7 @@ function MainComponent() {
         const examData = {
           paperName: 'Practice Paper 2',
           userAnswers: selectedAnswers,
-          timeTaken: (90 * 60) - timeRemaining,
+          timeTaken: (75 * 60) - timeRemaining,
           examType: 'TMUA'
         };
         
@@ -537,8 +623,8 @@ function MainComponent() {
         {/* Header */}
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+              Master TMUA
             </h1>
           </div>
         </div>
@@ -657,11 +743,11 @@ function MainComponent() {
         {/* Header */}
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+              Master TMUA
             </h1>
             <div className="flex items-center space-x-4 pr-4">
-              <div className="text-yellow-300 text-lg font-mono">
+              <div className="text-white text-base font-mono">
                 <i className="fas fa-clock mr-2"></i>
                 Time Remaining: {formatInstructionTime(instructionTime)}
               </div>
@@ -851,12 +937,12 @@ function MainComponent() {
       <div className={`${getHeaderTheme()} p-2`}>
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <h1 className="text-base font-normal pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+              Master TMUA
             </h1>
           </div>
           <div className="flex flex-col items-end space-y-1 pr-4">
-            <div className="text-yellow-300 text-lg font-mono">
+            <div className="text-white text-base font-mono">
               <i className="fas fa-clock mr-2"></i>
               Time Remaining: {formatTime(timeRemaining)}
             </div>
@@ -907,30 +993,6 @@ function MainComponent() {
                     onClick={() => applyColorScheme("default")}
                   >
                     Color Scheme
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("light-yellow")}
-                  >
-                    Black on Light Yellow
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("salmon")}
-                  >
-                    Black on Salmon
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("high-contrast")}
-                  >
-                    Black on White
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("yellow")}
-                  >
-                    Black on Yellow
                   </button>
                 </div>
               )}
@@ -1143,6 +1205,7 @@ function MainComponent() {
                 className="h-6 w-auto"
               />
             </button>
+            {currentQuestion < questions.length - 1 && (
             <button
               className="text-sm text-white hover:text-gray-200 bg-transparent border-none"
               onClick={handleNext}
@@ -1154,6 +1217,7 @@ function MainComponent() {
                 className="h-6 w-auto"
               />
             </button>
+            )}
           </div>
         </div>
       </div>
@@ -1162,5 +1226,5 @@ function MainComponent() {
 }
 
 export default function Page() {
-  return <MainComponent />;
+  return <PaymentGate paperName="Practice Paper 2"><MainComponent /></PaymentGate>;
 }

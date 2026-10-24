@@ -6,6 +6,7 @@ import { useUser } from '@clerk/nextjs'
 import { saveExamResult, calculateScore } from '../../lib/supabase'
 import { InlineMath, BlockMath } from "react-katex";
 import "katex/dist/katex.min.css";
+import PaymentGate from "../../components/PaymentGate";
 
 // ✅ Define this once
 function renderWithLatex(str = "") {
@@ -78,10 +79,10 @@ What is the equation of the straight line through the two points at which the ci
     },
     {
       id: 2,
-      text: `The curve $y = x^2 - 6x + 3$ has turning points at $x = \\alpha$ and $x = \\beta$ where $\\beta$ > $\\alpha$.
+      text: `The curve $y = x^3 - 6x + 3$ has turning points at $x = \\alpha$ and $x = \\beta$ where $\\beta$ > $\\alpha$.
 
 Find
-$$\\int_\\alpha^\\beta x^2 - 6x + 3 \, dx$$`,
+$$\\int_\\alpha^\\beta x^3 - 6x + 3 \, dx$$`,
       options: [
         "$-8\\sqrt{2}$",
         "$-10$",
@@ -135,7 +136,7 @@ $$f(mn) = \\begin{cases} f(m)f(n) & \\text{if } mn \\text{ is a multiple of } 3 
 
 for all positive integers $m$ and $n$.
 
-Given that $f(3) = f(4) - f(3) = 0$, what is the value of $f(3)$?`,
+Given that $f(9) + f(16) - f(24) = 0$, what is the value of $f(3)$?`,
   options: [
     "$\\frac{8}{3}$",
     "$2\\sqrt{2}$",
@@ -163,7 +164,7 @@ Find the positive difference between the maximum and the minimum values of $f(x)
 },
 {
   id: 7,
-  text: `The function $f$ is such that $f(0) = 0$ and $g(x) > 0$ for all positive values of $x$.
+  text: `The function $f$ is such that $f(0) = 0$ and $xf(x) > 0$ for all non-zero values of $x$.
 
 It is given that
 
@@ -273,7 +274,7 @@ $$\\int_n^{n+1} f(x) \\, dx = n + 1$$
 
 Evaluate
 
-$$\\sum_{r=1}^{8} \\int_0^{r} f(x) \\, dx$$`,
+$$\\sum_{r=1}^{8} (\\int_0^{r} f(x) \\, dx)$$`,
   options: [
     "$36$",
     "$84$",
@@ -331,7 +332,7 @@ The third term, in ascending powers of $x$, is $105x^2$
 The fourth term, in ascending powers of $x$, is $210x^3$
 The fourth term, in descending powers of $x$, is $210x^3$
 
-Find the value of $(\\frac{a}{b})^2$.`,
+Find the value of ($(\\frac{a}{b}))^2$.`,
   options: [
     "$\\frac{1}{4}$",
     "$\\frac{4}{9}$",
@@ -381,9 +382,9 @@ What is the equation of $C$?`,
   id: 19,
   text: `The equation
 
-$$\\sin^4(4^{\\text{cosø}} \\times 60°) = \\frac{3}{4}$$
+ $$ \\sin^2 {4^{\\cos \\theta} \\times 60°} = \\frac{3}{4} $$
 
-has exactly three solutions in the range $0° \\leq ø \\leq x°$
+has exactly three solutions in the range $0° \\leq \\theta \\leq x°$
 
 What is the range of all possible values of $x$?`,
   options: [
@@ -432,6 +433,9 @@ $$2 \\log_{10}(x - y) = \\log_{10}(2 - 2x) + \\log_{10}(y + 5)$$`,
         setTimeRemaining((prev) => prev - 1);
       }, 1000);
       return () => clearInterval(timer);
+    } else if (currentView === "exam" && timeRemaining === 0) {
+      // Auto-end exam when time runs out
+      confirmEndExam();
     }
   }, [currentView, timeRemaining]);
 
@@ -645,7 +649,7 @@ $$2 \\log_{10}(x - y) = \\log_{10}(2 - 2x) + \\log_{10}(y + 5)$$`,
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
             <h1 className="text-xl font-semibold pl-2">
-              Test of Mathematics for University Admission
+              Master TMUA
             </h1>
           </div>
         </div>
@@ -765,7 +769,7 @@ $$2 \\log_{10}(x - y) = \\log_{10}(2 - 2x) + \\log_{10}(y + 5)$$`,
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
             <h1 className="text-xl font-semibold pl-2">
-              Test of Mathematics for University Admission
+              Master TMUA
             </h1>
             <div className="flex items-center space-x-4 pr-4">
               <div className="text-yellow-300 text-lg font-mono">
@@ -958,8 +962,8 @@ $$2 \\log_{10}(x - y) = \\log_{10}(2 - 2x) + \\log_{10}(y + 5)$$`,
       <div className={`${getHeaderTheme()} p-2`}>
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <h1 className="text-base font-normal pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-base font-normal pl-2 font-mono text-white">
+              Master TMUA
             </h1>
           </div>
           <div className="flex flex-col items-end space-y-1 pr-4">
@@ -1014,30 +1018,6 @@ $$2 \\log_{10}(x - y) = \\log_{10}(2 - 2x) + \\log_{10}(y + 5)$$`,
                     onClick={() => applyColorScheme("default")}
                   >
                     Color Scheme
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("light-yellow")}
-                  >
-                    Black on Light Yellow
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("salmon")}
-                  >
-                    Black on Salmon
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("high-contrast")}
-                  >
-                    Black on White
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("yellow")}
-                  >
-                    Black on Yellow
                   </button>
                 </div>
               )}
@@ -1250,6 +1230,7 @@ $$2 \\log_{10}(x - y) = \\log_{10}(2 - 2x) + \\log_{10}(y + 5)$$`,
                 className="h-6 w-auto"
               />
             </button>
+            {currentQuestion < questions.length - 1 && (
             <button
               className="text-sm text-white hover:text-gray-200 bg-transparent border-none"
               onClick={handleNext}
@@ -1261,6 +1242,7 @@ $$2 \\log_{10}(x - y) = \\log_{10}(2 - 2x) + \\log_{10}(y + 5)$$`,
                 className="h-6 w-auto"
               />
             </button>
+            )}
           </div>
         </div>
       </div>
@@ -1269,5 +1251,5 @@ $$2 \\log_{10}(x - y) = \\log_{10}(2 - 2x) + \\log_{10}(y + 5)$$`,
 }
 
 export default function Page() {
-  return <MainComponent />;
+  return <PaymentGate paperName="2021 Paper 1"><MainComponent /></PaymentGate>;
 }

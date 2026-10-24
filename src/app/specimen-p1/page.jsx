@@ -6,6 +6,7 @@ import { useUser } from '@clerk/nextjs'
 import { saveExamResult, calculateScore } from '../../lib/supabase'
 import { InlineMath, BlockMath } from "react-katex";
 import "katex/dist/katex.min.css";
+import PaymentGate from '../../components/PaymentGate';
 
 // ✅ Define this once
 function renderWithLatex(str = "") {
@@ -33,7 +34,7 @@ function MainComponent() {
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const [selectedAnswers, setSelectedAnswers] = React.useState({});
   const [flaggedQuestions, setFlaggedQuestions] = React.useState(new Set());
-  const [timeRemaining, setTimeRemaining] = React.useState(90 * 60); // 90 minutes in seconds
+  const [timeRemaining, setTimeRemaining] = React.useState(75 * 60); // 75 minutes in seconds
   const [instructionTime, setInstructionTime] = React.useState(60); // 60 seconds for instructions
   const [colorScheme, setColorScheme] = React.useState("default");
   const [showNavigator, setShowNavigator] = React.useState(false);
@@ -57,7 +58,7 @@ function MainComponent() {
   const questionsRaw = [
     {
       id: 1,
-      text: `The sum of the two values of $x$ that satisfy the simultaneous equations\n $x - 3y + 1 = 0$ and $3x^2 - 7xy = 5$ is`,
+      text: `The sum of the two values of $x$ that satisfy the simultaneous equations $x - 3y + 1 = 0$ and $3x^2 - 7xy = 5$ is`,
       options: ["$-8.5$", "$-7.5$", "$-1.5$", "$3.5$", "$4.5$", "$5$"],
     },
     {
@@ -256,6 +257,9 @@ function MainComponent() {
         setTimeRemaining((prev) => prev - 1);
       }, 1000);
       return () => clearInterval(timer);
+    } else if (currentView === "exam" && timeRemaining === 0) {
+      // Auto-end exam when time runs out
+      confirmEndExam();
     }
   }, [currentView, timeRemaining]);
 
@@ -341,7 +345,7 @@ function MainComponent() {
         const examData = {
           paperName: 'Specimen Paper 1',
           userAnswers: selectedAnswers,
-          timeTaken: (90 * 60) - timeRemaining,
+          timeTaken: (75 * 60) - timeRemaining,
           examType: 'TMUA'
         };
         // Save to Supabase with automatic marking
@@ -354,8 +358,9 @@ function MainComponent() {
           throw new Error('Failed to save exam result');
         }
       } else {
-        // Guest users: do not save, just redirect
-        alert('Exam completed! Please sign up to see your marks and dashboard.');
+        // Guest users: calculate score but don't save
+        const markingResult = calculateScore(selectedAnswers, 'Specimen Paper 1');
+        alert(`Exam completed: You scored ${markingResult.score}/${markingResult.totalQuestions}. Please sign up to save future marks and access your personalised dashboard!`);
         router.push('/sign-up');
       }
     } catch (error) {
@@ -463,8 +468,8 @@ function MainComponent() {
         {/* Header */}
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+              Master TMUA
             </h1>
           </div>
         </div>
@@ -583,11 +588,11 @@ function MainComponent() {
         {/* Header */}
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold pl-2">
+            <h1 className="text-2xl font-semibold pl-2 text-white">
               Test of Mathematics for University Admission
             </h1>
             <div className="flex items-center space-x-4 pr-4">
-              <div className="text-yellow-300 text-lg font-mono">
+              <div className="text-white text-base font-mono">
                 <i className="fas fa-clock mr-2"></i>
                 Time Remaining: {formatInstructionTime(instructionTime)}
               </div>
@@ -777,12 +782,12 @@ function MainComponent() {
       <div className={`${getHeaderTheme()} p-2`}>
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <h1 className="text-base font-normal pl-2">
+            <h1 className="text-2xl font-semibold pl-2 text-white">
               Test of Mathematics for University Admission
             </h1>
           </div>
           <div className="flex flex-col items-end space-y-1 pr-4">
-            <div className="text-yellow-300 text-lg font-mono">
+            <div className="text-white text-base font-mono">
               <i className="fas fa-clock mr-2"></i>
               Time Remaining: {formatTime(timeRemaining)}
             </div>
@@ -833,30 +838,6 @@ function MainComponent() {
                     onClick={() => applyColorScheme("default")}
                   >
                     Color Scheme
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("light-yellow")}
-                  >
-                    Black on Light Yellow
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("salmon")}
-                  >
-                    Black on Salmon
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("high-contrast")}
-                  >
-                    Black on White
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("yellow")}
-                  >
-                    Black on Yellow
                   </button>
                 </div>
               )}
@@ -1054,6 +1035,7 @@ function MainComponent() {
                 className="h-6 w-auto"
               />
             </button>
+            {currentQuestion < questions.length - 1 && (
             <button
               className="text-sm text-white hover:text-gray-200 bg-transparent border-none"
               onClick={handleNext}
@@ -1065,6 +1047,7 @@ function MainComponent() {
                 className="h-6 w-auto"
               />
             </button>
+            )}
           </div>
         </div>
       </div>
@@ -1073,5 +1056,5 @@ function MainComponent() {
 }
 
 export default function Page() {
-  return <MainComponent />;
+  return <PaymentGate paperName="Specimen Paper 1"><MainComponent /></PaymentGate>;
 }

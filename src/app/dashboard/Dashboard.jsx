@@ -4,9 +4,127 @@ import { useRouter } from 'next/navigation';
 import { useUser, useClerk } from '@clerk/nextjs';
 import { getUserExamResults } from '../../lib/supabase';
 import Sidebar from '../../components/Sidebar';
+import UpgradeModal from '../../components/UpgradeModal';
+import { checkUserEntitlements } from '../../lib/supabase';
+
+const TMUA_SCORE_BY_PERCENT = {
+  0: 0.0,
+  1: 1.0,
+  2: 1.0,
+  3: 1.0,
+  4: 1.0,
+  5: 1.0,
+  6: 1.0,
+  7: 1.0,
+  8: 1.0,
+  9: 1.0,
+  10: 1.0,
+  11: 1.0,
+  12: 1.0,
+  13: 1.0,
+  14: 1.1,
+  15: 1.1,
+  16: 1.2,
+  17: 1.2,
+  18: 1.3,
+  19: 1.5,
+  20: 1.7,
+  21: 1.9,
+  22: 2.0,
+  23: 2.2,
+  24: 2.3,
+  25: 2.5,
+  26: 2.6,
+  27: 2.7,
+  28: 2.9,
+  29: 3.0,
+  30: 3.2,
+  31: 3.3,
+  32: 3.4,
+  33: 3.6,
+  34: 3.7,
+  35: 3.8,
+  36: 3.9,
+  37: 4.1,
+  38: 4.2,
+  39: 4.3,
+  40: 4.4,
+  41: 4.5,
+  42: 4.7,
+  43: 4.8,
+  44: 4.9,
+  45: 5.0,
+  46: 5.1,
+  47: 5.2,
+  48: 5.4,
+  49: 5.5,
+  50: 5.6,
+  51: 5.7,
+  52: 5.8,
+  53: 5.9,
+  54: 6.0,
+  55: 6.1,
+  56: 6.2,
+  57: 6.3,
+  58: 6.4,
+  59: 6.5,
+  60: 6.6,
+  61: 6.6,
+  62: 6.7,
+  63: 6.8,
+  64: 6.8,
+  65: 6.9,
+  66: 7.0,
+  67: 7.0,
+  68: 7.1,
+  69: 7.2,
+  70: 7.2,
+  71: 7.3,
+  72: 7.4,
+  73: 7.4,
+  74: 7.5,
+  75: 7.6,
+  76: 7.7,
+  77: 7.8,
+  78: 7.9,
+  79: 7.9,
+  80: 8.0,
+  81: 8.0,
+  82: 8.1,
+  83: 8.1,
+  84: 8.2,
+  85: 8.2,
+  86: 8.3,
+  87: 8.3,
+  88: 8.4,
+  89: 8.5,
+  90: 8.5,
+  91: 8.6,
+  92: 8.7,
+  93: 8.8,
+  94: 8.9,
+  95: 9.0,
+  96: 9.0,
+  97: 9.0,
+  98: 9.0,
+  99: 9.0,
+  100: 9.0,
+};
+
+function formatTmuaScoreFromPercent(percent) {
+  const normalizedPercent = Math.max(0, Math.min(100, Math.round(percent || 0)));
+  const tmuaScore = TMUA_SCORE_BY_PERCENT[normalizedPercent] ?? 0.0;
+  return tmuaScore.toFixed(1);
+}
+
+function getTmuaBarWidth(percent) {
+  const normalizedPercent = Math.max(0, Math.min(100, Math.round(percent || 0)));
+  const tmuaScore = TMUA_SCORE_BY_PERCENT[normalizedPercent] ?? 0.0;
+  return `${(tmuaScore / 9) * 100}%`;
+}
 
 // Header Component
-function Header() {
+function Header({ onPremiumClick, showPremiumButton, isPremium }) {
   const { user } = useUser();
   
   return (
@@ -17,7 +135,23 @@ function Header() {
         </h1>
       </div>
       
-      <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-3 sm:space-x-4">
+        {showPremiumButton && (
+          <button
+            onClick={onPremiumClick}
+            className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg font-semibold text-sm sm:text-base bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-500 text-[#1a0030] shadow-[0_0_15px_rgba(251,191,36,0.4)] hover:from-yellow-300 hover:via-amber-200 hover:to-yellow-400 hover:shadow-[0_0_20px_rgba(251,191,36,0.6)] transition-all duration-300"
+          >
+            Go Premium
+          </button>
+        )}
+        {!showPremiumButton && isPremium ? (
+          <button
+            onClick={() => {}}
+            className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg font-semibold text-sm sm:text-base bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-500 text-[#1a0030] shadow-[0_0_15px_rgba(251,191,36,0.4)] hover:from-yellow-300 hover:via-amber-200 hover:to-yellow-400 hover:shadow-[0_0_20px_rgba(251,191,36,0.6)] transition-all duration-300"
+          >
+            Premium
+          </button>
+        ) : null}
         <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold">
           {user?.firstName?.[0] || user?.emailAddresses?.[0]?.emailAddress?.[0]?.toUpperCase() || 'U'}
         </div>
@@ -35,14 +169,14 @@ function ReadyToTestCard({ onReady }) {
   };
   
   return (
-    <div className="bg-[#1a0030] p-4 sm:p-6 rounded-xl border border-[#5c4d7d] shadow-lg h-full flex flex-col justify-between min-h-[180px]">
-      <div>
+    <div className="bg-[#1a0030] p-4 sm:p-6 rounded-xl border border-[#5c4d7d] shadow-lg h-full min-h-[180px] flex flex-col justify-center">
+      <div className="mb-4 sm:mb-5">
         <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">Ready To Test?</h3>
-        <p className="text-gray-400 text-sm mb-4">Start your practice exam now</p>
+        <p className="text-gray-400 text-sm">Start a new practice exam now</p>
       </div>
       <button 
         onClick={handleReadyClick}
-        className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors text-sm sm:text-base"
+        className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors text-sm sm:text-base mt-auto"
       >
         Ready
       </button>
@@ -71,9 +205,6 @@ function DaysLeftCounter() {
 // Average Score Card Component (Updated for responsiveness)
 function AverageScoreCard() {
   const { user } = useUser();
-  const [averageScore, setAverageScore] = useState(0);
-  const [totalExams, setTotalExams] = useState(0);
-  
   const [scoreData, setScoreData] = useState({
     average: 0,
     highest: 0,
@@ -128,30 +259,31 @@ function AverageScoreCard() {
 
   if (loading) {
     return (
-      <div className="bg-[#1a0030] p-6 rounded-xl border border-[#5c4d7d] shadow-lg h-48 flex items-center justify-center">
+      <div className="bg-[#1a0030] p-4 sm:p-6 rounded-xl border border-[#5c4d7d] shadow-lg h-full min-h-[180px] flex items-center justify-center">
         <div className="text-gray-400">Loading scores...</div>
       </div>
     );
   }
 
   return (
-    <div className="bg-[#1a0030] p-6 rounded-xl border border-[#5c4d7d] shadow-lg h-48">
-      <h3 className="text-lg font-semibold text-white mb-2">Average Score</h3>
-      <div className="text-4xl font-bold text-white mb-4">{scoreData.average}%</div>
+    <div className="bg-[#1a0030] p-4 sm:p-6 rounded-xl border border-[#5c4d7d] shadow-lg h-full min-h-[180px] flex flex-col">
+      <h3 className="text-xl font-semibold text-white">Average Score</h3>
+      <p className="text-gray-400 text-xs mb-2 leading-tight">Score conversion based on average from 2017-2023</p>
+      <div className="text-4xl font-bold text-white mb-3">{formatTmuaScoreFromPercent(scoreData.average)}</div>
       <div className="space-y-1">
         <div className="flex justify-between text-sm">
           <span className="text-gray-400">Highest Score</span>
-          <span className="text-white">{scoreData.highest}%</span>
+          <span className="text-white">{formatTmuaScoreFromPercent(scoreData.highest)}</span>
         </div>
         <div className="w-full bg-gray-700 rounded-full h-1">
-          <div className="bg-green-500 h-1 rounded-full" style={{width: `${scoreData.highest}%`}}></div>
+          <div className="bg-green-500 h-1 rounded-full" style={{width: getTmuaBarWidth(scoreData.highest)}}></div>
         </div>
         <div className="flex justify-between text-sm">
           <span className="text-gray-400">Lowest Score</span>
-          <span className="text-white">{scoreData.lowest}%</span>
+          <span className="text-white">{formatTmuaScoreFromPercent(scoreData.lowest)}</span>
         </div>
         <div className="w-full bg-gray-700 rounded-full h-1">
-          <div className="bg-orange-500 h-1 rounded-full" style={{width: `${scoreData.lowest}%`}}></div>
+          <div className="bg-orange-500 h-1 rounded-full" style={{width: getTmuaBarWidth(scoreData.lowest)}}></div>
         </div>
       </div>
     </div>
@@ -196,7 +328,7 @@ function ProgressCircle() {
   const strokeDashoffset = circumference - (progress / 100) * circumference;
   
   return (
-    <div className="bg-[#1a0030] p-6 rounded-xl border border-[#5c4d7d] shadow-lg h-48 flex flex-col items-center justify-center">
+    <div className="bg-[#1a0030] p-4 sm:p-6 rounded-xl border border-[#5c4d7d] shadow-lg h-full min-h-[180px] flex flex-col items-center justify-center">
       <div className="relative w-24 h-24 mb-4">
         <svg className="w-24 h-24 transform -rotate-90" viewBox="0 0 100 100">
           <circle
@@ -241,7 +373,6 @@ function ProgressCircle() {
 
 // Calendar Widget Component - Updated with navigation and proper date highlighting
 function CalendarWidget() {
-  const [currentDate, setCurrentDate] = useState(new Date());
   const [currentMonth, setCurrentMonth] = useState(new Date().getMonth());
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
   
@@ -266,6 +397,11 @@ function CalendarWidget() {
   // Add days of the month
   for (let day = 1; day <= daysInMonth; day++) {
     days.push(day);
+  }
+
+  // Keep a fixed 6-row calendar grid so navigation does not leave visual gaps.
+  while (days.length < 42) {
+    days.push(null);
   }
   
   const navigateMonth = (direction) => {
@@ -324,17 +460,25 @@ function CalendarWidget() {
         ))}
       </div>
       
-      <div className="grid grid-cols-7 gap-1">
+      <div className="grid grid-cols-7 grid-rows-6 gap-1 auto-rows-fr">
         {days.map((day, index) => {
           if (day === null) {
-            return <div key={index} className="h-8"></div>;
+            return (
+              <div
+                key={`empty-${currentYear}-${currentMonth}-${index}`}
+                className="h-8"
+              ></div>
+            );
           }
           
           const todayHighlight = isToday(day);
           const examHighlight = isExamDay(day);
           
           return (
-            <div key={day} className="relative h-8 flex items-center justify-center">
+            <div
+              key={`day-${currentYear}-${currentMonth}-${day}`}
+              className="relative h-8 flex items-center justify-center"
+            >
               <div className={`
                 w-7 h-7 rounded-full flex items-center justify-center text-sm font-medium transition-colors
                 ${todayHighlight ? 'bg-purple-600 text-white ring-2 ring-purple-400' : 
@@ -719,6 +863,8 @@ function GradeBoundariesGraph() {
 // Main Dashboard Layout
 export default function Dashboard({ onReady }) {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [upgradeModalOpen, setUpgradeModalOpen] = useState(false);
+  const [userEntitlements, setUserEntitlements] = useState(null);
   const { user, isLoaded } = useUser();
   const router = useRouter();
   
@@ -734,6 +880,19 @@ export default function Dashboard({ onReady }) {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  useEffect(() => {
+    const checkEntitlements = async () => {
+      if (user) {
+        const entitlements = await checkUserEntitlements();
+        setUserEntitlements(entitlements);
+      }
+    };
+
+    if (isLoaded && user) {
+      checkEntitlements();
+    }
+  }, [user, isLoaded]);
 
   // Redirect if not logged in
   useEffect(() => {
@@ -761,7 +920,11 @@ export default function Dashboard({ onReady }) {
           ? 'ml-12 sm:ml-14 md:ml-16' 
           : 'ml-48 sm:ml-56 md:ml-56 lg:ml-64 xl:ml-72'
       } p-4 sm:p-6 md:p-6 lg:p-8 xl:p-10`}>
-        <Header />
+        <Header
+          onPremiumClick={() => setUpgradeModalOpen(true)}
+          showPremiumButton={!userEntitlements?.hasFullAccess}
+          isPremium={!!userEntitlements?.hasFullAccess}
+        />
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mt-1">
           <div className="sm:col-span-1"><ReadyToTestCard onReady={onReady} /></div>
           <div className="sm:col-span-1"><DaysLeftCounter /></div>
@@ -771,7 +934,10 @@ export default function Dashboard({ onReady }) {
           <div className="sm:col-span-2 xl:col-span-2"><GradeBoundariesGraph /></div>
         </div>
       </main>
+      <UpgradeModal
+        isOpen={upgradeModalOpen}
+        onClose={() => setUpgradeModalOpen(false)}
+      />
     </div>
   );
 }
-

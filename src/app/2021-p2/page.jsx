@@ -6,6 +6,7 @@ import { useUser } from '@clerk/nextjs'
 import { saveExamResult, calculateScore } from '../../lib/supabase'
 import { InlineMath, BlockMath } from "react-katex";
 import "katex/dist/katex.min.css";
+import PaymentGate from "../../components/PaymentGate";
 
 // ✅ Define this once
 function renderWithLatex(str = "") {
@@ -178,7 +179,7 @@ What is the $x$-coordinate of the point where this straight line meets the $x$-a
       id: 8,
       text: `Consider the following statement about the polynomial $p(x)$, where $a$ and $b$ are real numbers with $a < b$:
 
-$\\quad (\\star) \\quad$ There exists a number $c$ with $a < c < b$ such that $p'(c) = 0$.
+$\\quad (*) \\quad$ There exists a number $c$ with $a < c < b$ such that $p'(c) = 0$.
 
 Which one of the following is true?`,
       options: [
@@ -192,9 +193,9 @@ Which one of the following is true?`,
       id: 9,
       text: `Consider the following statements about a polynomial $f(x)$:
 
-$\\quad I \\quad$ $f(x) = ax^3 + bx^2 + cx + d$, where $a \\neq 0$
+$\\quad I \\quad$ $f(x) = px^3 + qx^2 + rx + s$, where $p \\neq 0$
 $\\quad II \\quad$ There is a real number $t$ for which $f'(t) = 0$
-$\\quad III \\quad$ There are two numbers $s$ and $t$ for which $f(s) \\cdot f(t) < 0$
+$\\quad III \\quad$ There are two numbers $u$ and $v$ for which $f(u) f(v) < 0$
 
 Which of these statements is/are sufficient for the equation $f(x) = 0$ to have a real solution?`,
       options: [
@@ -222,7 +223,7 @@ $$u_7 = 59$$
 
 Consider the following statement about this sequence:
 
-$\\quad (\\star) \\quad$ If $n$ is a prime number, then $u_n$ is a multiple of 3 or $u_n$ is a multiple of 5.
+$$ \\text{$\\quad (\\star) \\quad$ If $n$ is a prime number, then $u_n$ is a multiple of 3 or $u_n$ is a multiple of 5.} $$
 
 What is the smallest value of $n$ that provides a counterexample to (*)?`,
       options: [
@@ -392,9 +393,9 @@ $$\\sin B = y$$
 
 Which of the following statements is/are correct?
 
-$\\quad I. \\quad$ For some choice of $x$ and $y$, there is exactly one triangle the student could draw.
-$\\quad II. \\quad$ For some choice of $x$ and $y$, there are exactly two different triangles the student could draw.
-$\\quad III. \\quad$ For some choice of $x$ and $y$, there are exactly three different triangles the student could draw.
+$\\quad I \\quad$ For some choice of $x$ and $y$, there is exactly one triangle the student could draw.
+$\\quad II \\quad$ For some choice of $x$ and $y$, there are exactly two different triangles the student could draw.
+$\\quad III \\quad$ For some choice of $x$ and $y$, there are exactly three different triangles the student could draw.
 
 (Note that congruent triangles are considered to be the same.)`,
       options: [
@@ -470,6 +471,9 @@ $$\\int_{-1}^1 f_{99}(x) dx$$`,
         setTimeRemaining((prev) => prev - 1);
       }, 1000);
       return () => clearInterval(timer);
+    } else if (currentView === "exam" && timeRemaining === 0) {
+      // Auto-end exam when time runs out
+      confirmEndExam();
     }
   }, [currentView, timeRemaining]);
 
@@ -682,8 +686,8 @@ $$\\int_{-1}^1 f_{99}(x) dx$$`,
         {/* Header */}
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+              Master TMUA
             </h1>
           </div>
         </div>
@@ -802,11 +806,11 @@ $$\\int_{-1}^1 f_{99}(x) dx$$`,
         {/* Header */}
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+             Master TMUA
             </h1>
             <div className="flex items-center space-x-4 pr-4">
-              <div className="text-yellow-300 text-lg font-mono">
+              <div className="text-white text-base font-mono">
                 <i className="fas fa-clock mr-2"></i>
                 Time Remaining: {formatInstructionTime(instructionTime)}
               </div>
@@ -996,12 +1000,12 @@ $$\\int_{-1}^1 f_{99}(x) dx$$`,
       <div className={`${getHeaderTheme()} p-2`}>
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <h1 className="text-base font-normal pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+              Master TMUA
             </h1>
           </div>
           <div className="flex flex-col items-end space-y-1 pr-4">
-            <div className="text-yellow-300 text-lg font-mono">
+            <div className="text-white text-base font-mono">
               <i className="fas fa-clock mr-2"></i>
               Time Remaining: {formatTime(timeRemaining)}
             </div>
@@ -1052,30 +1056,6 @@ $$\\int_{-1}^1 f_{99}(x) dx$$`,
                     onClick={() => applyColorScheme("default")}
                   >
                     Color Scheme
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("light-yellow")}
-                  >
-                    Black on Light Yellow
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("salmon")}
-                  >
-                    Black on Salmon
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("high-contrast")}
-                  >
-                    Black on White
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("yellow")}
-                  >
-                    Black on Yellow
                   </button>
                 </div>
               )}
@@ -1288,6 +1268,7 @@ $$\\int_{-1}^1 f_{99}(x) dx$$`,
                 className="h-6 w-auto"
               />
             </button>
+            {currentQuestion < questions.length - 1 && (
             <button
               className="text-sm text-white hover:text-gray-200 bg-transparent border-none"
               onClick={handleNext}
@@ -1299,6 +1280,7 @@ $$\\int_{-1}^1 f_{99}(x) dx$$`,
                 className="h-6 w-auto"
               />
             </button>
+            )}
           </div>
         </div>
       </div>
@@ -1307,5 +1289,5 @@ $$\\int_{-1}^1 f_{99}(x) dx$$`,
 }
 
 export default function Page() {
-  return <MainComponent />;
+  return <PaymentGate paperName="2021 Paper 2"><MainComponent /></PaymentGate>;
 }

@@ -6,6 +6,7 @@ import { useUser } from '@clerk/nextjs'
 import { saveExamResult, calculateScore } from '../../lib/supabase'
 import { InlineMath, BlockMath } from "react-katex";
 import "katex/dist/katex.min.css";
+import PaymentGate from "../../components/PaymentGate";
 
 // ✅ Define this once
 function renderWithLatex(str = "") {
@@ -173,11 +174,11 @@ $\\quad$ The difference between two consecutive positive cube numbers is always 
 
 Here is an attempted proof of this claim:
 
-$ \\quad$ I. $\\quad$ $(x + 1)^3 = x^3 + 3x^2 + 3x + 1$
-$ \\quad$ II. $\\quad$ Taking $x$ to be a positive integer, the difference between two consecutive cube numbers can be expressed as $(x + 1)^3 - x^3 = 3x^2 + 3x + 1$
-$ \\quad$ III. $\\quad$ It is impossible to factorise $3x^2 + 3x + 1$ into two linear factors with integer coefficients because its discriminant is $9 - 12 = -3 < 0$.
-$ \\quad$ IV. $\\quad$ Therefore for every positive integer value of $x$ the integer $3x^2 + 3x + 1$ cannot be factorised.
-$ \\quad$ V. $\\quad$ Hence, the difference between two consecutive cube numbers will always be prime.
+$ \\quad I \\quad$ $(x + 1)^3 = x^3 + 3x^2 + 3x + 1$
+$ \\quad II \\quad$ Taking $x$ to be a positive integer, the difference between two consecutive cube numbers can be expressed as $(x + 1)^3 - x^3 = 3x^2 + 3x + 1$
+$ \\quad III \\quad$ It is impossible to factorise $3x^2 + 3x + 1$ into two linear factors with integer coefficients because its discriminant is negative.
+$ \\quad IV \\quad$ Therefore for every positive integer value of $x$ the integer $3x^2 + 3x + 1$ cannot be factorised.
+$ \\quad V \\quad$ Hence, the difference between two consecutive cube numbers will always be prime.
 
 Which of the following best describes this proof?`,
       options: [
@@ -192,11 +193,11 @@ Which of the following best describes this proof?`,
     },
     {
       id: 8,
-      text: `A selection $S$ of $n$ terms is taken from the arithmetic sequence $1, 4, 7, 10, \\ldots, 70$.
+      text: `A selection, $S$, of $n$ terms is taken from the arithmetic sequence $1, 4, 7, 10, \\ldots, 70$.
 
 Consider the following statement:
 
-$ \\quad$ (*) $\\quad$ There are two distinct terms in $S$ whose sum is 74.
+$$ \\quad \\text{ (*)  There are two distinct terms in $S$ whose sum is 74.}$$
 
 What is the smallest value of $n$ for which (*) is necessarily true?`,
       options: [
@@ -212,7 +213,7 @@ What is the smallest value of $n$ for which (*) is necessarily true?`,
       id: 9,
       text: `Consider the following statement:
 
-$ \\quad$ (*) $\\quad$ For all real numbers $k$, if $x < k$ then $x^2 < k$
+$$ \\quad \\text{ (*)  For all real numbers $x$, if $x < k$ then $x^2 < k$.}$$
 
 What is the complete set of values of $k$ for which (*) is true?`,
       options: [
@@ -229,9 +230,9 @@ What is the complete set of values of $k$ for which (*) is true?`,
       id: 10,
       text: `Which of the following statements is/are true?
 
-$ \\quad I \\quad$ For all real numbers $a$ and for all positive integers $n$, $x < n$
-$ \\quad II \\quad$ For all real numbers $a$, there exists a positive integer $n$ such that $x < n$
-$ \\quad III \\quad$ There exists a real number $a$ such that for all positive integers $n$, $x < n$`,
+$ \\quad I \\quad$ For all real numbers $x$ and for all positive integers $n$, $x < n$
+$ \\quad II \\quad$ For all real numbers $x$, there exists a positive integer $n$ such that $x < n$
+$ \\quad III \\quad$ There exists a real number $x$ such that for all positive integers $n$, $x < n$`,
       options: [
         "none of them",
         "I only",
@@ -247,10 +248,10 @@ $ \\quad III \\quad$ There exists a real number $a$ such that for all positive i
       id: 11,
       text: `The diagram shows a kite $PQRS$ whose diagonals meet at $O$.
 
-$OP = x$
-$OQ = y$
-$OR = x$
-$OS = z$
+$\\quad OP = x$
+$\\quad OQ = y$
+$\\quad OR = x$
+$\\quad OS = z$
 
 Which of the following is necessary and sufficient for angle $SPQ$ to be a right angle?`,
       options: [
@@ -283,9 +284,9 @@ $$R = \\int_0^{1} (\\sqrt{2})^x \\, dx$$`,
       id: 13,
       text: `Consider the statement (*) about a real number $x$:
 
-$\\quad (\\star) \\quad$There exists a real number $y$ such that $x - xy + y$ is negative.
+$$\\quad (*) \\text{ There exists a real number }y\\text{ such that} x - xy + y \\text{ is negative.}$$
 
-For how many real values of $x$ is $(\\star)$ true?`,
+For how many real values of $x$ is (*) true?`,
       options: [
         "no values of $x$",
         "exactly one value of $x$",
@@ -299,9 +300,9 @@ For how many real values of $x$ is $(\\star)$ true?`,
       id: 14,
       text: `Consider the two inequalities:
 
-$|x + 5| < |x + 11|$
+$$|x + 5| < |x + 11|$$
 
-$|x + 11| < |x + 1|$
+$$|x + 11| < |x + 1|$$
 
 Which one of the following is correct?`,
       options: [
@@ -342,9 +343,9 @@ for each $n$.
 
 Which of the following statements must be true?
 
-$\\quad I. \\quad$ (minimum of $a_1, \\ldots, a_{100}$) $\\leq$ (minimum of $b_1, \\ldots, b_{100}$) + (minimum of $c_1, \\ldots, c_{100}$)
-$\\quad II. \\quad$ (minimum of $a_1, \\ldots, a_{100}$) $\\leq$ (minimum of $b_1, \\ldots, b_{100}$) + (minimum of $c_1, \\ldots, c_{100}$)
-$\\quad III. \\quad$ (maximum of $a_1, \\ldots, a_{100}$) $\\leq$ (maximum of $b_1, \\ldots, b_{100}$) + (maximum of $c_1, \\ldots, c_{100}$)`,
+$\\quad I \\quad$ (minimum of $a_1, \\ldots, a_{100}$) $\\leq$ (minimum of $b_1, \\ldots, b_{100}$) + (minimum of $c_1, \\ldots, c_{100}$)
+$\\quad II \\quad$ (minimum of $a_1, \\ldots, a_{100}$) $\\leq$ (minimum of $b_1, \\ldots, b_{100}$) + (minimum of $c_1, \\ldots, c_{100}$)
+$\\quad III \\quad$ (maximum of $a_1, \\ldots, a_{100}$) $\\leq$ (maximum of $b_1, \\ldots, b_{100}$) + (maximum of $c_1, \\ldots, c_{100}$)`,
       options: [
         "none of them",
         "I only",
@@ -360,10 +361,10 @@ $\\quad III. \\quad$ (maximum of $a_1, \\ldots, a_{100}$) $\\leq$ (maximum of $b
       id: 17,
       text: `A student answered the following question:
 
-$\\quad a$ and $b$ are non-zero real numbers.
+$\\quad a\\text{ and }b\\text{ are non-zero real numbers.}$
 
-$\\quad$Prove that the equation $x^3 + ax^2 + b = 0$ has three distinct real roots if $27b\\left(b + \\frac{4a^3}{27}\\right)< 0$
-$\\quad$
+$\\quad$  Prove that the equation $x^3 + ax^2 + b = 0$ has three distinct real roots if $27b\\left(b + \\frac{4a^3}{27}\\right)< 0$
+
 Here is the student's solution:
 
 $\\quad I \\quad$ We differentiate $y = x^3 + ax^2 + b$ to get $\\frac{dy}{dx} = 3x^2 + 2ax = x(3x + 2a)$
@@ -381,7 +382,7 @@ Which one of the following options best describes the student's solution?`,
         "It is a completely correct solution.",
         "The student has instead proved the converse of the statement in the question.",
         "The solution is wrong, because the student should have stated step II after step III.",
-        "The solution is wrong, because the student should have shown the converse of the result in step III.",
+        "The solution is wrong, because the student should have shown the converse of the result in step II.",
         "The solution is wrong, because the student should have shown the converse of the result in step III."
       ],
     },
@@ -389,7 +390,7 @@ Which one of the following options best describes the student's solution?`,
       id: 18,
       text: `P, Q, R and S show the graphs of
 
-$y = (\\cos x)^{\\cos x}$, $y = (\\sin x)^{\\sin x}$, $y = (\\cos x)^{\\sin x}$ and $y = (\\sin x)^{\\cos x}$
+$$y = (\\cos x)^{\\cos x},y = (\\sin x)^{\\sin x}, y = (\\cos x)^{\\sin x} \\text{ and } y = (\\sin x)^{\\cos x}$$
 
 for $0 < x < \\frac{\\pi}{2}$ in some order.
 
@@ -411,7 +412,7 @@ Which row in the following table correctly identifies the graphs?`,
 
 $ \\quad$ $\\quad$ • Every vertex of the polygon lies on the circumference of a circle $C$.
 $ \\quad$ $\\quad$ • The centre of the circle $C$ is inside the polygon.
-$ \\quad$ $\\quad$ • The radius from the centre of the circle $C$ to the vertices of the polygon cuts the polygon into $n$ triangles of equal area.
+$ \\quad$ $\\quad$ • The radii from the centre of the circle $C$ to the vertices of the polygon cuts the polygon into $n$ triangles of equal area.
 
 For which values of $n$ are these properties sufficient to deduce that the polygon is regular?`,
       options: [
@@ -467,6 +468,9 @@ Which one of the following statements is true?`,
         setTimeRemaining((prev) => prev - 1);
       }, 1000);
       return () => clearInterval(timer);
+    } else if (currentView === "exam" && timeRemaining === 0) {
+      // Auto-end exam when time runs out
+      confirmEndExam();
     }
   }, [currentView, timeRemaining]);
 
@@ -679,8 +683,8 @@ Which one of the following statements is true?`,
         {/* Header */}
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+              Master TMUA
             </h1>
           </div>
         </div>
@@ -799,11 +803,11 @@ Which one of the following statements is true?`,
         {/* Header */}
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+              Master TMUA
             </h1>
             <div className="flex items-center space-x-4 pr-4">
-              <div className="text-yellow-300 text-lg font-mono">
+              <div className="text-white text-base font-mono">
                 <i className="fas fa-clock mr-2"></i>
                 Time Remaining: {formatInstructionTime(instructionTime)}
               </div>
@@ -993,12 +997,12 @@ Which one of the following statements is true?`,
       <div className={`${getHeaderTheme()} p-2`}>
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <h1 className="text-base font-normal pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+              Master TMUA
             </h1>
           </div>
           <div className="flex flex-col items-end space-y-1 pr-4">
-            <div className="text-yellow-300 text-lg font-mono">
+            <div className="text-white text-base font-mono">
               <i className="fas fa-clock mr-2"></i>
               Time Remaining: {formatTime(timeRemaining)}
             </div>
@@ -1049,30 +1053,6 @@ Which one of the following statements is true?`,
                     onClick={() => applyColorScheme("default")}
                   >
                     Color Scheme
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("light-yellow")}
-                  >
-                    Black on Light Yellow
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("salmon")}
-                  >
-                    Black on Salmon
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("high-contrast")}
-                  >
-                    Black on White
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("yellow")}
-                  >
-                    Black on Yellow
                   </button>
                 </div>
               )}
@@ -1285,6 +1265,7 @@ Which one of the following statements is true?`,
                 className="h-6 w-auto"
               />
             </button>
+            {currentQuestion < questions.length - 1 && (
             <button
               className="text-sm text-white hover:text-gray-200 bg-transparent border-none"
               onClick={handleNext}
@@ -1296,6 +1277,7 @@ Which one of the following statements is true?`,
                 className="h-6 w-auto"
               />
             </button>
+            )}
           </div>
         </div>
       </div>
@@ -1304,5 +1286,5 @@ Which one of the following statements is true?`,
 }
 
 export default function Page() {
-  return <MainComponent />;
+  return <PaymentGate paperName="2022 Paper 2"><MainComponent /></PaymentGate>;
 }

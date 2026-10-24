@@ -60,7 +60,9 @@ export default function UpgradeModal({ isOpen, onClose, paperName }) {
         {/* Header */}
         <div className="p-6 border-b border-[#5c4d7d]">
           <div className="flex justify-between items-center">
-            <h2 className="text-2xl font-bold text-white">Upgrade Required</h2>
+            <h2 className="text-2xl font-bold text-white">
+              {paperName ? 'Upgrade Required' : 'Go Premium'}
+            </h2>
             <button
               onClick={onClose}
               className="text-gray-400 hover:text-white transition-colors"
@@ -68,9 +70,11 @@ export default function UpgradeModal({ isOpen, onClose, paperName }) {
               <FaTimes size={20} />
             </button>
           </div>
-          <p className="text-gray-300 mt-2">
-            {paperName} requires a premium subscription to access.
-          </p>
+          {paperName && (
+            <p className="text-gray-300 mt-2">
+              {paperName} requires a premium subscription to access.
+            </p>
+          )}
         </div>
 
         {/* Pricing Card - Reusing from Landing Page */}
@@ -85,13 +89,16 @@ export default function UpgradeModal({ isOpen, onClose, paperName }) {
                 <FaCheck className="text-green-400 mr-3" /> Access to all past papers (2017-2023)
               </li>
               <li className="flex items-center text-gray-300">
-                <FaCheck className="text-green-400 mr-3" /> Specimen and practice papers
+                <FaCheck className="text-green-400 mr-3" /> Instant automatic marking
+              </li>
+              <li className="flex items-center text-gray-300">
+                <FaCheck className="text-green-400 mr-3" /> Personalised mistake papers
               </li>
               <li className="flex items-center text-gray-300">
                 <FaCheck className="text-green-400 mr-3" /> Detailed analytics and progress tracking
               </li>
               <li className="flex items-center text-gray-300">
-                <FaCheck className="text-green-400 mr-3" /> Authentic exam interface
+                <FaCheck className="text-green-400 mr-3" /> Authentic identical exam interface
               </li>
               <li className="flex items-center text-gray-300">
                 <FaCheck className="text-green-400 mr-3" /> Unlimited practice attempts
@@ -117,7 +124,7 @@ export default function UpgradeModal({ isOpen, onClose, paperName }) {
         {/* Footer */}
         <div className="p-6 pt-0">
           <p className="text-center text-gray-400 text-sm">
-            Practice Papers 1 & 2 remain free forever
+            Practice and Specimen Papers 1 & 2 remain free forever
           </p>
         </div>
       </div>

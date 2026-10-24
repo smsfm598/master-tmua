@@ -6,6 +6,7 @@ import { useUser } from '@clerk/nextjs'
 import { saveExamResult, calculateScore } from '../../lib/supabase'
 import { InlineMath, BlockMath } from "react-katex";
 import "katex/dist/katex.min.css";
+import PaymentGate from "../../components/PaymentGate";
 
 // ✅ Define this once
 function renderWithLatex(str = "") {
@@ -86,7 +87,7 @@ What is the value of $2p + q$?`,
       id: 3,
       text: `Find the complete set of values of $x$ for which
 
-$$(x + 4)(x + 3)(1 - x) > 0$$ and $$(x + 2)(x - 2) < 0$$`,
+$$(x + 4)(x + 3)(1 - x) > 0 \\quad \\text { and } \\quad (x + 2)(x - 2) < 0$$`,
       options: [
         "$1 < x < 2$",
         "$-2 < x < 1$",
@@ -192,7 +193,7 @@ Which quadratic expression can be factorised as $(x - \\sqrt{\\alpha})(x - \\sqr
         "$x^2 - \\sqrt{14}x + 3$",
         "$x^2 - \\sqrt{20}x + 3$",
         "$x^2 - 178x + 81$",
-        "$x^2 + 176x + 81$",
+        "$x^2 - 176x + 81$",
         "$x^2 + 196x + 81$"
       ],
     },
@@ -279,7 +280,7 @@ What is the value of $m$?`,
       id: 15,
       text: `Find the positive difference between the two real values of $x$ for which
 
-$$(\\log_2 x)^4 + 12 \\left( \\log_2 \\frac{1}{x} \\right)^2 - 2^6 = 0$$`,
+$$(\\log_2 x)^4 + 12 \\left( \\log_2 (\\frac{1}{x}) \\right)^2 - 2^6 = 0$$`,
       options: [
         "$4$",
         "$16$",
@@ -327,7 +328,7 @@ Find the value of $\\tan \\theta$`,
       id: 18,
       text: `Find the number of solutions and the sum of the solutions of the equation
 
-$1 - 2 \\cos^2 x = |\\cos x|$
+$$1 - 2 \\cos^2 x = |\\cos x|$$
 
 where $0 \\leq x \\leq 180°$`,
       options: [
@@ -387,6 +388,9 @@ satisfied by exactly two distinct values of $x$?`,
         setTimeRemaining((prev) => prev - 1);
       }, 1000);
       return () => clearInterval(timer);
+    } else if (currentView === "exam" && timeRemaining === 0) {
+      // Auto-end exam when time runs out
+      confirmEndExam();
     }
   }, [currentView, timeRemaining]);
 
@@ -599,8 +603,8 @@ satisfied by exactly two distinct values of $x$?`,
         {/* Header */}
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+              Master TMUA
             </h1>
           </div>
         </div>
@@ -719,11 +723,11 @@ satisfied by exactly two distinct values of $x$?`,
         {/* Header */}
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+              Master TMUA
             </h1>
             <div className="flex items-center space-x-4 pr-4">
-              <div className="text-yellow-300 text-lg font-mono">
+              <div className="text-white text-base font-mono">
                 <i className="fas fa-clock mr-2"></i>
                 Time Remaining: {formatInstructionTime(instructionTime)}
               </div>
@@ -913,12 +917,12 @@ satisfied by exactly two distinct values of $x$?`,
       <div className={`${getHeaderTheme()} p-2`}>
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <h1 className="text-base font-normal pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+              Master TMUA
             </h1>
           </div>
           <div className="flex flex-col items-end space-y-1 pr-4">
-            <div className="text-yellow-300 text-lg font-mono">
+            <div className="text-white text-base font-mono">
               <i className="fas fa-clock mr-2"></i>
               Time Remaining: {formatTime(timeRemaining)}
             </div>
@@ -969,30 +973,6 @@ satisfied by exactly two distinct values of $x$?`,
                     onClick={() => applyColorScheme("default")}
                   >
                     Color Scheme
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("light-yellow")}
-                  >
-                    Black on Light Yellow
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("salmon")}
-                  >
-                    Black on Salmon
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("high-contrast")}
-                  >
-                    Black on White
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("yellow")}
-                  >
-                    Black on Yellow
                   </button>
                 </div>
               )}
@@ -1205,6 +1185,7 @@ satisfied by exactly two distinct values of $x$?`,
                 className="h-6 w-auto"
               />
             </button>
+            {currentQuestion < questions.length - 1 && (
             <button
               className="text-sm text-white hover:text-gray-200 bg-transparent border-none"
               onClick={handleNext}
@@ -1216,6 +1197,7 @@ satisfied by exactly two distinct values of $x$?`,
                 className="h-6 w-auto"
               />
             </button>
+            )}
           </div>
         </div>
       </div>
@@ -1224,5 +1206,5 @@ satisfied by exactly two distinct values of $x$?`,
 }
 
 export default function Page() {
-  return <MainComponent />;
+  return <PaymentGate paperName="2020 Paper 1"><MainComponent /></PaymentGate>;
 }

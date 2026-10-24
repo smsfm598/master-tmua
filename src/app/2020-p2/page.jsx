@@ -6,6 +6,7 @@ import { useUser } from '@clerk/nextjs'
 import { saveExamResult, calculateScore } from '../../lib/supabase'
 import { InlineMath, BlockMath } from "react-katex";
 import "katex/dist/katex.min.css";
+import PaymentGate from "../../components/PaymentGate";
 
 // ✅ Define this once
 function renderWithLatex(str = "") {
@@ -119,9 +120,9 @@ Every positive integer $N$ that is greater than 6 can be written as the sum of t
 
 Which of the following is/are counterexample(s) to this statement?
 
-I. $N = 5$
-II. $N = 7$
-III. $N = 9$`,
+$\\quad I \\quad$ $N = 5$
+$\\quad II \\quad$ $N = 7$
+$\\quad III \\quad$ $N = 9$`,
       options: [
         "none of them",
         "I only",
@@ -175,9 +176,9 @@ Condition III: $f(x) = -f(-x)$ for $-5 \\leq x \\leq 5$`,
       id: 7,
       text: `Consider the following conditions on a parallelogram $PQRS$, labelled anticlockwise:
 
-I. length of $PQ =$ length of $QR$
-II. The diagonal $PR$ intersects the diagonal $QS$ at right angles
-III. $\\angle PQR = \\angle QRS$
+$\\quad I \\quad$ length of $PQ =$ length of $QR$
+$\\quad II \\quad$ The diagonal $PR$ intersects the diagonal $QS$ at right angles
+$\\quad III \\quad$ $\\angle PQR = \\angle QRS$
 
 Which of these conditions is/are individually sufficient for the parallelogram $PQRS$ to be a square?`,
       options: [
@@ -195,11 +196,11 @@ Which of these conditions is/are individually sufficient for the parallelogram $
       id: 8,
       text: `A student is asked to prove whether the following statement (*) is true or false:
 
-(*) For all real numbers $a$ and $b$, $|a + b| < |a| + |b|$
+$\\quad$ (*) $\\quad$ For all real numbers $a$ and $b$, $|a + b| < |a| + |b|$
 
 The student's proof is as follows:
 
-Statement (*) is false. A counterexample is $a = 3, b = 4$, as $|3 + 4| = 7$ and $|3| + |4| = 7$, but $7 < 7$ is false.
+$\\quad$ Statement (*) is false. A counterexample is $a = 3, b = 4$, as $|3 + 4| = 7$ and $|3| + |4| = 7$, but $7 < 7$ is false.
 
 Which of the following best describes the student's proof?`,
       options: [
@@ -328,7 +329,7 @@ $\\quad II \\quad$ For $T$ to have property P, it is necessary that $d$ is even.
       id: 15,
       text: `Which one of the following is a necessary and sufficient condition for
 
-$\\sum_{k=1}^{n} \\sin\\left(\\frac{k\\pi}{3}\\right) = \\frac{\\sqrt{3}}{2}$
+$$\\sum_{k=1}^{n} \\sin\\left(\\frac{k\\pi}{3}\\right) = \\frac{\\sqrt{3}}{2}$$
 
 to be true?`,
       options: [
@@ -434,21 +435,14 @@ Given only this information, what are the smallest number and the largest number
       id: 20,
       text: `$x$ is a real number and $f$ is a function.
 
-Given that exactly one of the following statements is true, which one is it?
-
-A. $x \\geq 0$ only if $f(x) < 0$
-B. $x < 0$ if $f(x) \\geq 0$
-C. $x \\geq $ only if $f(x) \\geq 0$
-D. $f(x) < 0$ if $x < 0$
-E. $f(x) \\geq 0$ only if $x ≥ 0$
-F. $f(x) ≥ 0$ if and only if $x < 0$`,
+Given that exactly one of the following statements is true, which one is it? `,
       options: [
-        "A",
-        "B",
-        "C",
-        "D",
-        "E",
-        "F"
+        "$x \\geq 0$ only if $f(x) < 0$",
+        "$x < 0$ if $f(x) \\geq 0$",
+        "$x \\geq $ only if $f(x) \\geq 0$",
+        "$f(x) < 0$ if $x < 0$",
+        "$f(x) \\geq 0$ only if $x ≥ 0$",
+        "$f(x) ≥ 0$ if and only if $x < 0$"
       ],
     },
   ];
@@ -475,6 +469,9 @@ F. $f(x) ≥ 0$ if and only if $x < 0$`,
         setTimeRemaining((prev) => prev - 1);
       }, 1000);
       return () => clearInterval(timer);
+    } else if (currentView === "exam" && timeRemaining === 0) {
+      // Auto-end exam when time runs out
+      confirmEndExam();
     }
   }, [currentView, timeRemaining]);
 
@@ -687,8 +684,8 @@ F. $f(x) ≥ 0$ if and only if $x < 0$`,
         {/* Header */}
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+              Master TMUA
             </h1>
           </div>
         </div>
@@ -807,11 +804,11 @@ F. $f(x) ≥ 0$ if and only if $x < 0$`,
         {/* Header */}
         <div className="bg-[#016CAA] text-white p-2">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-semibold pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+              Master TMUA
             </h1>
             <div className="flex items-center space-x-4 pr-4">
-              <div className="text-yellow-300 text-lg font-mono">
+              <div className="text-white text-base font-mono">
                 <i className="fas fa-clock mr-2"></i>
                 Time Remaining: {formatInstructionTime(instructionTime)}
               </div>
@@ -1001,12 +998,12 @@ F. $f(x) ≥ 0$ if and only if $x < 0$`,
       <div className={`${getHeaderTheme()} p-2`}>
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <h1 className="text-base font-normal pl-2">
-              Test of Mathematics for University Admission
+            <h1 className="text-2xl font-semibold pl-2 text-white">
+              Master TMUA
             </h1>
           </div>
           <div className="flex flex-col items-end space-y-1 pr-4">
-            <div className="text-yellow-300 text-lg font-mono">
+            <div className="text-white text-base font-mono">
               <i className="fas fa-clock mr-2"></i>
               Time Remaining: {formatTime(timeRemaining)}
             </div>
@@ -1057,30 +1054,6 @@ F. $f(x) ≥ 0$ if and only if $x < 0$`,
                     onClick={() => applyColorScheme("default")}
                   >
                     Color Scheme
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("light-yellow")}
-                  >
-                    Black on Light Yellow
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("salmon")}
-                  >
-                    Black on Salmon
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("high-contrast")}
-                  >
-                    Black on White
-                  </button>
-                  <button
-                    className="block w-full text-left px-3 py-2 hover:bg-gray-100"
-                    onClick={() => applyColorScheme("yellow")}
-                  >
-                    Black on Yellow
                   </button>
                 </div>
               )}
@@ -1293,6 +1266,7 @@ F. $f(x) ≥ 0$ if and only if $x < 0$`,
                 className="h-6 w-auto"
               />
             </button>
+            {currentQuestion < questions.length - 1 && (
             <button
               className="text-sm text-white hover:text-gray-200 bg-transparent border-none"
               onClick={handleNext}
@@ -1304,6 +1278,7 @@ F. $f(x) ≥ 0$ if and only if $x < 0$`,
                 className="h-6 w-auto"
               />
             </button>
+            )}
           </div>
         </div>
       </div>
@@ -1312,5 +1287,5 @@ F. $f(x) ≥ 0$ if and only if $x < 0$`,
 }
 
 export default function Page() {
-  return <MainComponent />;
+  return <PaymentGate paperName="2020 Paper 2"><MainComponent /></PaymentGate>;
 }

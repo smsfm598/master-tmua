@@ -32,7 +32,12 @@ export default function PapersPage() {
   useEffect(() => {
     const checkEntitlements = async () => {
       if (user) {
-        const entitlements = await checkUserEntitlements(user.id);
+        console.log("Clerk user:", user.id);
+
+        const entitlements = await checkUserEntitlements();
+
+        console.log("Entitlements:", entitlements);
+
         setUserEntitlements(entitlements);
       }
       setLoading(false);
@@ -60,8 +65,8 @@ export default function PapersPage() {
   
   // Complete paper list organized by year
   const papersByYear = {
-    'Practice': ['Practice Paper 1', 'Practice Paper 2'],
     'Specimen': ['Specimen Paper 1', 'Specimen Paper 2'],
+    'Practice': ['Practice Paper 1', 'Practice Paper 2'],
     '2017': ['2017 Paper 1', '2017 Paper 2'],
     '2018': ['2018 Paper 1', '2018 Paper 2'],
     '2019': ['2019 Paper 1', '2019 Paper 2'],
@@ -71,7 +76,11 @@ export default function PapersPage() {
     '2023': ['2023 Paper 1', '2023 Paper 2']
   };
   
-  const allPapers = Object.values(papersByYear).flat();
+  // Explicitly define the order of year groups to avoid numeric key ordering issues
+  const yearOrder = ['Specimen', 'Practice', '2017', '2018', '2019', '2020', '2021', '2022', '2023'];
+  
+  // Flatten papers in our desired order
+  const allPapers = yearOrder.flatMap(year => papersByYear[year]);
   const displayPapers = selectedYear === 'all' ? allPapers : papersByYear[selectedYear] || [];
   
   // Function to map paper names to their corresponding routes
@@ -100,15 +109,25 @@ export default function PapersPage() {
   };
   
   const handlePaperClick = (paperName) => {
-    // All papers are accessible for now
-    console.log(`Starting: ${paperName}`);
-    const route = getPaperRoute(paperName);
-    router.push(route);
+    // Check if paper is free or user has access
+    if (isPaperFree(paperName) || userEntitlements?.hasFullAccess) {
+      console.log(`Starting: ${paperName}`);
+      const route = getPaperRoute(paperName);
+      router.push(route);
+    } else {
+      // Show upgrade modal
+      setUpgradeModal({ isOpen: true, paperName });
+    }
   };
 
   const getPaperStatus = (paperName) => {
-    // All papers are accessible for now
-    return 'accessible';
+    if (isPaperFree(paperName)) {
+      return 'free';
+    } else if (userEntitlements?.hasFullAccess) {
+      return 'accessible';
+    } else {
+      return 'locked';
+    }
   };
   
   return (
@@ -129,14 +148,23 @@ export default function PapersPage() {
                 Choose any paper to practice
               </p>
             </div>
-            {!userEntitlements?.hasFullAccess && (
-              <button
-                onClick={() => setUpgradeModal({ isOpen: true, paperName: 'All Premium Papers' })}
-                className="bg-[#8e44ad] hover:bg-[#9b59b6] text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium"
-              >
-                Upgrade Now
-              </button>
-            )}
+              {userEntitlements && !userEntitlements?.hasFullAccess ? (
+                <button
+                  onClick={() =>
+                    setUpgradeModal({ isOpen: true, paperName: "All Premium Papers" })
+                  }
+                  className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg font-semibold text-sm sm:text-base bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-500 text-[#1a0030] shadow-[0_0_15px_rgba(251,191,36,0.4)] hover:from-yellow-300 hover:via-amber-200 hover:to-yellow-400 hover:shadow-[0_0_20px_rgba(251,191,36,0.6)] transition-all duration-300"
+                >
+                  Go Premium
+                </button>
+              ) : userEntitlements?.hasFullAccess ? (
+                <button
+                  onClick={() => {}}
+                  className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg font-semibold text-sm sm:text-base bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-500 text-[#1a0030] shadow-[0_0_15px_rgba(251,191,36,0.4)] hover:from-yellow-300 hover:via-amber-200 hover:to-yellow-400 hover:shadow-[0_0_20px_rgba(251,191,36,0.6)] transition-all duration-300"
+                >
+                  Premium
+                </button>
+              ) : null}
           </div>
         </div>
         
@@ -155,7 +183,7 @@ export default function PapersPage() {
               >
                 All Papers
               </button>
-              {Object.keys(papersByYear).map((year) => (
+              {yearOrder.map((year) => (
                 <button
                   key={year}
                   onClick={() => setSelectedYear(year)}
